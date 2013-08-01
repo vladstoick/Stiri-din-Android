@@ -2,13 +2,16 @@ package com.vladstoick.DialogFragment;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,13 +21,14 @@ import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataModifiedEvent;
 import com.vladstoick.stiridinromania.R;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by Vlad on 7/23/13.
  */
-public class AddNewsGroupDialogFragment extends SherlockDialogFragment implements EditText.OnEditorActionListener {
-    private EditText mEditText;
-    private Button mPositive;
-    private Button mNegative;
+public class AddNewsGroupDialogFragment extends SherlockDialogFragment  implements EditText.OnEditorActionListener {
+    @InjectView(R.id.newGroupEditText)EditText mEditText;
     public static String TAG = "ADDDIALOGGROUP";
 
     public AddNewsGroupDialogFragment() {
@@ -36,9 +40,11 @@ public class AddNewsGroupDialogFragment extends SherlockDialogFragment implement
 
         BusProvider.getInstance().register(this);
         View mView = inflater.inflate(R.layout.dialog_addnewgroup, null);
-        mEditText = (EditText) mView.findViewById(R.id.newGroupEditText);
-        return new AlertDialog.Builder(getSherlockActivity())
+        Views.inject(this,mView);
+
+        AlertDialog builder =  new AlertDialog.Builder(getSherlockActivity())
                 .setView(mView)
+
                 .setPositiveButton(getSherlockActivity().getString(R.string.add_dialog_fragment_ok),
                         new DialogInterface.OnClickListener() {
                             @Override
@@ -56,9 +62,11 @@ public class AddNewsGroupDialogFragment extends SherlockDialogFragment implement
                             }
                         })
                  .create();
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        mEditText.requestFocus();
+        builder.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        return builder;
     }
-
-
     @Override
     public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
         if (EditorInfo.IME_ACTION_DONE == actionId) {

@@ -33,6 +33,7 @@ import butterknife.Views;
 public class AllGroupsFragment extends SherlockFragment {
     public interface AllGroupsFragmentCommunicationInterface {
         public void newsGroupSelected(int index);
+        public void showAddGroupDialog();
     }
     public static String TAG = "ALLGROUPSFRAGMENT";
     ArrayList<NewsGroup> newsDataSource;
@@ -138,7 +139,7 @@ public class AllGroupsFragment extends SherlockFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_add: {
-//                mListener.showDialog(new AddNewsGroupDialogFragment(), AddNewsGroupDialogFragment.TAG);
+                mListener.showAddGroupDialog();
                 break;
             }
             default: {

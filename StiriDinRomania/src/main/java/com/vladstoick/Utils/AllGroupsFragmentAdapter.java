@@ -23,8 +23,7 @@ public class AllGroupsFragmentAdapter extends BaseAdapter {
     static class RowHolder {
         @InjectView(R.id.groupTitle) TextView mTitle;
         @InjectView(R.id.numberOfGroups)TextView mNumberOfGroups;
-        public RowHolder(View view)
-        {
+        public RowHolder(View view){
             Views.inject(this,view);
         }
     }
