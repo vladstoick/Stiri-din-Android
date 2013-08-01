@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="async">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/StiriDinRomania/libs/async.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
