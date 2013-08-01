@@ -13,13 +13,20 @@ import com.vladstoick.stiridinromania.R;
 
 import java.util.ArrayList;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by vlad on 7/19/13.
  */
 public class AllGroupsFragmentAdapter extends BaseAdapter {
     static class RowHolder {
-        TextView mTitle;
-        TextView mNumberOfGroups;
+        @InjectView(R.id.groupTitle) TextView mTitle;
+        @InjectView(R.id.numberOfGroups)TextView mNumberOfGroups;
+        public RowHolder(View view)
+        {
+            Views.inject(this,view);
+        }
     }
 
     private final Context context;
@@ -53,9 +60,7 @@ public class AllGroupsFragmentAdapter extends BaseAdapter {
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(R.layout.list_row_allgroups, parent, false);
-            holder = new RowHolder();
-            holder.mTitle = (TextView) row.findViewById(R.id.groupTitle);
-            holder.mNumberOfGroups = (TextView) row.findViewById(R.id.numberOfGroups);
+            holder = new RowHolder(row);
             row.setTag(holder);
         } else {
             holder = (RowHolder) row.getTag();

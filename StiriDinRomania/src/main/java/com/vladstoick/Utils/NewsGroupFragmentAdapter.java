@@ -12,14 +12,20 @@ import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.stiridinromania.R;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 
 /**
  * Created by vlad on 7/19/13.
  */
 public class NewsGroupFragmentAdapter extends BaseAdapter {
     static class RowHolder {
-        TextView mTitle;
-        TextView mDescription;
+        @InjectView(R.id.newsSourceTitle)TextView mTitle;
+        @InjectView(R.id.description)TextView mDescription;
+        public RowHolder(View view){
+            Views.inject(this,view);
+        }
     }
 
     private final Context context;
@@ -54,21 +60,13 @@ public class NewsGroupFragmentAdapter extends BaseAdapter {
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(R.layout.list_row_newsgroup, parent, false);
-            holder = new RowHolder();
-            holder.mTitle = (TextView) row.findViewById(R.id.newsSourceTitle);
-            holder.mDescription = (TextView) row.findViewById(R.id.description);
+            holder = new RowHolder(row);
             row.setTag(holder);
         }
         else
             holder = (RowHolder) row.getTag();
-        try{
-            holder.mTitle.setText(ns.getTitle());
-            holder.mDescription.setText(ns.getDescription());
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
+        holder.mTitle.setText(ns.getTitle());
+        holder.mDescription.setText(ns.getDescription());
         return row;
     }
 }
