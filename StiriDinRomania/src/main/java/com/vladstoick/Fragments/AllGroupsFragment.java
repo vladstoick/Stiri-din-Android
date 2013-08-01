@@ -24,6 +24,9 @@ import com.vladstoick.stiridinromania.R;
 
 import java.util.ArrayList;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by vlad on 7/19/13.
  */
@@ -35,7 +38,7 @@ public class AllGroupsFragment extends SherlockFragment {
     ArrayList<NewsGroup> newsDataSource;
     private static String TAG_NDS = "DATA" + TAG;
     private View mView;
-    private ListView mList;
+    @InjectView(R.id.allGroupsListView) ListView mList;
     private AllGroupsFragmentAdapter adapter;
     private AllGroupsFragmentCommunicationInterface mListener;
 
@@ -95,24 +98,14 @@ public class AllGroupsFragment extends SherlockFragment {
         setRetainInstance(true);
         setHasOptionsMenu(true);
         mView = inflater.inflate(R.layout.fragment_allgroups, container, false);
-        mList = (ListView) mView.findViewById(R.id.allGroupsListView);
         BusProvider.getInstance().register(this);
+        Views.inject(this , mView);
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 mListener.newsGroupSelected(position);
             }
         });
-//        mList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//                Log.d(TAG, "LongClicked");
-//                new DeleteDialogFragment(getSherlockActivity(), position, "GROUP").show(
-//                        getSherlockActivity().getSupportFragmentManager(), DeleteDialogFragment.TAG);
-//
-//                return false;
-//            }
-//        });
         setAdapter();
         return mView;
     }

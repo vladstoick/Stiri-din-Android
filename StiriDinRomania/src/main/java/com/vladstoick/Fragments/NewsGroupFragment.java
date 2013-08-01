@@ -19,6 +19,9 @@ import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.Utils.NewsGroupFragmentAdapter;
 import com.vladstoick.stiridinromania.R;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by vlad on 7/19/13.
  */
@@ -27,7 +30,7 @@ public class NewsGroupFragment extends SherlockFragment {
     private static String NG_TAG = "NG_TAG";
     private NewsGroup newsGroup;
     private View mView;
-    private ListView mList;
+    @InjectView(R.id.newsGroupListView) ListView mList;
 //    private FragmentCommunicationInterface mListener;
     NewsGroupFragmentAdapter adapter;
     public NewsGroupFragment() {
@@ -87,7 +90,7 @@ public class NewsGroupFragment extends SherlockFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_newsgroup, container, false);
-        mList = (ListView) mView.findViewById(R.id.newsGroupListView);
+        Views.inject(this,mView);
         adapter = new NewsGroupFragmentAdapter(newsGroup, getSherlockActivity());
         mList.setAdapter(adapter);
         return mView;

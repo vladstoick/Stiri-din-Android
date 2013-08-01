@@ -8,31 +8,31 @@ package com.facebook.android;
 
 public final class R {
 	public static final class attr {
-		public static final int confirm_logout = 0x7f01001c;
-		public static final int done_button_background = 0x7f010020;
-		public static final int done_button_text = 0x7f010021;
-		public static final int extra_fields = 0x7f010026;
-		public static final int fetch_user_info = 0x7f010027;
-		public static final int is_cropped = 0x7f010031;
-		public static final int login_text = 0x7f01003a;
-		public static final int logout_text = 0x7f01003c;
-		public static final int multi_select = 0x7f01003d;
-		public static final int preset_size = 0x7f010073;
-		public static final int radius_in_meters = 0x7f010043;
-		public static final int results_limit = 0x7f010044;
-		public static final int search_text = 0x7f010050;
-		public static final int show_pictures = 0x7f010052;
-		public static final int show_search_box = 0x7f010053;
-		public static final int show_title_bar = 0x7f010054;
-		public static final int title_bar_background = 0x7f010065;
-		public static final int title_text = 0x7f010066;
+		public static final int confirm_logout = 0x7f010063;
+		public static final int done_button_background = 0x7f01006d;
+		public static final int done_button_text = 0x7f01006b;
+		public static final int extra_fields = 0x7f010068;
+		public static final int fetch_user_info = 0x7f010064;
+		public static final int is_cropped = 0x7f010073;
+		public static final int login_text = 0x7f010065;
+		public static final int logout_text = 0x7f010066;
+		public static final int multi_select = 0x7f010062;
+		public static final int preset_size = 0x7f010072;
+		public static final int radius_in_meters = 0x7f01006e;
+		public static final int results_limit = 0x7f01006f;
+		public static final int search_text = 0x7f010070;
+		public static final int show_pictures = 0x7f010067;
+		public static final int show_search_box = 0x7f010071;
+		public static final int show_title_bar = 0x7f010069;
+		public static final int title_bar_background = 0x7f01006c;
+		public static final int title_text = 0x7f01006a;
 	}
 	public static final class color {
-		public static final int com_facebook_blue = 0x7f060006;
-		public static final int com_facebook_loginfragment_connected_shadow_color = 0x7f060007;
-		public static final int com_facebook_loginfragment_connected_text_color = 0x7f060008;
-		public static final int com_facebook_loginfragment_not_connected_text_color = 0x7f060009;
-		public static final int com_facebook_loginview_text_color = 0x7f06000a;
+		public static final int com_facebook_blue = 0x7f050006;
+		public static final int com_facebook_loginfragment_connected_shadow_color = 0x7f050007;
+		public static final int com_facebook_loginfragment_connected_text_color = 0x7f050008;
+		public static final int com_facebook_loginfragment_not_connected_text_color = 0x7f050009;
+		public static final int com_facebook_loginview_text_color = 0x7f05000a;
 	}
 	public static final class dimen {
 		public static final int com_facebook_loginfragment_profile_picture_height = 0x7f07000f;
@@ -82,29 +82,29 @@ public final class R {
 		public static final int com_facebook_top_button = 0x7f02008f;
 	}
 	public static final class id {
-		public static final int com_facebook_loginfragment_login_button = 0x7f04003b;
-		public static final int com_facebook_loginfragment_logo_image = 0x7f040039;
-		public static final int com_facebook_loginfragment_profile_name = 0x7f04003a;
-		public static final int com_facebook_picker_activity_circle = 0x7f040038;
-		public static final int com_facebook_picker_checkbox = 0x7f04003d;
-		public static final int com_facebook_picker_checkbox_stub = 0x7f040041;
-		public static final int com_facebook_picker_divider = 0x7f040045;
-		public static final int com_facebook_picker_done_button = 0x7f040044;
-		public static final int com_facebook_picker_image = 0x7f04003e;
-		public static final int com_facebook_picker_list_section_header = 0x7f040042;
-		public static final int com_facebook_picker_list_view = 0x7f040037;
-		public static final int com_facebook_picker_profile_pic_stub = 0x7f04003f;
-		public static final int com_facebook_picker_row_activity_circle = 0x7f04003c;
-		public static final int com_facebook_picker_title = 0x7f040040;
-		public static final int com_facebook_picker_title_bar = 0x7f040047;
-		public static final int com_facebook_picker_title_bar_stub = 0x7f040046;
-		public static final int com_facebook_picker_top_bar = 0x7f040043;
-		public static final int com_facebook_placepickerfragment_search_box_stub = 0x7f040048;
-		public static final int large = 0x7f04000b;
-		public static final int normal = 0x7f040001;
-		public static final int picker_subtitle = 0x7f04004a;
-		public static final int search_box = 0x7f040049;
-		public static final int small = 0x7f04000a;
+		public static final int com_facebook_loginfragment_login_button = 0x7f06003b;
+		public static final int com_facebook_loginfragment_logo_image = 0x7f060039;
+		public static final int com_facebook_loginfragment_profile_name = 0x7f06003a;
+		public static final int com_facebook_picker_activity_circle = 0x7f060038;
+		public static final int com_facebook_picker_checkbox = 0x7f06003d;
+		public static final int com_facebook_picker_checkbox_stub = 0x7f060041;
+		public static final int com_facebook_picker_divider = 0x7f060045;
+		public static final int com_facebook_picker_done_button = 0x7f060044;
+		public static final int com_facebook_picker_image = 0x7f06003e;
+		public static final int com_facebook_picker_list_section_header = 0x7f060042;
+		public static final int com_facebook_picker_list_view = 0x7f060037;
+		public static final int com_facebook_picker_profile_pic_stub = 0x7f06003f;
+		public static final int com_facebook_picker_row_activity_circle = 0x7f06003c;
+		public static final int com_facebook_picker_title = 0x7f060040;
+		public static final int com_facebook_picker_title_bar = 0x7f060047;
+		public static final int com_facebook_picker_title_bar_stub = 0x7f060046;
+		public static final int com_facebook_picker_top_bar = 0x7f060043;
+		public static final int com_facebook_placepickerfragment_search_box_stub = 0x7f060048;
+		public static final int large = 0x7f06000b;
+		public static final int normal = 0x7f060000;
+		public static final int picker_subtitle = 0x7f06004a;
+		public static final int search_box = 0x7f060049;
+		public static final int small = 0x7f06000a;
 	}
 	public static final class layout {
 		public static final int com_facebook_friendpickerfragment = 0x7f030018;
@@ -145,11 +145,28 @@ public final class R {
 		public static final int com_facebook_loginview_silver_style = 0x7f0a005f;
 	}
 	public static final class styleable {
-		public static final int[] com_facebook_friend_picker_fragment = { };
-		public static final int[] com_facebook_login_view = { };
-		public static final int[] com_facebook_picker_fragment = { };
-		public static final int[] com_facebook_place_picker_fragment = { };
-		public static final int[] com_facebook_profile_picture_view = { 0x7f010073 };
+		public static final int[] com_facebook_friend_picker_fragment = { 0x7f010062 };
+		public static final int com_facebook_friend_picker_fragment_multi_select = 0;
+		public static final int[] com_facebook_login_view = { 0x7f010063, 0x7f010064, 0x7f010065, 0x7f010066 };
+		public static final int com_facebook_login_view_confirm_logout = 0;
+		public static final int com_facebook_login_view_fetch_user_info = 1;
+		public static final int com_facebook_login_view_login_text = 2;
+		public static final int com_facebook_login_view_logout_text = 3;
+		public static final int[] com_facebook_picker_fragment = { 0x7f010067, 0x7f010068, 0x7f010069, 0x7f01006a, 0x7f01006b, 0x7f01006c, 0x7f01006d };
+		public static final int com_facebook_picker_fragment_done_button_background = 6;
+		public static final int com_facebook_picker_fragment_done_button_text = 4;
+		public static final int com_facebook_picker_fragment_extra_fields = 1;
+		public static final int com_facebook_picker_fragment_show_pictures = 0;
+		public static final int com_facebook_picker_fragment_show_title_bar = 2;
+		public static final int com_facebook_picker_fragment_title_bar_background = 5;
+		public static final int com_facebook_picker_fragment_title_text = 3;
+		public static final int[] com_facebook_place_picker_fragment = { 0x7f01006e, 0x7f01006f, 0x7f010070, 0x7f010071 };
+		public static final int com_facebook_place_picker_fragment_radius_in_meters = 0;
+		public static final int com_facebook_place_picker_fragment_results_limit = 1;
+		public static final int com_facebook_place_picker_fragment_search_text = 2;
+		public static final int com_facebook_place_picker_fragment_show_search_box = 3;
+		public static final int[] com_facebook_profile_picture_view = { 0x7f010072, 0x7f010073 };
+		public static final int com_facebook_profile_picture_view_is_cropped = 1;
 		public static final int com_facebook_profile_picture_view_preset_size = 0;
 	}
 }

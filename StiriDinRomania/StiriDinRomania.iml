@@ -73,6 +73,7 @@
     <orderEntry type="library" exported="" name="async" level="project" />
     <orderEntry type="module" module-name="facebook" exported="" />
     <orderEntry type="library" exported="" name="support-v4-18.0.0" level="project" />
+    <orderEntry type="library" exported="" name="butterknife-2.0.1" level="project" />
   </component>
 </module>
 

@@ -7,5 +7,5 @@
     <dimen name="top_and_bottom_margin">4dp</dimen>
     <dimen name="large_font">22sp</dimen>
     <dimen name="medium_font">18sp</dimen>
-
+    <dimen name="small_font">14sp</dimen>
 </resources>
