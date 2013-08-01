@@ -2,9 +2,6 @@ package com.vladstoick.DataModel;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import com.vladstoick.stiri.R;
-
 import java.util.ArrayList;
 
 /**

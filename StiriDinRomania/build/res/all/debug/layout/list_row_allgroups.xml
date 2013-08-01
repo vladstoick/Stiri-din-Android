@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="@dimen/top_and_bottom_margin"
+                android:paddingTop="@dimen/top_and_bottom_margin"
+                android:layout_height="match_parent">
+    <TextView
+
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/lorem_w_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/groupTitle"/>
+
+    <TextView
+            android:id="@+id/numberOfGroups"
+            android:text="@string/lorem_w_5"
+            android:layout_below="@id/groupTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_allgroups.xml -->

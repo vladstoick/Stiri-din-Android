@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/StiriDinRomania/StiriDinRomania.iml" filepath="$PROJECT_DIR$/StiriDinRomania/StiriDinRomania.iml" />
       <module fileurl="file://$PROJECT_DIR$/StiriDinRomaniaAndroidGradle.iml" filepath="$PROJECT_DIR$/StiriDinRomaniaAndroidGradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/facebook/facebook.iml" filepath="$PROJECT_DIR$/libraries/facebook/facebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/facebook/facebook1.iml" filepath="$PROJECT_DIR$/libraries/facebook/facebook1.iml" />
     </modules>
   </component>
 </project>

@@ -1,1 +1,1 @@
-include ':StiriDinRomania'
+include  ':libraries:facebook' , ':StiriDinRomania'

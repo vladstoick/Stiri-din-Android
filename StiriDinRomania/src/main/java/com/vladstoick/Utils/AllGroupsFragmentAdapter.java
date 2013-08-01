@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.vladstoick.DataModel.NewsGroup;
-import com.vladstoick.stiri.R;
+import com.vladstoick.stiridinromania.R;
 
 import java.util.ArrayList;
 

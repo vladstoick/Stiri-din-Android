@@ -2,7 +2,6 @@ package com.vladstoick.Utils;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,8 @@ import android.widget.TextView;
 
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsSource;
-import com.vladstoick.stiri.R;
+import com.vladstoick.stiridinromania.R;
+
 
 /**
  * Created by vlad on 7/19/13.

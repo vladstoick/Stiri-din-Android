@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ADD SOURCE FRAGMENT-->
+    <string name="add_dialog_fragment_title_source">Adaugă un feed nou</string>
+    <string name="add_dialog_fragment_feedtitle_source">Numele feedului</string>
+    <string name="add_dialog_fragment_feeddescription_source">Descrierea feedului</string>
+    <string name="add_dialog_fragment_feedadress_source">Adresa rss a feedului</string>
+    <!--ADD GROUP FRAGMENT-->
+    <string name="add_dialog_fragment_title_group">Adaugă un grup nou</string>
+    <string name="add_dialog_fragment_message_group">Introduceți noul nume al grupului</string>
+    <string name="add_dialog_fragment_ok">Adaugă</string>
+    <!--DELETE DIALOG FRAGMENT-->
+    <string name="delete_dialog_fragment_title">Vrei să ștergi acest element?</string>
+    <string name="delete_dialog_fragment_message">Ești sigur?</string>
+    <!--GENERAL-->
+    <string name="delete">Șterge</string>
+    <string name="rename">Redenumește</string>
+    <string name="group">Grup</string>
+    <string name="groups">Grupuri</string>
+    <string name="feed">Feed</string>
+    <string name="feeds">Feeduri</string>
+    <string name="app_name">Ştiri din România</string>
+    <string name="action_settings">Settings</string>
+    <string name="ok">Da</string>
+    <string name="cancel">Anulează</string>
+    <string name="add">Adaugă</string>
+    <string name="update_data">Acutalizează</string>
+    <!--LOGIN ACTIVITY-->
+    <string name="login_facebook">Loghează-te cu Facebook</string>
+    <string name="login_microsoft">Loghează-te cu Microsoft</string>
+    <string name="login_message">Ştiri din România va folosi doar numele tău pentru a sync-ui datele
+        pe toate device-urile tale
+    </string>
+    <string name="logout">Deloghează-te</string>
+</resources>

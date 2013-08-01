@@ -156,7 +156,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int activityChooserViewStyle=0x7f01005f;
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -181,6 +181,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonStyleSmall=0x7f010032;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int confirm_logout=0x7f010063;
         /**  Specifies a layout for custom navigation. Overrides navigationMode. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -214,6 +222,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
+        public static final int done_button_background=0x7f01006d;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int done_button_text=0x7f01006b;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
         public static final int dropDownHintAppearance=0x7f010061;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -240,6 +260,22 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int expandActivityOverflowButtonDrawable=0x7f010014;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int extra_fields=0x7f010068;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fetch_user_info=0x7f010064;
         /**  Default background for the menu header. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -302,6 +338,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int initialActivityCount=0x7f010013;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int is_cropped=0x7f010073;
         /**  Default background for each menu item. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -374,11 +418,35 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int listPreferredItemPaddingRight=0x7f01004d;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int login_text=0x7f010065;
         /**  Specifies the drawable used for the application logo. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int logo=0x7f01000b;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int logout_text=0x7f010066;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int multi_select=0x7f010062;
         /**  The type of navigation to use. 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -405,6 +473,18 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int preserveIconSpacing=0x7f01001c;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>small</code></td><td>-2</td><td> Keep in sync with constants in ProfilePictureView </td></tr>
+<tr><td><code>normal</code></td><td>-3</td><td></td></tr>
+<tr><td><code>large</code></td><td>-4</td><td></td></tr>
+</table>
+         */
+        public static final int preset_size=0x7f010072;
         /**  Specifies the horizontal padding on either end for an embedded progress bar. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -430,6 +510,22 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int queryHint=0x7f01001e;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int radius_in_meters=0x7f01006e;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int results_limit=0x7f01006f;
         /**  SearchView AutoCompleteTextView style 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -491,11 +587,43 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int searchViewVoiceIcon=0x7f010042;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int search_text=0x7f010070;
         /**  Background drawable for standalone items that need focus/pressed states. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int selectableItemBackground=0x7f010033;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int show_pictures=0x7f010067;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int show_search_box=0x7f010071;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int show_title_bar=0x7f010069;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -594,6 +722,18 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int titleTextStyle=0x7f010005;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int title_bar_background=0x7f01006c;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int title_text=0x7f01006a;
         /**  Default vertical divider between menu items. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -674,10 +814,10 @@ containing a value of this type.
         public static final int windowSplitActionBar=0x7f01005d;
     }
     public static final class bool {
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-w480dp/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-w480dp\values.xml 
          */
         public static final int abs__action_bar_embed_tabs=0x7f040000;
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-sw600dp/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-sw600dp\values.xml 
          */
         public static final int abs__action_bar_expanded_action_views_exclusive=0x7f040001;
         public static final int abs__config_actionMenuItemAllCaps=0x7f040002;
@@ -692,18 +832,26 @@ containing a value of this type.
         public static final int abs__bright_foreground_disabled_holo_light=0x7f050003;
         public static final int abs__bright_foreground_holo_dark=0x7f050004;
         public static final int abs__bright_foreground_holo_light=0x7f050005;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f050006;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f050007;
-        public static final int abs__primary_text_holo_dark=0x7f050008;
-        public static final int abs__primary_text_holo_light=0x7f050009;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f05000b;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f05000c;
+        public static final int abs__primary_text_holo_dark=0x7f05000d;
+        public static final int abs__primary_text_holo_light=0x7f05000e;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
+         */
+        public static final int com_facebook_blue=0x7f050006;
+        public static final int com_facebook_loginfragment_connected_shadow_color=0x7f050007;
+        public static final int com_facebook_loginfragment_connected_text_color=0x7f050008;
+        public static final int com_facebook_loginfragment_not_connected_text_color=0x7f050009;
+        public static final int com_facebook_loginview_text_color=0x7f05000a;
     }
     public static final class dimen {
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-land/values.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-large-hdpi-1024x600/values.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-large-mdpi-1024x600/values.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-large-land-hdpi-1024x600/values.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-large-land-mdpi-1024x600/values.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-xlarge/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-land\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-hdpi-1024x600\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-mdpi-1024x600\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-land-hdpi-1024x600\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-land-mdpi-1024x600\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-xlarge\values.xml 
          */
         public static final int abs__action_bar_default_height=0x7f070000;
         public static final int abs__action_bar_icon_vertical_padding=0x7f070001;
@@ -713,18 +861,39 @@ containing a value of this type.
         public static final int abs__action_bar_title_text_size=0x7f070005;
         public static final int abs__action_button_min_width=0x7f070006;
         public static final int abs__config_prefDialogWidth=0x7f070007;
-        public static final int abs__dialog_min_width_major=0x7f07000f;
-        public static final int abs__dialog_min_width_minor=0x7f070010;
+        public static final int abs__dialog_min_width_major=0x7f07001d;
+        public static final int abs__dialog_min_width_minor=0x7f07001e;
         public static final int abs__dropdownitem_icon_width=0x7f070008;
         public static final int abs__dropdownitem_text_padding_left=0x7f070009;
         public static final int abs__dropdownitem_text_padding_right=0x7f07000a;
         public static final int abs__search_view_preferred_width=0x7f07000b;
         public static final int abs__search_view_text_min_width=0x7f07000c;
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/dimens.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-sw720dp-land/dimens.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\dimens.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw720dp-land\dimens.xml 
          */
         public static final int activity_horizontal_margin=0x7f07000d;
         public static final int activity_vertical_margin=0x7f07000e;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
+         */
+        public static final int com_facebook_loginfragment_profile_picture_height=0x7f07000f;
+        public static final int com_facebook_loginfragment_profile_picture_width=0x7f070010;
+        public static final int com_facebook_loginview_height=0x7f070011;
+        public static final int com_facebook_loginview_padding_bottom=0x7f070012;
+        public static final int com_facebook_loginview_padding_left=0x7f070013;
+        public static final int com_facebook_loginview_padding_right=0x7f070014;
+        public static final int com_facebook_loginview_padding_top=0x7f070015;
+        public static final int com_facebook_loginview_text_size=0x7f070016;
+        public static final int com_facebook_loginview_width=0x7f070017;
+        public static final int com_facebook_profilepictureview_preset_size_large=0x7f070018;
+        public static final int com_facebook_profilepictureview_preset_size_normal=0x7f070019;
+        public static final int com_facebook_profilepictureview_preset_size_small=0x7f07001a;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\dimens.xml 
+         */
+        public static final int left_and_right_margin=0x7f07001b;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\dimens.xml 
+         */
+        public static final int list_view_width=0x7f07001f;
+        public static final int top_and_bottom_margin=0x7f07001c;
     }
     public static final class drawable {
         public static final int abs__ab_bottom_solid_dark_holo=0x7f020000;
@@ -839,67 +1008,144 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_dark=0x7f02006d;
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006e;
         public static final int abs__toast_frame=0x7f02006f;
-        public static final int ic_launcher=0x7f020070;
+        public static final int card_background=0x7f020070;
+        public static final int com_facebook_button_check=0x7f020071;
+        public static final int com_facebook_button_check_off=0x7f020072;
+        public static final int com_facebook_button_check_on=0x7f020073;
+        public static final int com_facebook_button_grey_focused=0x7f020074;
+        public static final int com_facebook_button_grey_normal=0x7f020075;
+        public static final int com_facebook_button_grey_pressed=0x7f020076;
+        public static final int com_facebook_close=0x7f020077;
+        public static final int com_facebook_icon=0x7f020078;
+        public static final int com_facebook_list_divider=0x7f020079;
+        public static final int com_facebook_list_section_header_background=0x7f02007a;
+        public static final int com_facebook_loginbutton_blue=0x7f02007b;
+        public static final int com_facebook_loginbutton_blue_focused=0x7f02007c;
+        public static final int com_facebook_loginbutton_blue_normal=0x7f02007d;
+        public static final int com_facebook_loginbutton_blue_pressed=0x7f02007e;
+        public static final int com_facebook_loginbutton_silver=0x7f02007f;
+        public static final int com_facebook_loginfragment_background_gradient=0x7f020080;
+        public static final int com_facebook_logo=0x7f020081;
+        public static final int com_facebook_picker_item_background=0x7f020082;
+        public static final int com_facebook_picker_list_focused=0x7f020083;
+        public static final int com_facebook_picker_list_longpressed=0x7f020084;
+        public static final int com_facebook_picker_list_pressed=0x7f020085;
+        public static final int com_facebook_picker_list_selector=0x7f020086;
+        public static final int com_facebook_picker_list_selector_background_transition=0x7f020087;
+        public static final int com_facebook_picker_list_selector_disabled=0x7f020088;
+        public static final int com_facebook_picker_top_button=0x7f020089;
+        public static final int com_facebook_place_default_icon=0x7f02008a;
+        public static final int com_facebook_profile_default_icon=0x7f02008b;
+        public static final int com_facebook_profile_picture_blank_portrait=0x7f02008c;
+        public static final int com_facebook_profile_picture_blank_square=0x7f02008d;
+        public static final int com_facebook_top_background=0x7f02008e;
+        public static final int com_facebook_top_button=0x7f02008f;
+        public static final int content_discard=0x7f020090;
+        public static final int content_edit=0x7f020091;
+        public static final int content_new=0x7f020092;
+        public static final int ic_launcher=0x7f020093;
+        public static final int navigation_refresh=0x7f020094;
     }
     public static final class id {
-        public static final int abs__action_bar=0x7f060020;
-        public static final int abs__action_bar_container=0x7f06001f;
-        public static final int abs__action_bar_subtitle=0x7f060011;
-        public static final int abs__action_bar_title=0x7f060010;
-        public static final int abs__action_context_bar=0x7f060021;
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
+        public static final int abs__action_bar=0x7f060022;
+        public static final int abs__action_bar_container=0x7f060021;
+        public static final int abs__action_bar_subtitle=0x7f060013;
+        public static final int abs__action_bar_title=0x7f060012;
+        public static final int abs__action_context_bar=0x7f060023;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
          */
-        public static final int abs__action_menu_divider=0x7f06000a;
-        public static final int abs__action_menu_presenter=0x7f06000b;
-        public static final int abs__action_mode_bar=0x7f060025;
-        public static final int abs__action_mode_bar_stub=0x7f060024;
-        public static final int abs__action_mode_close_button=0x7f060014;
-        public static final int abs__activity_chooser_view_content=0x7f060015;
-        public static final int abs__checkbox=0x7f06001c;
-        public static final int abs__content=0x7f060022;
-        public static final int abs__default_activity_button=0x7f060018;
-        public static final int abs__expand_activities_button=0x7f060016;
-        public static final int abs__home=0x7f06000c;
-        public static final int abs__icon=0x7f06001a;
-        public static final int abs__image=0x7f060017;
-        public static final int abs__imageButton=0x7f060012;
-        public static final int abs__list_item=0x7f060019;
-        public static final int abs__progress_circular=0x7f06000d;
-        public static final int abs__progress_horizontal=0x7f06000e;
-        public static final int abs__radio=0x7f06001d;
-        public static final int abs__search_badge=0x7f060028;
-        public static final int abs__search_bar=0x7f060027;
-        public static final int abs__search_button=0x7f060029;
-        public static final int abs__search_close_btn=0x7f06002e;
-        public static final int abs__search_edit_frame=0x7f06002a;
-        public static final int abs__search_go_btn=0x7f060030;
-        public static final int abs__search_mag_icon=0x7f06002b;
-        public static final int abs__search_plate=0x7f06002c;
-        public static final int abs__search_src_text=0x7f06002d;
-        public static final int abs__search_voice_btn=0x7f060031;
-        public static final int abs__shortcut=0x7f06001e;
-        public static final int abs__split_action_bar=0x7f060023;
-        public static final int abs__submit_area=0x7f06002f;
-        public static final int abs__textButton=0x7f060013;
-        public static final int abs__title=0x7f06001b;
-        public static final int abs__up=0x7f06000f;
-        public static final int action_settings=0x7f060032;
+        public static final int abs__action_menu_divider=0x7f06000c;
+        public static final int abs__action_menu_presenter=0x7f06000d;
+        public static final int abs__action_mode_bar=0x7f060027;
+        public static final int abs__action_mode_bar_stub=0x7f060026;
+        public static final int abs__action_mode_close_button=0x7f060016;
+        public static final int abs__activity_chooser_view_content=0x7f060017;
+        public static final int abs__checkbox=0x7f06001e;
+        public static final int abs__content=0x7f060024;
+        public static final int abs__default_activity_button=0x7f06001a;
+        public static final int abs__expand_activities_button=0x7f060018;
+        public static final int abs__home=0x7f06000e;
+        public static final int abs__icon=0x7f06001c;
+        public static final int abs__image=0x7f060019;
+        public static final int abs__imageButton=0x7f060014;
+        public static final int abs__list_item=0x7f06001b;
+        public static final int abs__progress_circular=0x7f06000f;
+        public static final int abs__progress_horizontal=0x7f060010;
+        public static final int abs__radio=0x7f06001f;
+        public static final int abs__search_badge=0x7f06002a;
+        public static final int abs__search_bar=0x7f060029;
+        public static final int abs__search_button=0x7f06002b;
+        public static final int abs__search_close_btn=0x7f060030;
+        public static final int abs__search_edit_frame=0x7f06002c;
+        public static final int abs__search_go_btn=0x7f060032;
+        public static final int abs__search_mag_icon=0x7f06002d;
+        public static final int abs__search_plate=0x7f06002e;
+        public static final int abs__search_src_text=0x7f06002f;
+        public static final int abs__search_voice_btn=0x7f060033;
+        public static final int abs__shortcut=0x7f060020;
+        public static final int abs__split_action_bar=0x7f060025;
+        public static final int abs__submit_area=0x7f060031;
+        public static final int abs__textButton=0x7f060015;
+        public static final int abs__title=0x7f06001d;
+        public static final int abs__up=0x7f060011;
+        public static final int action_add=0x7f060059;
+        public static final int action_logout=0x7f06005b;
+        public static final int action_refresh=0x7f06005a;
+        public static final int action_settings=0x7f060058;
+        public static final int allGroupsFragment=0x7f060034;
+        public static final int allGroupsListView=0x7f060050;
+        public static final int com_facebook_loginfragment_login_button=0x7f06003b;
+        public static final int com_facebook_loginfragment_logo_image=0x7f060039;
+        public static final int com_facebook_loginfragment_profile_name=0x7f06003a;
+        public static final int com_facebook_picker_activity_circle=0x7f060038;
+        public static final int com_facebook_picker_checkbox=0x7f06003d;
+        public static final int com_facebook_picker_checkbox_stub=0x7f060041;
+        public static final int com_facebook_picker_divider=0x7f060045;
+        public static final int com_facebook_picker_done_button=0x7f060044;
+        public static final int com_facebook_picker_image=0x7f06003e;
+        public static final int com_facebook_picker_list_section_header=0x7f060042;
+        public static final int com_facebook_picker_list_view=0x7f060037;
+        public static final int com_facebook_picker_profile_pic_stub=0x7f06003f;
+        public static final int com_facebook_picker_row_activity_circle=0x7f06003c;
+        public static final int com_facebook_picker_title=0x7f060040;
+        public static final int com_facebook_picker_title_bar=0x7f060047;
+        public static final int com_facebook_picker_title_bar_stub=0x7f060046;
+        public static final int com_facebook_picker_top_bar=0x7f060043;
+        public static final int com_facebook_placepickerfragment_search_box_stub=0x7f060048;
+        public static final int description=0x7f060057;
         public static final int disableHome=0x7f060008;
-        public static final int edit_query=0x7f060026;
+        public static final int edit_name=0x7f06004b;
+        public static final int edit_query=0x7f060028;
+        public static final int facebookLogin=0x7f060035;
+        public static final int groupTitle=0x7f060053;
         public static final int homeAsUp=0x7f060005;
+        public static final int large=0x7f06000b;
         public static final int listMode=0x7f060001;
+        public static final int listView=0x7f060052;
+        public static final int newGroupEditText=0x7f06004c;
+        public static final int newSourceDescription=0x7f06004e;
+        public static final int newSourceRss=0x7f06004f;
+        public static final int newSourceTitle=0x7f06004d;
+        public static final int newsGroupFragment=0x7f060036;
+        public static final int newsGroupListView=0x7f060051;
+        public static final int newsSourceTitle=0x7f060056;
         public static final int normal=0x7f060000;
+        public static final int numberOfGroups=0x7f060054;
+        public static final int numberOfNews=0x7f060055;
+        public static final int picker_subtitle=0x7f06004a;
+        public static final int search_box=0x7f060049;
         public static final int showCustom=0x7f060007;
         public static final int showHome=0x7f060004;
         public static final int showTitle=0x7f060006;
+        public static final int small=0x7f06000a;
         public static final int tabMode=0x7f060002;
         public static final int useLogo=0x7f060003;
         public static final int wrap_content=0x7f060009;
     }
     public static final class integer {
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-w360dp/values.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-w500dp/values.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-w600dp/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-w360dp\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-w500dp\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-w600dp\values.xml 
          */
         public static final int abs__max_action_buttons=0x7f080000;
     }
@@ -925,12 +1171,35 @@ containing a value of this type.
         public static final int abs__search_dropdown_item_icons_2line=0x7f030012;
         public static final int abs__search_view=0x7f030013;
         public static final int abs__simple_dropdown_hint=0x7f030014;
-        public static final int activity_login=0x7f030015;
-        public static final int sherlock_spinner_dropdown_item=0x7f030016;
-        public static final int sherlock_spinner_item=0x7f030017;
+        public static final int activity_allgroups=0x7f030015;
+        public static final int activity_login=0x7f030016;
+        public static final int activity_newsgroup=0x7f030017;
+        public static final int com_facebook_friendpickerfragment=0x7f030018;
+        public static final int com_facebook_loginfragment=0x7f030019;
+        public static final int com_facebook_picker_activity_circle_row=0x7f03001a;
+        public static final int com_facebook_picker_checkbox=0x7f03001b;
+        public static final int com_facebook_picker_image=0x7f03001c;
+        public static final int com_facebook_picker_list_row=0x7f03001d;
+        public static final int com_facebook_picker_list_section_header=0x7f03001e;
+        public static final int com_facebook_picker_search_box=0x7f03001f;
+        public static final int com_facebook_picker_title_bar=0x7f030020;
+        public static final int com_facebook_picker_title_bar_stub=0x7f030021;
+        public static final int com_facebook_placepickerfragment=0x7f030022;
+        public static final int com_facebook_placepickerfragment_list_row=0x7f030023;
+        public static final int dialog_addnewgroup=0x7f030024;
+        public static final int dialog_addnewsource=0x7f030025;
+        public static final int fragment_allgroups=0x7f030026;
+        public static final int fragment_newsgroup=0x7f030027;
+        public static final int fragment_newsitem=0x7f030028;
+        public static final int list_row_allgroups=0x7f030029;
+        public static final int list_row_newsgroup=0x7f03002a;
+        public static final int sherlock_spinner_dropdown_item=0x7f03002b;
+        public static final int sherlock_spinner_item=0x7f03002c;
     }
     public static final class menu {
         public static final int login=0x7f0b0000;
+        public static final int menu_allgroups=0x7f0b0001;
+        public static final int menu_newsgroup=0x7f0b0002;
     }
     public static final class string {
         public static final int abs__action_bar_home_description=0x7f090000;
@@ -946,33 +1215,85 @@ containing a value of this type.
         public static final int abs__searchview_description_voice=0x7f09000a;
         public static final int abs__shareactionprovider_share_with=0x7f09000b;
         public static final int abs__shareactionprovider_share_with_application=0x7f09000c;
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml 
          */
         public static final int action_settings=0x7f09000d;
-        public static final int app_name=0x7f09000e;
-        public static final int hello_world=0x7f09000f;
+        public static final int add=0x7f09000e;
+        public static final int add_dialog_fragment_feedadress_source=0x7f09000f;
+        public static final int add_dialog_fragment_feeddescription_source=0x7f090010;
+        public static final int add_dialog_fragment_feedtitle_source=0x7f090011;
+        public static final int add_dialog_fragment_message_group=0x7f090012;
+        public static final int add_dialog_fragment_ok=0x7f090013;
+        public static final int add_dialog_fragment_title_group=0x7f090014;
+        public static final int add_dialog_fragment_title_source=0x7f090015;
+        public static final int app_id=0x7f090016;
+        public static final int app_name=0x7f090017;
+        public static final int cancel=0x7f090018;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
+         */
+        public static final int com_facebook_choose_friends=0x7f090019;
+        public static final int com_facebook_dialogloginactivity_ok_button=0x7f09001a;
+        public static final int com_facebook_loading=0x7f09001b;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-es\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-he\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-iw\values.xml 
+         */
+        public static final int com_facebook_loginfragment_log_in_button=0x7f09001c;
+        public static final int com_facebook_loginfragment_logged_in=0x7f09001d;
+        public static final int com_facebook_loginfragment_not_logged_in=0x7f09001e;
+        public static final int com_facebook_loginview_cancel_action=0x7f09001f;
+        public static final int com_facebook_loginview_log_in_button=0x7f090020;
+        public static final int com_facebook_loginview_log_out_action=0x7f090021;
+        public static final int com_facebook_loginview_log_out_button=0x7f090022;
+        public static final int com_facebook_loginview_logged_in_as=0x7f090023;
+        public static final int com_facebook_loginview_logged_in_using_facebook=0x7f090024;
+        public static final int com_facebook_logo_content_description=0x7f090025;
+        public static final int com_facebook_nearby=0x7f090026;
+        public static final int com_facebook_picker_done_button_text=0x7f090027;
+        public static final int com_facebook_placepicker_subtitle_catetory_only_format=0x7f090028;
+        public static final int com_facebook_placepicker_subtitle_format=0x7f090029;
+        public static final int com_facebook_placepicker_subtitle_were_here_only_format=0x7f09002a;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml 
+         */
+        public static final int delete=0x7f09002b;
+        public static final int delete_dialog_fragment_message=0x7f09002c;
+        public static final int delete_dialog_fragment_title=0x7f09002d;
+        public static final int feed=0x7f09002e;
+        public static final int feeds=0x7f09002f;
+        public static final int group=0x7f090030;
+        public static final int groups=0x7f090031;
+        public static final int login_facebook=0x7f090032;
+        public static final int login_message=0x7f090033;
+        public static final int login_microsoft=0x7f090034;
+        public static final int logout=0x7f090035;
+        public static final int lorem_w_5=0x7f090036;
+        public static final int ok=0x7f090037;
+        public static final int rename=0x7f090038;
+        public static final int two_digit_int=0x7f090039;
+        public static final int update_data=0x7f09003a;
     }
     public static final class style {
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/styles.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\styles.xml 
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-v11/styles.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-v11\styles.xml 
  API 11 theme customizations can go here. 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-v14/styles.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-v14\styles.xml 
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f0a0000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0a0001;
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
          */
         public static final int Sherlock___TextAppearance_Small=0x7f0a0002;
-        /**  From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-v11/values.xml 
- From: file:/C:/Programming/Android/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-v14/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-v11\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-v14\values.xml 
          */
         public static final int Sherlock___Theme=0x7f0a0003;
         public static final int Sherlock___Theme_DarkActionBar=0x7f0a0004;
@@ -1062,9 +1383,13 @@ containing a value of this type.
         public static final int Widget_Sherlock_SearchAutoCompleteTextView=0x7f0a0058;
         public static final int Widget_Sherlock_Spinner_DropDown_ActionBar=0x7f0a0059;
         public static final int Widget_Sherlock_TextView_SpinnerItem=0x7f0a005a;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
+         */
+        public static final int com_facebook_loginview_default_style=0x7f0a005b;
+        public static final int com_facebook_loginview_silver_style=0x7f0a005c;
     }
     public static final class styleable {
-        /** Attributes that can be used with a SherlockActionBar.
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -3303,5 +3628,345 @@ containing a value of this type.
           @attr name android:focusable
         */
         public static final int SherlockView_android_focusable = 0;
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_facebook_friend_picker_fragment_multi_select com.vladstoick.stiridinromania:multi_select}</code></td><td></td></tr>
+           </table>
+           @see #com_facebook_friend_picker_fragment_multi_select
+         */
+        public static final int[] com_facebook_friend_picker_fragment = {
+            0x7f010062
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#multi_select}
+          attribute's value can be found in the {@link #com_facebook_friend_picker_fragment} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:multi_select
+        */
+        public static final int com_facebook_friend_picker_fragment_multi_select = 0;
+        /** Attributes that can be used with a com_facebook_login_view.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_facebook_login_view_confirm_logout com.vladstoick.stiridinromania:confirm_logout}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_fetch_user_info com.vladstoick.stiridinromania:fetch_user_info}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_login_text com.vladstoick.stiridinromania:login_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_logout_text com.vladstoick.stiridinromania:logout_text}</code></td><td></td></tr>
+           </table>
+           @see #com_facebook_login_view_confirm_logout
+           @see #com_facebook_login_view_fetch_user_info
+           @see #com_facebook_login_view_login_text
+           @see #com_facebook_login_view_logout_text
+         */
+        public static final int[] com_facebook_login_view = {
+            0x7f010063, 0x7f010064, 0x7f010065, 0x7f010066
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#confirm_logout}
+          attribute's value can be found in the {@link #com_facebook_login_view} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:confirm_logout
+        */
+        public static final int com_facebook_login_view_confirm_logout = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#fetch_user_info}
+          attribute's value can be found in the {@link #com_facebook_login_view} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:fetch_user_info
+        */
+        public static final int com_facebook_login_view_fetch_user_info = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#login_text}
+          attribute's value can be found in the {@link #com_facebook_login_view} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:login_text
+        */
+        public static final int com_facebook_login_view_login_text = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#logout_text}
+          attribute's value can be found in the {@link #com_facebook_login_view} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:logout_text
+        */
+        public static final int com_facebook_login_view_logout_text = 3;
+        /** Attributes that can be used with a com_facebook_picker_fragment.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_background com.vladstoick.stiridinromania:done_button_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_text com.vladstoick.stiridinromania:done_button_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_extra_fields com.vladstoick.stiridinromania:extra_fields}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_show_pictures com.vladstoick.stiridinromania:show_pictures}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_show_title_bar com.vladstoick.stiridinromania:show_title_bar}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_title_bar_background com.vladstoick.stiridinromania:title_bar_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_title_text com.vladstoick.stiridinromania:title_text}</code></td><td></td></tr>
+           </table>
+           @see #com_facebook_picker_fragment_done_button_background
+           @see #com_facebook_picker_fragment_done_button_text
+           @see #com_facebook_picker_fragment_extra_fields
+           @see #com_facebook_picker_fragment_show_pictures
+           @see #com_facebook_picker_fragment_show_title_bar
+           @see #com_facebook_picker_fragment_title_bar_background
+           @see #com_facebook_picker_fragment_title_text
+         */
+        public static final int[] com_facebook_picker_fragment = {
+            0x7f010067, 0x7f010068, 0x7f010069, 0x7f01006a,
+            0x7f01006b, 0x7f01006c, 0x7f01006d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#done_button_background}
+          attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.vladstoick.stiridinromania:done_button_background
+        */
+        public static final int com_facebook_picker_fragment_done_button_background = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#done_button_text}
+          attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:done_button_text
+        */
+        public static final int com_facebook_picker_fragment_done_button_text = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#extra_fields}
+          attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:extra_fields
+        */
+        public static final int com_facebook_picker_fragment_extra_fields = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#show_pictures}
+          attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:show_pictures
+        */
+        public static final int com_facebook_picker_fragment_show_pictures = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#show_title_bar}
+          attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:show_title_bar
+        */
+        public static final int com_facebook_picker_fragment_show_title_bar = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#title_bar_background}
+          attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.vladstoick.stiridinromania:title_bar_background
+        */
+        public static final int com_facebook_picker_fragment_title_bar_background = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#title_text}
+          attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:title_text
+        */
+        public static final int com_facebook_picker_fragment_title_text = 3;
+        /** Attributes that can be used with a com_facebook_place_picker_fragment.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_radius_in_meters com.vladstoick.stiridinromania:radius_in_meters}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_results_limit com.vladstoick.stiridinromania:results_limit}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_search_text com.vladstoick.stiridinromania:search_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_show_search_box com.vladstoick.stiridinromania:show_search_box}</code></td><td></td></tr>
+           </table>
+           @see #com_facebook_place_picker_fragment_radius_in_meters
+           @see #com_facebook_place_picker_fragment_results_limit
+           @see #com_facebook_place_picker_fragment_search_text
+           @see #com_facebook_place_picker_fragment_show_search_box
+         */
+        public static final int[] com_facebook_place_picker_fragment = {
+            0x7f01006e, 0x7f01006f, 0x7f010070, 0x7f010071
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#radius_in_meters}
+          attribute's value can be found in the {@link #com_facebook_place_picker_fragment} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:radius_in_meters
+        */
+        public static final int com_facebook_place_picker_fragment_radius_in_meters = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#results_limit}
+          attribute's value can be found in the {@link #com_facebook_place_picker_fragment} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:results_limit
+        */
+        public static final int com_facebook_place_picker_fragment_results_limit = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#search_text}
+          attribute's value can be found in the {@link #com_facebook_place_picker_fragment} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:search_text
+        */
+        public static final int com_facebook_place_picker_fragment_search_text = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#show_search_box}
+          attribute's value can be found in the {@link #com_facebook_place_picker_fragment} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:show_search_box
+        */
+        public static final int com_facebook_place_picker_fragment_show_search_box = 3;
+        /** Attributes that can be used with a com_facebook_profile_picture_view.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_facebook_profile_picture_view_is_cropped com.vladstoick.stiridinromania:is_cropped}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_profile_picture_view_preset_size com.vladstoick.stiridinromania:preset_size}</code></td><td></td></tr>
+           </table>
+           @see #com_facebook_profile_picture_view_is_cropped
+           @see #com_facebook_profile_picture_view_preset_size
+         */
+        public static final int[] com_facebook_profile_picture_view = {
+            0x7f010072, 0x7f010073
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#is_cropped}
+          attribute's value can be found in the {@link #com_facebook_profile_picture_view} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.vladstoick.stiridinromania:is_cropped
+        */
+        public static final int com_facebook_profile_picture_view_is_cropped = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.vladstoick.stiridinromania.R.attr#preset_size}
+          attribute's value can be found in the {@link #com_facebook_profile_picture_view} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>small</code></td><td>-2</td><td> Keep in sync with constants in ProfilePictureView </td></tr>
+<tr><td><code>normal</code></td><td>-3</td><td></td></tr>
+<tr><td><code>large</code></td><td>-4</td><td></td></tr>
+</table>
+          @attr name com.vladstoick.stiridinromania:preset_size
+        */
+        public static final int com_facebook_profile_picture_view_preset_size = 0;
     };
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/edit_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:padding="10dp"
+              android:orientation="vertical">
+    <EditText
+            android:hint="@string/add_dialog_fragment_feedtitle_source"
+            android:id="@+id/newSourceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:imeOptions="actionDone"/>
+    <EditText
+            android:hint="@string/add_dialog_fragment_feeddescription_source"
+            android:id="@+id/newSourceDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            />
+    <EditText
+            android:id="@+id/newSourceRss"
+            android:hint="@string/add_dialog_fragment_feedadress_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"/>
+</LinearLayout>

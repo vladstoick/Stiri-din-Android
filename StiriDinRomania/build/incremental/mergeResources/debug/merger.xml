@@ -1598,11 +1598,35 @@
                     </item>
                 </style>
 
+                <attr
+                    name="windowMinWidthMinor"
+                    format="dimension" />
+
                 <style name="Widget.Sherlock.Light.ActionButton.Overflow" >
                     <item name="android:src">
 @drawable/abs__ic_menu_moreoverflow_holo_light
                     </item>
                 </style>
+
+                <attr
+                    name="listPreferredItemPaddingRight"
+                    format="dimension" />
+                <attr
+                    name="actionBarSize"
+                    format="dimension" >
+                    <enum
+                        name="wrap_content"
+                        value="0" />
+                </attr>
+                <attr
+                    name="actionBarStyle"
+                    format="reference" />
+                <attr
+                    name="textAppearanceSearchResultTitle"
+                    format="reference" />
+                <attr
+                    name="searchViewSearchIcon"
+                    format="reference" />
 
                 <item
                     name="abs__action_menu_presenter"
@@ -1630,17 +1654,33 @@ bold
                     type="id"/>
 
                 <attr
+                    name="actionModeStyle"
+                    format="reference" />
+                <attr
                     name="titleTextStyle"
                     format="reference" />
 
                 <dimen name="abs__dropdownitem_text_padding_right" >8dip
                 </dimen>
 
+                <attr
+                    name="actionBarSplitStyle"
+                    format="reference" />
+
                 <style name="Widget.Sherlock.Light.ActionBar.TabBar.Inverse" />
 
                 <attr
+                    name="actionBarDivider"
+                    format="reference" />
+                <attr
+                    name="itemBackground"
+                    format="color|reference" />
+                <attr
                     name="divider"
                     format="reference" />
+                <attr
+                    name="backgroundStacked"
+                    format="reference|color" />
 
                 <dimen name="abs__action_bar_title_text_size" >18dp
                 </dimen>
@@ -1678,6 +1718,13 @@ bold
                     </item>
                 </style>
 
+                <attr
+                    name="spinnerDropDownItemStyle"
+                    format="reference" />
+                <attr
+                    name="searchViewCloseIcon"
+                    format="reference" />
+
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Title.Inverse"
                     parent="Widget" >
@@ -1688,6 +1735,10 @@ bold
 ?android:attr/textColorPrimaryInverse
                     </item>
                 </style>
+
+                <attr
+                    name="selectableItemBackground"
+                    format="reference" />
 
                 <style
                     name="TextAppearance.Sherlock"
@@ -1717,6 +1768,10 @@ wrap_content
                     name="Widget.Sherlock.Light.ActionButton"
                     parent="Widget.Sherlock.ActionButton" />
 
+                <attr
+                    name="searchDropdownBackground"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.TextView.SpinnerItem"
                     parent="Widget" >
@@ -1737,8 +1792,25 @@ wrap_content
                     </item>
                 </style>
 
+                <attr
+                    name="actionMenuTextAppearance"
+                    format="reference" />
+
                 <dimen name="abs__dropdownitem_text_padding_left" >8dip
                 </dimen>
+
+                <attr
+                    name="actionBarWidgetTheme"
+                    format="reference" />
+                <attr
+                    name="activityChooserViewStyle"
+                    format="reference" />
+                <attr
+                    name="subtitle"
+                    format="string" />
+                <attr
+                    name="actionMenuTextColor"
+                    format="color|reference" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionBar.Title.Inverse"
@@ -1751,6 +1823,9 @@ wrap_content
                     </item>
                 </style>
 
+                <attr
+                    name="windowMinWidthMajor"
+                    format="dimension" />
                 <attr
                     name="subtitleTextStyle"
                     format="reference" />
@@ -1869,8 +1944,20 @@ true
                     </item>
                 </style>
 
+                <attr
+                    name="title"
+                    format="string" />
+                <attr
+                    name="itemPadding"
+                    format="dimension" />
+
                 <string name="abs__activity_chooser_view_see_all" >See all...
                 </string>
+
+                <attr
+                    name="actionModeCloseDrawable"
+                    format="reference" />
+
                 <string name="abs__shareactionprovider_share_with_application" >Share with 
 <ns1:g
                         id="application_name"
@@ -1878,11 +1965,19 @@ true
 %s
                     </ns1:g></string>
 
+                <attr
+                    name="searchViewTextField"
+                    format="reference" />
+
                 <dimen name="abs__search_view_preferred_width" >320dip
                 </dimen>
 
                 <string name="abs__searchview_description_search" >Search
                 </string>
+
+                <attr
+                    name="actionModeBackground"
+                    format="reference" />
 
                 <style
                     name="Sherlock.__Theme"
@@ -1904,6 +1999,13 @@ false
                     </item>
                 </style>
 
+                <attr
+                    name="textAppearanceSearchResultSubtitle"
+                    format="reference" />
+                <attr
+                    name="actionOverflowButtonStyle"
+                    format="reference" />
+
                 <declare-styleable name="SherlockActionMode" >
 
                     <!-- Specifies a style to use for title text. -->
@@ -1918,11 +2020,22 @@ false
                     <attr name="height" />
                 </declare-styleable>
 
+                <attr
+                    name="homeLayout"
+                    format="reference" />
+                <attr
+                    name="dividerVertical"
+                    format="reference" />
+
                 <style name="Widget.Sherlock.Light.ActionButton.CloseMode" >
                     <item name="android:background">
 @drawable/abs__btn_cab_done_holo_light
                     </item>
                 </style>
+
+                <attr
+                    name="textAppearanceSmallPopupMenu"
+                    format="reference" />
 
                 <style
                     name="Sherlock.__Theme.Light"
@@ -1978,6 +2091,9 @@ false
                 <attr
                     name="backgroundSplit"
                     format="reference|color" />
+                <attr
+                    name="actionModeShareDrawable"
+                    format="reference" />
 
                 <declare-styleable name="SherlockMenuItem" >
 
@@ -2073,12 +2189,33 @@ false
                     <attr name="android:minWidth" />
                 </declare-styleable>
 
+                <attr
+                    name="actionBarTabStyle"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.DropDownItem.Spinner"
                     parent="Sherlock.__Widget.Holo.DropDownItem" />
 
+                <attr
+                    name="activatedBackgroundIndicator"
+                    format="reference" />
+                <attr
+                    name="queryHint"
+                    format="string" />
+                <attr
+                    name="actionBarItemBackground"
+                    format="reference" />
+
                 <color name="abs__bright_foreground_holo_dark" >@color/abs__background_holo_light
                 </color>
+
+                <attr
+                    name="itemIconDisabledAlpha"
+                    format="float" />
+                <attr
+                    name="listPopupWindowStyle"
+                    format="reference" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionBar.Title"
@@ -2091,8 +2228,16 @@ false
                     </item>
                 </style>
 
+                <attr
+                    name="indeterminateProgressStyle"
+                    format="reference" />
+
                 <string name="abs__searchview_description_voice" >Voice search
                 </string>
+
+                <attr
+                    name="logo"
+                    format="reference" />
 
                 <style
                     name="Sherlock.__Widget.Holo.Spinner"
@@ -2122,6 +2267,10 @@ dropdown
 true
                     </item>
                 </style>
+
+                <attr
+                    name="listPreferredItemHeightSmall"
+                    format="dimension" />
 
                 <declare-styleable name="SherlockActionBar" >
 
@@ -2163,64 +2312,31 @@ true
                             value="0x20" />
                     </attr>
                     <!-- Specifies title text used for navigationMode="normal" -->
-                    <attr
-                        name="title"
-                        format="string" />
                     <!-- Specifies subtitle text used for navigationMode="normal" -->
-                    <attr
-                        name="subtitle"
-                        format="string" />
                     <!-- Specifies a style to use for title text. -->
                     <attr name="titleTextStyle" />
                     <!-- Specifies a style to use for subtitle text. -->
                     <attr name="subtitleTextStyle" />
                     <!-- Specifies the drawable used for the application icon. -->
-                    <attr
-                        name="icon"
-                        format="reference" />
                     <!-- Specifies the drawable used for the application logo. -->
-                    <attr
-                        name="logo"
-                        format="reference" />
                     <!-- Specifies the drawable used for item dividers. -->
                     <attr name="divider" />
                     <!-- Specifies a background drawable for the action bar. -->
                     <attr name="background" />
                     <!-- Specifies a background drawable for a second stacked row of the action bar. -->
-                    <attr
-                        name="backgroundStacked"
-                        format="reference|color" />
                     <!-- Specifies a background drawable for the bottom component of a split action bar. -->
                     <attr name="backgroundSplit" />
                     <!-- Specifies a layout for custom navigation. Overrides navigationMode. -->
-                    <attr
-                        name="customNavigationLayout"
-                        format="reference" />
                     <!-- Specifies a fixed height. -->
                     <attr name="height" />
                     <!-- Specifies a layout to use for the "home" section of the action bar. -->
-                    <attr
-                        name="homeLayout"
-                        format="reference" />
                     <!-- Specifies a style resource to use for an embedded progress bar. -->
-                    <attr
-                        name="progressBarStyle"
-                        format="reference" />
                     <!-- Specifies a style resource to use for an indeterminate progress spinner. -->
-                    <attr
-                        name="indeterminateProgressStyle"
-                        format="reference" />
                     <!-- Specifies the horizontal padding on either end for an embedded progress bar. -->
-                    <attr
-                        name="progressBarPadding"
-                        format="dimension" />
                     <!--
              Specifies padding that should be applied to the left and right sides of
              system-provided items in the bar.
                     -->
-                    <attr
-                        name="itemPadding"
-                        format="dimension" />
                 </declare-styleable>
                 <declare-styleable name="SherlockTheme" >
 
@@ -2229,31 +2345,13 @@ true
                     <!-- =================== -->
                     <eat-comment />
                     <!-- Default style for tabs within an action bar -->
-                    <attr
-                        name="actionBarTabStyle"
-                        format="reference" />
-                    <attr
-                        name="actionBarTabBarStyle"
-                        format="reference" />
-                    <attr
-                        name="actionBarTabTextStyle"
-                        format="reference" />
-                    <attr
-                        name="actionOverflowButtonStyle"
-                        format="reference" />
                     <!-- Reference to a style for the Action Bar -->
-                    <attr
-                        name="actionBarStyle"
-                        format="reference" />
                     <!--
              Reference to a style for the split Action Bar. This style
              controls the split component that holds the menu/action
              buttons. actionBarStyle is still used for the primary
              bar.
                     -->
-                    <attr
-                        name="actionBarSplitStyle"
-                        format="reference" />
                     <!--
              Reference to a theme that should be used to inflate widgets
              and layouts destined for the action bar. Most of the time
@@ -2263,72 +2361,28 @@ true
              can become important. If this is set to @null the current
              theme will be used.
                     -->
-                    <attr
-                        name="actionBarWidgetTheme"
-                        format="reference" />
                     <!--
              Size of the Action Bar, including the contextual
              bar used to present Action Modes.
                     -->
-                    <attr
-                        name="actionBarSize"
-                        format="dimension" >
-                        <enum
-                            name="wrap_content"
-                            value="0" />
-                    </attr>
                     <!-- Custom divider drawable to use for elements in the action bar. -->
-                    <attr
-                        name="actionBarDivider"
-                        format="reference" />
                     <!-- Custom item state list drawable background for action bar items. -->
-                    <attr
-                        name="actionBarItemBackground"
-                        format="reference" />
                     <!--
              TextAppearance style that will be applied to text that
              appears within action menu items.
                     -->
-                    <attr
-                        name="actionMenuTextAppearance"
-                        format="reference" />
                     <!-- Color for text that appears within action menu items. -->
-                    <attr
-                        name="actionMenuTextColor"
-                        format="color|reference" />
 
                     <!-- =================== -->
                     <!-- Action mode styles -->
                     <!-- =================== -->
                     <eat-comment />
-
-                    <attr
-                        name="actionModeStyle"
-                        format="reference" />
-                    <attr
-                        name="actionModeCloseButtonStyle"
-                        format="reference" />
                     <!-- Background drawable to use for action mode UI -->
-                    <attr
-                        name="actionModeBackground"
-                        format="reference" />
                     <!-- Background drawable to use for action mode UI in the lower split bar -->
-                    <attr
-                        name="actionModeSplitBackground"
-                        format="reference" />
                     <!-- Drawable to use for the close action mode button -->
-                    <attr
-                        name="actionModeCloseDrawable"
-                        format="reference" />
                     <!-- Drawable to use for the Share action button in WebView selection action modes -->
-                    <attr
-                        name="actionModeShareDrawable"
-                        format="reference" />
 
                     <!-- PopupWindow style to use for action modes when showing as a window overlay. -->
-                    <attr
-                        name="actionModePopupWindowStyle"
-                        format="reference" />
 
                     <!-- ============= -->
                     <!-- Button styles -->
@@ -2336,113 +2390,38 @@ true
                     <eat-comment />
 
                     <!-- Small Button style. -->
-                    <attr
-                        name="buttonStyleSmall"
-                        format="reference" />
 
                     <!-- Background drawable for standalone items that need focus/pressed states. -->
-                    <attr
-                        name="selectableItemBackground"
-                        format="reference" />
 
                     <!--
              This Drawable is overlaid over the foreground of the Window's content area, usually
              to place a shadow below the title.
                     -->
-                    <attr
-                        name="windowContentOverlay"
-                        format="reference" />
 
                     <!-- Text color, typeface, size, and style for the text inside of a popup menu. -->
-                    <attr
-                        name="textAppearanceLargePopupMenu"
-                        format="reference" />
 
                     <!-- Text color, typeface, size, and style for small text inside of a popup menu. -->
-                    <attr
-                        name="textAppearanceSmallPopupMenu"
-                        format="reference" />
 
                     <!-- Text color, typeface, size, and style for "small" text. Defaults to secondary text color. -->
-                    <attr
-                        name="textAppearanceSmall"
-                        format="reference" />
-                    <attr
-                        name="textColorPrimary"
-                        format="color" />
-                    <attr
-                        name="textColorPrimaryDisableOnly"
-                        format="color" />
-                    <attr
-                        name="textColorPrimaryInverse"
-                        format="color" />
-                    <attr
-                        name="spinnerItemStyle"
-                        format="reference" />
-                    <attr
-                        name="spinnerDropDownItemStyle"
-                        format="reference" />
 
                     <!-- ============================ -->
                     <!-- SearchView styles and assets -->
                     <!-- ============================ -->
                     <eat-comment />
                     <!-- SearchView AutoCompleteTextView style -->
-                    <attr
-                        name="searchAutoCompleteTextView"
-                        format="reference" />
                     <!-- SearchView dropdown background -->
-                    <attr
-                        name="searchDropdownBackground"
-                        format="reference" />
                     <!-- SearchView close button icon -->
-                    <attr
-                        name="searchViewCloseIcon"
-                        format="reference" />
                     <!-- SearchView Go button icon -->
-                    <attr
-                        name="searchViewGoIcon"
-                        format="reference" />
                     <!-- SearchView Search icon -->
-                    <attr
-                        name="searchViewSearchIcon"
-                        format="reference" />
                     <!-- SearchView Voice button icon -->
-                    <attr
-                        name="searchViewVoiceIcon"
-                        format="reference" />
                     <!-- SearchView query refinement icon -->
-                    <attr
-                        name="searchViewEditQuery"
-                        format="reference" />
                     <!-- SearchView query refinement icon background -->
-                    <attr
-                        name="searchViewEditQueryBackground"
-                        format="reference" />
                     <!-- SearchView text field background for the left section -->
-                    <attr
-                        name="searchViewTextField"
-                        format="reference" />
                     <!-- SearchView text field background for the right section -->
-                    <attr
-                        name="searchViewTextFieldRight"
-                        format="reference" />
                     <!-- Text color for urls in search suggestions, used by things like global search and the browser. @hide -->
-                    <attr
-                        name="textColorSearchUrl"
-                        format="reference|color" />
                     <!-- The list item height for search results. @hide -->
-                    <attr
-                        name="searchResultListItemHeight"
-                        format="dimension" />
                     <!-- Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color. -->
-                    <attr
-                        name="textAppearanceSearchResultTitle"
-                        format="reference" />
                     <!-- Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color. -->
-                    <attr
-                        name="textAppearanceSearchResultSubtitle"
-                        format="reference" />
 
                     <!-- =========== -->
                     <!-- List styles -->
@@ -2450,85 +2429,16 @@ true
                     <eat-comment />
 
                     <!-- A smaller, sleeker list item height. -->
-                    <attr
-                        name="listPreferredItemHeightSmall"
-                        format="dimension" />
 
                     <!-- The preferred padding along the left edge of list items. -->
-                    <attr
-                        name="listPreferredItemPaddingLeft"
-                        format="dimension" />
                     <!-- The preferred padding along the right edge of list items. -->
-                    <attr
-                        name="listPreferredItemPaddingRight"
-                        format="dimension" />
 
                     <!-- The preferred TextAppearance for the primary text of small list items. -->
-                    <attr
-                        name="textAppearanceListItemSmall"
-                        format="reference" />
-                    <attr
-                        name="windowMinWidthMajor"
-                        format="dimension" />
-                    <attr
-                        name="windowMinWidthMinor"
-                        format="dimension" />
 
                     <!-- Drawable to use for generic vertical dividers. -->
-                    <attr
-                        name="dividerVertical"
-                        format="reference" />
-                    <attr
-                        name="actionDropDownStyle"
-                        format="reference" />
-                    <attr
-                        name="actionButtonStyle"
-                        format="reference" />
-                    <attr
-                        name="homeAsUpIndicator"
-                        format="reference" />
-                    <attr
-                        name="dropDownListViewStyle"
-                        format="reference" />
-                    <attr
-                        name="popupMenuStyle"
-                        format="reference" />
-                    <attr
-                        name="dropdownListPreferredItemHeight"
-                        format="dimension" />
-                    <attr
-                        name="actionSpinnerItemStyle"
-                        format="reference" />
-                    <attr
-                        name="windowNoTitle"
-                        format="boolean" />
-                    <attr
-                        name="windowActionBar"
-                        format="boolean" />
-                    <attr
-                        name="windowActionBarOverlay"
-                        format="boolean" />
-                    <attr
-                        name="windowActionModeOverlay"
-                        format="boolean" />
-                    <attr
-                        name="windowSplitActionBar"
-                        format="boolean" />
-                    <attr
-                        name="listPopupWindowStyle"
-                        format="reference" />
 
                     <!-- Default ActivityChooserView style. -->
-                    <attr
-                        name="activityChooserViewStyle"
-                        format="reference" />
                     <!-- Drawable used as a background for activated items. -->
-                    <attr
-                        name="activatedBackgroundIndicator"
-                        format="reference" />
-                    <attr
-                        name="dropDownHintAppearance"
-                        format="reference" />
                 </declare-styleable>
 
                 <style name="Widget.Sherlock.ActionButton.Overflow" >
@@ -2589,9 +2499,17 @@ true
                     </item>
                 </style>
 
+                <attr
+                    name="actionModePopupWindowStyle"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.Light.ActionBar.TabView"
                     parent="Widget.Sherlock.ActionBar.TabView" />
+
+                <attr
+                    name="initialActivityCount"
+                    format="string" />
 
                 <dimen name="abs__action_button_min_width" >56dip
                 </dimen>
@@ -2629,6 +2547,13 @@ true
                     </item>
                 </style>
 
+                <attr
+                    name="searchViewVoiceIcon"
+                    format="reference" />
+                <attr
+                    name="textAppearanceLargePopupMenu"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.ActionBar.TabBar"
                     parent="Widget" >
@@ -2646,9 +2571,6 @@ middle
                 <declare-styleable name="SherlockActivityChooserView" >
 
                     <!-- The maximal number of items initially shown in the activity list. -->
-                    <attr
-                        name="initialActivityCount"
-                        format="string" />
                     <!--
              The drawable to show in the button for expanding the activities overflow popup.
              <strong>Note:</strong> Clients would like to set this drawable
@@ -2656,11 +2578,12 @@ middle
              example, if share activity is to be chosen the drawable should
              give a clue that sharing is to be performed.
                     -->
-                    <attr
-                        name="expandActivityOverflowButtonDrawable"
-                        format="reference" />
                     <attr name="android:background" />
                 </declare-styleable>
+
+                <attr
+                    name="windowAnimationStyle"
+                    format="reference" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.DropDownItem"
@@ -2679,6 +2602,10 @@ normal
                 <style
                     name="TextAppearance.Sherlock.Light.SearchResult"
                     parent="TextAppearance.Sherlock.SearchResult" />
+
+                <attr
+                    name="headerBackground"
+                    format="color|reference" />
 
                 <integer name="abs__max_action_buttons" >
 2
@@ -2750,6 +2677,10 @@ wrap_content
                 <dimen name="abs__dropdownitem_icon_width" >32dip
                 </dimen>
 
+                <attr
+                    name="dropdownListPreferredItemHeight"
+                    format="dimension" />
+
                 <style
                     name="TextAppearance.Sherlock.Light.Small"
                     parent="TextAppearance.Sherlock.Small" />
@@ -2757,38 +2688,18 @@ wrap_content
                 <declare-styleable name="SherlockMenuView" >
 
                     <!-- Default appearance of menu item text. -->
-                    <attr
-                        name="itemTextAppearance"
-                        format="reference" />
                     <!-- Default horizontal divider between rows of menu items. -->
-                    <attr
-                        name="horizontalDivider"
-                        format="reference" />
                     <!-- Default vertical divider between menu items. -->
-                    <attr
-                        name="verticalDivider"
-                        format="reference" />
                     <!-- Default background for the menu header. -->
-                    <attr
-                        name="headerBackground"
-                        format="color|reference" />
                     <!-- Default background for each menu item. -->
-                    <attr
-                        name="itemBackground"
-                        format="color|reference" />
                     <!-- Default animations for the menu. -->
-                    <attr
-                        name="windowAnimationStyle"
-                        format="reference" />
                     <!-- Default disabled icon alpha for each menu item that shows an icon. -->
-                    <attr
-                        name="itemIconDisabledAlpha"
-                        format="float" />
                     <!-- Whether space should be reserved in layout when an icon is missing. -->
-                    <attr
-                        name="preserveIconSpacing"
-                        format="boolean" />
                 </declare-styleable>
+
+                <attr
+                    name="dropDownListViewStyle"
+                    format="reference" />
 
                 <color name="abs__bright_foreground_holo_light" >@color/abs__background_holo_dark
                 </color>
@@ -2809,6 +2720,10 @@ wrap_content
 
                 <string name="abs__action_bar_up_description" >Navigate up
                 </string>
+
+                <attr
+                    name="windowActionModeOverlay"
+                    format="boolean" />
 
                 <style
                     name="Widget.Sherlock.PopupMenu"
@@ -2863,15 +2778,9 @@ center_horizontal
              The default state of the SearchView. If true, it will be iconified when not in
              use and expanded when clicked.
                     -->
-                    <attr
-                        name="iconifiedByDefault"
-                        format="boolean" />
                     <!-- An optional maximum width of the SearchView. -->
                     <attr name="android:maxWidth" />
                     <!-- An optional query hint string to be displayed in the empty query field. -->
-                    <attr
-                        name="queryHint"
-                        format="string" />
                     <!-- The IME options to set on the query text field. -->
                     <attr name="android:imeOptions" />
                     <!-- The input type to set on the query text field. -->
@@ -2908,6 +2817,10 @@ useLogo|showHome|showTitle
                     </item>
                 </style>
 
+                <attr
+                    name="actionModeSplitBackground"
+                    format="reference" />
+
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Subtitle"
                     parent="Widget" >
@@ -2930,6 +2843,10 @@ useLogo|showHome|showTitle
                     </item>
                 </style>
 
+                <attr
+                    name="textColorPrimaryInverse"
+                    format="color" />
+
                 <style
                     name="Widget.Sherlock.ProgressBar"
                     parent="android:Widget.ProgressBar" >
@@ -2944,9 +2861,20 @@ useLogo|showHome|showTitle
                 <string name="abs__searchview_description_submit" >Submit query
                 </string>
 
+                <attr
+                    name="searchAutoCompleteTextView"
+                    format="reference" />
+
                 <style
                     name="Sherlock.__Theme.DarkActionBar"
                     parent="Theme.Sherlock.Light" />
+
+                <attr
+                    name="textColorPrimary"
+                    format="color" />
+                <attr
+                    name="popupMenuStyle"
+                    format="reference" />
 
                 <string name="abs__activitychooserview_choose_application" >Choose an application
                 </string>
@@ -2956,6 +2884,10 @@ useLogo|showHome|showTitle
 14sp
                     </item>
                 </style>
+
+                <attr
+                    name="homeAsUpIndicator"
+                    format="reference" />
 
                 <item
                     name="abs__up"
@@ -3011,8 +2943,19 @@ useLogo|showHome|showTitle
 true
                 </bool>
 
+                <attr
+                    name="searchViewEditQueryBackground"
+                    format="reference" />
+
                 <string name="abs__shareactionprovider_share_with" >Share with
                 </string>
+
+                <attr
+                    name="preserveIconSpacing"
+                    format="boolean" />
+                <attr
+                    name="customNavigationLayout"
+                    format="reference" />
 
                 <declare-styleable name="SherlockView" >
                     <attr name="android:focusable" />
@@ -3044,6 +2987,13 @@ normal
                 <style
                     name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Small"
                     parent="TextAppearance.Sherlock.Widget.PopupMenu.Small" />
+
+                <attr
+                    name="textAppearanceListItemSmall"
+                    format="reference" />
+                <attr
+                    name="horizontalDivider"
+                    format="reference" />
 
                 <string name="abs__searchview_description_query" >Search query
                 </string>
@@ -3232,11 +3182,19 @@ false
                     </item>
                 </style>
 
+                <attr
+                    name="actionModeCloseButtonStyle"
+                    format="reference" />
+
                 <color name="abs__bright_foreground_disabled_holo_dark" >#ff4c4c4c
                 </color>
 
                 <string name="abs__action_bar_home_description" >Navigate home
                 </string>
+
+                <attr
+                    name="textColorSearchUrl"
+                    format="reference|color" />
 
                 <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
@@ -3457,6 +3415,10 @@ false
                     </item>
                 </style>
 
+                <attr
+                    name="listPreferredItemPaddingLeft"
+                    format="dimension" />
+
                 <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
 
@@ -3470,6 +3432,10 @@ false
 ?android:attr/textColorSecondary
                     </item>
                 </style>
+
+                <attr
+                    name="actionSpinnerItemStyle"
+                    format="reference" />
 
                 <style
                     name="Widget.Sherlock.Spinner.DropDown.ActionBar"
@@ -3512,6 +3478,10 @@ false
                     </item>
                 </style>
 
+                <attr
+                    name="actionBarTabBarStyle"
+                    format="reference" />
+
                 <bool name="abs__config_actionMenuItemAllCaps" >
 true
                 </bool>
@@ -3519,6 +3489,10 @@ true
                 <style
                     name="Widget.Sherlock.Light.ProgressBar"
                     parent="Widget.Sherlock.ProgressBar" />
+
+                <attr
+                    name="searchViewGoIcon"
+                    format="reference" />
 
                 <bool name="abs__split_action_bar_is_narrow" >
 true
@@ -3609,6 +3583,16 @@ center
                     <attr name="android:gravity" />
                 </declare-styleable>
 
+                <attr
+                    name="dropDownHintAppearance"
+                    format="reference" />
+                <attr
+                    name="buttonStyleSmall"
+                    format="reference" />
+                <attr
+                    name="spinnerItemStyle"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.ActionBar.TabText"
                     parent="Widget" >
@@ -3674,6 +3658,10 @@ marquee
                     name="abs__progress_horizontal"
                     type="id"/>
 
+                <attr
+                    name="textColorPrimaryDisableOnly"
+                    format="color" />
+
                 <style
                     name="Widget.Sherlock.ProgressBar.Horizontal"
                     parent="android:Widget.ProgressBar.Horizontal" >
@@ -3709,11 +3697,25 @@ center_vertical
                     </item>
                 </style>
 
+                <attr
+                    name="itemTextAppearance"
+                    format="reference" />
+                <attr
+                    name="progressBarPadding"
+                    format="dimension" />
+
                 <string name="abs__searchview_description_clear" >Clear query
                 </string>
 
                 <dimen name="abs__config_prefDialogWidth" >320dp
                 </dimen>
+
+                <attr
+                    name="verticalDivider"
+                    format="reference" />
+                <attr
+                    name="actionButtonStyle"
+                    format="reference" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Subtitle.Inverse"
@@ -3728,8 +3730,26 @@ center_vertical
 
                 <style name="Widget.Sherlock.Light.ActionBar.TabView.Inverse" />
 
+                <attr
+                    name="actionBarTabTextStyle"
+                    format="reference" />
+                <attr
+                    name="searchResultListItemHeight"
+                    format="dimension" />
+                <attr
+                    name="iconifiedByDefault"
+                    format="boolean" />
+                <attr
+                    name="windowActionBar"
+                    format="boolean" />
+
                 <dimen name="abs__search_view_text_min_width" >160dip
                 </dimen>
+
+                <attr
+                    name="windowNoTitle"
+                    format="boolean" />
+
                 <dimen name="abs__action_bar_subtitle_text_size" >14dp
                 </dimen>
 
@@ -3754,6 +3774,10 @@ center_vertical
 @style/TextAppearance.Sherlock.Widget.ActionMode.Subtitle
                     </item>
                 </style>
+
+                <attr
+                    name="windowSplitActionBar"
+                    format="boolean" />
 
                 <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
@@ -3799,6 +3823,10 @@ normal
                     </item>
                 </style>
 
+                <attr
+                    name="windowContentOverlay"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.Light.DropDownItem.Spinner"
                     parent="Sherlock.__Widget.Holo.DropDownItem" />
@@ -3823,13 +3851,31 @@ normal
                     </item>
                 </style>
 
+                <attr
+                    name="icon"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.ListView.DropDown"
                     parent="Sherlock.__Widget.Holo.ListView" />
 
+                <attr
+                    name="expandActivityOverflowButtonDrawable"
+                    format="reference" />
+                <attr
+                    name="progressBarStyle"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.ActivityChooserView"
                     parent="Sherlock.__Widget.ActivityChooserView" />
+
+                <attr
+                    name="actionDropDownStyle"
+                    format="reference" />
+                <attr
+                    name="searchViewTextFieldRight"
+                    format="reference" />
 
                 <style
                     name="Widget.Sherlock.ListPopupWindow"
@@ -3851,6 +3897,10 @@ wrap_content
                     </item>
                 </style>
 
+                <attr
+                    name="searchViewEditQuery"
+                    format="reference" />
+
                 <style
                     name="Widget.Sherlock.Light.ActionBar.TabText"
                     parent="Widget.Sherlock.ActionBar.TabText" />
@@ -3870,9 +3920,17 @@ wrap_content
 false
                 </bool>
 
+                <attr
+                    name="textAppearanceSmall"
+                    format="reference" />
+
                 <item
                     name="abs__home"
                     type="id"/>
+
+                <attr
+                    name="windowActionBarOverlay"
+                    format="boolean" />
             </file>
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-land\values.xml"
@@ -4336,12 +4394,700 @@ true
             </file>
         </source>
     </dataSet>
+    <dataSet config="StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar" >
+        <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res" >
+            <file
+                name="com_facebook_button_check"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_button_check.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_button_check_off"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_button_check_off.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_button_check_on"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_button_check_on.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_focused"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_button_grey_focused.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_normal"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_button_grey_normal.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_pressed"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_button_grey_pressed.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_close"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_close.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_icon"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_icon.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_list_divider"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_list_divider.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_list_section_header_background"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_list_section_header_background.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_loginbutton_blue.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_focused"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_loginbutton_blue_focused.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_normal"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_loginbutton_blue_normal.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_pressed"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_loginbutton_blue_pressed.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_silver"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_loginbutton_silver.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_loginfragment_background_gradient"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_loginfragment_background_gradient.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_logo"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_logo.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_picker_item_background"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_picker_item_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_picker_list_focused"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_picker_list_focused.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_picker_list_longpressed"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_picker_list_longpressed.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_picker_list_pressed"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_picker_list_pressed.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_picker_list_selector"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_picker_list_selector.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_picker_list_selector_background_transition"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_picker_list_selector_background_transition.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_picker_list_selector_disabled"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_picker_list_selector_disabled.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_picker_top_button"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_picker_top_button.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_place_default_icon"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_place_default_icon.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_profile_default_icon"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_profile_default_icon.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_profile_picture_blank_portrait"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_profile_picture_blank_portrait.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_profile_picture_blank_square"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_profile_picture_blank_square.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_top_background"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_top_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_top_button"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable\com_facebook_top_button.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_focused"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_button_grey_focused.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_normal"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_button_grey_normal.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_pressed"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_button_grey_pressed.9.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_close"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_close.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_icon"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_icon.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_focused"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_loginbutton_blue_focused.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_normal"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_loginbutton_blue_normal.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_pressed"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_loginbutton_blue_pressed.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_logo"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-hdpi\com_facebook_logo.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_close"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-ldpi\com_facebook_close.png"
+                qualifiers="ldpi"
+                type="drawable" />
+            <file
+                name="com_facebook_icon"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-ldpi\com_facebook_icon.png"
+                qualifiers="ldpi"
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_focused"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-xhdpi\com_facebook_button_grey_focused.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_normal"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-xhdpi\com_facebook_button_grey_normal.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_button_grey_pressed"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-xhdpi\com_facebook_button_grey_pressed.9.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_close"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-xhdpi\com_facebook_close.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_focused"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-xhdpi\com_facebook_loginbutton_blue_focused.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_normal"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-xhdpi\com_facebook_loginbutton_blue_normal.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_loginbutton_blue_pressed"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-xhdpi\com_facebook_loginbutton_blue_pressed.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_logo"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\drawable-xhdpi\com_facebook_logo.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="com_facebook_friendpickerfragment"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_friendpickerfragment.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_loginfragment"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_loginfragment.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_picker_activity_circle_row"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_activity_circle_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_picker_checkbox"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_checkbox.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_picker_image"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_image.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_picker_list_row"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_list_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_picker_list_section_header"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_list_section_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_picker_search_box"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_search_box.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_picker_title_bar"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_title_bar.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_picker_title_bar_stub"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_title_bar_stub.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_placepickerfragment"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_placepickerfragment.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="com_facebook_placepickerfragment_list_row"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_placepickerfragment_list_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml"
+                qualifiers="" >
+                <attr
+                    name="logout_text"
+                    format="string" />
+                <attr
+                    name="results_limit"
+                    format="integer" />
+
+                <dimen name="com_facebook_loginview_padding_right" >0dp
+                </dimen>
+
+                <attr
+                    name="show_title_bar"
+                    format="boolean" />
+
+                <color name="com_facebook_blue" >#3B5998
+                </color>
+                <color name="com_facebook_loginview_text_color" >#FFFFFF
+                </color>
+
+                <dimen name="com_facebook_loginview_height" >44dp
+                </dimen>
+
+                <attr
+                    name="fetch_user_info"
+                    format="boolean" />
+
+                <string name="com_facebook_logo_content_description" >Facebook Logo
+                </string>
+                <string name="com_facebook_loginview_log_in_button" >Log In
+                </string>
+
+                <color name="com_facebook_loginfragment_connected_text_color" >#FFFFFF
+                </color>
+
+                <declare-styleable name="com_facebook_picker_fragment" >
+                </declare-styleable>
+
+                <dimen name="com_facebook_loginview_padding_top" >0dp
+                </dimen>
+
+                <string name="com_facebook_nearby" >Nearby
+                </string>
+                <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
+                </string>
+
+                <declare-styleable name="com_facebook_place_picker_fragment" >
+                </declare-styleable>
+
+                <string name="com_facebook_loading" >Loading...
+                </string>
+
+                <style
+                    name="com_facebook_loginview_silver_style"
+                    parent="@android:style/Widget.Button" >
+                    <item name="android:width">
+205dp
+                    </item>
+                    <item name="android:height">
+44dp
+                    </item>
+                    <item name="android:background">
+@drawable/com_facebook_loginbutton_silver
+                    </item>
+                    <item name="android:textSize">
+18sp
+                    </item>
+                    <item name="android:textStyle">
+bold
+                    </item>
+                    <item name="android:textColor">
+#4B5164
+                    </item>
+                    <item name="android:gravity">
+center
+                    </item>
+                </style>
+
+                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d were here
+                </string>
+
+                <attr
+                    name="extra_fields"
+                    format="string" />
+
+                <string name="com_facebook_picker_done_button_text" >Done
+                </string>
+                <string name="com_facebook_loginview_log_out_button" >Log Out
+                </string>
+
+                <color name="com_facebook_loginfragment_not_connected_text_color" >#A6AED7
+                </color>
+
+                <declare-styleable name="com_facebook_profile_picture_view" >
+                    <attr name="preset_size" >
+
+                        <!-- Keep in sync with constants in ProfilePictureView -->
+                        <enum
+                            name="small"
+                            value="-2" />
+                        <enum
+                            name="normal"
+                            value="-3" />
+                        <enum
+                            name="large"
+                            value="-4" />
+                    </attr>
+                </declare-styleable>
+
+                <dimen name="com_facebook_loginview_padding_left" >42dp
+                </dimen>
+                <dimen name="com_facebook_profilepictureview_preset_size_normal" >100dp
+                </dimen>
+
+                <declare-styleable name="com_facebook_friend_picker_fragment" >
+                </declare-styleable>
+
+                <attr
+                    name="radius_in_meters"
+                    format="integer" />
+                <attr
+                    name="title_text"
+                    format="string" />
+                <attr
+                    name="confirm_logout"
+                    format="boolean" />
+                <attr
+                    name="show_pictures"
+                    format="boolean" />
+                <attr
+                    name="done_button_text"
+                    format="string" />
+
+                <dimen name="com_facebook_loginview_padding_bottom" >0dp
+                </dimen>
+
+                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d were here
+                </string>
+
+                <dimen name="com_facebook_loginview_text_size" >16.0sp
+                </dimen>
+
+                <string name="com_facebook_choose_friends" >Choose Friends
+                </string>
+
+                <attr
+                    name="show_search_box"
+                    format="boolean" />
+
+                <string name="com_facebook_loginfragment_log_in_button" >Log In…
+                </string>
+                <string name="com_facebook_loginfragment_not_logged_in" >Not Logged In
+                </string>
+
+                <dimen name="com_facebook_loginfragment_profile_picture_width" >64dp
+                </dimen>
+
+                <attr
+                    name="multi_select"
+                    format="boolean" />
+
+                <dimen name="com_facebook_loginfragment_profile_picture_height" >64dp
+                </dimen>
+
+                <string name="com_facebook_loginview_log_out_action" >Log Out
+                </string>
+
+                <dimen name="com_facebook_profilepictureview_preset_size_small" >50dp
+                </dimen>
+
+                <string name="com_facebook_dialogloginactivity_ok_button" >OK
+                </string>
+
+                <color name="com_facebook_loginfragment_connected_shadow_color" >#000000
+                </color>
+
+                <attr
+                    name="done_button_background"
+                    format="reference" />
+
+                <string name="com_facebook_loginview_logged_in_as" >Logged in as: %1$s
+                </string>
+
+                <dimen name="com_facebook_profilepictureview_preset_size_large" >180dp
+                </dimen>
+
+                <attr
+                    name="login_text"
+                    format="string" />
+                <attr
+                    name="search_text"
+                    format="string" />
+
+                <string name="com_facebook_loginview_cancel_action" >Cancel
+                </string>
+
+                <attr
+                    name="title_bar_background"
+                    format="reference" />
+
+                <string name="com_facebook_loginview_logged_in_using_facebook" >Logged in using Facebook
+                </string>
+
+                <declare-styleable name="com_facebook_login_view" >
+                </declare-styleable>
+
+                <style
+                    name="com_facebook_loginview_default_style"
+                    parent="@android:style/Widget.Button" >
+                    <item name="android:width">
+@dimen/com_facebook_loginview_width
+                    </item>
+                    <item name="android:height">
+@dimen/com_facebook_loginview_height
+                    </item>
+                    <item name="android:background">
+@drawable/com_facebook_loginbutton_blue
+                    </item>
+                    <item name="android:textColor">
+@color/com_facebook_loginview_text_color
+                    </item>
+                    <item name="android:textSize">
+@dimen/com_facebook_loginview_text_size
+                    </item>
+                    <item name="android:paddingLeft">
+@dimen/com_facebook_loginview_padding_left
+                    </item>
+                    <item name="android:gravity">
+center
+                    </item>
+                </style>
+
+                <attr
+                    name="is_cropped"
+                    format="boolean" />
+
+                <string name="com_facebook_loginfragment_logged_in" >Logged In
+                </string>
+
+                <dimen name="com_facebook_loginview_width" >205dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-es\values.xml"
+                qualifiers="es" >
+                <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
+                </string>
+                <string name="com_facebook_loginview_log_out_action" >Cerrar sesión
+                </string>
+                <string name="com_facebook_loginfragment_logged_in" >Sesión iniciada
+                </string>
+                <string name="com_facebook_loginview_cancel_action" >Cancelar
+                </string>
+                <string name="com_facebook_loginfragment_not_logged_in" >No has iniciado sesión
+                </string>
+                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >es:%1$,d estuvieron aquí
+                </string>
+                <string name="com_facebook_loginview_logged_in_using_facebook" >Sesión iniciada con Facebook
+                </string>
+                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d estuvieron aquí
+                </string>
+                <string name="com_facebook_loginfragment_log_in_button" >Iniciar Sesión…
+                </string>
+                <string name="com_facebook_logo_content_description" >Logo de Facebook
+                </string>
+                <string name="com_facebook_loginview_log_in_button" >Iniciar Sesión
+                </string>
+                <string name="com_facebook_loginview_log_out_button" >Cerrar Sesión
+                </string>
+                <string name="com_facebook_loginview_logged_in_as" >Sesión iniciada como: %1$s
+                </string>
+            </file>
+            <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-he\values.xml"
+                qualifiers="he" >
+                <string name="com_facebook_loginview_cancel_action" >בטל
+                </string>
+                <string name="com_facebook_loginview_log_out_button" >התנתק
+                </string>
+                <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
+                </string>
+                <string name="com_facebook_loginfragment_not_logged_in" >לא מחובר
+                </string>
+                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d היו פה
+                </string>
+                <string name="com_facebook_loginfragment_log_in_button" >התחבר…
+                </string>
+                <string name="com_facebook_logo_content_description" >Facebook Logo
+                </string>
+                <string name="com_facebook_loginview_logged_in_using_facebook" >מחובר באמצעות פייסבוק
+                </string>
+                <string name="com_facebook_loginview_log_in_button" >התחבר
+                </string>
+                <string name="com_facebook_loginview_log_out_action" >התנתק
+                </string>
+                <string name="com_facebook_loginview_logged_in_as" >מחובר בשם: %1$s
+                </string>
+                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
+                </string>
+                <string name="com_facebook_loginfragment_logged_in" >מחובר
+                </string>
+            </file>
+            <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-iw\values.xml"
+                qualifiers="iw" >
+                <string name="com_facebook_loginview_log_in_button" >התחבר
+                </string>
+                <string name="com_facebook_loginfragment_logged_in" >מחובר
+                </string>
+                <string name="com_facebook_loginfragment_log_in_button" >התחבר…
+                </string>
+                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
+                </string>
+                <string name="com_facebook_loginview_log_out_button" >התנתק
+                </string>
+                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d היו פה
+                </string>
+                <string name="com_facebook_loginview_logged_in_as" >מחובר בשם: %1$s
+                </string>
+                <string name="com_facebook_loginview_logged_in_using_facebook" >מחובר באמצעות פייסבוק
+                </string>
+                <string name="com_facebook_loginview_log_out_action" >התנתק
+                </string>
+                <string name="com_facebook_loginfragment_not_logged_in" >לא מחובר
+                </string>
+                <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
+                </string>
+                <string name="com_facebook_loginview_cancel_action" >בטל
+                </string>
+                <string name="com_facebook_logo_content_description" >Facebook Logo
+                </string>
+            </file>
+        </source>
+    </dataSet>
     <dataSet config="main" >
         <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res" >
+            <file
+                name="card_background"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-hdpi\card_background.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="content_discard"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-hdpi\content_discard.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="content_edit"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-hdpi\content_edit.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="content_new"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-hdpi\content_new.png"
+                qualifiers="hdpi"
+                type="drawable" />
             <file
                 name="ic_launcher"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-hdpi\ic_launcher.png"
                 qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="navigation_refresh"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-hdpi\navigation_refresh.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="content_discard"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-mdpi\content_discard.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="content_edit"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-mdpi\content_edit.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="content_new"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-mdpi\content_new.png"
+                qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="ic_launcher"
@@ -4349,8 +5095,33 @@ true
                 qualifiers="mdpi"
                 type="drawable" />
             <file
+                name="navigation_refresh"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-mdpi\navigation_refresh.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="content_discard"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-xhdpi\content_discard.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="content_edit"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-xhdpi\content_edit.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="content_new"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-xhdpi\content_new.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="navigation_refresh"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-xhdpi\navigation_refresh.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
@@ -4359,8 +5130,53 @@ true
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="activity_allgroups"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_allgroups.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_login"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_login.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_newsgroup"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="dialog_addnewgroup"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\dialog_addnewgroup.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="dialog_addnewsource"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\dialog_addnewsource.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_allgroups"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_allgroups.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_newsgroup"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsgroup.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_newsitem"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsitem.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="list_row_allgroups"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_allgroups.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="list_row_newsgroup"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_newsgroup.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -4369,8 +5185,22 @@ true
                 qualifiers=""
                 type="menu" />
             <file
+                name="menu_allgroups"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\menu_allgroups.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="menu_newsgroup"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\menu_newsgroup.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\dimens.xml"
                 qualifiers="" >
+                <dimen name="top_and_bottom_margin" >4dp
+                </dimen>
+                <dimen name="left_and_right_margin" >16dp
+                </dimen>
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
                 <dimen name="activity_vertical_margin" >16dp
@@ -4379,11 +5209,62 @@ true
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml"
                 qualifiers="" >
+                <string name="delete_dialog_fragment_message" >Are you sure?
+                </string>
+                <string name="add_dialog_fragment_feeddescription_source" >The description of the feed
+                </string>
                 <string name="action_settings" >Settings
                 </string>
-                <string name="app_name" >StiriDinRomania
+                <string name="add_dialog_fragment_title_group" >Add a new group
                 </string>
-                <string name="hello_world" >Hello world!
+                <string name="rename" >Rename
+                </string>
+                <string name="cancel" >Cancel
+                </string>
+                <string name="update_data" >Update
+                </string>
+                <string name="login_message" >News from Romania uses your name in order to sync your news across
+        all devices
+                </string>
+                <string name="ok" >OK
+                </string>
+                <string name="add_dialog_fragment_message_group" >Enter the name of the new group
+                </string>
+                <string name="login_microsoft" >Login with Microsoft
+                </string>
+                <string name="groups" >Groups
+                </string>
+                <string name="app_id" >498421953559265
+                </string>
+                <string name="add_dialog_fragment_feedadress_source" >The rss address of the feed
+                </string>
+                <string name="add_dialog_fragment_ok" >Add
+                </string>
+                <string name="two_digit_int" >99
+                </string>
+                <string name="lorem_w_5" >Lorem ipsum dolor sit amet.
+                </string>
+                <string name="logout" >Log out
+                </string>
+                <string name="group" >Group
+                </string>
+                <string name="feeds" >Feeds
+                </string>
+                <string name="add_dialog_fragment_title_source" >Add a new feed
+                </string>
+                <string name="add" >Add
+                </string>
+                <string name="feed" >Feed
+                </string>
+                <string name="login_facebook" >Login with Facebook
+                </string>
+                <string name="app_name" >News from Romania
+                </string>
+                <string name="delete" >Delete
+                </string>
+                <string name="add_dialog_fragment_feedtitle_source" >The name of the feed
+                </string>
+                <string name="delete_dialog_fragment_title" >Do you want to delete this?
                 </string>
             </file>
             <file
@@ -4407,6 +5288,67 @@ true
 
                     <!-- All customizations that are NOT specific to a particular API-level can go here. -->
                 </style>
+            </file>
+            <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\dimens.xml"
+                qualifiers="ro" >
+                <dimen name="list_view_width" >500dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml"
+                qualifiers="ro" >
+                <string name="action_settings" >Settings
+                </string>
+                <string name="delete_dialog_fragment_title" >Vrei să ștergi acest element?
+                </string>
+                <string name="delete_dialog_fragment_message" >Ești sigur?
+                </string>
+                <string name="delete" >Șterge
+                </string>
+                <string name="login_facebook" >Loghează-te cu Facebook
+                </string>
+                <string name="app_name" >Ştiri din România
+                </string>
+                <string name="feeds" >Feeduri
+                </string>
+                <string name="add_dialog_fragment_feedtitle_source" >Numele feedului
+                </string>
+                <string name="group" >Grup
+                </string>
+                <string name="feed" >Feed
+                </string>
+                <string name="add_dialog_fragment_title_source" >Adaugă un feed nou
+                </string>
+                <string name="logout" >Deloghează-te
+                </string>
+                <string name="add_dialog_fragment_ok" >Adaugă
+                </string>
+                <string name="cancel" >Anulează
+                </string>
+                <string name="login_microsoft" >Loghează-te cu Microsoft
+                </string>
+                <string name="rename" >Redenumește
+                </string>
+                <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
+        pe toate device-urile tale
+                </string>
+                <string name="update_data" >Acutalizează
+                </string>
+                <string name="add_dialog_fragment_message_group" >Introduceți noul nume al grupului
+                </string>
+                <string name="add" >Adaugă
+                </string>
+                <string name="add_dialog_fragment_title_group" >Adaugă un grup nou
+                </string>
+                <string name="ok" >Da
+                </string>
+                <string name="groups" >Grupuri
+                </string>
+                <string name="add_dialog_fragment_feeddescription_source" >Descrierea feedului
+                </string>
+                <string name="add_dialog_fragment_feedadress_source" >Adresa rss a feedului
+                </string>
             </file>
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw600dp\dimens.xml"
