@@ -13,6 +13,7 @@
     <string name="add_dialog_fragment_ok">Adaugă</string>
     <string name="add_dialog_fragment_title_group">Adaugă un grup nou</string>
     <string name="add_dialog_fragment_title_source">Adaugă un feed nou</string>
+    <string name="all_groups_title">Grupuruke tale</string>
     <string name="app_name">Ştiri din România</string>
     <string name="cancel">Anulează</string>
     <string name="delete">Șterge</string>

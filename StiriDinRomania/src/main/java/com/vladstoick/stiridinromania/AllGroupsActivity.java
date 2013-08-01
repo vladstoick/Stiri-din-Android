@@ -27,7 +27,7 @@ import java.util.ArrayList;
  */
 public class AllGroupsActivity extends SherlockFragmentActivity implements AllGroupsFragment.AllGroupsFragmentCommunicationInterface {
     private String USER_ID_TAG = "userId";
-    private String TAG = "MAINACTIVITY";
+    private String TAG = "MAINACTIVITYaa";
     private NewsDataSource newsDataSource;
     @Override
     protected void onSaveInstanceState(Bundle outState) {

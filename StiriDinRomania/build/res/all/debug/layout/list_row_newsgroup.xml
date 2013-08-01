@@ -2,23 +2,27 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-
-                android:padding="10dp"
                 android:layout_gravity="center_vertical"
+                android:paddingBottom="@dimen/top_and_bottom_margin"
+                android:paddingTop="@dimen/top_and_bottom_margin"
                 android:layout_height="wrap_content">
 
     <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
             android:layout_alignParentRight="true"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/two_digit_int"
             android:layout_marginLeft="10dp"
-            android:id="@+id/numberOfNews"/>
+            android:id="@+id/numberOfNews"
+            android:textSize="@dimen/large_font"/>
 
     <TextView
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="@dimen/medium_font"
+            android:textStyle="bold"
             android:text="@string/lorem_w_5"
             android:layout_toLeftOf="@id/numberOfNews"
             android:layout_width="match_parent"
@@ -26,6 +30,7 @@
             android:id="@+id/newsSourceTitle"/>
 
     <TextView
+            android:textStyle="italic"
             android:id="@+id/description"
             android:text="@string/lorem_w_5"
             android:layout_below="@id/newsSourceTitle"

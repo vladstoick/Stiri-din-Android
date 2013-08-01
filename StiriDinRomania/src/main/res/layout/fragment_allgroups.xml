@@ -3,7 +3,6 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:gravity="center_horizontal"
         android:layout_height="match_parent">
 
     <ListView
@@ -11,8 +10,7 @@
             android:scrollbars="none"
             android:paddingLeft="@dimen/left_and_right_margin"
             android:paddingRight="@dimen/left_and_right_margin"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+
             tools:listitem="@layout/list_row_allgroups"
             android:clipToPadding="false"
             android:layout_width="fill_parent"

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Styled" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/Widget.Styled.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Widget.Styled.ActionBar</item>
+    </style>
+
+    <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@style/Widget.Styled.ActionBar.TextStyle</item>
+        <item name="titleTextStyle">@style/Widget.Styled.ActionBar.TextStyle</item>
+    </style>
+    <style name="Widget.Styled.ActionBar.TextStyle">
+        <item name="android:textColor">@color/android:white</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textSize">@dimen/medium_font</item>
+    </style>
+</resources>
