@@ -7,6 +7,9 @@ import android.os.Parcelable;
  * Created by vlad on 7/19/13.
  */
 public class NewsItem implements Parcelable {
+    public static String TAG_TITLE = "title";
+    public static String TAG_DESCRIPTION = "description";
+    public static String TAG_URLLINK = "url";
     private String title;
     private String description;
     private String urlLink;

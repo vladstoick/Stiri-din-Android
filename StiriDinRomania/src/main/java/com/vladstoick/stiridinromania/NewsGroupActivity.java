@@ -2,6 +2,7 @@ package com.vladstoick.stiridinromania;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.util.Log;
@@ -16,7 +17,8 @@ import com.vladstoick.Utils.Tags;
 /**
  * Created by Vlad on 7/28/13.
  */
-public class NewsGroupActivity extends SherlockFragmentActivity {
+public class NewsGroupActivity extends SherlockFragmentActivity
+        implements NewsGroupFragment.NewsGroupFragmentCommunicationInterface{
     private NewsGroup ng;
     private static String TAG = "NewsGroupActivity";
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,12 @@ public class NewsGroupActivity extends SherlockFragmentActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.newsGroupFragment,
                         newsGroupFragment).commit();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public void selectedNewsSource(int id) {
+        Intent intent = new Intent(this, NewsItemListActivity.class);
+        startActivity(intent);
     }
 
     @Override

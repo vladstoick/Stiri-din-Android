@@ -13,5 +13,7 @@
     <dimen name="abs__action_button_min_width">64dip</dimen>
 
     <integer name="abs__max_action_buttons">5</integer>
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw600dp\refs.xml -->
+    <item name="activity_newsitem_list" type="layout">@layout/activity_newsitem_twopane</item>
 
 </resources>

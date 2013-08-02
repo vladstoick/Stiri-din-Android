@@ -1,9 +1,10 @@
 package com.vladstoick.stiridinromania;
 
 import android.app.Application;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+import com.newrelic.agent.android.NewRelic;
 
 import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsDataSource;
@@ -15,10 +16,15 @@ import com.vladstoick.OttoBus.DataModifiedEvent;
  */
 public class StiriApp extends Application {
     public NewsDataSource newsDataSource = null ;
+    public static RequestQueue queue;
     @Override
     public void onCreate() {
         super.onCreate();
+        NewRelic.withApplicationToken(
+                "AAda1a6278e5ef8e4349079aa07d6b5039aaa395a0"
+        ).start(this);
         BusProvider.getInstance().register(this);
+        queue = Volley.newRequestQueue(this);
     }
 
     @Override

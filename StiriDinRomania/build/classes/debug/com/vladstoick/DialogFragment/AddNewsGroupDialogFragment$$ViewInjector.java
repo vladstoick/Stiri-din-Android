@@ -7,7 +7,7 @@ import butterknife.Views.Finder;
 public class AddNewsGroupDialogFragment$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.DialogFragment.AddNewsGroupDialogFragment target, Object source) {
     View view;
-    view = finder.findById(source, 2130968652);
+    view = finder.findById(source, 2131099726);
     target.mEditText = (android.widget.EditText) view;
   }
 

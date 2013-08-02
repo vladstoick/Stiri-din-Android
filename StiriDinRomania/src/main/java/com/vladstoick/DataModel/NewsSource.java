@@ -1,8 +1,23 @@
 package com.vladstoick.DataModel;
 
+import android.content.Context;
 import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.squareup.otto.Subscribe;
+import com.vladstoick.OttoBus.BusProvider;
+import com.vladstoick.OttoBus.NewsSourceFeedLoaded;
+import com.vladstoick.stiridinromania.StiriApp;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -10,6 +25,17 @@ import java.util.ArrayList;
  * Created by vlad on 7/19/13.
  */
 public class NewsSource implements Parcelable {
+    public static class DataDownloaded {
+        public String url;
+        ArrayList<NewsItem> items;
+        public DataDownloaded(ArrayList<NewsItem> items, String url)
+        {
+            this.items = items;
+            this.url = url;
+        }
+    }
+    String url;
+    public static String BASE_URL="http://37.139.8.146:3000/?url=";
     public static String TAG_RSSLINK = "url";
     private String rssLink;
     public static String TAG_TITLE = "title";
@@ -19,13 +45,15 @@ public class NewsSource implements Parcelable {
     public ArrayList<NewsItem> news;
     public static String TAG_ID = "id";
     private int id;
-    private static int groupId;
+    private int groupId;
+    private int numberOfUnreadNews;
     public NewsSource(String rssLink, String title, String description, int id) {
         this.rssLink = rssLink;
         this.title = title;
         this.description = description;
         this.id = id;
         news = new ArrayList<NewsItem>();
+
     }
     public NewsSource(Cursor cursor)
     {
@@ -34,13 +62,26 @@ public class NewsSource implements Parcelable {
         this.description = cursor.getString(2);
         this.rssLink = cursor.getString(3);
         this.groupId = cursor.getInt(4);
+        this.numberOfUnreadNews = cursor.getInt(5);
     }
-    public static int getGroupId() {
+    public void loadFeed(StiriApp app)
+    {
+        BusProvider.getInstance().register(this);
+    }
+    public int getNumberOfUnreadNews() {
+        return numberOfUnreadNews;
+    }
+
+    public void setNumberOfUnreadNews(int numberOfUnreadNews) {
+        this.numberOfUnreadNews = numberOfUnreadNews;
+    }
+
+    public int getGroupId() {
         return groupId;
     }
 
-    public static void setGroupId(int groupId) {
-        NewsSource.groupId = groupId;
+    public void setGroupId(int groupId) {
+        this.groupId = groupId;
     }
 
     public int getId() {
@@ -99,7 +140,9 @@ public class NewsSource implements Parcelable {
         dest.writeString(this.rssLink);
         dest.writeString(this.title);
         dest.writeString(this.description);
-//        dest.writeTypedList(news);
+        dest.writeTypedList(news);
+        dest.writeInt(groupId);
+        dest.writeInt(numberOfUnreadNews);
     }
 
     private NewsSource(Parcel in) {
@@ -107,7 +150,9 @@ public class NewsSource implements Parcelable {
         this.rssLink = in.readString();
         this.title = in.readString();
         this.description = in.readString();
-//        in.readTypedList(news, NewsItem.CREATOR);
+        in.readTypedList(news, NewsItem.CREATOR);
+        this.groupId = in.readInt();
+        this.numberOfUnreadNews = in.readInt();
     }
 
 }

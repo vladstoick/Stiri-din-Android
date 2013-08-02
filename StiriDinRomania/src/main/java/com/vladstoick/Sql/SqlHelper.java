@@ -15,6 +15,7 @@ public class SqlHelper extends SQLiteOpenHelper{
     public static String SOURCES_TABLE = "sources";
     public static String COLUMN_GROUP_ID = "groupid";
     public static String COLUMN_NOFEEDS = "nofeeds";
+    public static String COLUMN_NOUNREADNEWS = "nounreadnews";
     public static String COLUMN_ID = "id";
     public static String COLUMN_TITLE = "title";
     public static String COLUMN_URL = "url";
@@ -25,10 +26,10 @@ public class SqlHelper extends SQLiteOpenHelper{
     private static String CREATE_SOURCES_TABLE = "CREATE TABLE " + SOURCES_TABLE + " ( " +
             COLUMN_ID + " int primary key , " + COLUMN_TITLE + " text not null , "
             + COLUMN_DESCRIPTION + " text not null ," + COLUMN_URL + " text not null , "+
-              COLUMN_GROUP_ID+ " int ) ";
+              COLUMN_GROUP_ID+ " int , "+COLUMN_NOUNREADNEWS  +" int ) ";
     public static String[] GROUPS_COLUMNS = {COLUMN_ID,COLUMN_TITLE,COLUMN_NOFEEDS};
     public static String[] SOURCES_COLUMNS = {COLUMN_ID,COLUMN_TITLE,COLUMN_DESCRIPTION,
-            COLUMN_URL, COLUMN_GROUP_ID};
+            COLUMN_URL, COLUMN_GROUP_ID , COLUMN_NOUNREADNEWS};
     public SqlHelper(Context context) {
         super(context, DB_NAME, null, DBVERSION);
     }

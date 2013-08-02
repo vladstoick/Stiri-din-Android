@@ -55,7 +55,8 @@ public class AllGroupsActivity extends SherlockFragmentActivity implements
         }
         else if (extras != null) {
             int userId = extras.getInt(USER_ID_TAG);
-            ((StiriApp)getApplication()).newsDataSource = new NewsDataSource(userId,this);
+            ((StiriApp)getApplication()).newsDataSource = new NewsDataSource(userId,
+                    (StiriApp) getApplication());
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.allGroupsFragment,
                 fragment).commit();

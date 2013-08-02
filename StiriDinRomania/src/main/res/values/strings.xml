@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--ALL GROUPS ACITIVTY-->
+
+    <!-- ALL GROUPS ACITIVTY -->
     <string name="all_groups_title">Your groups</string>
-    <!--ADD SOURCE FRAGMENT-->
+    <!-- ADD SOURCE FRAGMENT -->
     <string name="add_dialog_fragment_title_source">Add a new feed</string>
     <string name="add_dialog_fragment_feedtitle_source">The name of the feed</string>
     <string name="add_dialog_fragment_feeddescription_source">The description of the feed</string>
     <string name="add_dialog_fragment_feedadress_source">The rss address of the feed</string>
-    <!--TEST VALUES-->
+    <!-- TEST VALUES -->
     <string name="two_digit_int">99</string>
     <string name="lorem_w_5">Lorem ipsum dolor sit amet.</string>
-    <!--ADD GROUP FRAGMENT-->
+    <!-- ADD GROUP FRAGMENT -->
     <string name="add_dialog_fragment_title_group">Add a new group</string>
     <string name="add_dialog_fragment_message_group">Enter the name of the new group</string>
     <string name="add_dialog_fragment_ok">Add</string>
-    <!--DELETE DIALOG FRAGMENT-->
+    <!-- DELETE DIALOG FRAGMENT -->
     <string name="delete_dialog_fragment_title">Do you want to delete this?</string>
     <string name="delete_dialog_fragment_message">Are you sure?</string>
-    <!--GENERAL-->
+    <!-- GENERAL -->
     <string name="nointernet">No internet connection</string>
     <string name="delete">Delete</string>
     <string name="rename">Rename</string>
@@ -32,11 +33,13 @@
     <string name="cancel">Cancel</string>
     <string name="add">Add</string>
     <string name="update_data">Update</string>
-    <!--LOGIN ACTIVITY-->
+    <!-- LOGIN ACTIVITY -->
     <string name="login_facebook">Login with Facebook</string>
     <string name="login_microsoft">Login with Microsoft</string>
     <string name="login_message">News from Romania uses your name in order to sync your news across
-        all devices
-    </string>
+        all devices</string>
     <string name="logout">Log out</string>
+    <string name="title_newsitem_list">NewsItems</string>
+    <string name="title_newsitem_detail">NewsItem Detail</string>
+
 </resources>

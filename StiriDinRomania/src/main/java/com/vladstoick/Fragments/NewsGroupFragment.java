@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -26,12 +27,15 @@ import butterknife.Views;
  * Created by vlad on 7/19/13.
  */
 public class NewsGroupFragment extends SherlockFragment {
+    public interface NewsGroupFragmentCommunicationInterface{
+        public void selectedNewsSource(int id);
+    }
     public static String TAG = "NEWSGROUPFRAGMENT";
     private static String NG_TAG = "NG_TAG";
     private NewsGroup newsGroup;
     private View mView;
     @InjectView(R.id.newsGroupListView) ListView mList;
-//    private FragmentCommunicationInterface mListener;
+    private NewsGroupFragmentCommunicationInterface mListener;
     NewsGroupFragmentAdapter adapter;
     public NewsGroupFragment() {
 
@@ -40,7 +44,7 @@ public class NewsGroupFragment extends SherlockFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-//            mListener = (FragmentCommunicationInterface) activity;
+            mListener = (NewsGroupFragmentCommunicationInterface) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement FragmentCommunicationInterface");
@@ -50,6 +54,7 @@ public class NewsGroupFragment extends SherlockFragment {
     @Override
     public void onDetach() {
         super.onDetach();
+        mListener = null;
     }
 
     @Override
@@ -93,6 +98,12 @@ public class NewsGroupFragment extends SherlockFragment {
         Views.inject(this,mView);
         adapter = new NewsGroupFragmentAdapter(newsGroup, getSherlockActivity());
         mList.setAdapter(adapter);
+        mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mListener.selectedNewsSource(newsGroup.newsSources.get(position).getId());
+            }
+        });
         return mView;
     }
 

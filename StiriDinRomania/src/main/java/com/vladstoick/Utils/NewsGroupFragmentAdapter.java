@@ -23,6 +23,7 @@ public class NewsGroupFragmentAdapter extends BaseAdapter {
     static class RowHolder {
         @InjectView(R.id.newsSourceTitle)TextView mTitle;
         @InjectView(R.id.description)TextView mDescription;
+        @InjectView(R.id.numberOfNews)TextView mNumberOfNews;
         public RowHolder(View view){
             Views.inject(this,view);
         }
@@ -67,6 +68,7 @@ public class NewsGroupFragmentAdapter extends BaseAdapter {
             holder = (RowHolder) row.getTag();
         holder.mTitle.setText(ns.getTitle());
         holder.mDescription.setText(ns.getDescription());
+        holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews()+ "");
         return row;
     }
 }

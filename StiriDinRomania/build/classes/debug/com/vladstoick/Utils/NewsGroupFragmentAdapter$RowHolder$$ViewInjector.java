@@ -7,14 +7,17 @@ import butterknife.Views.Finder;
 public class NewsGroupFragmentAdapter$RowHolder$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Utils.NewsGroupFragmentAdapter.RowHolder target, Object source) {
     View view;
-    view = finder.findById(source, 2130968662);
+    view = finder.findById(source, 2131099737);
     target.mTitle = (android.widget.TextView) view;
-    view = finder.findById(source, 2130968663);
+    view = finder.findById(source, 2131099738);
     target.mDescription = (android.widget.TextView) view;
+    view = finder.findById(source, 2131099736);
+    target.mNumberOfNews = (android.widget.TextView) view;
   }
 
   public static void reset(com.vladstoick.Utils.NewsGroupFragmentAdapter.RowHolder target) {
     target.mTitle = null;
     target.mDescription = null;
+    target.mNumberOfNews = null;
   }
 }

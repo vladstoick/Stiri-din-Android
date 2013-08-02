@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--ALL GROUPS ACITIVTY-->
-    <string name="all_groups_title">Grupuruke tale</string>
+    <string name="all_groups_title">Gruprile tale</string>
     <!--ADD SOURCE FRAGMENT-->
     <string name="add_dialog_fragment_title_source">Adaugă un feed nou</string>
     <string name="add_dialog_fragment_feedtitle_source">Numele feedului</string>

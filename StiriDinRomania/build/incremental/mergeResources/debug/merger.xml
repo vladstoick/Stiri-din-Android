@@ -2373,7 +2373,6 @@ true
                     -->
                     <!-- Color for text that appears within action menu items. -->
 
-
                     <!-- =================== -->
                     <!-- Action mode styles -->
                     <!-- =================== -->
@@ -2383,9 +2382,7 @@ true
                     <!-- Drawable to use for the close action mode button -->
                     <!-- Drawable to use for the Share action button in WebView selection action modes -->
 
-
                     <!-- PopupWindow style to use for action modes when showing as a window overlay. -->
-
 
                     <!-- ============= -->
                     <!-- Button styles -->
@@ -2394,24 +2391,18 @@ true
 
                     <!-- Small Button style. -->
 
-
                     <!-- Background drawable for standalone items that need focus/pressed states. -->
-
 
                     <!--
              This Drawable is overlaid over the foreground of the Window's content area, usually
              to place a shadow below the title.
                     -->
 
-
                     <!-- Text color, typeface, size, and style for the text inside of a popup menu. -->
-
 
                     <!-- Text color, typeface, size, and style for small text inside of a popup menu. -->
 
-
                     <!-- Text color, typeface, size, and style for "small" text. Defaults to secondary text color. -->
-
 
                     <!-- ============================ -->
                     <!-- SearchView styles and assets -->
@@ -2432,7 +2423,6 @@ true
                     <!-- Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color. -->
                     <!-- Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color. -->
 
-
                     <!-- =========== -->
                     <!-- List styles -->
                     <!-- =========== -->
@@ -2440,16 +2430,12 @@ true
 
                     <!-- A smaller, sleeker list item height. -->
 
-
                     <!-- The preferred padding along the left edge of list items. -->
                     <!-- The preferred padding along the right edge of list items. -->
 
-
                     <!-- The preferred TextAppearance for the primary text of small list items. -->
 
-
                     <!-- Drawable to use for generic vertical dividers. -->
-
 
                     <!-- Default ActivityChooserView style. -->
                     <!-- Drawable used as a background for activated items. -->
@@ -5159,6 +5145,21 @@ center
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_newsitem_detail"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsitem_detail.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_newsitem_list"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsitem_list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_newsitem_twopane"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsitem_twopane.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="dialog_addnewgroup"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\dialog_addnewgroup.xml"
                 qualifiers=""
@@ -5181,6 +5182,11 @@ center
             <file
                 name="fragment_newsitem"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsitem.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_newsitem_detail"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsitem_detail.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -5242,6 +5248,10 @@ center
                 </string>
                 <string name="nointernet" >No internet connection
                 </string>
+                <string name="title_newsitem_list" >NewsItems
+                </string>
+                <string name="title_newsitem_detail" >NewsItem Detail
+                </string>
                 <string name="add_dialog_fragment_title_group" >Add a new group
                 </string>
                 <string name="rename" >Rename
@@ -5257,9 +5267,9 @@ center
                 </string>
                 <string name="add_dialog_fragment_message_group" >Enter the name of the new group
                 </string>
-                <string name="groups" >Groups
-                </string>
                 <string name="login_microsoft" >Login with Microsoft
+                </string>
+                <string name="groups" >Groups
                 </string>
                 <string name="app_id" >498421953559265
                 </string>
@@ -5357,6 +5367,74 @@ sans-serif-thin
                 </style>
             </file>
             <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-fr\strings.xml"
+                qualifiers="fr" >
+                <string name="add" >Adaugă
+                </string>
+                <string name="groups" >Grupuri
+                </string>
+                <string name="delete_dialog_fragment_message" >Ești sigur?
+                </string>
+                <string name="delete_dialog_fragment_title" >Vrei să ștergi acest element?
+                </string>
+                <string name="add_dialog_fragment_ok" >Ajouter
+                </string>
+                <string name="feeds" >Feeduri
+                </string>
+                <string name="update_data" >Acutalizează
+                </string>
+                <string name="all_groups_title" >Votre groups
+                </string>
+                <string name="feed" >Feed
+                </string>
+                <string name="add_dialog_fragment_title_source" >Ajouter un nouveau flux RSS
+                </string>
+                <string name="add_dialog_fragment_feedadress_source" >L\'adresse url du flux RSS
+                </string>
+                <string name="action_settings" >Settings
+                </string>
+                <string name="add_dialog_fragment_message_group" >Entrez le nom du nouveau groupe
+                </string>
+                <string name="add_dialog_fragment_title_group" >Ajouter un nouveau groupe
+                </string>
+                <string name="login_microsoft" >Loghează-te cu Microsoft
+                </string>
+                <string name="group" >Grup
+                </string>
+                <string name="add_dialog_fragment_feeddescription_source" >La description du flux RSS
+                </string>
+                <string name="nointernet" >Pas de connexion internet
+                </string>
+                <string name="login_facebook" >Loghează-te cu Facebook
+                </string>
+                <string name="add_dialog_fragment_feedtitle_source" >Le nom du flux RSS
+                </string>
+                <string name="app_name" >Ştiri din România
+                </string>
+                <string name="rename" >Redenumește
+                </string>
+                <string name="logout" >Deloghează-te
+                </string>
+                <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
+        pe toate device-urile tale
+                </string>
+                <string name="ok" >OK
+                </string>
+                <string name="cancel" >Anulează
+                </string>
+                <string name="delete" >Șterge
+                </string>
+            </file>
+            <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-large\refs.xml"
+                qualifiers="large" >
+                <item
+                    name="activity_newsitem_list"
+                    type="layout">
+@layout/activity_newsitem_twopane
+                </item>
+            </file>
+            <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\dimens.xml"
                 qualifiers="ro" >
                 <dimen name="list_view_width" >500dp
@@ -5379,9 +5457,9 @@ sans-serif-thin
                 </string>
                 <string name="add_dialog_fragment_title_source" >Adaugă un feed nou
                 </string>
-                <string name="rename" >Redenumește
-                </string>
                 <string name="login_microsoft" >Loghează-te cu Microsoft
+                </string>
+                <string name="rename" >Redenumește
                 </string>
                 <string name="update_data" >Acutalizează
                 </string>
@@ -5393,7 +5471,7 @@ sans-serif-thin
                 </string>
                 <string name="action_settings" >Settings
                 </string>
-                <string name="all_groups_title" >Grupuruke tale
+                <string name="all_groups_title" >Gruprile tale
                 </string>
                 <string name="add_dialog_fragment_feedtitle_source" >Numele feedului
                 </string>
@@ -5410,11 +5488,11 @@ sans-serif-thin
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale
                 </string>
-                <string name="add" >Adaugă
-                </string>
                 <string name="nointernet" >Nu aveți internet
                 </string>
                 <string name="add_dialog_fragment_title_group" >Adaugă un grup nou
+                </string>
+                <string name="add" >Adaugă
                 </string>
                 <string name="ok" >OK
                 </string>
@@ -5424,6 +5502,15 @@ sans-serif-thin
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw600dp\dimens.xml"
                 qualifiers="sw600dp" />
+            <file
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw600dp\refs.xml"
+                qualifiers="sw600dp" >
+                <item
+                    name="activity_newsitem_list"
+                    type="layout">
+@layout/activity_newsitem_twopane
+                </item>
+            </file>
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw720dp-land\dimens.xml"
                 qualifiers="sw720dp-land" >
