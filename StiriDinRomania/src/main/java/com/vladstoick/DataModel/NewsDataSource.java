@@ -98,21 +98,31 @@ public class NewsDataSource implements Parcelable{
         }
         return newsGroups;
     }
-
-    public NewsGroup getNewsGroup(int position) {
-        NewsGroup ng = allNewsGroups.get(position);
-
+    public NewsGroup getNewsGroup(int id) {
+        SQLiteDatabase db = sqlHelper.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.GROUPS_TABLE, SqlHelper.GROUPS_COLUMNS,
+                SqlHelper.COLUMN_ID +" = " + id , null , null , null , null , null);
+        cursor.moveToFirst();
+        NewsGroup ng = new NewsGroup(cursor);
+        cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
+                SqlHelper.COLUMN_GROUP_ID +" = "+id , null , null , null , null , null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast())
+        {
+            ng.newsSources.add(new NewsSource(cursor));
+            cursor.moveToNext();
+        }
         return ng;
     }
 
     //MODIFYING DATA
-    public void deleteNewsGroup(final int position) {
+    public void deleteNewsGroup(final int id) {
         httpClient = new AsyncHttpClient();
-        httpClient.delete(BASE_URL + userId + "/" + getNewsGroup(position).getId(),
+        httpClient.delete(BASE_URL + userId + "/" + id,
                 new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(String s) {
-                        allNewsGroups.remove(position);
+//                        allNewsGroups.remove(position);
                         BusProvider.getInstance().post(new DataLoadedEvent(
                                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED,
                                 allNewsGroups));

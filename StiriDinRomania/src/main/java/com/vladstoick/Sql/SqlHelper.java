@@ -27,6 +27,8 @@ public class SqlHelper extends SQLiteOpenHelper{
             + COLUMN_DESCRIPTION + " text not null ," + COLUMN_URL + " text not null , "+
               COLUMN_GROUP_ID+ " int ) ";
     public static String[] GROUPS_COLUMNS = {COLUMN_ID,COLUMN_TITLE,COLUMN_NOFEEDS};
+    public static String[] SOURCES_COLUMNS = {COLUMN_ID,COLUMN_TITLE,COLUMN_DESCRIPTION,
+            COLUMN_URL, COLUMN_GROUP_ID};
     public SqlHelper(Context context) {
         super(context, DB_NAME, null, DBVERSION);
     }

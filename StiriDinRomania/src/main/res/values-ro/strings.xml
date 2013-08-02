@@ -15,6 +15,7 @@
     <string name="delete_dialog_fragment_title">Vrei să ștergi acest element?</string>
     <string name="delete_dialog_fragment_message">Ești sigur?</string>
     <!--GENERAL-->
+    <string name="nointernet">Nu aveți internet</string>
     <string name="delete">Șterge</string>
     <string name="rename">Redenumește</string>
     <string name="group">Grup</string>
@@ -23,7 +24,7 @@
     <string name="feeds">Feeduri</string>
     <string name="app_name">Ştiri din România</string>
     <string name="action_settings">Settings</string>
-    <string name="ok">Da</string>
+    <string name="ok">OK</string>
     <string name="cancel">Anulează</string>
     <string name="add">Adaugă</string>
     <string name="update_data">Acutalizează</string>

@@ -61,10 +61,10 @@ public class AllGroupsActivity extends SherlockFragmentActivity implements
                 fragment).commit();
     }
     @Override
-    public void newsGroupSelected(int index) {
+    public void newsGroupSelected(int id) {
         Intent intent = new Intent(this, NewsGroupActivity.class);
-        intent.putExtra(Tags.NEWSGROUP_TAG,
-                ((StiriApp)getApplication()).newsDataSource.getNewsGroup(index));
+        NewsGroup ng = ((StiriApp)getApplication()).newsDataSource.getNewsGroup(id);
+        intent.putExtra(Tags.NEWSGROUP_TAG,ng);
         startActivity(intent);
     }
 

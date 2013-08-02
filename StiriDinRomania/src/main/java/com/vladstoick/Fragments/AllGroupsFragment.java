@@ -18,10 +18,12 @@ import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsGroup;
+import com.vladstoick.DialogFragment.NoConnectionDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.Utils.AllGroupsFragmentAdapter;
 import com.vladstoick.DialogFragment.DeleteDialogFragment;
+import com.vladstoick.Utils.Utils;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
 
@@ -101,7 +103,7 @@ public class AllGroupsFragment extends SherlockFragment {
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mListener.newsGroupSelected(position);
+                mListener.newsGroupSelected(newsDataSource.get(position).getId());
             }
         });
         setAdapter();
@@ -136,7 +138,13 @@ public class AllGroupsFragment extends SherlockFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_add: {
-                mListener.showAddGroupDialog();
+                if(Utils.isOnline(getSherlockActivity()) == true)
+                    mListener.showAddGroupDialog();
+                else
+                {
+                    new NoConnectionDialogFragment().show(getSherlockActivity().
+                            getSupportFragmentManager(),NoConnectionDialogFragment.TAG);
+                }
                 break;
             }
             default: {

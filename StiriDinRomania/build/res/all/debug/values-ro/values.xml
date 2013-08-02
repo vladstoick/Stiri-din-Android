@@ -28,7 +28,8 @@
         pe toate device-urile tale</string>
     <string name="login_microsoft">Loghează-te cu Microsoft</string>
     <string name="logout">Deloghează-te</string>
-    <string name="ok">Da</string>
+    <string name="nointernet">Nu aveți internet</string>
+    <string name="ok">OK</string>
     <string name="rename">Redenumește</string>
     <string name="update_data">Acutalizează</string>
 

@@ -7,7 +7,7 @@ import butterknife.Views.Finder;
 public class NewsGroupFragment$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Fragments.NewsGroupFragment target, Object source) {
     View view;
-    view = finder.findById(source, 2131099729);
+    view = finder.findById(source, 2130968657);
     target.mList = (android.widget.ListView) view;
   }
 

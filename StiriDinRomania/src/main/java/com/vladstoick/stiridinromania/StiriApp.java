@@ -1,6 +1,9 @@
 package com.vladstoick.stiridinromania;
 
 import android.app.Application;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 
 import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsDataSource;
@@ -22,7 +25,6 @@ public class StiriApp extends Application {
     public void onTerminate() {
         BusProvider.getInstance().unregister(this);
     }
-
     @Subscribe
     public void dataModified(DataModifiedEvent event) {
         if (event.dataModifiedType == DataModifiedEvent.TAG_DELETEGROUP) {
