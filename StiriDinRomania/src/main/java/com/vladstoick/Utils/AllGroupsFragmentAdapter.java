@@ -65,12 +65,14 @@ public class AllGroupsFragmentAdapter extends BaseAdapter {
             holder = (RowHolder) row.getTag();
         }
         holder.mTitle.setText(ng.getTitle());
-        String noGroups = ng.getNoFeeds()+" ";
-        if(ng.newsSources.size()==1)
-            noGroups = noGroups + context.getString(R.string.feed).toLowerCase();
+
+        int noGroups = ng.getNoFeeds();
+        String noGroupsString;
+        if(noGroups == 1)
+            noGroupsString = noGroups + context.getString(R.string.feed).toLowerCase();
         else
-            noGroups = noGroups + context.getString(R.string.feeds).toLowerCase();
-        holder.mNumberOfGroups.setText(noGroups);
+            noGroupsString = noGroups + context.getString(R.string.feeds).toLowerCase();
+        holder.mNumberOfGroups.setText(noGroupsString);
         return row;
     }
 }
