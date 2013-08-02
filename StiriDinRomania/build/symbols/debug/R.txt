@@ -382,8 +382,10 @@ int id com_facebook_picker_title_bar 0x7f060047
 int id com_facebook_picker_title_bar_stub 0x7f060046
 int id com_facebook_picker_top_bar 0x7f060043
 int id com_facebook_placepickerfragment_search_box_stub 0x7f060048
+int id delete 0x7f06005c
 int id description 0x7f060057
 int id disableHome 0x7f060008
+int id edit 0x7f06005d
 int id edit_name 0x7f06004b
 int id edit_query 0x7f060028
 int id facebookLogin 0x7f060035
@@ -459,7 +461,8 @@ int layout sherlock_spinner_dropdown_item 0x7f03002b
 int layout sherlock_spinner_item 0x7f03002c
 int menu login 0x7f0b0000
 int menu menu_allgroups 0x7f0b0001
-int menu menu_newsgroup 0x7f0b0002
+int menu menu_groupselected 0x7f0b0002
+int menu menu_newsgroup 0x7f0b0003
 int string abs__action_bar_home_description 0x7f090000
 int string abs__action_bar_up_description 0x7f090001
 int string abs__action_menu_overflow_description 0x7f090002

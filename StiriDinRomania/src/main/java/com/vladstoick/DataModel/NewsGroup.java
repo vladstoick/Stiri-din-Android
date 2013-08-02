@@ -1,5 +1,6 @@
 package com.vladstoick.DataModel;
 
+import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
 import java.util.ArrayList;
@@ -8,12 +9,23 @@ import java.util.ArrayList;
  * Created by vlad on 7/19/13.
  */
 public class NewsGroup implements Parcelable {
+
     public static String TAG_TITLE = "group_title";
     private String title;
     public static String TAG_ID = "group_id";
     private int id;
     public static String TAG_NEWSOURCES = "group_feeds";
+    private int noFeeds;
+    public static String TAG_NOFEEDS = "group_ids";
     public ArrayList<NewsSource> newsSources;
+
+    public int getNoFeeds() {
+        return noFeeds;
+    }
+
+    public void setNoFeeds(int noFeeds) {
+        this.noFeeds = noFeeds;
+    }
 
     public String getTitle() {
         return title;
@@ -25,6 +37,12 @@ public class NewsGroup implements Parcelable {
 
     public int getId() {
         return id;
+    }
+    public NewsGroup(Cursor cursor)
+    {
+        this.id = cursor.getInt(0);
+        this.title = cursor.getString(1);
+        this.noFeeds = cursor.getInt(2);
     }
     public NewsGroup()
     {

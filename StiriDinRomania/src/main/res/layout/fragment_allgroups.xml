@@ -16,5 +16,6 @@
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/allGroupsListView"
-            android:dividerHeight="1dp"/>
+            android:dividerHeight="1dp"
+           />
 </LinearLayout>

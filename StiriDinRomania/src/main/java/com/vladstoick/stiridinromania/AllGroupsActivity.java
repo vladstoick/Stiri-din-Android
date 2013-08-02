@@ -51,8 +51,7 @@ public class AllGroupsActivity extends SherlockFragmentActivity implements
         if(savedInstanceState!=null){
             ((StiriApp)getApplication()).newsDataSource =
                     savedInstanceState.getParcelable(Tags.NEWSDATASOURCE_TAG);
-            fragment = AllGroupsFragment.newInstance(
-                    ((StiriApp)getApplication()).newsDataSource.getAllNewsGroups());
+            fragment = new AllGroupsFragment();
         }
         else if (extras != null) {
             int userId = extras.getInt(USER_ID_TAG);

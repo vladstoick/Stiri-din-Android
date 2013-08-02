@@ -18,12 +18,21 @@ public class NewsSource implements Parcelable {
     public ArrayList<NewsItem> news;
     public static String TAG_ID = "id";
     private int id;
+    public static int groupId;
     public NewsSource(String rssLink, String title, String description, int id) {
         this.rssLink = rssLink;
         this.title = title;
         this.description = description;
         this.id = id;
         news = new ArrayList<NewsItem>();
+    }
+
+    public static int getGroupId() {
+        return groupId;
+    }
+
+    public static void setGroupId(int groupId) {
+        NewsSource.groupId = groupId;
     }
 
     public int getId() {

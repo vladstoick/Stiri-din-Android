@@ -62,9 +62,9 @@ public class AddNewsGroupDialogFragment extends SherlockDialogFragment  implemen
                             }
                         })
                  .create();
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
         mEditText.requestFocus();
-        builder.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        builder.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         return builder;
     }
     @Override

@@ -2,18 +2,17 @@ package com.vladstoick.DataModel;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
-import com.vladstoick.Sql.SqlHelper;
+import com.vladstoick.sql.SqlHelper;
 
 import java.util.ArrayList;
 
@@ -43,25 +42,12 @@ public class NewsDataSource implements Parcelable{
             @Override
             public void onSuccess(String s) {
                 allNewsGroups = JSONParsing.parseNewsDataSource(s);
-                for(int i = 0 ;i < allNewsGroups.size(); i++ )
-                {
+                for(int i = 0 ;i < allNewsGroups.size(); i++ ) {
                     NewsGroup ng = allNewsGroups.get(i);
-                    ContentValues values = new ContentValues();
-                    values.put(SqlHelper.COLUMN_TITLE,ng.getTitle());
-                    values.put(SqlHelper.COLUMN_ID,ng.getId());
-                    SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
-                    sqlLiteDatabase.insert(SqlHelper.GROUPS_TABLE,null,values);
-                    for(int j =0 ; j < ng.newsSources.size() ; j++ )
-                    {
+                    insertNewsGroupInDb(ng);
+                    for(int j =0 ; j < ng.newsSources.size() ; j++ ){
                         NewsSource ns = ng.newsSources.get(j);
-                        values = new ContentValues();
-                        values.put(SqlHelper.COLUMN_TITLE,ns.getTitle());
-                        values.put(SqlHelper.COLUMN_ID,ns.getId());
-                        values.put(SqlHelper.COLUMN_DESCRIPTION,ns.getDescription());
-                        values.put(SqlHelper.COLUMN_URL,ns.getRssLink());
-                        sqlLiteDatabase.insert(SqlHelper.SOURCES_TABLE,null,values);
                     }
-
                 }
                 BusProvider.getInstance().post(new DataLoadedEvent(
                         DataLoadedEvent.TAG_NEWSDATASOURCE,
@@ -100,7 +86,17 @@ public class NewsDataSource implements Parcelable{
     };
     //ACCESSING DATA
     public ArrayList<NewsGroup> getAllNewsGroups() {
-        return this.allNewsGroups;
+        SQLiteDatabase db = sqlHelper.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.GROUPS_TABLE,SqlHelper.GROUPS_COLUMNS,
+                null, null, null , null , null , null );
+        cursor.moveToFirst();
+        ArrayList<NewsGroup> newsGroups = new ArrayList<NewsGroup>();
+        while(!cursor.isAfterLast())
+        {
+            newsGroups.add(new NewsGroup(cursor));
+            cursor.moveToNext();
+        }
+        return newsGroups;
     }
 
     public NewsGroup getNewsGroup(int position) {
@@ -134,11 +130,7 @@ public class NewsDataSource implements Parcelable{
             public void onSuccess(String s) {
                 NewsGroup ng = new NewsGroup(groupTitle, JSONParsing.parseAddNewsGroupResponse(s));
                 allNewsGroups.add(ng);
-                ContentValues values = new ContentValues();
-                values.put(SqlHelper.COLUMN_TITLE,ng.getTitle());
-                values.put(SqlHelper.COLUMN_ID,ng.getId());
-                SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
-                sqlLiteDatabase.insert(SqlHelper.GROUPS_TABLE,null,values);
+                insertNewsGroupInDb(ng);
                 BusProvider.getInstance().post(new
                         DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED,
                         allNewsGroups));
@@ -147,5 +139,26 @@ public class NewsDataSource implements Parcelable{
     }
 
     //SQLITE Helper
-
+    private void insertNewsGroupInDb(NewsGroup ng)
+    {
+        ContentValues values = new ContentValues();
+        values.put(SqlHelper.COLUMN_TITLE,ng.getTitle());
+        values.put(SqlHelper.COLUMN_ID,ng.getId());
+        values.put(SqlHelper.COLUMN_NOFEEDS,ng.getNoFeeds());
+        SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
+        sqlLiteDatabase.insertWithOnConflict(SqlHelper.GROUPS_TABLE,null,values,
+                SQLiteDatabase.CONFLICT_REPLACE);
+    }
+    private void insertNewsSourceInDb(NewsSource ns)
+    {
+        ContentValues values = new ContentValues();
+        SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
+        values.put(SqlHelper.COLUMN_TITLE,ns.getTitle());
+        values.put(SqlHelper.COLUMN_ID,ns.getId());
+        values.put(SqlHelper.COLUMN_DESCRIPTION,ns.getDescription());
+        values.put(SqlHelper.COLUMN_URL,ns.getRssLink());
+        values.put(SqlHelper.COLUMN_GROUP_ID,ns.getGroupId());
+        sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
+                SQLiteDatabase.CONFLICT_REPLACE);
+    }
 }

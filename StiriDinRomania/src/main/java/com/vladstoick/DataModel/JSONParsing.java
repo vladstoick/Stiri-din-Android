@@ -23,13 +23,14 @@ public class JSONParsing {
                 NewsGroup ng = new NewsGroup(groupJO.getString(NewsGroup.TAG_TITLE),
                         groupJO.getInt(NewsGroup.TAG_ID));
                 JSONArray feedsJA = groupJO.getJSONArray(NewsGroup.TAG_NEWSOURCES);
+                ng.setNoFeeds(feedsJA.length());
                 for (int feedIterator = 0; feedIterator < feedsJA.length(); feedIterator++) {
                     JSONObject feedJO = feedsJA.getJSONObject(feedIterator);
                     NewsSource ns = new NewsSource(feedJO.getString(NewsSource.TAG_RSSLINK),
                             feedJO.getString(NewsSource.TAG_TITLE),
                             feedJO.getString(NewsSource.TAG_DESCRIPTION),
                             feedJO.getInt(NewsSource.TAG_ID));
-
+                    ns.setGroupId(ng.getId());
                     ng.newsSources.add(ns);
                 }
                 newsDataSource.add(ng);

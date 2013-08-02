@@ -65,7 +65,7 @@ public class AllGroupsFragmentAdapter extends BaseAdapter {
             holder = (RowHolder) row.getTag();
         }
         holder.mTitle.setText(ng.getTitle());
-        String noGroups = ng.newsSources.size()+" ";
+        String noGroups = ng.getNoFeeds()+" ";
         if(ng.newsSources.size()==1)
             noGroups = noGroups + context.getString(R.string.feed).toLowerCase();
         else

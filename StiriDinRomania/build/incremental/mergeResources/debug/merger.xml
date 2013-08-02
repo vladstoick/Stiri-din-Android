@@ -5190,6 +5190,11 @@ center
                 qualifiers=""
                 type="menu" />
             <file
+                name="menu_groupselected"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\menu_groupselected.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 name="menu_newsgroup"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\menu_newsgroup.xml"
                 qualifiers=""

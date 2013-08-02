@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -21,6 +23,7 @@ import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.Utils.AllGroupsFragmentAdapter;
 import com.vladstoick.DialogFragment.DeleteDialogFragment;
 import com.vladstoick.stiridinromania.R;
+import com.vladstoick.stiridinromania.StiriApp;
 
 import java.util.ArrayList;
 
@@ -49,14 +52,6 @@ public class AllGroupsFragment extends SherlockFragment {
         outState.putParcelableArrayList(TAG_NDS, newsDataSource);
     }
 
-    public static AllGroupsFragment newInstance(ArrayList<NewsGroup> newsDataSource)
-    {
-        AllGroupsFragment fragment = new AllGroupsFragment();
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList(TAG_NDS,newsDataSource);
-        fragment.setArguments(bundle);
-        return fragment;
-    }
     public AllGroupsFragment() {}
 
     @Override
@@ -87,20 +82,22 @@ public class AllGroupsFragment extends SherlockFragment {
         super.onCreate(savedInstanceState);
         if(savedInstanceState!=null){
             newsDataSource = savedInstanceState.getParcelableArrayList(TAG_NDS);
-            setAdapter();
         }
-        else if(getArguments()!=null){
-            newsDataSource = getArguments().getParcelableArrayList(TAG_NDS);
+        else{
+            newsDataSource = ((StiriApp)getActivity().getApplication()).newsDataSource
+                    .getAllNewsGroups();
+
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
         setRetainInstance(true);
         setHasOptionsMenu(true);
         mView = inflater.inflate(R.layout.fragment_allgroups, container, false);
         BusProvider.getInstance().register(this);
-        Views.inject(this , mView);
+        Views.inject(this, mView);
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

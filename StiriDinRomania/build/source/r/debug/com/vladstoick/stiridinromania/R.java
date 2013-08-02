@@ -1115,8 +1115,10 @@ containing a value of this type.
         public static final int com_facebook_picker_title_bar_stub=0x7f060046;
         public static final int com_facebook_picker_top_bar=0x7f060043;
         public static final int com_facebook_placepickerfragment_search_box_stub=0x7f060048;
+        public static final int delete=0x7f06005c;
         public static final int description=0x7f060057;
         public static final int disableHome=0x7f060008;
+        public static final int edit=0x7f06005d;
         public static final int edit_name=0x7f06004b;
         public static final int edit_query=0x7f060028;
         public static final int facebookLogin=0x7f060035;
@@ -1202,7 +1204,8 @@ containing a value of this type.
     public static final class menu {
         public static final int login=0x7f0b0000;
         public static final int menu_allgroups=0x7f0b0001;
-        public static final int menu_newsgroup=0x7f0b0002;
+        public static final int menu_groupselected=0x7f0b0002;
+        public static final int menu_newsgroup=0x7f0b0003;
     }
     public static final class string {
         public static final int abs__action_bar_home_description=0x7f090000;
