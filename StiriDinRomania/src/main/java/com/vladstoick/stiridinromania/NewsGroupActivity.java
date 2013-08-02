@@ -11,6 +11,7 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.vladstoick.DataModel.NewsGroup;
+import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsGroupFragment;
 import com.vladstoick.Utils.Tags;
 
@@ -33,8 +34,11 @@ public class NewsGroupActivity extends SherlockFragmentActivity
     }
 
     @Override
-    public void selectedNewsSource(int id) {
+    public void selectedNewsSource(NewsSource ns) {
         Intent intent = new Intent(this, NewsItemListActivity.class);
+        //TODO SCAPA DE ASTA
+        NewsSource realNs = ((StiriApp)getApplication()).newsDataSource.getNewsSource(ns.getId());
+        intent.putExtra(NewsSource.TAG,realNs);
         startActivity(intent);
     }
 

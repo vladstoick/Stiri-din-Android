@@ -358,10 +358,10 @@ int id abs__submit_area 0x7f060031
 int id abs__textButton 0x7f060015
 int id abs__title 0x7f06001d
 int id abs__up 0x7f060011
-int id action_add 0x7f06005c
-int id action_logout 0x7f06005e
-int id action_refresh 0x7f06005d
-int id action_settings 0x7f06005b
+int id action_add 0x7f06005d
+int id action_logout 0x7f06005f
+int id action_refresh 0x7f06005e
+int id action_settings 0x7f06005c
 int id allGroupsFragment 0x7f060034
 int id allGroupsListView 0x7f060052
 int id com_facebook_loginfragment_login_button 0x7f06003d
@@ -382,10 +382,10 @@ int id com_facebook_picker_title_bar 0x7f060049
 int id com_facebook_picker_title_bar_stub 0x7f060048
 int id com_facebook_picker_top_bar 0x7f060045
 int id com_facebook_placepickerfragment_search_box_stub 0x7f06004a
-int id delete 0x7f06005f
+int id delete 0x7f060060
 int id description 0x7f06005a
 int id disableHome 0x7f060008
-int id edit 0x7f060060
+int id edit 0x7f060061
 int id edit_name 0x7f06004d
 int id edit_query 0x7f060028
 int id facebookLogin 0x7f060035
@@ -414,6 +414,7 @@ int id showHome 0x7f060004
 int id showTitle 0x7f060006
 int id small 0x7f06000a
 int id tabMode 0x7f060002
+int id title 0x7f06005b
 int id useLogo 0x7f060003
 int id wrap_content 0x7f060009
 int integer abs__max_action_buttons 0x7f080000
@@ -464,8 +465,9 @@ int layout fragment_newsitem 0x7f03002b
 int layout fragment_newsitem_detail 0x7f03002c
 int layout list_row_allgroups 0x7f03002d
 int layout list_row_newsgroup 0x7f03002e
-int layout sherlock_spinner_dropdown_item 0x7f03002f
-int layout sherlock_spinner_item 0x7f030030
+int layout list_row_newsitem 0x7f03002f
+int layout sherlock_spinner_dropdown_item 0x7f030030
+int layout sherlock_spinner_item 0x7f030031
 int menu login 0x7f0b0000
 int menu menu_allgroups 0x7f0b0001
 int menu menu_groupselected 0x7f0b0002

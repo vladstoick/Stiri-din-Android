@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
 import com.vladstoick.Fragments.NewsItemListFragment;
 
@@ -26,7 +27,7 @@ import com.vladstoick.Fragments.NewsItemListFragment;
  */
 public class NewsItemListActivity extends FragmentActivity
         implements NewsItemListFragment.Callbacks {
-
+    NewsSource newsSource;
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -37,6 +38,12 @@ public class NewsItemListActivity extends FragmentActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newsitem_list);
+        if(getIntent().getExtras()!=null )
+            newsSource = getIntent().getExtras().getParcelable(NewsSource.TAG);
+        setTitle(newsSource.getTitle());
+        NewsItemListFragment fragment = NewsItemListFragment.newInstance(newsSource);
+        getSupportFragmentManager().beginTransaction().replace(R.id.newsitem_list,fragment)
+                .commit();
 
         if (findViewById(R.id.newsitem_detail_container) != null) {
             // The detail container view will be present only in the
@@ -44,15 +51,13 @@ public class NewsItemListActivity extends FragmentActivity
             // res/values-sw600dp). If this view is present, then the
             // activity should be in two-pane mode.
             mTwoPane = true;
-
             // In two-pane mode, list items should be given the
             // 'activated' state when touched.
-            ((NewsItemListFragment) getSupportFragmentManager()
-                    .findFragmentById(R.id.newsitem_list))
-                    .setActivateOnItemClick(true);
+//            ((NewsItemListFragment) getSupportFragmentManager()
+//                    .findFragmentById(R.id.newsitem_list))
+//                    .setActivateOnItemClick(true);
         }
 
-        // TODO: If exposing deep links into your app, handle intents here.
     }
 
     /**

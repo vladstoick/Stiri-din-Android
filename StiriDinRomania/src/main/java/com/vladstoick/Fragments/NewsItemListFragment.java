@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.vladstoick.DataModel.NewsItem;
+import com.vladstoick.DataModel.NewsSource;
+import com.vladstoick.Utils.NewsItemListFragmentAdapter;
+
 /**
  * A list fragment representing a list of NewsItems. This fragment
  * also supports tablet devices by allowing list items to be given an
@@ -17,7 +21,7 @@ import android.widget.ListView;
  * interface.
  */
 public class NewsItemListFragment extends ListFragment {
-
+    NewsSource ns;
     /**
      * The serialization (saved instance state) Bundle key representing the
      * activated item position. Only used on tablets.
@@ -56,7 +60,14 @@ public class NewsItemListFragment extends ListFragment {
         public void onItemSelected(String id) {
         }
     };
-
+    public static NewsItemListFragment newInstance(NewsSource newsSource)
+    {
+        NewsItemListFragment fragment = new NewsItemListFragment();
+        Bundle extras = new Bundle();
+        extras.putParcelable(NewsSource.TAG,newsSource);
+        fragment.setArguments(extras);
+        return fragment;
+    }
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -67,13 +78,10 @@ public class NewsItemListFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if(getArguments()!=null)
+            ns = getArguments().getParcelable(NewsSource.TAG);
         // TODO: replace with a real list adapter.
-//        setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(
-//                getActivity(),
-//                android.R.layout.simple_list_item_activated_1,
-//                android.R.id.text1,
-//                DummyContent.ITEMS));
+        setListAdapter(new NewsItemListFragmentAdapter(getActivity(),ns));
     }
 
     @Override

@@ -166,6 +166,14 @@ public class NewsDataSource implements Parcelable{
         }
         return newsGroups;
     }
+    public NewsSource getNewsSource(int id)
+    {
+        for(int i=0;i<allNewsGroups.size();i++)
+            for(int j=0;j<allNewsGroups.get(i).newsSources.size();j++)
+                if(allNewsGroups.get(i).newsSources.get(j).getId()==id)
+                    return  allNewsGroups.get(i).newsSources.get(j);
+        return null;
+    }
     public NewsGroup getNewsGroup(int id) {
         SQLiteDatabase db = sqlHelper.getReadableDatabase();
         Cursor cursor = db.query(SqlHelper.GROUPS_TABLE, SqlHelper.GROUPS_COLUMNS,

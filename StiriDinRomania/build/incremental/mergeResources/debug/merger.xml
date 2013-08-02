@@ -2373,6 +2373,7 @@ true
                     -->
                     <!-- Color for text that appears within action menu items. -->
 
+
                     <!-- =================== -->
                     <!-- Action mode styles -->
                     <!-- =================== -->
@@ -2382,7 +2383,9 @@ true
                     <!-- Drawable to use for the close action mode button -->
                     <!-- Drawable to use for the Share action button in WebView selection action modes -->
 
+
                     <!-- PopupWindow style to use for action modes when showing as a window overlay. -->
+
 
                     <!-- ============= -->
                     <!-- Button styles -->
@@ -2391,18 +2394,24 @@ true
 
                     <!-- Small Button style. -->
 
+
                     <!-- Background drawable for standalone items that need focus/pressed states. -->
+
 
                     <!--
              This Drawable is overlaid over the foreground of the Window's content area, usually
              to place a shadow below the title.
                     -->
 
+
                     <!-- Text color, typeface, size, and style for the text inside of a popup menu. -->
+
 
                     <!-- Text color, typeface, size, and style for small text inside of a popup menu. -->
 
+
                     <!-- Text color, typeface, size, and style for "small" text. Defaults to secondary text color. -->
+
 
                     <!-- ============================ -->
                     <!-- SearchView styles and assets -->
@@ -2423,6 +2432,7 @@ true
                     <!-- Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color. -->
                     <!-- Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color. -->
 
+
                     <!-- =========== -->
                     <!-- List styles -->
                     <!-- =========== -->
@@ -2430,12 +2440,16 @@ true
 
                     <!-- A smaller, sleeker list item height. -->
 
+
                     <!-- The preferred padding along the left edge of list items. -->
                     <!-- The preferred padding along the right edge of list items. -->
 
+
                     <!-- The preferred TextAppearance for the primary text of small list items. -->
 
+
                     <!-- Drawable to use for generic vertical dividers. -->
+
 
                     <!-- Default ActivityChooserView style. -->
                     <!-- Drawable used as a background for activated items. -->
@@ -5413,14 +5427,14 @@ sans-serif-thin
                 </string>
                 <string name="rename" >Redenumește
                 </string>
-                <string name="logout" >Deloghează-te
-                </string>
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale
                 </string>
-                <string name="ok" >OK
+                <string name="logout" >Deloghează-te
                 </string>
                 <string name="cancel" >Anulează
+                </string>
+                <string name="ok" >OK
                 </string>
                 <string name="delete" >Șterge
                 </string>
@@ -5488,11 +5502,11 @@ sans-serif-thin
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale
                 </string>
+                <string name="add" >Adaugă
+                </string>
                 <string name="nointernet" >Nu aveți internet
                 </string>
                 <string name="add_dialog_fragment_title_group" >Adaugă un grup nou
-                </string>
-                <string name="add" >Adaugă
                 </string>
                 <string name="ok" >OK
                 </string>
@@ -5539,6 +5553,11 @@ sans-serif-thin
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="list_row_newsitem"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_newsitem.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\rs\debug" />
     </dataSet>

@@ -18,12 +18,13 @@
             </intent-filter>
         </activity>
         <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.AllGroupsActivity"/>
-        <activity android:name="com.vladstoick.stiridinromania.NewsGroupActivity" android:parentActivityName=".AllGroupsActivity">
+        <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsGroupActivity" android:parentActivityName=".AllGroupsActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".AllGroupsActivity"/>
         </activity>
-        <activity android:label="@string/title_newsitem_list" android:name="com.vladstoick.stiridinromania.NewsItemListActivity">
+        <activity android:label="@string/title_newsitem_list" android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsItemListActivity" android:parentActivityName=".NewsGroupActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsGroupActivity"/>
         </activity>
-        <activity android:label="@string/title_newsitem_detail" android:name="com.vladstoick.stiridinromania.NewsItemDetailActivity" android:parentActivityName=".NewsItemListActivity">
+        <activity android:label="@string/title_newsitem_detail" android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsItemDetailActivity" android:parentActivityName=".NewsItemListActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsItemListActivity"/>
         </activity>
     </application>

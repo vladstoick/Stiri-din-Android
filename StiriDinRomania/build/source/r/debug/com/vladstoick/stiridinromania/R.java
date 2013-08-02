@@ -1091,10 +1091,10 @@ containing a value of this type.
         public static final int abs__textButton=0x7f060015;
         public static final int abs__title=0x7f06001d;
         public static final int abs__up=0x7f060011;
-        public static final int action_add=0x7f06005c;
-        public static final int action_logout=0x7f06005e;
-        public static final int action_refresh=0x7f06005d;
-        public static final int action_settings=0x7f06005b;
+        public static final int action_add=0x7f06005d;
+        public static final int action_logout=0x7f06005f;
+        public static final int action_refresh=0x7f06005e;
+        public static final int action_settings=0x7f06005c;
         public static final int allGroupsFragment=0x7f060034;
         public static final int allGroupsListView=0x7f060052;
         public static final int com_facebook_loginfragment_login_button=0x7f06003d;
@@ -1115,10 +1115,10 @@ containing a value of this type.
         public static final int com_facebook_picker_title_bar_stub=0x7f060048;
         public static final int com_facebook_picker_top_bar=0x7f060045;
         public static final int com_facebook_placepickerfragment_search_box_stub=0x7f06004a;
-        public static final int delete=0x7f06005f;
+        public static final int delete=0x7f060060;
         public static final int description=0x7f06005a;
         public static final int disableHome=0x7f060008;
-        public static final int edit=0x7f060060;
+        public static final int edit=0x7f060061;
         public static final int edit_name=0x7f06004d;
         public static final int edit_query=0x7f060028;
         public static final int facebookLogin=0x7f060035;
@@ -1147,6 +1147,7 @@ containing a value of this type.
         public static final int showTitle=0x7f060006;
         public static final int small=0x7f06000a;
         public static final int tabMode=0x7f060002;
+        public static final int title=0x7f06005b;
         public static final int useLogo=0x7f060003;
         public static final int wrap_content=0x7f060009;
     }
@@ -1208,8 +1209,9 @@ containing a value of this type.
         public static final int fragment_newsitem_detail=0x7f03002c;
         public static final int list_row_allgroups=0x7f03002d;
         public static final int list_row_newsgroup=0x7f03002e;
-        public static final int sherlock_spinner_dropdown_item=0x7f03002f;
-        public static final int sherlock_spinner_item=0x7f030030;
+        public static final int list_row_newsitem=0x7f03002f;
+        public static final int sherlock_spinner_dropdown_item=0x7f030030;
+        public static final int sherlock_spinner_item=0x7f030031;
     }
     public static final class menu {
         public static final int login=0x7f0b0000;

@@ -20,19 +20,19 @@
     For more on layout aliases, see:
     http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     -->
-
-    <fragment
+    <FrameLayout
         android:id="@+id/newsitem_list"
         android:name="com.vladstoick.Fragments.NewsItemListFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        tools:layout="@android:layout/list_content" />
+        tools:layout="@android:layout/list_content"/>
+
 
     <FrameLayout
         android:id="@+id/newsitem_detail_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3" />
+        android:layout_weight="2" />
 
 </LinearLayout>

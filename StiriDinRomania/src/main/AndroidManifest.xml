@@ -35,19 +35,26 @@
             android:launchMode="singleTop" />
         <activity
             android:name="com.vladstoick.stiridinromania.NewsGroupActivity"
-            android:parentActivityName=".AllGroupsActivity" >
+            android:parentActivityName=".AllGroupsActivity"
+            android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".AllGroupsActivity" />
         </activity>
         <activity
             android:name="com.vladstoick.stiridinromania.NewsItemListActivity"
-            android:label="@string/title_newsitem_list" >
+            android:label="@string/title_newsitem_list"
+            android:parentActivityName=".NewsGroupActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".NewsGroupActivity" />
         </activity>
         <activity
             android:name="com.vladstoick.stiridinromania.NewsItemDetailActivity"
             android:label="@string/title_newsitem_detail"
-            android:parentActivityName=".NewsItemListActivity" >
+            android:parentActivityName=".NewsItemListActivity"
+            android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".NewsItemListActivity" />

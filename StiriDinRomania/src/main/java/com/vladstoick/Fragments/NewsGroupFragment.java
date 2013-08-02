@@ -14,6 +14,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.vladstoick.DataModel.NewsGroup;
+import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.DialogFragment.AddNewsGroupDialogFragment;
 import com.vladstoick.DialogFragment.AddNewsSourceDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
@@ -28,7 +29,7 @@ import butterknife.Views;
  */
 public class NewsGroupFragment extends SherlockFragment {
     public interface NewsGroupFragmentCommunicationInterface{
-        public void selectedNewsSource(int id);
+        public void selectedNewsSource(NewsSource ns);
     }
     public static String TAG = "NEWSGROUPFRAGMENT";
     private static String NG_TAG = "NG_TAG";
@@ -101,7 +102,7 @@ public class NewsGroupFragment extends SherlockFragment {
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mListener.selectedNewsSource(newsGroup.newsSources.get(position).getId());
+                mListener.selectedNewsSource(newsGroup.newsSources.get(position));
             }
         });
         return mView;

@@ -69,9 +69,9 @@ public class AllGroupsFragmentAdapter extends BaseAdapter {
         int noGroups = ng.getNoFeeds();
         String noGroupsString;
         if(noGroups == 1)
-            noGroupsString = noGroups + context.getString(R.string.feed).toLowerCase();
+            noGroupsString = noGroups + " " + context.getString(R.string.feed).toLowerCase();
         else
-            noGroupsString = noGroups + context.getString(R.string.feeds).toLowerCase();
+            noGroupsString = noGroups + " " +context.getString(R.string.feeds).toLowerCase();
         holder.mNumberOfGroups.setText(noGroupsString);
         return row;
     }

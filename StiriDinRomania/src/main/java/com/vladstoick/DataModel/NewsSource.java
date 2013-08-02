@@ -25,16 +25,7 @@ import java.util.ArrayList;
  * Created by vlad on 7/19/13.
  */
 public class NewsSource implements Parcelable {
-    public static class DataDownloaded {
-        public String url;
-        ArrayList<NewsItem> items;
-        public DataDownloaded(ArrayList<NewsItem> items, String url)
-        {
-            this.items = items;
-            this.url = url;
-        }
-    }
-    String url;
+    public static String TAG = "NEWSSORUCE";
     public static String BASE_URL="http://37.139.8.146:3000/?url=";
     public static String TAG_RSSLINK = "url";
     private String rssLink;
@@ -143,6 +134,7 @@ public class NewsSource implements Parcelable {
         dest.writeTypedList(news);
         dest.writeInt(groupId);
         dest.writeInt(numberOfUnreadNews);
+        dest.writeInt(id);
     }
 
     private NewsSource(Parcel in) {
@@ -153,6 +145,7 @@ public class NewsSource implements Parcelable {
         in.readTypedList(news, NewsItem.CREATOR);
         this.groupId = in.readInt();
         this.numberOfUnreadNews = in.readInt();
+        this.id=in.readInt();
     }
 
 }
