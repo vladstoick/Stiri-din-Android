@@ -17,7 +17,8 @@ import com.vladstoick.Utils.Tags;
  * This activity is mostly just a 'shell' activity containing nothing
  * more than a {@link com.vladstoick.Fragments.NewsGroupDetailFragment}.
  */
-public class NewsGroupDetailActivity extends SherlockFragmentActivity{
+public class NewsGroupDetailActivity extends SherlockFragmentActivity implements
+        NewsGroupDetailFragment.NewsGroupDetailFragmentCommunicationInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +41,8 @@ public class NewsGroupDetailActivity extends SherlockFragmentActivity{
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putString(Tags.NEWSOURCE_TAG_ID,
-                    getIntent().getStringExtra(Tags.NEWSOURCE_TAG_ID));
+            int newsGroupId = getIntent().getIntExtra(Tags.NEWSGROUP_TAG_ID, -1);
+            arguments.putInt(Tags.NEWSGROUP_TAG_ID, newsGroupId);
             NewsGroupDetailFragment fragment = new NewsGroupDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
@@ -65,5 +66,12 @@ public class NewsGroupDetailActivity extends SherlockFragmentActivity{
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void selectedNewsSource(int id) {
+        Intent intent = new Intent(this, NewsItemListActivity.class);
+        intent.putExtra(Tags.NEWSOURCE_TAG_ID,id);
+        startActivity(intent);
     }
 }

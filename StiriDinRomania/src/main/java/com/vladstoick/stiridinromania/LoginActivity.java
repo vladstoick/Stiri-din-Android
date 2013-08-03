@@ -12,7 +12,12 @@ import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.model.GraphUser;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 import com.vladstoick.DataModel.NewsDataSource;
+
+import org.json.JSONObject;
 
 /**
  * Created by vlad on 7/17/13.
@@ -21,7 +26,7 @@ public class LoginActivity extends SherlockFragmentActivity {
     private int userId = 0;
     private static String TAG = "LOGINACTIVITY";
     private String USER_ID_TAG = "userId";
-
+    private String token;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -48,6 +53,13 @@ public class LoginActivity extends SherlockFragmentActivity {
             public void call(Session session, SessionState state, Exception exception) {
                 if (session.isOpened()) {
                     Log.d(TAG, "SESSION IS OPEN");
+                    SharedPreferences settings = getSharedPreferences("appPref",
+                            Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = settings.edit();
+                    token = session.getAccessToken();
+                    editor.putString("user_token_fb", token);
+                    editor.commit();
+
                     // make request to the /me API
                     Request.executeMeRequestAsync(session, new Request.GraphUserCallback() {
 
@@ -60,13 +72,38 @@ public class LoginActivity extends SherlockFragmentActivity {
                                     SharedPreferences settings = getSharedPreferences("appPref",
                                             Context.MODE_PRIVATE);
                                     SharedPreferences.Editor editor = settings.edit();
-                                    editor.putString("user_id_fb", "928bf8a68ad76c1f");
-                                    System.out.println(user.getName());
-                                    editor.putInt("user_id", 4);
-                                    //TODO FACEBOOK
-                                    userId = 4;
-                                    editor.commit();
-                                    gotoAllGroupsActivity();
+                                    String fbaccount = user.getId();
+                                    editor.putString("user_id_fb", fbaccount);
+
+                                    AsyncHttpClient client = new AsyncHttpClient();
+                                    RequestParams params = new RequestParams();
+
+                                    params.put("fbtoken",token );
+                                    params.put("fbaccount",fbaccount );
+                                    client.post("http://stiriromania.eu01.aws.af.cm/user/login",
+                                            params, new AsyncHttpResponseHandler() {
+                                        @Override
+                                        public void onSuccess(String s) {
+                                            super.onSuccess(s);
+                                            try{
+                                            JSONObject jsonObject = new JSONObject(s);
+                                                SharedPreferences settings =
+                                                        getSharedPreferences("appPref",
+                                                        Context.MODE_PRIVATE);
+                                                SharedPreferences.Editor editor = settings.edit();
+                                                userId = jsonObject.getInt("id");
+                                                editor.putInt("user_id", userId );
+                                                editor.commit();
+                                                gotoAllGroupsActivity();
+                                            }
+                                            catch (Exception e)
+                                            {
+                                                e.printStackTrace();
+                                            }
+                                        }
+                                    });
+
+
 
                                 }
                             }

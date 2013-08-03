@@ -37,9 +37,9 @@ public class NewsGroupDetailFragment extends SherlockFragment {
     NewsGroupFragmentAdapter adapter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         BusProvider.getInstance().register(this);
         setHasOptionsMenu(true);
-        super.onCreate(savedInstanceState);
         if (savedInstanceState != null)
             newsGroup = savedInstanceState.getParcelable(Tags.NEWSGROUP_TAG);
         else if (getArguments() != null) {

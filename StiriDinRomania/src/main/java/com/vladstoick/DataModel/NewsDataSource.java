@@ -122,6 +122,7 @@ public class NewsDataSource implements Parcelable{
                     {
                         allNewsGroups.get(i).newsSources.get(j).
                                 setNumberOfUnreadNews(newsItems.size());
+                        allNewsGroups.get(i).newsSources.get(j).news = newsItems;
                         insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
                         insertNewsItemsInDb(allNewsGroups.get(i).newsSources.get(j));
                     }

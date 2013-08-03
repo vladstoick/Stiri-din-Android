@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.stiridinromania.R;
@@ -25,6 +26,7 @@ public class NewsItemDetailFragment extends Fragment {
     public static final String ARG_ITEM = "item_id";
     private NewsItem mItem;
     @InjectView(R.id.news_item_detail_webView) WebView mWebView;
+    @InjectView(R.id.news_item_detail_title) TextView mTitle;
     public NewsItemDetailFragment() {
     }
 
@@ -43,7 +45,8 @@ public class NewsItemDetailFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_newsitem_detail, container, false);
         Views.inject(this,rootView);
         if (mItem != null) {
-            mWebView.loadData(mItem.getDescription(),"text/html; charset=UTF-8", null);
+            mTitle.setText(mItem.getTitle());
+            mWebView.loadData(mItem.getDescription(),"text/html; charset=utf-8", null);
         }
 
         return rootView;

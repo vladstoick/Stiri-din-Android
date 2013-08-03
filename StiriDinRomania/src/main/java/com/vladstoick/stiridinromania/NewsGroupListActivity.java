@@ -76,7 +76,7 @@ public class NewsGroupListActivity extends SherlockFragmentActivity
             // In single-pane mode, simply start the detail activity
             // for the selected item ID.
             Intent detailIntent = new Intent(this, NewsGroupDetailActivity.class);
-            detailIntent.putExtra(Tags.NEWSOURCE_TAG_ID, id);
+            detailIntent.putExtra(Tags.NEWSGROUP_TAG_ID, id);
             startActivity(detailIntent);
         }
     }

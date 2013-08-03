@@ -2,18 +2,24 @@
 <project version="4">
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
-      <GlobalState>
-        <option name="visible" value="false" />
-      </GlobalState>
+      <GlobalState />
     </option>
   </component>
   <component name="AndroidLayouts">
     <shared>
       <config>
+        <locale>iw</locale>
         <target>android-18</target>
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_twopane.xml">
+        <config>
+          <device>n7</device>
+          <state>Landscape</state>
+          <theme>@style/Theme.Styled</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_allgroups.xml">
         <config>
           <device>Nexus 4</device>
@@ -33,33 +39,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce4bd01f-0e24-4761-9107-6fc7ef347aeb" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\mycompany\myapp\NewsGroupDetailFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\layout\activity_newsgroup.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\layout\fragment_allgroups.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\mycompany\myapp\NewsItemListActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\mycompany\myapp\dummy\DummyContent.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\vladstoick\stiridinromania\AllGroupsActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\vladstoick\stiridinromania\NewsGroupActivity.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\mycompany\myapp\NewsGroupDetailActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java" />
-      <change type="MOVED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\mycompany\myapp\NewsGroupListActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java" />
-      <change type="MOVED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\mycompany\myapp\NewsGroupListFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java" />
-      <change type="MOVED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\vladstoick\Fragments\AllGroupsFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragmentOld.java" />
-      <change type="MOVED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\vladstoick\Fragments\NewsGroupFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
+      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\vladstoick\Fragments\NewsGroupListFragmentOld.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_allgroups.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemListFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/actionbarsherlock/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/actionbarsherlock/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/facebook/android/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/vladstoick/stiridinromania/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/vladstoick/stiridinromania/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/StiriApp.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/StiriApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_twopane.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_twopane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_twopane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_twopane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_newsgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem_detail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsitem_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsitem_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StiriDinRomaniaAndroidGradle.iws" />
@@ -160,6 +159,21 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" line="112" class="com.vladstoick.DataModel.NewsDataSource" package="com.vladstoick.DataModel">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
@@ -174,40 +188,9 @@
       <file leaf-file-name="NewsDataSource.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="92" selection-start="3154" selection-end="3154" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="4267">
+            <state line="112" column="0" selection-start="3984" selection-end="3984" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="4284">
               <folding>
-                <element signature="e#5352#5363#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsGroupListFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="34" selection-start="3018" selection-end="3018" vertical-scroll-proportion="-12.8" vertical-offset="1125" max-vertical-offset="1972">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsGroupListActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsGroupDetailActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="53" selection-start="2413" selection-end="2413" vertical-scroll-proportion="1.0590278" vertical-offset="342" max-vertical-offset="1275">
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#5434#5445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -216,7 +199,7 @@
       <file leaf-file-name="NewsGroupDetailFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="9" selection-start="3618" selection-end="3618" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1581">
+            <state line="81" column="0" selection-start="2930" selection-end="2930" vertical-scroll-proportion="0.0" vertical-offset="866" max-vertical-offset="1581">
               <folding />
             </state>
           </provider>
@@ -225,19 +208,32 @@
       <file leaf-file-name="NewsItemListActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1989">
+            <state line="52" column="41" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1989">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_row_newsgroup.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_newsgroup.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="LoginActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="47" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-15.64" vertical-offset="0" max-vertical-offset="782">
+            <state line="59" column="59" selection-start="2251" selection-end="2251" vertical-scroll-proportion="-0.8177083" vertical-offset="1117" max-vertical-offset="1989">
+              <folding>
+                <element signature="e#1648#5142#0" expanded="true" />
+                <element signature="e#2402#5098#0" expanded="true" />
+                <element signature="e#3628#4981#0" expanded="true" />
+                <element signature="e#4942#4943#0" expanded="true" />
+                <element signature="e#5075#5076#0" expanded="true" />
+                <element signature="e#5131#5132#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsItemDetailFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="78" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -332,22 +328,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/AllGroupsActivity.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/AllGroupsFragment.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemListFragment.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment11.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragmentOld.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemListActivity.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_twopane.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupActivity.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_newsgroup.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsitem_detail.xml" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_twopane.xml" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" />
       </list>
     </option>
   </component>
@@ -435,6 +431,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StiriDinRomaniaAndroidGradle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StiriDinRomaniaAndroidGradle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StiriDinRomania" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-v14" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -781,7 +807,7 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="n4" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="AndroidTargetDevices" value="192.168.56.101:5555" />
+    <property name="AndroidTargetDevices" value="192.168.56.102:5555" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -1003,7 +1029,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20833333" sideWeight="0.6703786" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40224358" sideWeight="0.6703786" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1018,7 +1044,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6703786" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1115,57 +1141,80 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/StiriApp.java">
+    <entry file="jar://C:/CLI/android-sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar!/android/support/v4/app/BackStackRecord.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+        <state line="108" column="16" selection-start="5224" selection-end="5224" vertical-scroll-proportion="-6.84" vertical-offset="1648" max-vertical-offset="2346">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_twopane.xml">
+    <entry file="jar://C:/CLI/android-sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar!/android/support/v4/app/FragmentManagerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="19" selection-start="7366" selection-end="7366" vertical-scroll-proportion="-6.32" vertical-offset="2188" max-vertical-offset="3417">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/CLI/android-sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar!/android/support/v4/app/FragmentActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="9" selection-start="3600" selection-end="3600" vertical-scroll-proportion="-6.84" vertical-offset="1240" max-vertical-offset="2091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/classes.jar!/android/support/v4/app/Watson.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="11" selection-start="590" selection-end="590" vertical-scroll-proportion="0.32210526" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="750" selection-end="750" vertical-scroll-proportion="-0.031189084" vertical-offset="254" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="934" selection-end="934" vertical-scroll-proportion="0.22018349" vertical-offset="471" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="55" selection-start="3290" selection-end="3290" vertical-scroll-proportion="0.64908254" vertical-offset="760" max-vertical-offset="1632">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_list.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="36" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.6824085" vertical-offset="0" max-vertical-offset="847">
+        <state line="5" column="62" selection-start="307" selection-end="307" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="340">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_detail.xml">
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsitem_detail.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="488">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="30" selection-start="3394" selection-end="3394" vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/AllGroupsFragmentAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="477" selection-end="477" vertical-scroll-proportion="0.20659722" vertical-offset="0" max-vertical-offset="1173">
+        <state line="21" column="63" selection-start="1071" selection-end="1071" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="561">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="12" selection-start="1986" selection-end="2029" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="46" selection-start="4436" selection-end="4436" vertical-scroll-proportion="1.8680556" vertical-offset="981" max-vertical-offset="2618">
+        <state line="55" column="80" selection-start="2269" selection-end="2269" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
@@ -1175,65 +1224,51 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="542" selection-end="542" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="765">
+        <state line="33" column="48" selection-start="1376" selection-end="1376" vertical-scroll-proportion="1.042751" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java">
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="34" selection-start="3018" selection-end="3018" vertical-scroll-proportion="-12.8" vertical-offset="1125" max-vertical-offset="1972">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="48" column="78" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="816">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="92" selection-start="3154" selection-end="3154" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="4267">
+        <state line="112" column="0" selection-start="3984" selection-end="3984" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="4284">
           <folding>
-            <element signature="e#5352#5363#0" expanded="true" />
+            <element signature="e#5434#5445#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1989">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_newsgroup.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="47" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-15.64" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="9" selection-start="3618" selection-end="3618" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1581">
+        <state line="81" column="0" selection-start="2930" selection-end="2930" vertical-scroll-proportion="0.0" vertical-offset="866" max-vertical-offset="1581">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java">
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="53" selection-start="2413" selection-end="2413" vertical-scroll-proportion="1.0590278" vertical-offset="342" max-vertical-offset="1275">
+        <state line="52" column="41" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1989">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="59" selection-start="2251" selection-end="2251" vertical-scroll-proportion="-0.8177083" vertical-offset="1117" max-vertical-offset="1989">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1648#5142#0" expanded="true" />
+            <element signature="e#2402#5098#0" expanded="true" />
+            <element signature="e#3628#4981#0" expanded="true" />
+            <element signature="e#4942#4943#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5131#5132#0" expanded="true" />
           </folding>
         </state>
       </provider>

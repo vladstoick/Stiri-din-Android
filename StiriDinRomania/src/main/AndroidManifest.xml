@@ -32,12 +32,10 @@
         </activity>
         <activity
                 android:name="com.vladstoick.stiridinromania.NewsGroupListActivity"
-                android:label="@string/title_newsgroup_list"
                 android:launchMode="singleTop">
         </activity>
         <activity
                 android:name="com.vladstoick.stiridinromania.NewsGroupDetailActivity"
-                android:label="@string/title_newsgroup_detail"
                 android:parentActivityName=".NewsGroupListActivity"
                 android:launchMode="singleTop">
             <meta-data
@@ -56,7 +54,6 @@
         </activity>
         <activity
             android:name="com.vladstoick.stiridinromania.NewsItemDetailActivity"
-            android:label="@string/title_newsitem_detail"
             android:launchMode="singleTop"
             android:parentActivityName=".NewsItemListActivity" >
             <meta-data
