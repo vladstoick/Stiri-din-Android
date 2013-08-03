@@ -41,10 +41,6 @@ public class NewsItemListActivity extends FragmentActivity
         if(getIntent().getExtras()!=null )
             newsSource = getIntent().getExtras().getParcelable(NewsSource.TAG);
         setTitle(newsSource.getTitle());
-        NewsItemListFragment fragment = NewsItemListFragment.newInstance(newsSource);
-        getSupportFragmentManager().beginTransaction().replace(R.id.newsitem_list,fragment)
-                .commit();
-
         if (findViewById(R.id.newsitem_detail_container) != null) {
             // The detail container view will be present only in the
             // large-screen layouts (res/values-large and
@@ -53,9 +49,12 @@ public class NewsItemListActivity extends FragmentActivity
             mTwoPane = true;
             // In two-pane mode, list items should be given the
             // 'activated' state when touched.
-//            ((NewsItemListFragment) getSupportFragmentManager()
-//                    .findFragmentById(R.id.newsitem_list))
-//                    .setActivateOnItemClick(true);
+            ((NewsItemListFragment) getSupportFragmentManager()
+                    .findFragmentById(R.id.newsitem_list))
+                    .setActivateOnItemClick(true);
+            ((NewsItemListFragment) getSupportFragmentManager()
+                    .findFragmentById(R.id.newsitem_list))
+                    .setData(newsSource);
         }
 
     }

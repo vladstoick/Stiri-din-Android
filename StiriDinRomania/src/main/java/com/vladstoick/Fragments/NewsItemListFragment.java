@@ -74,14 +74,14 @@ public class NewsItemListFragment extends ListFragment {
      */
     public NewsItemListFragment() {
     }
-
+    public void setData(NewsSource ns)
+    {
+        this.ns = ns;
+        setListAdapter(new NewsItemListFragmentAdapter(getActivity(),ns));
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(getArguments()!=null)
-            ns = getArguments().getParcelable(NewsSource.TAG);
-        // TODO: replace with a real list adapter.
-        setListAdapter(new NewsItemListFragmentAdapter(getActivity(),ns));
     }
 
     @Override
@@ -121,7 +121,7 @@ public class NewsItemListFragment extends ListFragment {
 
         // Notify the active callbacks interface (the activity, if the
         // fragment is attached to one) that an item has been selected.
-//        mCallbacks.onItemSelected(DummyContent.ITEMS.get(position).id);
+        mCallbacks.onItemSelected(ns.news.get(position).getUrlLink());
     }
 
     @Override
