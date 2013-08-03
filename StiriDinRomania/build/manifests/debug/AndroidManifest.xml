@@ -27,6 +27,11 @@
         <activity android:label="@string/title_newsitem_detail" android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsItemDetailActivity" android:parentActivityName=".NewsItemListActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsItemListActivity"/>
         </activity>
+        <activity android:label="@string/title_newsgroup_list" android:name="com.vladstoick.stiridinromania.NewsGroupListActivity">
+        </activity>
+        <activity android:label="@string/title_newsgroup_detail" android:name="com.vladstoick.stiridinromania.NewsGroupDetailActivity" android:parentActivityName=".NewsGroupListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsGroupListActivity"/>
+        </activity>
     </application>
 
 </manifest>

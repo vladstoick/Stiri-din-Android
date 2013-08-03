@@ -41,5 +41,7 @@
     <string name="logout">Log out</string>
     <string name="title_newsitem_list">NewsItems</string>
     <string name="title_newsitem_detail">NewsItem Detail</string>
+    <string name="title_newsgroup_list">NewsSources</string>
+    <string name="title_newsgroup_detail">NewsGroup Detail</string>
 
 </resources>

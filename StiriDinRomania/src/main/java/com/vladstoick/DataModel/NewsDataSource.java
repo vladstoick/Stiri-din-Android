@@ -54,23 +54,20 @@ public class NewsDataSource implements Parcelable{
             public void onResponse(String s) {
                 allNewsGroups = JSONParsing.parseNewsDataSource(s);
                 for(int i = 0 ;i < allNewsGroups.size(); i++ ) {
-                    NewsGroup ng = allNewsGroups.get(i);
-                    insertNewsGroupInDb(ng);
+                    insertNewsGroupInDb(allNewsGroups.get(i));
                 }
-                BusProvider.getInstance().post(new DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE,
-                        allNewsGroups));
+                BusProvider.getInstance().post(new DataLoadedEvent(
+                        DataLoadedEvent.TAG_NEWSDATASOURCE,allNewsGroups));
             }
         },new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-
+                volleyError.printStackTrace();
             }
         });
         StiriApp.queue.add(request);
 
     }
-    //PARCELABLE
-
     @Override
     public int describeContents() {
         return 0;
@@ -120,6 +117,7 @@ public class NewsDataSource implements Parcelable{
                         allNewsGroups.get(i).newsSources.get(j).setNumberOfUnreadNews
                                 (newsItems.size());
                         insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
+                        insertNewsItemsInDb(allNewsGroups.get(i).newsSources.get(j));
                     }
 
         }
@@ -180,10 +178,7 @@ public class NewsDataSource implements Parcelable{
         cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
                 SqlHelper.COLUMN_GROUP_ID +" = "+id , null , null , null , null , null);
         cursor.moveToFirst();
-        while(!cursor.isAfterLast())
-        {
-            NewsSource ns = new NewsSource(cursor);
-            //TODO REMOVE
+        while(!cursor.isAfterLast()){
             ng.newsSources.add(new NewsSource(cursor));
             cursor.moveToNext();
         }
@@ -222,7 +217,6 @@ public class NewsDataSource implements Parcelable{
             }
         });
     }
-
     //SQLITE Helper
     private void insertNewsGroupInDb(NewsGroup ng)
     {
@@ -231,8 +225,34 @@ public class NewsDataSource implements Parcelable{
         values.put(SqlHelper.COLUMN_ID,ng.getId());
         values.put(SqlHelper.COLUMN_NOFEEDS,ng.getNoFeeds());
         SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
-        sqlLiteDatabase.insertWithOnConflict(SqlHelper.GROUPS_TABLE,null,values,
+        try{
+            sqlLiteDatabase.insertWithOnConflict(SqlHelper.GROUPS_TABLE,null,values,
                 SQLiteDatabase.CONFLICT_REPLACE);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+    private void insertNewsItemsInDb(NewsSource ns)
+    {
+        SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
+        for(int i=0 ; i < ns.news.size() ; i++)
+        {
+            NewsItem ni = ns.news.get(i);
+            ContentValues values = new ContentValues();
+            values.put(SqlHelper.COLUMN_URL,ni.getUrlLink());
+            values.put(SqlHelper.COLUMN_TITLE,ni.getTitle());
+            values.put(SqlHelper.COLUMN_DESCRIPTION,ni.getDescription());
+            values.put(SqlHelper.COLUMN_SOURCE_ID,ns.getId());
+            try{
+                sqlLiteDatabase.insertWithOnConflict(SqlHelper.NEWSITEMS_TABLE, null , values,
+                    SQLiteDatabase.CONFLICT_REPLACE);
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+        }
     }
     public void insertNewsSourceInDb(NewsSource ns)
     {
@@ -245,7 +265,13 @@ public class NewsDataSource implements Parcelable{
         values.put(SqlHelper.COLUMN_URL,ns.getRssLink());
         values.put(SqlHelper.COLUMN_GROUP_ID,ns.getGroupId());
         values.put(SqlHelper.COLUMN_NOUNREADNEWS,ns.getNumberOfUnreadNews());
-        sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
+        try{
+            sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
                 SQLiteDatabase.CONFLICT_REPLACE);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }

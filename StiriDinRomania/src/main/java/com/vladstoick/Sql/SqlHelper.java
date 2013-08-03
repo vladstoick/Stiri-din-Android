@@ -13,13 +13,18 @@ public class SqlHelper extends SQLiteOpenHelper{
     private static String DB_NAME = "feeds.db";
     public static String GROUPS_TABLE = "groups";
     public static String SOURCES_TABLE = "sources";
+    public static String NEWSITEMS_TABLE = "newsitems";
     public static String COLUMN_GROUP_ID = "groupid";
+    public static String COLUMN_SOURCE_ID = "sourceid";
     public static String COLUMN_NOFEEDS = "nofeeds";
     public static String COLUMN_NOUNREADNEWS = "nounreadnews";
     public static String COLUMN_ID = "id";
     public static String COLUMN_TITLE = "title";
     public static String COLUMN_URL = "url";
     public static String COLUMN_DESCRIPTION = "description";
+    private static String CREATE_NEWSITEMS_TABLE = "CREATE TABLE " + NEWSITEMS_TABLE + " ( "+
+            COLUMN_URL  + " text primary key , " + COLUMN_TITLE  + " text not null , " +
+            COLUMN_DESCRIPTION +  " text not null , "+COLUMN_SOURCE_ID +" int )";
     private static String CREATE_GROUPS_TABLE = "CREATE TABLE " + GROUPS_TABLE + " ( " +
             COLUMN_ID + " int primary key , " + COLUMN_TITLE + " text not null , "+
             COLUMN_NOFEEDS + " int )";
@@ -38,6 +43,7 @@ public class SqlHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_GROUPS_TABLE);
         db.execSQL(CREATE_SOURCES_TABLE);
+        db.execSQL(CREATE_NEWSITEMS_TABLE);
     }
 
     @Override

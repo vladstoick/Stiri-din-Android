@@ -43,7 +43,7 @@ public class NewsItemDetailFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_newsitem_detail, container, false);
         Views.inject(this,rootView);
         if (mItem != null) {
-            mWebView.loadData(mItem.getDescription(),"text/html","utf-8");
+            mWebView.loadData(mItem.getDescription(),"text/html; charset=UTF-8", null);
         }
 
         return rootView;

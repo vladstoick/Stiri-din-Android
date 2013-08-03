@@ -1656,34 +1656,38 @@ bold
                 <attr
                     name="actionModeStyle"
                     format="reference" />
-                <attr
-                    name="titleTextStyle"
-                    format="reference" />
 
                 <dimen name="abs__dropdownitem_text_padding_right" >8dip
                 </dimen>
 
                 <attr
+                    name="titleTextStyle"
+                    format="reference" />
+                <attr
                     name="actionBarSplitStyle"
+                    format="reference" />
+                <attr
+                    name="actionBarDivider"
                     format="reference" />
 
                 <style name="Widget.Sherlock.Light.ActionBar.TabBar.Inverse" />
 
-                <attr
-                    name="actionBarDivider"
-                    format="reference" />
                 <attr
                     name="itemBackground"
                     format="color|reference" />
                 <attr
                     name="divider"
                     format="reference" />
-                <attr
-                    name="backgroundStacked"
-                    format="reference|color" />
 
                 <dimen name="abs__action_bar_title_text_size" >18dp
                 </dimen>
+
+                <attr
+                    name="backgroundStacked"
+                    format="reference|color" />
+                <attr
+                    name="spinnerDropDownItemStyle"
+                    format="reference" />
 
                 <style name="Widget.Sherlock.Light.ActionBar.Solid" >
                     <item name="titleTextStyle">
@@ -1718,9 +1722,6 @@ bold
                     </item>
                 </style>
 
-                <attr
-                    name="spinnerDropDownItemStyle"
-                    format="reference" />
                 <attr
                     name="searchViewCloseIcon"
                     format="reference" />
@@ -1953,11 +1954,6 @@ true
 
                 <string name="abs__activity_chooser_view_see_all" >See all...
                 </string>
-
-                <attr
-                    name="actionModeCloseDrawable"
-                    format="reference" />
-
                 <string name="abs__shareactionprovider_share_with_application" >Share with 
 <ns1:g
                         id="application_name"
@@ -1965,6 +1961,9 @@ true
 %s
                     </ns1:g></string>
 
+                <attr
+                    name="actionModeCloseDrawable"
+                    format="reference" />
                 <attr
                     name="searchViewTextField"
                     format="reference" />
@@ -1975,10 +1974,6 @@ true
                 <string name="abs__searchview_description_search" >Search
                 </string>
 
-                <attr
-                    name="actionModeBackground"
-                    format="reference" />
-
                 <style
                     name="Sherlock.__Theme"
                     parent="android:Theme.NoTitleBar" >
@@ -1986,6 +1981,10 @@ true
 @null
                     </item>
                 </style>
+
+                <attr
+                    name="actionModeBackground"
+                    format="reference" />
 
                 <bool name="abs__config_allowActionMenuItemTextWithIcon" >
 false
@@ -2000,10 +1999,10 @@ false
                 </style>
 
                 <attr
-                    name="textAppearanceSearchResultSubtitle"
+                    name="actionOverflowButtonStyle"
                     format="reference" />
                 <attr
-                    name="actionOverflowButtonStyle"
+                    name="textAppearanceSearchResultSubtitle"
                     format="reference" />
 
                 <declare-styleable name="SherlockActionMode" >
@@ -2021,10 +2020,10 @@ false
                 </declare-styleable>
 
                 <attr
-                    name="homeLayout"
+                    name="dividerVertical"
                     format="reference" />
                 <attr
-                    name="dividerVertical"
+                    name="homeLayout"
                     format="reference" />
 
                 <style name="Widget.Sherlock.Light.ActionButton.CloseMode" >
@@ -2213,9 +2212,6 @@ false
                 <attr
                     name="itemIconDisabledAlpha"
                     format="float" />
-                <attr
-                    name="listPopupWindowStyle"
-                    format="reference" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionBar.Title"
@@ -2228,6 +2224,9 @@ false
                     </item>
                 </style>
 
+                <attr
+                    name="listPopupWindowStyle"
+                    format="reference" />
                 <attr
                     name="indeterminateProgressStyle"
                     format="reference" />
@@ -2475,13 +2474,13 @@ true
                     parent="Widget" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionMode"
-                    parent="Widget.Sherlock.ActionMode" >
-                    <item name="titleTextStyle">
-@style/TextAppearance.Sherlock.Widget.ActionMode.Title
+                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
+                    parent="Widget" >
+                    <item name="android:textSize">
+@dimen/abs__action_bar_subtitle_text_size
                     </item>
-                    <item name="subtitleTextStyle">
-@style/TextAppearance.Sherlock.Widget.ActionMode.Subtitle
+                    <item name="android:textColor">
+?android:attr/textColorSecondary
                     </item>
                 </style>
 
@@ -2503,13 +2502,13 @@ true
                 </style>
 
                 <style
-                    name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
-                    parent="Widget" >
-                    <item name="android:textSize">
-@dimen/abs__action_bar_subtitle_text_size
+                    name="Widget.Sherlock.Light.ActionMode"
+                    parent="Widget.Sherlock.ActionMode" >
+                    <item name="titleTextStyle">
+@style/TextAppearance.Sherlock.Widget.ActionMode.Title
                     </item>
-                    <item name="android:textColor">
-?android:attr/textColorSecondary
+                    <item name="subtitleTextStyle">
+@style/TextAppearance.Sherlock.Widget.ActionMode.Subtitle
                     </item>
                 </style>
 
@@ -2521,12 +2520,12 @@ true
                     name="Widget.Sherlock.Light.ActionBar.TabView"
                     parent="Widget.Sherlock.ActionBar.TabView" />
 
+                <dimen name="abs__action_button_min_width" >56dip
+                </dimen>
+
                 <attr
                     name="initialActivityCount"
                     format="string" />
-
-                <dimen name="abs__action_button_min_width" >56dip
-                </dimen>
 
                 <declare-styleable name="SherlockMenuGroup" >
 
@@ -3677,24 +3676,6 @@ marquee
                     format="color" />
 
                 <style
-                    name="Widget.Sherlock.ProgressBar.Horizontal"
-                    parent="android:Widget.ProgressBar.Horizontal" >
-                    <item name="android:progressDrawable">
-@drawable/abs__progress_horizontal_holo_dark
-                    </item>
-                    <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
-                    <item name="android:minHeight">
-16dip
-                    </item>
-                    <item name="android:maxHeight">
-16dip
-                    </item>
-                </style>
-
-                <string name="abs__action_menu_overflow_description" >More options
-                </string>
-
-                <style
                     name="Sherlock.__Widget.Holo.DropDownItem"
                     parent="Widget" >
                     <item name="android:textAppearance">
@@ -3708,6 +3689,24 @@ marquee
                     </item>
                     <item name="android:gravity">
 center_vertical
+                    </item>
+                </style>
+
+                <string name="abs__action_menu_overflow_description" >More options
+                </string>
+
+                <style
+                    name="Widget.Sherlock.ProgressBar.Horizontal"
+                    parent="android:Widget.ProgressBar.Horizontal" >
+                    <item name="android:progressDrawable">
+@drawable/abs__progress_horizontal_holo_dark
+                    </item>
+                    <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
+                    <item name="android:minHeight">
+16dip
+                    </item>
+                    <item name="android:maxHeight">
+16dip
                     </item>
                 </style>
 
@@ -3727,9 +3726,6 @@ center_vertical
                 <attr
                     name="verticalDivider"
                     format="reference" />
-                <attr
-                    name="actionButtonStyle"
-                    format="reference" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Subtitle.Inverse"
@@ -3742,30 +3738,33 @@ center_vertical
                     </item>
                 </style>
 
+                <attr
+                    name="actionButtonStyle"
+                    format="reference" />
+
                 <style name="Widget.Sherlock.Light.ActionBar.TabView.Inverse" />
 
                 <attr
                     name="actionBarTabTextStyle"
                     format="reference" />
                 <attr
-                    name="searchResultListItemHeight"
-                    format="dimension" />
-                <attr
                     name="iconifiedByDefault"
                     format="boolean" />
+                <attr
+                    name="searchResultListItemHeight"
+                    format="dimension" />
                 <attr
                     name="windowActionBar"
                     format="boolean" />
 
                 <dimen name="abs__search_view_text_min_width" >160dip
                 </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
 
                 <attr
                     name="windowNoTitle"
                     format="boolean" />
-
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
 
                 <style
                     name="Widget.Sherlock.Light.SearchAutoCompleteTextView"
@@ -3789,11 +3788,14 @@ center_vertical
                     </item>
                 </style>
 
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
+                </dimen>
+
                 <attr
                     name="windowSplitActionBar"
                     format="boolean" />
 
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
+                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
                 </dimen>
 
                 <style name="Theme.Sherlock.Light.NoActionBar" >
@@ -3804,9 +3806,6 @@ false
 true
                     </item>
                 </style>
-
-                <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
-                </dimen>
 
                 <style
                     name="Widget.Sherlock.Light.Button.Small"
@@ -3841,10 +3840,6 @@ normal
                     name="windowContentOverlay"
                     format="reference" />
 
-                <style
-                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
-                    parent="Sherlock.__Widget.Holo.DropDownItem" />
-
                 <style name="TextAppearance.Sherlock.SearchResult.Subtitle" >
                     <item name="android:textSize">
 14sp
@@ -3853,6 +3848,10 @@ normal
 ?android:attr/textColorSecondary
                     </item>
                 </style>
+
+                <style
+                    name="Widget.Sherlock.Light.DropDownItem.Spinner"
+                    parent="Sherlock.__Widget.Holo.DropDownItem" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionMode.Inverse"
@@ -3916,10 +3915,6 @@ wrap_content
                     format="reference" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.TabText"
-                    parent="Widget.Sherlock.ActionBar.TabText" />
-
-                <style
                     name="TextAppearance.Sherlock.Widget.ActionMode.Title"
                     parent="Widget" >
                     <item name="android:textSize">
@@ -3930,18 +3925,21 @@ wrap_content
                     </item>
                 </style>
 
+                <style
+                    name="Widget.Sherlock.Light.ActionBar.TabText"
+                    parent="Widget.Sherlock.ActionBar.TabText" />
+
                 <bool name="abs__config_showMenuShortcutsWhenKeyboardPresent" >
 false
                 </bool>
-
-                <attr
-                    name="textAppearanceSmall"
-                    format="reference" />
 
                 <item
                     name="abs__home"
                     type="id"/>
 
+                <attr
+                    name="textAppearanceSmall"
+                    format="reference" />
                 <attr
                     name="windowActionBarOverlay"
                     format="boolean" />
@@ -3953,9 +3951,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >40dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
                 <dimen name="abs__action_bar_title_text_size" >16dp
                 </dimen>
@@ -3973,9 +3971,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >8dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >48dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
             </file>
             <file
@@ -3987,9 +3985,9 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >12dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >4dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >12dp
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_top_margin" >-2dp
                 </dimen>
@@ -3999,9 +3997,9 @@ false
                 qualifiers="large-land-mdpi-1024x600" >
                 <dimen name="abs__action_bar_default_height" >48dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >8dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
                 </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >5dip
                 </dimen>
@@ -4013,9 +4011,9 @@ false
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-mdpi-1024x600\values.xml"
                 qualifiers="large-mdpi-1024x600" >
-                <dimen name="abs__action_button_min_width" >64dip
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
+                </dimen>
+                <dimen name="abs__action_button_min_width" >64dip
                 </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
                 </dimen>
@@ -4048,12 +4046,13 @@ false
                 </dimen>
                 <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
 
                 <bool name="abs__action_bar_expanded_action_views_exclusive" >
 false
                 </bool>
+
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
+                </dimen>
             </file>
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-v11\values.xml"
@@ -4160,24 +4159,24 @@ false
                     parent="android:Widget.Holo.Spinner" />
 
                 <style
-                    name="Widget.Sherlock.ActionBar.TabView"
-                    parent="android:Widget.Holo.ActionBar.TabView" />
-
-                <style
                     name="TextAppearance.Sherlock.Widget.PopupMenu"
                     parent="android:TextAppearance.Holo.Widget.PopupMenu" />
+
+                <style
+                    name="Widget.Sherlock.ActionBar.TabView"
+                    parent="android:Widget.Holo.ActionBar.TabView" />
 
                 <style
                     name="Widget.Sherlock.Light.ActionButton.Overflow"
                     parent="android:Widget.Holo.Light.ActionButton.Overflow" />
 
                 <style
-                    name="Widget.Sherlock.Light.ActionBar.TabView"
-                    parent="android:Widget.Holo.Light.ActionBar.TabView" />
-
-                <style
                     name="Widget.Sherlock.Light.ProgressBar"
                     parent="android:Widget.Holo.Light.ProgressBar" />
+
+                <style
+                    name="Widget.Sherlock.Light.ActionBar.TabView"
+                    parent="android:Widget.Holo.Light.ActionBar.TabView" />
 
                 <style
                     name="Sherlock.__Theme"
@@ -4310,32 +4309,32 @@ true
                     parent="android:Widget.Holo.ListView.DropDown" />
 
                 <style
-                    name="Widget.Sherlock.ProgressBar.Horizontal"
-                    parent="android:Widget.Holo.ProgressBar.Horizontal" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar"
                     parent="android:Widget.Holo.Light.ActionBar" />
+
+                <style
+                    name="Widget.Sherlock.ProgressBar.Horizontal"
+                    parent="android:Widget.Holo.ProgressBar.Horizontal" />
 
                 <style
                     name="Widget.Sherlock.Light.SearchAutoCompleteTextView"
                     parent="android:Widget.Holo.Light.AutoCompleteTextView" />
 
                 <style
-                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
-                    parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
-
-                <style
                     name="Widget.Sherlock.Light.ActionBar.Solid"
                     parent="android:Widget.Holo.Light.ActionBar.Solid" />
 
                 <style
-                    name="TextAppearance.Sherlock.Widget.ActionMode.Title"
-                    parent="android:TextAppearance.Holo.Widget.ActionMode.Title" />
+                    name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
+                    parent="android:TextAppearance.Holo.Widget.PopupMenu.Large" />
 
                 <style
                     name="TextAppearance.Sherlock.Widget.ActionBar.Subtitle"
                     parent="android:TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+
+                <style
+                    name="TextAppearance.Sherlock.Widget.ActionMode.Title"
+                    parent="android:TextAppearance.Holo.Widget.ActionMode.Title" />
 
                 <style
                     name="Widget.Sherlock.SearchAutoCompleteTextView"
@@ -4378,17 +4377,20 @@ true
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-xlarge\values.xml"
                 qualifiers="xlarge" >
+                <dimen name="abs__action_bar_title_text_size" >18dp
+                </dimen>
+
                 <item
                     name="abs__dialog_min_width_minor"
                     type="dimen">
 72%
                 </item>
 
-                <dimen name="abs__action_bar_title_text_size" >18dp
-                </dimen>
                 <dimen name="abs__action_bar_subtitle_bottom_margin" >9dip
                 </dimen>
                 <dimen name="abs__action_button_min_width" >64dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
                 </dimen>
 
                 <item
@@ -4397,13 +4399,11 @@ true
 45%
                 </item>
 
-                <dimen name="abs__action_bar_subtitle_top_margin" >-3dp
-                </dimen>
                 <dimen name="abs__action_bar_default_height" >56dip
                 </dimen>
-                <dimen name="abs__action_bar_subtitle_text_size" >14dp
-                </dimen>
                 <dimen name="abs__action_bar_icon_vertical_padding" >4dip
+                </dimen>
+                <dimen name="abs__action_bar_subtitle_text_size" >14dp
                 </dimen>
             </file>
         </source>
@@ -4902,11 +4902,11 @@ center
                     name="done_button_background"
                     format="reference" />
 
-                <string name="com_facebook_loginview_logged_in_as" >Logged in as: %1$s
-                </string>
-
                 <dimen name="com_facebook_profilepictureview_preset_size_large" >180dp
                 </dimen>
+
+                <string name="com_facebook_loginview_logged_in_as" >Logged in as: %1$s
+                </string>
 
                 <attr
                     name="login_text"
@@ -4954,12 +4954,12 @@ center
                     </item>
                 </style>
 
+                <string name="com_facebook_loginfragment_logged_in" >Logged In
+                </string>
+
                 <attr
                     name="is_cropped"
                     format="boolean" />
-
-                <string name="com_facebook_loginfragment_logged_in" >Logged In
-                </string>
 
                 <dimen name="com_facebook_loginview_width" >205dp
                 </dimen>
@@ -4967,11 +4967,11 @@ center
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-es\values.xml"
                 qualifiers="es" >
-                <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
+                <string name="com_facebook_loginfragment_logged_in" >Sesión iniciada
                 </string>
                 <string name="com_facebook_loginview_log_out_action" >Cerrar sesión
                 </string>
-                <string name="com_facebook_loginfragment_logged_in" >Sesión iniciada
+                <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
                 </string>
                 <string name="com_facebook_loginview_cancel_action" >Cancelar
                 </string>
@@ -4981,9 +4981,9 @@ center
                 </string>
                 <string name="com_facebook_loginview_logged_in_using_facebook" >Sesión iniciada con Facebook
                 </string>
-                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d estuvieron aquí
-                </string>
                 <string name="com_facebook_loginfragment_log_in_button" >Iniciar Sesión…
+                </string>
+                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d estuvieron aquí
                 </string>
                 <string name="com_facebook_logo_content_description" >Logo de Facebook
                 </string>
@@ -5019,33 +5019,33 @@ center
                 </string>
                 <string name="com_facebook_loginview_logged_in_as" >מחובר בשם: %1$s
                 </string>
-                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
-                </string>
                 <string name="com_facebook_loginfragment_logged_in" >מחובר
+                </string>
+                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
                 </string>
             </file>
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-iw\values.xml"
                 qualifiers="iw" >
-                <string name="com_facebook_loginview_log_in_button" >התחבר
+                <string name="com_facebook_loginfragment_log_in_button" >התחבר…
                 </string>
                 <string name="com_facebook_loginfragment_logged_in" >מחובר
                 </string>
-                <string name="com_facebook_loginfragment_log_in_button" >התחבר…
+                <string name="com_facebook_loginview_log_in_button" >התחבר
                 </string>
                 <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
                 </string>
                 <string name="com_facebook_loginview_log_out_button" >התנתק
                 </string>
-                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d היו פה
-                </string>
                 <string name="com_facebook_loginview_logged_in_as" >מחובר בשם: %1$s
+                </string>
+                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d היו פה
                 </string>
                 <string name="com_facebook_loginview_logged_in_using_facebook" >מחובר באמצעות פייסבוק
                 </string>
-                <string name="com_facebook_loginview_log_out_action" >התנתק
-                </string>
                 <string name="com_facebook_loginfragment_not_logged_in" >לא מחובר
+                </string>
+                <string name="com_facebook_loginview_log_out_action" >התנתק
                 </string>
                 <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
                 </string>
@@ -5254,9 +5254,9 @@ center
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml"
                 qualifiers="" >
-                <string name="delete_dialog_fragment_message" >Are you sure?
-                </string>
                 <string name="add_dialog_fragment_feeddescription_source" >The description of the feed
+                </string>
+                <string name="delete_dialog_fragment_message" >Are you sure?
                 </string>
                 <string name="action_settings" >Settings
                 </string>
@@ -5266,13 +5266,13 @@ center
                 </string>
                 <string name="title_newsitem_detail" >NewsItem Detail
                 </string>
-                <string name="add_dialog_fragment_title_group" >Add a new group
-                </string>
                 <string name="rename" >Rename
                 </string>
-                <string name="update_data" >Update
+                <string name="add_dialog_fragment_title_group" >Add a new group
                 </string>
                 <string name="cancel" >Cancel
+                </string>
+                <string name="update_data" >Update
                 </string>
                 <string name="login_message" >News from Romania uses your name in order to sync your news across
         all devices
@@ -5287,6 +5287,8 @@ center
                 </string>
                 <string name="app_id" >498421953559265
                 </string>
+                <string name="title_newsgroup_detail" >NewsGroup Detail
+                </string>
                 <string name="add_dialog_fragment_feedadress_source" >The rss address of the feed
                 </string>
                 <string name="add_dialog_fragment_ok" >Add
@@ -5296,6 +5298,8 @@ center
                 <string name="lorem_w_5" >Lorem ipsum dolor sit amet.
                 </string>
                 <string name="all_groups_title" >Your groups
+                </string>
+                <string name="title_newsgroup_list" >NewsSources
                 </string>
                 <string name="logout" >Log out
                 </string>
@@ -5309,9 +5313,9 @@ center
                 </string>
                 <string name="feed" >Feed
                 </string>
-                <string name="login_facebook" >Login with Facebook
-                </string>
                 <string name="app_name" >News from Romania
+                </string>
+                <string name="login_facebook" >Login with Facebook
                 </string>
                 <string name="delete" >Delete
                 </string>
@@ -5391,15 +5395,15 @@ sans-serif-thin
                 </string>
                 <string name="delete_dialog_fragment_title" >Vrei să ștergi acest element?
                 </string>
-                <string name="add_dialog_fragment_ok" >Ajouter
-                </string>
                 <string name="feeds" >Feeduri
+                </string>
+                <string name="add_dialog_fragment_ok" >Ajouter
                 </string>
                 <string name="update_data" >Acutalizează
                 </string>
-                <string name="all_groups_title" >Votre groups
-                </string>
                 <string name="feed" >Feed
+                </string>
+                <string name="all_groups_title" >Votre groups
                 </string>
                 <string name="add_dialog_fragment_title_source" >Ajouter un nouveau flux RSS
                 </string>
@@ -5427,14 +5431,14 @@ sans-serif-thin
                 </string>
                 <string name="rename" >Redenumește
                 </string>
+                <string name="cancel" >Anulează
+                </string>
+                <string name="ok" >OK
+                </string>
                 <string name="logout" >Deloghează-te
                 </string>
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale
-                </string>
-                <string name="ok" >OK
-                </string>
-                <string name="cancel" >Anulează
                 </string>
                 <string name="delete" >Șterge
                 </string>
@@ -5442,6 +5446,11 @@ sans-serif-thin
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-large\refs.xml"
                 qualifiers="large" >
+                <item
+                    name="activity_newsgroup_list"
+                    type="layout">
+@layout/activity_newsgroup_twopane
+                </item>
                 <item
                     name="activity_newsitem_list"
                     type="layout">
@@ -5465,15 +5474,15 @@ sans-serif-thin
                 </string>
                 <string name="login_facebook" >Loghează-te cu Facebook
                 </string>
-                <string name="feeds" >Feeduri
-                </string>
                 <string name="app_name" >Ştiri din România
+                </string>
+                <string name="feeds" >Feeduri
                 </string>
                 <string name="add_dialog_fragment_title_source" >Adaugă un feed nou
                 </string>
-                <string name="login_microsoft" >Loghează-te cu Microsoft
-                </string>
                 <string name="rename" >Redenumește
+                </string>
+                <string name="login_microsoft" >Loghează-te cu Microsoft
                 </string>
                 <string name="update_data" >Acutalizează
                 </string>
@@ -5502,11 +5511,11 @@ sans-serif-thin
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale
                 </string>
+                <string name="nointernet" >Nu aveți internet
+                </string>
                 <string name="add_dialog_fragment_title_group" >Adaugă un grup nou
                 </string>
                 <string name="add" >Adaugă
-                </string>
-                <string name="nointernet" >Nu aveți internet
                 </string>
                 <string name="ok" >OK
                 </string>
@@ -5519,6 +5528,11 @@ sans-serif-thin
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw600dp\refs.xml"
                 qualifiers="sw600dp" >
+                <item
+                    name="activity_newsgroup_list"
+                    type="layout">
+@layout/activity_newsgroup_twopane
+                </item>
                 <item
                     name="activity_newsitem_list"
                     type="layout">
@@ -5556,6 +5570,26 @@ sans-serif-thin
             <file
                 name="list_row_newsitem"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_newsitem.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_newsgroup_list"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_newsgroup_detail"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsgroup_detail.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_newsgroup_twopane"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_twopane.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_newsgroup_detail"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_detail.xml"
                 qualifiers=""
                 type="layout" />
         </source>
