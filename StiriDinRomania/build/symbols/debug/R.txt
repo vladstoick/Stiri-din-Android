@@ -401,7 +401,7 @@ int id newSourceTitle 0x7f06004f
 int id newsGroupFragment 0x7f060036
 int id newsGroupListView 0x7f060053
 int id newsSourceTitle 0x7f060059
-int id newsitem_detail 0x7f060055
+int id news_item_detail_webView 0x7f060055
 int id newsitem_detail_container 0x7f060037
 int id newsitem_list 0x7f060038
 int id normal 0x7f060000

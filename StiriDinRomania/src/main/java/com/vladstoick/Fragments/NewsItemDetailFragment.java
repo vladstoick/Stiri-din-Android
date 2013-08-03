@@ -5,9 +5,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.webkit.WebView;
 
+import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.stiridinromania.R;
+
+import butterknife.InjectView;
+import butterknife.Views;
 
 //import com.mycompany.myapp.dummy.DummyContent;
 
@@ -18,21 +22,9 @@ import com.vladstoick.stiridinromania.R;
  * on handsets.
  */
 public class NewsItemDetailFragment extends Fragment {
-    /**
-     * The fragment argument representing the item ID that this fragment
-     * represents.
-     */
-    public static final String ARG_ITEM_ID = "item_id";
-
-    /**
-     * The dummy content this fragment is presenting.
-     */
-//    private DummyContent.DummyItem mItem;
-
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+    public static final String ARG_ITEM = "item_id";
+    private NewsItem mItem;
+    @InjectView(R.id.news_item_detail_webView) WebView mWebView;
     public NewsItemDetailFragment() {
     }
 
@@ -40,11 +32,8 @@ public class NewsItemDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (getArguments().containsKey(ARG_ITEM_ID)) {
-            // Load the dummy content specified by the fragment
-            // arguments. In a real-world scenario, use a Loader
-            // to load content from a content provider.
-//            mItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+        if (getArguments().containsKey(ARG_ITEM)) {
+            mItem = getArguments().getParcelable(ARG_ITEM);
         }
     }
 
@@ -52,11 +41,10 @@ public class NewsItemDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_newsitem_detail, container, false);
-
-        // Show the dummy content as text in a TextView.
-//        if (mItem != null) {
-//            ((TextView) rootView.findViewById(R.id.newsitem_detail)).setText(mItem.content);
-//        }
+        Views.inject(this,rootView);
+        if (mItem != null) {
+            mWebView.loadData(mItem.getDescription(),"text/html","utf-8");
+        }
 
         return rootView;
     }

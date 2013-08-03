@@ -1134,7 +1134,7 @@ containing a value of this type.
         public static final int newsGroupFragment=0x7f060036;
         public static final int newsGroupListView=0x7f060053;
         public static final int newsSourceTitle=0x7f060059;
-        public static final int newsitem_detail=0x7f060055;
+        public static final int news_item_detail_webView=0x7f060055;
         public static final int newsitem_detail_container=0x7f060037;
         public static final int newsitem_list=0x7f060038;
         public static final int normal=0x7f060000;

@@ -56,10 +56,6 @@ public class NewsDataSource implements Parcelable{
                 for(int i = 0 ;i < allNewsGroups.size(); i++ ) {
                     NewsGroup ng = allNewsGroups.get(i);
                     insertNewsGroupInDb(ng);
-                    for(int j =0 ; j < ng.newsSources.size() ; j++ ){
-                        NewsSource ns = ng.newsSources.get(j);
-                    }
-
                 }
                 BusProvider.getInstance().post(new DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE,
                         allNewsGroups));

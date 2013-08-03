@@ -2,10 +2,9 @@ package com.vladstoick.stiridinromania;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
-import android.view.MenuItem;
 
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
 
 /**
@@ -17,7 +16,7 @@ import com.vladstoick.Fragments.NewsItemDetailFragment;
  * This activity is mostly just a 'shell' activity containing nothing
  * more than a {@link com.vladstoick.Fragments.NewsItemDetailFragment}.
  */
-public class NewsItemDetailActivity extends FragmentActivity {
+public class NewsItemDetailActivity extends SherlockFragmentActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class NewsItemDetailActivity extends FragmentActivity {
         setContentView(R.layout.activity_newsitem_detail);
 
         // Show the Up button in the action bar.
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // savedInstanceState is non-null when there is fragment state
         // saved from previous configurations of this activity
@@ -40,8 +39,8 @@ public class NewsItemDetailActivity extends FragmentActivity {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putString(NewsItemDetailFragment.ARG_ITEM_ID,
-                    getIntent().getStringExtra(NewsItemDetailFragment.ARG_ITEM_ID));
+            arguments.putParcelable(NewsItemDetailFragment.ARG_ITEM,
+                    getIntent().getParcelableExtra(NewsItemDetailFragment.ARG_ITEM));
             NewsItemDetailFragment fragment = new NewsItemDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
@@ -51,7 +50,7 @@ public class NewsItemDetailActivity extends FragmentActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 // This ID represents the Home or Up button. In the case of this
@@ -66,4 +65,5 @@ public class NewsItemDetailActivity extends FragmentActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

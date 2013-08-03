@@ -1,10 +1,15 @@
-<FrameLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/newsitem_list"
         android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/left_and_right_margin"
+        android:layout_marginRight="@dimen/left_and_right_margin"
+        android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/newsitem_list"
+        android:name="com.vladstoick.Fragments.NewsItemListFragment"
         android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        tools:context=".NewsItemListActivity"
-        tools:layout="@android:layout/list_content" />
+        tools:layout="@android:layout/list_content"
+        android:layout_width="match_parent"
+    />
+</LinearLayout>
