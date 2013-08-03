@@ -12,6 +12,7 @@ import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.model.GraphUser;
+import com.vladstoick.DataModel.NewsDataSource;
 
 /**
  * Created by vlad on 7/17/13.
@@ -80,8 +81,9 @@ public class LoginActivity extends SherlockFragmentActivity {
     }
 
     private void gotoAllGroupsActivity() {
-        Intent intent = new Intent(this, AllGroupsActivity.class);
-        intent.putExtra(USER_ID_TAG, userId);
+        ((StiriApp)getApplication()).newsDataSource = new NewsDataSource(userId,
+                (StiriApp)getApplication());
+        Intent intent = new Intent(this, NewsGroupListActivity.class);
         startActivity(intent);
         finish();
     }

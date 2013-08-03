@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockListFragment;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Utils.NewsItemListFragmentAdapter;
@@ -21,7 +20,7 @@ import com.vladstoick.Utils.NewsItemListFragmentAdapter;
  * Activities containing this fragment MUST implement the {@link Callbacks}
  * interface.
  */
-public class NewsItemListFragment extends SherlockListFragment{
+public class NewsItemListFragment extends ListFragment {
     NewsSource ns;
     /**
      * The serialization (saved instance state) Bundle key representing the

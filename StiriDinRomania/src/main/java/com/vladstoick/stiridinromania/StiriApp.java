@@ -11,6 +11,8 @@ import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataModifiedEvent;
 
+import java.util.Date;
+
 /**
  * Created by Vlad on 8/1/13.
  */
@@ -25,6 +27,7 @@ public class StiriApp extends Application {
         ).start(this);
         BusProvider.getInstance().register(this);
         queue = Volley.newRequestQueue(this);
+
     }
 
     @Override

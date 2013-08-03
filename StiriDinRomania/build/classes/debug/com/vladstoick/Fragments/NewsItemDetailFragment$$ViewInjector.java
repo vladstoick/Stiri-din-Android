@@ -7,7 +7,7 @@ import butterknife.Views.Finder;
 public class NewsItemDetailFragment$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Fragments.NewsItemDetailFragment target, Object source) {
     View view;
-    view = finder.findById(source, 2130968664);
+    view = finder.findById(source, 2131099736);
     target.mWebView = (android.webkit.WebView) view;
   }
 

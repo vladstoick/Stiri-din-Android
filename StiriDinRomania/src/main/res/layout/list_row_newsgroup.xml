@@ -21,7 +21,7 @@
 
     <TextView
             android:fontFamily="sans-serif-condensed"
-            android:textSize="@dimen/medium_font"
+            android:textSize="@dimen/large_font"
             android:textStyle="bold"
             android:text="@string/lorem_w_5"
             android:layout_toLeftOf="@id/numberOfNews"

@@ -5159,6 +5159,21 @@ center
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_newsgroup_detail"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_detail.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_newsgroup_list"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_newsgroup_twopane"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_twopane.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_newsitem_detail"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsitem_detail.xml"
                 qualifiers=""
@@ -5194,6 +5209,11 @@ center
                 qualifiers=""
                 type="layout" />
             <file
+                name="fragment_newsgroup_detail"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsgroup_detail.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="fragment_newsitem"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsitem.xml"
                 qualifiers=""
@@ -5211,6 +5231,11 @@ center
             <file
                 name="list_row_newsgroup"
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_newsgroup.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="list_row_newsitem"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_newsitem.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -5301,9 +5326,9 @@ center
                 </string>
                 <string name="title_newsgroup_list" >NewsSources
                 </string>
-                <string name="logout" >Log out
-                </string>
                 <string name="group" >Group
+                </string>
+                <string name="logout" >Log out
                 </string>
                 <string name="feeds" >Feeds
                 </string>
@@ -5431,14 +5456,14 @@ sans-serif-thin
                 </string>
                 <string name="rename" >Redenumește
                 </string>
-                <string name="cancel" >Anulează
-                </string>
                 <string name="ok" >OK
                 </string>
-                <string name="logout" >Deloghează-te
+                <string name="cancel" >Anulează
                 </string>
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale
+                </string>
+                <string name="logout" >Deloghează-te
                 </string>
                 <string name="delete" >Șterge
                 </string>
@@ -5567,31 +5592,6 @@ sans-serif-thin
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
-            <file
-                name="list_row_newsitem"
-                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_newsitem.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="activity_newsgroup_list"
-                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_list.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="fragment_newsgroup_detail"
-                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsgroup_detail.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="activity_newsgroup_twopane"
-                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_twopane.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="activity_newsgroup_detail"
-                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_detail.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\rs\debug" />
     </dataSet>

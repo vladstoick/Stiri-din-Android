@@ -7,9 +7,9 @@ import butterknife.Views.Finder;
 public class AllGroupsFragmentAdapter$RowHolder$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Utils.AllGroupsFragmentAdapter.RowHolder target, Object source) {
     View view;
-    view = finder.findById(source, 2130968665);
+    view = finder.findById(source, 2131099737);
     target.mTitle = (android.widget.TextView) view;
-    view = finder.findById(source, 2130968666);
+    view = finder.findById(source, 2131099738);
     target.mNumberOfGroups = (android.widget.TextView) view;
   }
 

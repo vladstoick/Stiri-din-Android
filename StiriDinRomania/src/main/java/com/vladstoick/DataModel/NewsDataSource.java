@@ -22,7 +22,10 @@ import com.vladstoick.stiridinromania.StiriApp;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by vlad on 7/20/13.
@@ -35,14 +38,16 @@ public class NewsDataSource implements Parcelable{
     private int userId;
     private StiriApp app;
     private SqlHelper sqlHelper;
+    private Date updateAt;
 
     //CONSTRUCTORS
     public NewsDataSource(int userId, StiriApp app) {
         this.userId = userId;
-//        loadDataFromInternet();
+        loadDataFromInternet();
         this.app = app;
         sqlHelper = new SqlHelper(this.app);
         BusProvider.getInstance().register(this);
+
     }
 
     private void loadDataFromInternet() {
@@ -51,9 +56,8 @@ public class NewsDataSource implements Parcelable{
             @Override
             public void onResponse(String s) {
                 allNewsGroups = JSONParsing.parseNewsDataSource(s);
-                for(int i = 0 ;i < allNewsGroups.size(); i++ ) {
+                for(int i = 0 ;i < allNewsGroups.size(); i++ )
                     insertNewsGroupInDb(allNewsGroups.get(i));
-                }
                 BusProvider.getInstance().post(new DataLoadedEvent(
                         DataLoadedEvent.TAG_NEWSDATASOURCE,allNewsGroups));
             }
@@ -72,6 +76,10 @@ public class NewsDataSource implements Parcelable{
     }
     @Subscribe public void OnDataLoaded(DataLoadedEvent event)
     {
+        final Date currentDate =  Calendar.getInstance().getTime();
+        final SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        final String dateString = fmt.format(currentDate);
+
         if(event.dataLoadedType == DataLoadedEvent.TAG_NEWSDATASOURCE)
         {
             for(int i=0;i<allNewsGroups.size();i++)
@@ -81,6 +89,7 @@ public class NewsDataSource implements Parcelable{
                 {
                     NewsSource ns = ng.newsSources.get(j);
                     String url = NewsSource.BASE_URL+ ns.getRssLink()+"&feedId="+ns.getId();
+//                            +"&date="+dateString;
                     StringRequest stringRequest = new StringRequest(
                             Request.Method.GET, url, new Response.Listener<String>() {
                         @Override
@@ -111,39 +120,17 @@ public class NewsDataSource implements Parcelable{
                 for(int j=0;j<allNewsGroups.get(i).newsSources.size();j++)
                     if(allNewsGroups.get(i).newsSources.get(j).getId()==feedId)
                     {
-                        allNewsGroups.get(i).newsSources.get(j).news=newsItems;
-                        allNewsGroups.get(i).newsSources.get(j).setNumberOfUnreadNews
-                                (newsItems.size());
+                        allNewsGroups.get(i).newsSources.get(j).
+                                setNumberOfUnreadNews(newsItems.size());
                         insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
                         insertNewsItemsInDb(allNewsGroups.get(i).newsSources.get(j));
                     }
-
         }
         catch(Exception e)
         {
             e.printStackTrace();
         }
     }
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeTypedList(allNewsGroups);
-        dest.writeInt(userId);
-    }
-    private NewsDataSource(Parcel in)
-    {
-        in.readTypedList(allNewsGroups,NewsGroup.CREATOR);
-        userId = in.readInt();
-    }
-    public static final Parcelable.Creator<NewsDataSource> CREATOR
-            = new Parcelable.Creator<NewsDataSource>() {
-        public NewsDataSource createFromParcel(Parcel in) {
-            return new NewsDataSource(in);
-        }
-
-        public NewsDataSource[] newArray(int size) {
-            return new NewsDataSource[size];
-        }
-    };
     //ACCESSING DATA
     public ArrayList<NewsGroup> getAllNewsGroups() {
         SQLiteDatabase db = sqlHelper.getReadableDatabase();
@@ -191,7 +178,6 @@ public class NewsDataSource implements Parcelable{
         }
         return ng;
     }
-
     //MODIFYING DATA
     public void deleteNewsGroup(final int id) {
         httpClient = new AsyncHttpClient();
@@ -224,6 +210,7 @@ public class NewsDataSource implements Parcelable{
             }
         });
     }
+
     //SQLITE Helper
     private void insertNewsGroupInDb(NewsGroup ng)
     {
@@ -276,9 +263,28 @@ public class NewsDataSource implements Parcelable{
             sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
                 SQLiteDatabase.CONFLICT_REPLACE);
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeTypedList(allNewsGroups);
+        dest.writeInt(userId);
+    }
+    private NewsDataSource(Parcel in)
+    {
+        in.readTypedList(allNewsGroups,NewsGroup.CREATOR);
+        userId = in.readInt();
+    }
+    public static final Parcelable.Creator<NewsDataSource> CREATOR
+            = new Parcelable.Creator<NewsDataSource>() {
+        public NewsDataSource createFromParcel(Parcel in) {
+            return new NewsDataSource(in);
+        }
+
+        public NewsDataSource[] newArray(int size) {
+            return new NewsDataSource[size];
+        }
+    };
 }
