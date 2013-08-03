@@ -47,8 +47,6 @@ public class LoginActivity extends SherlockFragmentActivity {
     public void facebookLogin() {
         Log.d(TAG, "Logging in");
         Session.openActiveSession(this, true, new Session.StatusCallback() {
-
-            // callback when session changes state
             @Override
             public void call(Session session, SessionState state, Exception exception) {
                 if (session.isOpened()) {
@@ -59,11 +57,7 @@ public class LoginActivity extends SherlockFragmentActivity {
                     token = session.getAccessToken();
                     editor.putString("user_token_fb", token);
                     editor.commit();
-
-                    // make request to the /me API
                     Request.executeMeRequestAsync(session, new Request.GraphUserCallback() {
-
-                        // callback after Graph API response with user object
                         @Override
                         public void onCompleted(GraphUser user, Response response) {
                             {
@@ -74,10 +68,8 @@ public class LoginActivity extends SherlockFragmentActivity {
                                     SharedPreferences.Editor editor = settings.edit();
                                     String fbaccount = user.getId();
                                     editor.putString("user_id_fb", fbaccount);
-
                                     AsyncHttpClient client = new AsyncHttpClient();
                                     RequestParams params = new RequestParams();
-
                                     params.put("fbtoken",token );
                                     params.put("fbaccount",fbaccount );
                                     client.post("http://stiriromania.eu01.aws.af.cm/user/login",
