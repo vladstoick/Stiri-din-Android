@@ -19,7 +19,9 @@ import com.vladstoick.DialogFragment.AddNewsGroupDialogFragment;
 import com.vladstoick.DialogFragment.AddNewsSourceDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.Utils.NewsGroupFragmentAdapter;
+import com.vladstoick.Utils.Tags;
 import com.vladstoick.stiridinromania.R;
+import com.vladstoick.stiridinromania.StiriApp;
 
 import butterknife.InjectView;
 import butterknife.Views;
@@ -29,17 +31,36 @@ import butterknife.Views;
  */
 public class NewsGroupFragment extends SherlockFragment {
     public interface NewsGroupFragmentCommunicationInterface{
-        public void selectedNewsSource(NewsSource ns);
+        public void selectedNewsSource(int id);
     }
     public static String TAG = "NEWSGROUPFRAGMENT";
-    private static String NG_TAG = "NG_TAG";
     private NewsGroup newsGroup;
     private View mView;
     @InjectView(R.id.newsGroupListView) ListView mList;
     private NewsGroupFragmentCommunicationInterface mListener;
     NewsGroupFragmentAdapter adapter;
-    public NewsGroupFragment() {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        BusProvider.getInstance().register(this);
+        setHasOptionsMenu(true);
+        super.onCreate(savedInstanceState);
+        if (savedInstanceState != null)
+            newsGroup = savedInstanceState.getParcelable(Tags.NEWSGROUP_TAG);
+        else if (getArguments() != null) {
+            int newsGroupId = getArguments().getInt(Tags.NEWSGROUP_TAG_ID);
+            StiriApp app = (StiriApp)(getSherlockActivity().getApplication());
+            newsGroup = app.newsDataSource.getNewsGroup(newsGroupId);
+        }
+    }
+    public static NewsGroupFragment newInstance(int newsGroupId) {
+        NewsGroupFragment mNGF = new NewsGroupFragment();
+        Bundle arg = new Bundle();
+        arg.putInt(Tags.NEWSGROUP_TAG_ID, newsGroupId);
+        mNGF.setArguments(arg);
+        return mNGF;
+    }
 
+    public NewsGroupFragment() {
     }
     @Override
     public void onAttach(Activity activity) {
@@ -56,41 +77,13 @@ public class NewsGroupFragment extends SherlockFragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+        BusProvider.getInstance().unregister(this);
     }
-
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putParcelable(NG_TAG, newsGroup);
+        outState.putParcelable(Tags.NEWSGROUP_TAG, newsGroup);
 
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        BusProvider.getInstance().unregister(this);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        BusProvider.getInstance().register(this);
-        setHasOptionsMenu(true);
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState != null)
-            newsGroup = savedInstanceState.getParcelable(NG_TAG);
-        else if (getArguments() != null) {
-            newsGroup = getArguments().getParcelable(NG_TAG);
-        } else {
-            Log.wtf(TAG, "I have no idea why this is happening");
-        }
-    }
-
-    public static NewsGroupFragment newInstance(NewsGroup ng) {
-        NewsGroupFragment mNGF = new NewsGroupFragment();
-        Bundle arg = new Bundle();
-        arg.putParcelable(NG_TAG, ng);
-        mNGF.setArguments(arg);
-        return mNGF;
     }
 
     @Override
@@ -102,7 +95,7 @@ public class NewsGroupFragment extends SherlockFragment {
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mListener.selectedNewsSource(newsGroup.newsSources.get(position));
+                mListener.selectedNewsSource(newsGroup.newsSources.get(position).getId());
             }
         });
         return mView;

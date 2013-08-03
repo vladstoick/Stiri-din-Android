@@ -1,5 +1,6 @@
 package com.vladstoick.DataModel;
 
+import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -13,11 +14,26 @@ public class NewsItem implements Parcelable {
     private String title;
     private String description;
     private String urlLink;
-
+    private int sourceId;
     public NewsItem(String title, String description, String urlLink) {
         this.title = title;
         this.description = description;
         this.urlLink = urlLink;
+    }
+    public NewsItem(Cursor cursor)
+    {
+        this.urlLink = cursor.getString(0);
+        this.title = cursor.getString(1);
+        this.description = cursor.getString(2);
+        this.sourceId = cursor.getInt(3);
+    }
+
+    public int getSourceId() {
+        return sourceId;
+    }
+
+    public void setSourceId(int sourceId) {
+        this.sourceId = sourceId;
     }
 
     public String getTitle() {
@@ -43,7 +59,6 @@ public class NewsItem implements Parcelable {
     public void setUrlLink(String urlLink) {
         this.urlLink = urlLink;
     }
-
     public String getMobilizedUrlLink() {
         return "http://parserizer.eu01.aws.af.cm/?url=" + this.urlLink;
     }
@@ -70,11 +85,13 @@ public class NewsItem implements Parcelable {
         dest.writeString(title);
         dest.writeString(description);
         dest.writeString(urlLink);
+        dest.writeInt(sourceId);
     }
 
     private NewsItem(Parcel in) {
         this.title = in.readString();
         this.description = in.readString();
         this.urlLink = in.readString();
+        this.sourceId = in.readInt();
     }
 }

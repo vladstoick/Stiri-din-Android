@@ -10,6 +10,7 @@ import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
 import com.vladstoick.Fragments.NewsItemListFragment;
+import com.vladstoick.Utils.Tags;
 
 
 /**
@@ -30,7 +31,8 @@ import com.vladstoick.Fragments.NewsItemListFragment;
  */
 public class NewsItemListActivity extends SherlockFragmentActivity
         implements NewsItemListFragment.Callbacks {
-    NewsSource newsSource;
+    private int newsSourceId;
+    public NewsSource newsSource;
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -42,25 +44,27 @@ public class NewsItemListActivity extends SherlockFragmentActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newsitem_list);
         if(getIntent().getExtras()!=null )
-            newsSource = getIntent().getExtras().getParcelable(NewsSource.TAG);
-        setTitle(newsSource.getTitle());
-        ((NewsItemListFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.newsitem_list))
-                .setData(newsSource);
-        if (findViewById(R.id.newsitem_detail_container) != null) {
-            // The detail container view will be present only in the
-            // large-screen layouts (res/values-large and
-            // res/values-sw600dp). If this view is present, then the
-            // activity should be in two-pane mode.
-            mTwoPane = true;
-            // In two-pane mode, list items should be given the
-            // 'activated' state when touched.
+        {
+            newsSourceId = getIntent().getExtras().getInt(Tags.NEWSOURCE_TAG_ID);
+            newsSource = ((StiriApp)getApplication()).newsDataSource.getNewsSource(newsSourceId);
+            setTitle(newsSource.getTitle());
             ((NewsItemListFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.newsitem_list))
-                    .setActivateOnItemClick(true);
+                    .setData(newsSource);
+            if (findViewById(R.id.newsitem_detail_container) != null) {
+                // The detail container view will be present only in the
+                // large-screen layouts (res/values-large and
+                // res/values-sw600dp). If this view is present, then the
+                // activity should be in two-pane mode.
+                mTwoPane = true;
+                // In two-pane mode, list items should be given the
+                // 'activated' state when touched.
+                ((NewsItemListFragment) getSupportFragmentManager()
+                        .findFragmentById(R.id.newsitem_list))
+                        .setActivateOnItemClick(true);
 
+            }
         }
-
 
     }
 

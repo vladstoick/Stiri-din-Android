@@ -20,25 +20,26 @@ import com.vladstoick.Utils.Tags;
  */
 public class NewsGroupActivity extends SherlockFragmentActivity
         implements NewsGroupFragment.NewsGroupFragmentCommunicationInterface{
-    private NewsGroup ng;
+    private int newsGroupId;
+
     private static String TAG = "NewsGroupActivity";
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newsgroup);
         if(getIntent().getExtras()!=null)
-            ng=getIntent().getExtras().getParcelable(Tags.NEWSGROUP_TAG);
-        SherlockFragment newsGroupFragment = NewsGroupFragment.newInstance(ng);
+        {
+            newsGroupId = getIntent().getExtras().getInt(Tags.NEWSGROUP_TAG_ID);
+        }
+        SherlockFragment newsGroupFragment = NewsGroupFragment.newInstance(newsGroupId);
         getSupportFragmentManager().beginTransaction().replace(R.id.newsGroupFragment,
                         newsGroupFragment).commit();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
-    public void selectedNewsSource(NewsSource ns) {
+    public void selectedNewsSource(int id) {
         Intent intent = new Intent(this, NewsItemListActivity.class);
-        //TODO SCAPA DE ASTA
-        NewsSource realNs = ((StiriApp)getApplication()).newsDataSource.getNewsSource(ns.getId());
-        intent.putExtra(NewsSource.TAG,realNs);
+        intent.putExtra(Tags.NEWSOURCE_TAG_ID,id);
         startActivity(intent);
     }
 

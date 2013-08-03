@@ -54,6 +54,7 @@ public class NewsSource implements Parcelable {
         this.rssLink = cursor.getString(3);
         this.groupId = cursor.getInt(4);
         this.numberOfUnreadNews = cursor.getInt(5);
+        news = new ArrayList<NewsItem>();
     }
     public void loadFeed(StiriApp app)
     {

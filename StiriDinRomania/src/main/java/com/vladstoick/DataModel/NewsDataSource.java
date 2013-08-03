@@ -1,7 +1,6 @@
 package com.vladstoick.DataModel;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Parcel;
@@ -17,7 +16,6 @@ import com.loopj.android.http.RequestParams;
 import com.squareup.otto.Subscribe;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
-import com.vladstoick.OttoBus.NewsSourceFeedLoaded;
 import com.vladstoick.sql.SqlHelper;
 import com.vladstoick.stiridinromania.StiriApp;
 
@@ -41,7 +39,7 @@ public class NewsDataSource implements Parcelable{
     //CONSTRUCTORS
     public NewsDataSource(int userId, StiriApp app) {
         this.userId = userId;
-        loadDataFromInternet();
+//        loadDataFromInternet();
         this.app = app;
         sqlHelper = new SqlHelper(this.app);
         BusProvider.getInstance().register(this);
@@ -162,11 +160,20 @@ public class NewsDataSource implements Parcelable{
     }
     public NewsSource getNewsSource(int id)
     {
-        for(int i=0;i<allNewsGroups.size();i++)
-            for(int j=0;j<allNewsGroups.get(i).newsSources.size();j++)
-                if(allNewsGroups.get(i).newsSources.get(j).getId()==id)
-                    return  allNewsGroups.get(i).newsSources.get(j);
-        return null;
+        NewsSource ns;
+        SQLiteDatabase db = sqlHelper.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
+                SqlHelper.COLUMN_ID +" = " + id , null , null , null , null , null);
+        cursor.moveToFirst();
+        ns = new NewsSource(cursor);
+        cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
+                SqlHelper.COLUMN_SOURCE_ID +" = "+id , null , null , null , null , null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            ns.news.add(new NewsItem(cursor));
+            cursor.moveToNext();
+        }
+        return ns;
     }
     public NewsGroup getNewsGroup(int id) {
         SQLiteDatabase db = sqlHelper.getReadableDatabase();

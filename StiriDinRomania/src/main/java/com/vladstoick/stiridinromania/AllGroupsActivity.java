@@ -64,8 +64,7 @@ public class AllGroupsActivity extends SherlockFragmentActivity implements
     @Override
     public void newsGroupSelected(int id) {
         Intent intent = new Intent(this, NewsGroupActivity.class);
-        NewsGroup ng = ((StiriApp)getApplication()).newsDataSource.getNewsGroup(id);
-        intent.putExtra(Tags.NEWSGROUP_TAG,ng);
+        intent.putExtra(Tags.NEWSGROUP_TAG_ID,id);
         startActivity(intent);
     }
 
