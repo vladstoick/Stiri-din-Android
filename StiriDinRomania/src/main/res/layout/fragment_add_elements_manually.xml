@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:paddingLeft="@dimen/left_and_right_margin"
+              android:paddingRight="@dimen/left_and_right_margin"
+              android:layout_height="match_parent">
+    <EditText
+            android:hint="@string/add_element_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_and_bottom_margin"
+            android:layout_marginTop="@dimen/top_and_bottom_margin"/>
+    <EditText
+            android:hint="@string/add_element_feed_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_and_bottom_margin"
+            android:layout_marginTop="@dimen/top_and_bottom_margin"/>
+    <EditText
+            android:hint="@string/add_element_feed_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_and_bottom_margin"
+            android:layout_marginTop="@dimen/top_and_bottom_margin"/>
+    <EditText
+            android:hint="@string/add_element_feed_rss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_and_bottom_margin"
+            android:layout_marginTop="@dimen/top_and_bottom_margin"/>
+    
+</LinearLayout>

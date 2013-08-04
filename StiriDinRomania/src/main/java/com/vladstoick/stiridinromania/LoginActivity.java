@@ -68,6 +68,7 @@ public class LoginActivity extends SherlockFragmentActivity {
                                     SharedPreferences.Editor editor = settings.edit();
                                     String fbaccount = user.getId();
                                     editor.putString("user_id_fb", fbaccount);
+                                    editor.commit();
                                     AsyncHttpClient client = new AsyncHttpClient();
                                     RequestParams params = new RequestParams();
                                     params.put("fbtoken",token );

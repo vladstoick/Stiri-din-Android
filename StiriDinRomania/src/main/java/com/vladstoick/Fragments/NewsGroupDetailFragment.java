@@ -88,23 +88,4 @@ public class NewsGroupDetailFragment extends SherlockFragment {
         });
         return mView;
     }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_newsgroup,menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
-            case R.id.action_add:{
-//                mListener.showDialog(new AddNewsSourceDialogFragment(),
-//                        AddNewsSourceDialogFragment.TAG);
-                break;
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

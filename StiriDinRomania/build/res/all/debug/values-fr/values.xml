@@ -10,7 +10,7 @@
     <string name="add_dialog_fragment_message_group">Entrez le nom du nouveau groupe</string>
     <string name="add_dialog_fragment_ok">Ajouter</string>
     <string name="add_dialog_fragment_title_group">Ajouter un nouveau groupe</string>
-    <string name="add_dialog_fragment_title_source">Ajouter un nouveau flux RSS</string>
+    <string name="add_fragment_title_source">Ajouter un nouveau flux RSS</string>
     <string name="all_groups_title">Votre groups</string>
     <string name="app_name">Ştiri din România</string>
     <string name="cancel">Anulează</string>

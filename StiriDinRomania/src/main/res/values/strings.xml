@@ -3,18 +3,17 @@
 
     <!-- ALL GROUPS ACITIVTY -->
     <string name="all_groups_title">Your groups</string>
-    <!-- ADD SOURCE FRAGMENT -->
-    <string name="add_dialog_fragment_title_source">Add a new feed</string>
-    <string name="add_dialog_fragment_feedtitle_source">The name of the feed</string>
-    <string name="add_dialog_fragment_feeddescription_source">The description of the feed</string>
-    <string name="add_dialog_fragment_feedadress_source">The rss address of the feed</string>
+    <!-- ADD FRAGMENT -->
+    <string name="manual">Manual</string>
+    <string name="recommended">Recommended</string>
+    <string name="add_element_group_name">Enter the name of the new group</string>
+    <string name="add_element_fragment_title">Add a new feed</string>
+    <string name="add_element_feed_title">The name of the feed</string>
+    <string name="add_element_feed_description">The description of the feed</string>
+    <string name="add_element_feed_rss">The rss address of the feed</string>
     <!-- TEST VALUES -->
     <string name="two_digit_int">99</string>
     <string name="lorem_w_5">Lorem ipsum dolor sit amet.</string>
-    <!-- ADD GROUP FRAGMENT -->
-    <string name="add_dialog_fragment_title_group">Add a new group</string>
-    <string name="add_dialog_fragment_message_group">Enter the name of the new group</string>
-    <string name="add_dialog_fragment_ok">Add</string>
     <!-- DELETE DIALOG FRAGMENT -->
     <string name="delete_dialog_fragment_title">Do you want to delete this?</string>
     <string name="delete_dialog_fragment_message">Are you sure?</string>
@@ -43,5 +42,9 @@
     <string name="title_newsitem_detail">NewsItem Detail</string>
     <string name="title_newsgroup_list">NewsSources</string>
     <string name="title_newsgroup_detail">NewsGroup Detail</string>
+    <string name="title_activity_add_elements_acitvitiy">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 
 </resources>

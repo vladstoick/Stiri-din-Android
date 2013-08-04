@@ -3,14 +3,13 @@
     <!--ALL GROUPS ACITIVTY-->
     <string name="all_groups_title">Gruprile tale</string>
     <!--ADD SOURCE FRAGMENT-->
-    <string name="add_dialog_fragment_title_source">Adaugă un feed nou</string>
-    <string name="add_dialog_fragment_feedtitle_source">Numele feedului</string>
-    <string name="add_dialog_fragment_feeddescription_source">Descrierea feedului</string>
-    <string name="add_dialog_fragment_feedadress_source">Adresa rss a feedului</string>
-    <!--ADD GROUP FRAGMENT-->
-    <string name="add_dialog_fragment_title_group">Adaugă un grup nou</string>
-    <string name="add_dialog_fragment_message_group">Introduceți noul nume al grupului</string>
-    <string name="add_dialog_fragment_ok">Adaugă</string>
+    <string name="manual">Manual</string>
+    <string name="recommended">Recomandate</string>
+    <string name="add_element_fragment_title">Adaugă un feed nou</string>
+    <string name="add_element_feed_title">Numele feedului</string>
+    <string name="add_element_feed_description">Descrierea feedului</string>
+    <string name="add_element_feed_rss">Adresa rss a feedului</string>
+
     <!--DELETE DIALOG FRAGMENT-->
     <string name="delete_dialog_fragment_title">Vrei să ștergi acest element?</string>
     <string name="delete_dialog_fragment_message">Ești sigur?</string>

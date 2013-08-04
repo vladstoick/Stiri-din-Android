@@ -5279,15 +5279,23 @@ center
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml"
                 qualifiers="" >
+                <string name="title_section1" >Section 1
+                </string>
                 <string name="delete_dialog_fragment_message" >Are you sure?
                 </string>
                 <string name="add_dialog_fragment_feeddescription_source" >The description of the feed
                 </string>
                 <string name="action_settings" >Settings
                 </string>
+                <string name="title_section3" >Section 3
+                </string>
+                <string name="title_section2" >Section 2
+                </string>
                 <string name="nointernet" >No internet connection
                 </string>
                 <string name="title_newsitem_list" >NewsItems
+                </string>
+                <string name="add_element_fragment_title" >Add a new feed
                 </string>
                 <string name="title_newsitem_detail" >NewsItem Detail
                 </string>
@@ -5295,12 +5303,14 @@ center
                 </string>
                 <string name="rename" >Rename
                 </string>
-                <string name="update_data" >Update
-                </string>
                 <string name="cancel" >Cancel
+                </string>
+                <string name="update_data" >Update
                 </string>
                 <string name="login_message" >News from Romania uses your name in order to sync your news across
         all devices
+                </string>
+                <string name="recommended" >Recommended
                 </string>
                 <string name="ok" >OK
                 </string>
@@ -5322,6 +5332,8 @@ center
                 </string>
                 <string name="lorem_w_5" >Lorem ipsum dolor sit amet.
                 </string>
+                <string name="manual" >Manual
+                </string>
                 <string name="all_groups_title" >Your groups
                 </string>
                 <string name="title_newsgroup_list" >NewsSources
@@ -5341,6 +5353,8 @@ center
                 <string name="login_facebook" >Login with Facebook
                 </string>
                 <string name="app_name" >News from Romania
+                </string>
+                <string name="title_activity_add_elements_acitvitiy" >MainActivity
                 </string>
                 <string name="delete" >Delete
                 </string>
@@ -5418,6 +5432,8 @@ sans-serif-thin
                 </string>
                 <string name="delete_dialog_fragment_message" >Ești sigur?
                 </string>
+                <string name="add_fragment_title_source" >Ajouter un nouveau flux RSS
+                </string>
                 <string name="delete_dialog_fragment_title" >Vrei să ștergi acest element?
                 </string>
                 <string name="add_dialog_fragment_ok" >Ajouter
@@ -5456,10 +5472,10 @@ sans-serif-thin
                 </string>
                 <string name="rename" >Redenumește
                 </string>
+                <string name="logout" >Deloghează-te
+                </string>
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale
-                </string>
-                <string name="logout" >Deloghează-te
                 </string>
                 <string name="cancel" >Anulează
                 </string>
@@ -5519,6 +5535,8 @@ sans-serif-thin
                 </string>
                 <string name="action_settings" >Settings
                 </string>
+                <string name="add_element_fragment_title" >Adaugă un feed nou
+                </string>
                 <string name="all_groups_title" >Gruprile tale
                 </string>
                 <string name="add_dialog_fragment_feedtitle_source" >Numele feedului
@@ -5527,20 +5545,24 @@ sans-serif-thin
                 </string>
                 <string name="feed" >Feed
                 </string>
+                <string name="recommended" >Recomandate
+                </string>
                 <string name="logout" >Deloghează-te
                 </string>
                 <string name="add_dialog_fragment_ok" >Adaugă
+                </string>
+                <string name="manual" >Manual
                 </string>
                 <string name="cancel" >Anulează
                 </string>
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale
                 </string>
-                <string name="add" >Adaugă
+                <string name="add_dialog_fragment_title_group" >Adaugă un grup nou
                 </string>
                 <string name="nointernet" >Nu aveți internet
                 </string>
-                <string name="add_dialog_fragment_title_group" >Adaugă un grup nou
+                <string name="add" >Adaugă
                 </string>
                 <string name="ok" >OK
                 </string>
@@ -5592,6 +5614,31 @@ sans-serif-thin
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="add_elements_acitvitiy"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\add_elements_acitvitiy.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="fragment_add_elements_acitvitiy_dummy"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_add_elements_acitvitiy_dummy.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_addelements"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_addelements.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="news_group_list_activity"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\news_group_list_activity.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="fragment_add_elements_manually"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_add_elements_manually.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\rs\debug" />
     </dataSet>

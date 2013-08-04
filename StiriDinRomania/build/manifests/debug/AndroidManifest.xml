@@ -22,14 +22,15 @@
         <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsGroupDetailActivity" android:parentActivityName=".NewsGroupListActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsGroupListActivity"/>
         </activity>
-
         <activity android:label="@string/title_newsitem_list" android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsItemListActivity" android:parentActivityName=".NewsGroupActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsGroupActivity"/>
         </activity>
         <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsItemDetailActivity" android:parentActivityName=".NewsItemListActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsItemListActivity"/>
         </activity>
-
+        <activity android:label="@string/add_element_fragment_title" android:name="com.vladstoick.stiridinromania.AddElementAcitvitiy" android:parentActivityName="NewsGroupListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="NewsGroupListActivity"/>
+        </activity>
     </application>
 
 </manifest>

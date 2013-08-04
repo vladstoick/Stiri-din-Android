@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 import com.vladstoick.Fragments.NewsGroupDetailFragment;
 import com.vladstoick.Fragments.NewsGroupListFragment;
 import com.vladstoick.Utils.Tags;
@@ -86,5 +88,24 @@ public class NewsGroupListActivity extends SherlockFragmentActivity
         Intent intent = new Intent(this, NewsItemListActivity.class);
         intent.putExtra(Tags.NEWSOURCE_TAG_ID,id);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getSupportMenuInflater().inflate(R.menu.news_group_list_activity,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.action_add:{
+                Intent intent = new Intent(this, AddElementAcitvitiy.class);
+                startActivity(intent);
+                break;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

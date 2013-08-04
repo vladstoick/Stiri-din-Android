@@ -3,13 +3,13 @@
     <!--ALL GROUPS ACITIVTY-->
     <string name="all_groups_title">Votre groups</string>
     <!--ADD SOURCE FRAGMENT-->
-    <string name="add_dialog_fragment_title_source">Ajouter un nouveau flux RSS</string>
-    <string name="add_dialog_fragment_feedtitle_source">Le nom du flux RSS</string>
-    <string name="add_dialog_fragment_feeddescription_source">La description du flux RSS</string>
-    <string name="add_dialog_fragment_feedadress_source">L\'adresse url du flux RSS</string>
+    <string name="add_fragment_title_source">Ajouter un nouveau flux RSS</string>
+    <string name="add_element_feed_title">Le nom du flux RSS</string>
+    <string name="add_element_feed_description">La description du flux RSS</string>
+    <string name="add_element_feed_rss">L\'adresse url du flux RSS</string>
     <!--ADD GROUP FRAGMENT-->
     <string name="add_dialog_fragment_title_group">Ajouter un nouveau groupe</string>
-    <string name="add_dialog_fragment_message_group">Entrez le nom du nouveau groupe</string>
+    <string name="add_element_group_name">Entrez le nom du nouveau groupe</string>
     <string name="add_dialog_fragment_ok">Ajouter</string>
     <!--DELETE DIALOG FRAGMENT-->
     <string name="delete_dialog_fragment_title">Vrei să ștergi acest element?</string>

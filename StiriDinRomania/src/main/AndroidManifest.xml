@@ -31,18 +31,17 @@
             </intent-filter>
         </activity>
         <activity
-                android:name="com.vladstoick.stiridinromania.NewsGroupListActivity"
-                android:launchMode="singleTop">
+            android:name="com.vladstoick.stiridinromania.NewsGroupListActivity"
+            android:launchMode="singleTop" >
         </activity>
         <activity
-                android:name="com.vladstoick.stiridinromania.NewsGroupDetailActivity"
-                android:parentActivityName=".NewsGroupListActivity"
-                android:launchMode="singleTop">
+            android:name="com.vladstoick.stiridinromania.NewsGroupDetailActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewsGroupListActivity" >
             <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".NewsGroupListActivity" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NewsGroupListActivity" />
         </activity>
-
         <activity
             android:name="com.vladstoick.stiridinromania.NewsItemListActivity"
             android:label="@string/title_newsitem_list"
@@ -60,7 +59,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".NewsItemListActivity" />
         </activity>
-
+        <activity
+            android:name=".AddElementAcitvitiy"
+            android:label="@string/add_element_fragment_title"
+            android:parentActivityName="NewsGroupListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="NewsGroupListActivity" />
+        </activity>
     </application>
 
 </manifest>
