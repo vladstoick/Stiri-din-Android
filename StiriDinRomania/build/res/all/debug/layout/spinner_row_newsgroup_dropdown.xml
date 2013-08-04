@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:padding="10dp"
+              android:gravity="center_vertical"
+              android:layout_height="wrap_content">
+    <ImageView
+        android:contentDescription="@string/lorem_w_5"
+        android:layout_alignParentRight="true"
+        android:id="@+id/spinner_image"
+        android:layout_marginRight="@dimen/left_and_right_margin"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+    <TextView
+        android:layout_toLeftOf="@id/spinner_image"
+        android:textSize="@dimen/medium_font"
+        android:text="@string/lorem_w_5"
+        android:id="@+id/spinner_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\spinner_row_newsgroup_dropdown.xml -->

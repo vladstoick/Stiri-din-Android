@@ -61,8 +61,12 @@
         </activity>
         <activity
             android:name=".AddElementAcitvitiy"
+            android:windowSoftInputMode="adjustResize"
             android:label="@string/add_element_fragment_title"
+            android:uiOptions="splitActionBarWhenNarrow"
             android:parentActivityName="NewsGroupListActivity" >
+            <meta-data android:name="android.support.UI_OPTIONS"
+                       android:value="splitActionBarWhenNarrow" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="NewsGroupListActivity" />

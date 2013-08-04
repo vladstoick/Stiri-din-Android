@@ -96,8 +96,6 @@ public class LoginActivity extends SherlockFragmentActivity {
                                         }
                                     });
 
-
-
                                 }
                             }
                         }

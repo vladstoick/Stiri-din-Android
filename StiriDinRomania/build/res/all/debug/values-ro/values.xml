@@ -6,12 +6,9 @@
     <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="add">Adaugă</string>
-    <string name="add_dialog_fragment_feedadress_source">Adresa rss a feedului</string>
-    <string name="add_dialog_fragment_feeddescription_source">Descrierea feedului</string>
-    <string name="add_dialog_fragment_feedtitle_source">Numele feedului</string>
-    <string name="add_dialog_fragment_message_group">Introduceți noul nume al grupului</string>
-    <string name="add_dialog_fragment_ok">Adaugă</string>
-    <string name="add_dialog_fragment_title_group">Adaugă un grup nou</string>
+    <string name="add_element_feed_description">Descrierea feedului</string>
+    <string name="add_element_feed_rss">Adresa rss a feedului</string>
+    <string name="add_element_feed_title">Numele feedului</string>
     <string name="add_element_fragment_title">Adaugă un feed nou</string>
     <string name="all_groups_title">Gruprile tale</string>
     <string name="app_name">Ştiri din România</string>
@@ -29,6 +26,7 @@
     <string name="login_microsoft">Loghează-te cu Microsoft</string>
     <string name="logout">Deloghează-te</string>
     <string name="manual">Manual</string>
+    <string name="new_group">Adaugă un grup nou</string>
     <string name="nointernet">Nu aveți internet</string>
     <string name="ok">OK</string>
     <string name="recommended">Recomandate</string>

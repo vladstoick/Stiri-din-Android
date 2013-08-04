@@ -5,6 +5,7 @@
     <!--ADD SOURCE FRAGMENT-->
     <string name="manual">Manual</string>
     <string name="recommended">Recomandate</string>
+    <string name="new_group">Adaugă un grup nou</string>
     <string name="add_element_fragment_title">Adaugă un feed nou</string>
     <string name="add_element_feed_title">Numele feedului</string>
     <string name="add_element_feed_description">Descrierea feedului</string>

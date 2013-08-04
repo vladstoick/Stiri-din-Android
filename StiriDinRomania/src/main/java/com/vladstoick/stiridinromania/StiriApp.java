@@ -34,13 +34,4 @@ public class StiriApp extends Application {
     public void onTerminate() {
         BusProvider.getInstance().unregister(this);
     }
-    @Subscribe
-    public void dataModified(DataModifiedEvent event) {
-        if (event.dataModifiedType == DataModifiedEvent.TAG_DELETEGROUP) {
-            newsDataSource.deleteNewsGroup(event.id);
-        }
-        if (event.dataModifiedType == DataModifiedEvent.TAG_GROUPADD) {
-            newsDataSource.addNewsGroup(event.title);
-        }
-    }
 }

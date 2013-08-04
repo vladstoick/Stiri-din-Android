@@ -195,7 +195,7 @@ public class NewsDataSource implements Parcelable{
 
     }
 
-    public void addNewsGroup(final String groupTitle) {
+    public void addNewsGroupAndNewsSource(final String groupTitle, NewsSource ns) {
         httpClient = new AsyncHttpClient();
         RequestParams requestParams = new RequestParams();
         requestParams.put("title", groupTitle);

@@ -45,9 +45,11 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         // Show the Up button in the action bar.
         actionBar.setDisplayHomeAsUpEnabled(true);
-
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(false);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the app.
+
         List<SherlockFragment> fragments = new ArrayList<SherlockFragment>();
         fragments.add(new AddElementManuallyFragment());
         fragments.add(new AddElementRecommendedFragment());
@@ -80,37 +82,20 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getSupportMenuInflater().inflate(R.menu.add_elements_acitvitiy, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
-        switch(item.getItemId())
-        {
-            case android.R.id.home : {
-                NavUtils.navigateUpTo(this, new Intent(this, NewsGroupListActivity.class));
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
+    public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction
+            fragmentTransaction) {
 
     }
 
     @Override
-    public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+    public void onTabUnselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction
+            fragmentTransaction) {
 
     }
 
     @Override
-    public void onTabUnselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
+    public void onTabReselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction
+            fragmentTransaction) {
 
     }
     public class AddElementPagerAdapter extends FragmentPagerAdapter {

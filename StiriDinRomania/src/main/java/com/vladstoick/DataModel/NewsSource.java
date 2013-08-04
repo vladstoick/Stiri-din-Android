@@ -46,6 +46,8 @@ public class NewsSource implements Parcelable {
         news = new ArrayList<NewsItem>();
 
     }
+    public NewsSource()
+    {}
     public NewsSource(Cursor cursor)
     {
         this.id = cursor.getInt(0);
