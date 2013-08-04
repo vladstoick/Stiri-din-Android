@@ -29,7 +29,6 @@ public class StiriApp extends Application {
         queue = Volley.newRequestQueue(this);
 
     }
-
     @Override
     public void onTerminate() {
         BusProvider.getInstance().unregister(this);

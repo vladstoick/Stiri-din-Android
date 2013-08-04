@@ -47,9 +47,7 @@ public class NewsDataSource implements Parcelable{
         this.app = app;
         sqlHelper = new SqlHelper(this.app);
         BusProvider.getInstance().register(this);
-
     }
-
     private void loadDataFromInternet() {
         StringRequest request = new StringRequest(Request.Method.GET,
                 BASE_URL+userId,new Response.Listener<String>() {
@@ -132,54 +130,22 @@ public class NewsDataSource implements Parcelable{
             e.printStackTrace();
         }
     }
-    //ACCESSING DATA
-    public ArrayList<NewsGroup> getAllNewsGroups() {
-        SQLiteDatabase db = sqlHelper.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.GROUPS_TABLE,SqlHelper.GROUPS_COLUMNS,
-                null, null, null , null , null , null );
-        cursor.moveToFirst();
-        ArrayList<NewsGroup> newsGroups = new ArrayList<NewsGroup>();
-        while(!cursor.isAfterLast())
-        {
-            newsGroups.add(new NewsGroup(cursor));
-            cursor.moveToNext();
-        }
-        return newsGroups;
-    }
-    public NewsSource getNewsSource(int id)
-    {
-        NewsSource ns;
-        SQLiteDatabase db = sqlHelper.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
-                SqlHelper.COLUMN_ID +" = " + id , null , null , null , null , null);
-        cursor.moveToFirst();
-        ns = new NewsSource(cursor);
-        cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
-                SqlHelper.COLUMN_SOURCE_ID +" = "+id , null , null , null , null , null);
-        cursor.moveToFirst();
-        while(!cursor.isAfterLast()){
-            ns.news.add(new NewsItem(cursor));
-            cursor.moveToNext();
-        }
-        return ns;
-    }
-    public NewsGroup getNewsGroup(int id) {
-        SQLiteDatabase db = sqlHelper.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.GROUPS_TABLE, SqlHelper.GROUPS_COLUMNS,
-                SqlHelper.COLUMN_ID +" = " + id , null , null , null , null , null);
-        cursor.moveToFirst();
-        NewsGroup ng = new NewsGroup(cursor);
-        ng.newsSources = new ArrayList<NewsSource>();
-        cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
-                SqlHelper.COLUMN_GROUP_ID +" = "+id , null , null , null , null , null);
-        cursor.moveToFirst();
-        while(!cursor.isAfterLast()){
-            ng.newsSources.add(new NewsSource(cursor));
-            cursor.moveToNext();
-        }
-        return ng;
-    }
     //MODIFYING DATA
+    public void addNewsSource(NewsSource newsSource, int groupId)
+    {
+        httpClient = new AsyncHttpClient();
+        RequestParams requestParams = new RequestParams();
+        requestParams.put("title", newsSource.getTitle());
+        requestParams.put("description", newsSource.getDescription());
+        requestParams.put("url",newsSource.getRssLink());
+        httpClient.post(BASE_URL+userId + "/"+groupId , requestParams,
+                new AsyncHttpResponseHandler(){
+            @Override
+            public void onSuccess(String s) {
+                addNewSource(s);
+            }
+        });
+    }
     public void deleteNewsGroup(final int id) {
         httpClient = new AsyncHttpClient();
         httpClient.delete(BASE_URL + userId + "/" + id,
@@ -195,7 +161,7 @@ public class NewsDataSource implements Parcelable{
 
     }
 
-    public void addNewsGroupAndNewsSource(final String groupTitle, NewsSource ns) {
+    public void addNewsGroupAndNewsSource(final String groupTitle, final NewsSource ns) {
         httpClient = new AsyncHttpClient();
         RequestParams requestParams = new RequestParams();
         requestParams.put("title", groupTitle);
@@ -205,6 +171,7 @@ public class NewsDataSource implements Parcelable{
                 NewsGroup ng = new NewsGroup(groupTitle, JSONParsing.parseAddNewsGroupResponse(s));
                 allNewsGroups.add(ng);
                 insertNewsGroupInDb(ng);
+                addNewsSource(ns,ng.getId());
                 BusProvider.getInstance().post(new
                         DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED,
                         allNewsGroups));
@@ -267,6 +234,53 @@ public class NewsDataSource implements Parcelable{
         catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    //ACCESSING DATA
+    public ArrayList<NewsGroup> getAllNewsGroups() {
+        SQLiteDatabase db = sqlHelper.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.GROUPS_TABLE,SqlHelper.GROUPS_COLUMNS,
+                null, null, null , null , null , null );
+        cursor.moveToFirst();
+        ArrayList<NewsGroup> newsGroups = new ArrayList<NewsGroup>();
+        while(!cursor.isAfterLast())
+        {
+            newsGroups.add(new NewsGroup(cursor));
+            cursor.moveToNext();
+        }
+        return newsGroups;
+    }
+    public NewsSource getNewsSource(int id)
+    {
+        NewsSource ns;
+        SQLiteDatabase db = sqlHelper.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
+                SqlHelper.COLUMN_ID +" = " + id , null , null , null , null , null);
+        cursor.moveToFirst();
+        ns = new NewsSource(cursor);
+        cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
+                SqlHelper.COLUMN_SOURCE_ID +" = "+id , null , null , null , null , null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            ns.news.add(new NewsItem(cursor));
+            cursor.moveToNext();
+        }
+        return ns;
+    }
+    public NewsGroup getNewsGroup(int id) {
+        SQLiteDatabase db = sqlHelper.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.GROUPS_TABLE, SqlHelper.GROUPS_COLUMNS,
+                SqlHelper.COLUMN_ID +" = " + id , null , null , null , null , null);
+        cursor.moveToFirst();
+        NewsGroup ng = new NewsGroup(cursor);
+        ng.newsSources = new ArrayList<NewsSource>();
+        cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
+                SqlHelper.COLUMN_GROUP_ID +" = "+id , null , null , null , null , null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            ng.newsSources.add(new NewsSource(cursor));
+            cursor.moveToNext();
+        }
+        return ng;
     }
     @Override
     public void writeToParcel(Parcel dest, int flags) {

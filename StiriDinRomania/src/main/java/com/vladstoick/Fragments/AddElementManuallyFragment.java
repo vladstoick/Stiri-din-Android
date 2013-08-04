@@ -92,6 +92,12 @@ public class AddElementManuallyFragment extends SherlockFragment{
                     ((StiriApp)(getSherlockActivity()).getApplication()).newsDataSource
                             .addNewsGroupAndNewsSource(groupTitle, ns);
                 }
+                else
+                {
+                    int groupId = (int) mGroupSpinner.getSelectedItemId();
+                    ((StiriApp)(getSherlockActivity().getApplication())).newsDataSource.
+                        addNewsSource(ns,groupId);
+                }
 
             }
             case R.id.action_cancel:{
