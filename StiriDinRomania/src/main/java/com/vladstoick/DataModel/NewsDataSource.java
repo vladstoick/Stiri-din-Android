@@ -57,7 +57,7 @@ public class NewsDataSource implements Parcelable{
                 for(int i = 0 ;i < allNewsGroups.size(); i++ )
                     insertNewsGroupInDb(allNewsGroups.get(i));
                 BusProvider.getInstance().post(new DataLoadedEvent(
-                        DataLoadedEvent.TAG_NEWSDATASOURCE,allNewsGroups));
+                        DataLoadedEvent.TAG_NEWSDATASOURCE));
             }
         },new Response.ErrorListener() {
             @Override
@@ -116,17 +116,19 @@ public class NewsDataSource implements Parcelable{
             ArrayList<NewsItem> newsItems = JSONParsing.parseFeed(feedArray);
             for(int i=0;i<allNewsGroups.size();i++)
                 for(int j=0;j<allNewsGroups.get(i).newsSources.size();j++)
-                    if(allNewsGroups.get(i).newsSources.get(j).getId()==feedId)
-                    {
-                        allNewsGroups.get(i).newsSources.get(j).
-                                setNumberOfUnreadNews(newsItems.size());
-                        allNewsGroups.get(i).newsSources.get(j).news = newsItems;
-                        insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
-                        insertNewsItemsInDb(allNewsGroups.get(i).newsSources.get(j));
+                    if(allNewsGroups.get(i).newsSources.get(j).getId()==feedId){
+                        NewsGroup ng = allNewsGroups.get(i);
+                        ng.newsSources.get(j).setNumberOfUnreadNews(newsItems.size());
+                        ng.newsSources.get(j).news = newsItems;
+                        insertNewsSourceInDb(ng.newsSources.get(j));
+                        insertNewsItemsInDb(ng.newsSources.get(j));
+                        ng.setNoFeeds(ng.newsSources.size());
+                        insertNewsGroupInDb(ng);
                     }
+            BusProvider.getInstance().post(new
+                    DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
             e.printStackTrace();
         }
     }
@@ -154,8 +156,7 @@ public class NewsDataSource implements Parcelable{
                     public void onSuccess(String s) {
 //                        allNewsGroups.remove(position);
                         BusProvider.getInstance().post(new DataLoadedEvent(
-                                DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED,
-                                allNewsGroups));
+                                DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
                     }
                 });
 
@@ -173,8 +174,7 @@ public class NewsDataSource implements Parcelable{
                 insertNewsGroupInDb(ng);
                 addNewsSource(ns,ng.getId());
                 BusProvider.getInstance().post(new
-                        DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED,
-                        allNewsGroups));
+                        DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
             }
         });
     }

@@ -9,6 +9,7 @@ import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsGroup;
+import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.Utils.AllGroupsFragmentAdapter;
 import com.vladstoick.Utils.Tags;
@@ -41,12 +42,14 @@ public class NewsGroupListFragment extends SherlockListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        newsDataSource = ((StiriApp)(getSherlockActivity().getApplication())).newsDataSource
-                    .getAllNewsGroups();
+        BusProvider.getInstance().register(this);
     }
     private void setAdapter() {
+        newsDataSource = ((StiriApp)(getSherlockActivity().getApplication())).newsDataSource
+                .getAllNewsGroups();
         Context context = getSherlockActivity();
         if (newsDataSource != null) {
+
             adapter = new AllGroupsFragmentAdapter(newsDataSource, context);
             setListAdapter(adapter);
         }
@@ -75,6 +78,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
     public void onDetach() {
         super.onDetach();
         mCallbacks = null ;
+        BusProvider.getInstance().unregister(this);
     }
 
     @Override

@@ -10,12 +10,10 @@ import java.util.ArrayList;
 public class DataLoadedEvent {
     public static String TAG_NEWSDATASOURCE = "NewsDataSource";
     public static String TAG_NEWSDATASOURCE_MODIFIED = "NewsDataSourceModified";
-    public final ArrayList<NewsGroup> nds;
     public final String dataLoadedType;
 
-    public DataLoadedEvent(String type, ArrayList<NewsGroup> nds) {
+    public DataLoadedEvent(String type) {
         this.dataLoadedType = type;
-        this.nds = nds;
     }
 
     @Override
