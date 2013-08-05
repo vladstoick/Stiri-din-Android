@@ -16,6 +16,7 @@ apply plugin: 'newrelic'
 dependencies {
     compile project(':libraries:facebook')
     compile "com.android.support:support-v4:18.0.+"
+    compile 'com.google.code.gson:gson:1.7.2'
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile 'com.newrelic.agent.android:android-agent:2.426.0'
     compile 'com.squareup:otto:1.3.4'

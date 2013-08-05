@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class DataLoadedEvent {
     public static String TAG_NEWSDATASOURCE = "NewsDataSource";
     public static String TAG_NEWSDATASOURCE_MODIFIED = "NewsDataSourceModified";
+    public static String TAG_NEWSITEM = "NewsItemLoaded";
     public final String dataLoadedType;
 
     public DataLoadedEvent(String type) {

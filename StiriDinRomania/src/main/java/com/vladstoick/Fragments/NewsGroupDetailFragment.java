@@ -12,8 +12,10 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.OttoBus.BusProvider;
+import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.Utils.NewsGroupFragmentAdapter;
 import com.vladstoick.Utils.Tags;
 import com.vladstoick.stiridinromania.R;
@@ -87,5 +89,10 @@ public class NewsGroupDetailFragment extends SherlockFragment {
             }
         });
         return mView;
+    }
+    @Subscribe
+    public void onDataLoaded(DataLoadedEvent event)
+    {
+        adapter.notifyDataSetChanged();
     }
 }

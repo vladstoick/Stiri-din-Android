@@ -9,6 +9,8 @@ import android.os.Parcelable;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -30,13 +32,11 @@ import java.util.Date;
 /**
  * Created by vlad on 7/20/13.
  */
-public class NewsDataSource implements Parcelable{
-
+public class NewsDataSource{
     private AsyncHttpClient httpClient;
     private String BASE_URL = "http://stiriromania.eu01.aws.af.cm/user/";
     private ArrayList<NewsGroup> allNewsGroups;
     private int userId;
-    private StiriApp app;
     private SqlHelper sqlHelper;
     private Date updateAt;
 
@@ -44,8 +44,7 @@ public class NewsDataSource implements Parcelable{
     public NewsDataSource(int userId, StiriApp app) {
         this.userId = userId;
         loadDataFromInternet();
-        this.app = app;
-        sqlHelper = new SqlHelper(this.app);
+        sqlHelper = new SqlHelper(app);
         BusProvider.getInstance().register(this);
     }
     private void loadDataFromInternet() {
@@ -55,7 +54,7 @@ public class NewsDataSource implements Parcelable{
             public void onResponse(String s) {
                 allNewsGroups = JSONParsing.parseNewsDataSource(s);
                 for(int i = 0 ;i < allNewsGroups.size(); i++ )
-                    insertNewsGroupInDb(allNewsGroups.get(i));
+                    sqlHelper.insertNewsGroupInDb(allNewsGroups.get(i));
                 BusProvider.getInstance().post(new DataLoadedEvent(
                         DataLoadedEvent.TAG_NEWSDATASOURCE));
             }
@@ -66,18 +65,11 @@ public class NewsDataSource implements Parcelable{
             }
         });
         StiriApp.queue.add(request);
-
-    }
-    @Override
-    public int describeContents() {
-        return 0;
     }
     @Subscribe public void OnDataLoaded(DataLoadedEvent event)
     {
-        final Date currentDate =  Calendar.getInstance().getTime();
-        final SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-        final String dateString = fmt.format(currentDate);
-
+        final String dateString = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+                .format(Calendar.getInstance().getTime());
         if(event.dataLoadedType == DataLoadedEvent.TAG_NEWSDATASOURCE)
         {
             for(int i=0;i<allNewsGroups.size();i++)
@@ -111,19 +103,20 @@ public class NewsDataSource implements Parcelable{
             JSONObject jsonObject = new JSONObject(response);
             String sFeedId = jsonObject.getString("feedId");
             int feedId = Integer.parseInt(sFeedId);
-            NewsSource ns;
             JSONArray feedArray = jsonObject.getJSONArray("articles");
             ArrayList<NewsItem> newsItems = JSONParsing.parseFeed(feedArray);
+            for(int i=0;i<newsItems.size();i++)
+                if(newsItems.get(i).getDescription()=="null")
+                    getNewsItemPaperized(newsItems.get(i));
             for(int i=0;i<allNewsGroups.size();i++)
                 for(int j=0;j<allNewsGroups.get(i).newsSources.size();j++)
                     if(allNewsGroups.get(i).newsSources.get(j).getId()==feedId){
                         NewsGroup ng = allNewsGroups.get(i);
                         ng.newsSources.get(j).setNumberOfUnreadNews(newsItems.size());
                         ng.newsSources.get(j).news = newsItems;
-                        insertNewsSourceInDb(ng.newsSources.get(j));
-                        insertNewsItemsInDb(ng.newsSources.get(j));
-                        ng.setNoFeeds(ng.newsSources.size());
-                        insertNewsGroupInDb(ng);
+                        sqlHelper.insertNewsSourceInDb(ng.newsSources.get(j));
+                        sqlHelper.insertNewsItemsInDb(ng.newsSources.get(j));
+                        sqlHelper.insertNewsGroupInDb(ng);
                     }
             BusProvider.getInstance().post(new
                     DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
@@ -140,7 +133,7 @@ public class NewsDataSource implements Parcelable{
         requestParams.put("title", newsSource.getTitle());
         requestParams.put("description", newsSource.getDescription());
         requestParams.put("url",newsSource.getRssLink());
-        httpClient.post(BASE_URL+userId + "/"+groupId , requestParams,
+        httpClient.post(BASE_URL+userId + "/"+groupId, requestParams,
                 new AsyncHttpResponseHandler(){
             @Override
             public void onSuccess(String s) {
@@ -171,135 +164,46 @@ public class NewsDataSource implements Parcelable{
             public void onSuccess(String s) {
                 NewsGroup ng = new NewsGroup(groupTitle, JSONParsing.parseAddNewsGroupResponse(s));
                 allNewsGroups.add(ng);
-                insertNewsGroupInDb(ng);
+                sqlHelper.insertNewsGroupInDb(ng);
                 addNewsSource(ns,ng.getId());
                 BusProvider.getInstance().post(new
                         DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
             }
         });
     }
-
-    //SQLITE Helper
-    private void insertNewsGroupInDb(NewsGroup ng)
+    public void getNewsItemPaperized(NewsItem ni)
     {
-        ContentValues values = new ContentValues();
-        values.put(SqlHelper.COLUMN_TITLE,ng.getTitle());
-        values.put(SqlHelper.COLUMN_ID,ng.getId());
-        values.put(SqlHelper.COLUMN_NOFEEDS,ng.getNoFeeds());
-        SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
-        try{
-            sqlLiteDatabase.insertWithOnConflict(SqlHelper.GROUPS_TABLE,null,values,
-                SQLiteDatabase.CONFLICT_REPLACE);
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
-    private void insertNewsItemsInDb(NewsSource ns)
-    {
-        SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
-        for(int i=0 ; i < ns.news.size() ; i++)
-        {
-            NewsItem ni = ns.news.get(i);
-            ContentValues values = new ContentValues();
-            values.put(SqlHelper.COLUMN_URL,ni.getUrlLink());
-            values.put(SqlHelper.COLUMN_TITLE,ni.getTitle());
-            values.put(SqlHelper.COLUMN_DESCRIPTION,ni.getDescription());
-            values.put(SqlHelper.COLUMN_SOURCE_ID,ns.getId());
-            try{
-                sqlLiteDatabase.insertWithOnConflict(SqlHelper.NEWSITEMS_TABLE, null , values,
-                    SQLiteDatabase.CONFLICT_REPLACE);
+        String url = "http://37.139.8.146:8080/?url="+ni.getUrlLink();
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url , null ,
+                new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                try{
+                    updateNewsItem(jsonObject.getString("url"),jsonObject.getString("response"));
+                    BusProvider.getInstance().post(new DataLoadedEvent(DataLoadedEvent.TAG_NEWSITEM));
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
             }
-            catch (Exception e){
-                e.printStackTrace();
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
             }
-        }
+        });
+        StiriApp.queue.add(request);
     }
-    public void insertNewsSourceInDb(NewsSource ns)
-    {
-
-        ContentValues values = new ContentValues();
-        SQLiteDatabase sqlLiteDatabase = sqlHelper.getWritableDatabase();
-        values.put(SqlHelper.COLUMN_TITLE,ns.getTitle());
-        values.put(SqlHelper.COLUMN_ID,ns.getId());
-        values.put(SqlHelper.COLUMN_DESCRIPTION,ns.getDescription());
-        values.put(SqlHelper.COLUMN_URL,ns.getRssLink());
-        values.put(SqlHelper.COLUMN_GROUP_ID,ns.getGroupId());
-        values.put(SqlHelper.COLUMN_NOUNREADNEWS,ns.getNumberOfUnreadNews());
-        try{
-            sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
-                SQLiteDatabase.CONFLICT_REPLACE);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+    public ArrayList<NewsGroup> getAllNewsGroups(){
+        return sqlHelper.getAllNewsGroups();
     }
-    //ACCESSING DATA
-    public ArrayList<NewsGroup> getAllNewsGroups() {
-        SQLiteDatabase db = sqlHelper.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.GROUPS_TABLE,SqlHelper.GROUPS_COLUMNS,
-                null, null, null , null , null , null );
-        cursor.moveToFirst();
-        ArrayList<NewsGroup> newsGroups = new ArrayList<NewsGroup>();
-        while(!cursor.isAfterLast())
-        {
-            newsGroups.add(new NewsGroup(cursor));
-            cursor.moveToNext();
-        }
-        return newsGroups;
+    public NewsGroup getNewsGroup(int id){
+        return sqlHelper.getNewsGroup(id);
     }
-    public NewsSource getNewsSource(int id)
-    {
-        NewsSource ns;
-        SQLiteDatabase db = sqlHelper.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
-                SqlHelper.COLUMN_ID +" = " + id , null , null , null , null , null);
-        cursor.moveToFirst();
-        ns = new NewsSource(cursor);
-        cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
-                SqlHelper.COLUMN_SOURCE_ID +" = "+id , null , null , null , null , null);
-        cursor.moveToFirst();
-        while(!cursor.isAfterLast()){
-            ns.news.add(new NewsItem(cursor));
-            cursor.moveToNext();
-        }
-        return ns;
+    public NewsSource getNewsSource(int id){
+        return  sqlHelper.getNewsSource(id);
     }
-    public NewsGroup getNewsGroup(int id) {
-        SQLiteDatabase db = sqlHelper.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.GROUPS_TABLE, SqlHelper.GROUPS_COLUMNS,
-                SqlHelper.COLUMN_ID +" = " + id , null , null , null , null , null);
-        cursor.moveToFirst();
-        NewsGroup ng = new NewsGroup(cursor);
-        ng.newsSources = new ArrayList<NewsSource>();
-        cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
-                SqlHelper.COLUMN_GROUP_ID +" = "+id , null , null , null , null , null);
-        cursor.moveToFirst();
-        while(!cursor.isAfterLast()){
-            ng.newsSources.add(new NewsSource(cursor));
-            cursor.moveToNext();
-        }
-        return ng;
+    public void updateNewsItem(String url,String paperized){
+        sqlHelper.updateNewsItem(url,paperized);
     }
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeTypedList(allNewsGroups);
-        dest.writeInt(userId);
-    }
-    private NewsDataSource(Parcel in)
-    {
-        in.readTypedList(allNewsGroups,NewsGroup.CREATOR);
-        userId = in.readInt();
-    }
-    public static final Parcelable.Creator<NewsDataSource> CREATOR
-            = new Parcelable.Creator<NewsDataSource>() {
-        public NewsDataSource createFromParcel(Parcel in) {
-            return new NewsDataSource(in);
-        }
-
-        public NewsDataSource[] newArray(int size) {
-            return new NewsDataSource[size];
-        }
-    };
 }

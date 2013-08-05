@@ -76,6 +76,7 @@
     <orderEntry type="library" exported="" name="butterknife-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="android-agent-2.426.0" level="project" />
     <orderEntry type="library" exported="" name="volley" level="project" />
+    <orderEntry type="library" exported="" name="gson-1.7.2" level="project" />
   </component>
 </module>
 
