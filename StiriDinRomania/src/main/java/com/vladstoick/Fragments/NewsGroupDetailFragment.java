@@ -31,6 +31,7 @@ public class NewsGroupDetailFragment extends SherlockFragment {
     public interface NewsGroupDetailFragmentCommunicationInterface{
         public void selectedNewsSource(int id);
     }
+    int newsGroupId;
     public static String TAG = "NEWSGROUPFRAGMENT";
     private NewsGroup newsGroup;
     private View mView;
@@ -45,7 +46,7 @@ public class NewsGroupDetailFragment extends SherlockFragment {
         if (savedInstanceState != null)
             newsGroup = savedInstanceState.getParcelable(Tags.NEWSGROUP_TAG);
         else if (getArguments() != null) {
-            int newsGroupId = getArguments().getInt(Tags.NEWSGROUP_TAG_ID);
+            newsGroupId = getArguments().getInt(Tags.NEWSGROUP_TAG_ID);
             StiriApp app = (StiriApp)(getSherlockActivity().getApplication());
             newsGroup = app.newsDataSource.getNewsGroup(newsGroupId);
         }
@@ -93,6 +94,9 @@ public class NewsGroupDetailFragment extends SherlockFragment {
     @Subscribe
     public void onDataLoaded(DataLoadedEvent event)
     {
+        newsGroup = ((StiriApp)(getSherlockActivity()).getApplication())
+                .newsDataSource.getNewsGroup(newsGroupId);
+        adapter.setData(newsGroup);
         adapter.notifyDataSetChanged();
     }
 }

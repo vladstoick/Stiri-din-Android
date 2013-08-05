@@ -12,6 +12,8 @@ import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.stiridinromania.R;
 
+import java.util.ArrayList;
+
 import butterknife.InjectView;
 import butterknife.Views;
 
@@ -31,7 +33,9 @@ public class NewsGroupFragmentAdapter extends BaseAdapter {
 
     private final Context context;
     private NewsGroup data;
-
+    public void setData(NewsGroup data){
+        this.data = data;
+    }
     public NewsGroupFragmentAdapter(NewsGroup data, Context context) {
         this.context = context;
         this.data = data;

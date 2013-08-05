@@ -61,14 +61,10 @@
       <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\menu\menu_newsgroup.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\java\com\mycompany\myapp\NewsItemListActivity.java" afterPath="" />
       <change type="DELETED" beforePath="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-hdpi\card_background.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/DataLoadedEvent.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/DataLoadedEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/StiriDinRomania.iml" afterPath="$PROJECT_DIR$/StiriDinRomania/StiriDinRomania.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build.gradle" afterPath="$PROJECT_DIR$/StiriDinRomania/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_add_elements_manually.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_add_elements_manually.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_add_elements_manually.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_add_elements_manually.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsGroupFragmentAdapter.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsGroupFragmentAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StiriDinRomaniaAndroidGradle.iws" />
@@ -140,7 +136,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" line="167" class="com.vladstoick.DataModel.NewsDataSource$7" package="com.vladstoick.DataModel">
+      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" line="99" class="com.vladstoick.Fragments.NewsGroupDetailFragment" package="com.vladstoick.Fragments">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -155,22 +151,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" line="95" class="com.vladstoick.Fragments.NewsGroupDetailFragment" package="com.vladstoick.Fragments">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" line="175" class="com.vladstoick.DataModel.NewsDataSource" package="com.vladstoick.DataModel">
+      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" line="119" class="com.vladstoick.DataModel.NewsDataSource" package="com.vladstoick.DataModel">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -207,7 +188,34 @@
       <file leaf-file-name="NewsGroupListFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="5" selection-start="4015" selection-end="4015" vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="1819">
+            <state line="112" column="5" selection-start="3987" selection-end="3987" vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="1819">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsGroupDetailFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="0" selection-start="3645" selection-end="3645" vertical-scroll-proportion="1.4015595" vertical-offset="539" max-vertical-offset="1411">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllGroupsFragmentAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/AllGroupsFragmentAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="5" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsGroupFragmentAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsGroupFragmentAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="33" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1156">
               <folding />
             </state>
           </provider>
@@ -216,54 +224,33 @@
       <file leaf-file-name="NewsDataSource.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="5" selection-start="8564" selection-end="8564" vertical-scroll-proportion="0.0" vertical-offset="2052" max-vertical-offset="2924">
+            <state line="119" column="0" selection-start="4684" selection-end="4684" vertical-scroll-proportion="0.0" vertical-offset="1393" max-vertical-offset="3179">
               <folding>
-                <element signature="e#3199#3432#0" expanded="true" />
-                <element signature="e#3409#3410#0" expanded="true" />
-                <element signature="e#3434#3683#0" expanded="true" />
-                <element signature="e#3660#3661#0" expanded="true" />
-                <element signature="e#6022#6391#0" expanded="true" />
-                <element signature="e#6372#6373#0" expanded="true" />
-                <element signature="e#7442#7920#0" expanded="true" />
-                <element signature="e#7909#7910#0" expanded="true" />
-                <element signature="e#7922#8112#0" expanded="true" />
-                <element signature="e#8101#8102#0" expanded="true" />
+                <element signature="e#1688#2350#0" expanded="true" />
+                <element signature="e#2339#2340#0" expanded="true" />
+                <element signature="e#2351#2541#0" expanded="true" />
+                <element signature="e#2530#2531#0" expanded="true" />
+                <element signature="e#3474#3647#0" expanded="true" />
+                <element signature="e#3636#3637#0" expanded="true" />
+                <element signature="e#3649#3838#0" expanded="true" />
+                <element signature="e#3827#3828#0" expanded="true" />
+                <element signature="e#5374#5768#0" expanded="true" />
+                <element signature="e#5757#5758#0" expanded="true" />
+                <element signature="e#5941#6310#0" expanded="true" />
+                <element signature="e#6291#6292#0" expanded="true" />
+                <element signature="e#7361#7839#0" expanded="true" />
+                <element signature="e#7828#7829#0" expanded="true" />
+                <element signature="e#7841#8031#0" expanded="true" />
+                <element signature="e#8020#8021#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsGroupListActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java">
+      <file leaf-file-name="JSONParsing.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="31" selection-start="2118" selection-end="2118" vertical-scroll-proportion="-0.34429064" vertical-offset="930" max-vertical-offset="1853">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataLoadedEvent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/DataLoadedEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="12" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SqlHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="68" selection-start="6951" selection-end="6951" vertical-scroll-proportion="0.0" vertical-offset="1627" max-vertical-offset="2499">
+            <state line="71" column="18" selection-start="2657" selection-end="2657" vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1428">
               <folding />
             </state>
           </provider>
@@ -358,9 +345,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/add_elements_acitvitiy.xml" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/AddElementAcitvitiy.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/add_element_manual.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsSource.java" />
@@ -369,11 +353,14 @@
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsItemListFragmentAdapter.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_add_elements_manually.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/build.gradle" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/DataLoadedEvent.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/AllGroupsFragmentAdapter.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsGroupFragmentAdapter.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
       </list>
     </option>
   </component>
@@ -785,7 +772,7 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="n4" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="AndroidTargetDevices" value="192.168.56.101:5555" />
+    <property name="AndroidTargetDevices" value="00a2105d9047c7ff" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -1010,13 +997,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.28619152" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1028,8 +1015,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6726058" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32739422" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6002227" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1127,36 +1114,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_add_elements_manually.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="49" selection-start="658" selection-end="658" vertical-scroll-proportion="-7.36" vertical-offset="20" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/spinner_row_newsgroup_dropdown.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="40" selection-start="815" selection-end="815" vertical-scroll-proportion="-12.24" vertical-offset="0" max-vertical-offset="493">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/spinner_row_newsgroup.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="5" selection-start="3105" selection-end="3105" vertical-scroll-proportion="1.3535528" vertical-offset="273" max-vertical-offset="1309">
@@ -1199,23 +1156,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="13" selection-start="2526" selection-end="2526" vertical-scroll-proportion="0.41513762" vertical-offset="471" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="12" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="5" selection-start="4015" selection-end="4015" vertical-scroll-proportion="0.0" vertical-offset="743" max-vertical-offset="1819">
           <folding />
         </state>
       </provider>
@@ -1234,27 +1177,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="31" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="5" selection-start="3987" selection-end="3987" vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="1819">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="18" selection-start="2657" selection-end="2657" vertical-scroll-proportion="0.0" vertical-offset="539" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/AllGroupsFragmentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="5" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsGroupFragmentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="33" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="5" selection-start="8564" selection-end="8564" vertical-scroll-proportion="0.0" vertical-offset="2052" max-vertical-offset="2924">
+        <state line="119" column="0" selection-start="4684" selection-end="4684" vertical-scroll-proportion="0.0" vertical-offset="1393" max-vertical-offset="3179">
           <folding>
-            <element signature="e#3199#3432#0" expanded="true" />
-            <element signature="e#3409#3410#0" expanded="true" />
-            <element signature="e#3434#3683#0" expanded="true" />
-            <element signature="e#3660#3661#0" expanded="true" />
-            <element signature="e#6022#6391#0" expanded="true" />
-            <element signature="e#6372#6373#0" expanded="true" />
-            <element signature="e#7442#7920#0" expanded="true" />
-            <element signature="e#7909#7910#0" expanded="true" />
-            <element signature="e#7922#8112#0" expanded="true" />
-            <element signature="e#8101#8102#0" expanded="true" />
+            <element signature="e#1688#2350#0" expanded="true" />
+            <element signature="e#2339#2340#0" expanded="true" />
+            <element signature="e#2351#2541#0" expanded="true" />
+            <element signature="e#2530#2531#0" expanded="true" />
+            <element signature="e#3474#3647#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
+            <element signature="e#3649#3838#0" expanded="true" />
+            <element signature="e#3827#3828#0" expanded="true" />
+            <element signature="e#5374#5768#0" expanded="true" />
+            <element signature="e#5757#5758#0" expanded="true" />
+            <element signature="e#5941#6310#0" expanded="true" />
+            <element signature="e#6291#6292#0" expanded="true" />
+            <element signature="e#7361#7839#0" expanded="true" />
+            <element signature="e#7828#7829#0" expanded="true" />
+            <element signature="e#7841#8031#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java">
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="31" selection-start="2118" selection-end="2118" vertical-scroll-proportion="-0.34429064" vertical-offset="930" max-vertical-offset="1853">
+        <state line="99" column="0" selection-start="3645" selection-end="3645" vertical-scroll-proportion="1.4015595" vertical-offset="539" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>

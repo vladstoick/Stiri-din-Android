@@ -53,8 +53,11 @@ public class NewsDataSource{
             @Override
             public void onResponse(String s) {
                 allNewsGroups = JSONParsing.parseNewsDataSource(s);
-                for(int i = 0 ;i < allNewsGroups.size(); i++ )
+                for(int i = 0 ;i < allNewsGroups.size(); i++ ){
                     sqlHelper.insertNewsGroupInDb(allNewsGroups.get(i));
+                    for(int j=0 ; j < allNewsGroups.get(i).newsSources.size() ; j ++)
+                        sqlHelper.insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
+                }
                 BusProvider.getInstance().post(new DataLoadedEvent(
                         DataLoadedEvent.TAG_NEWSDATASOURCE));
             }
@@ -70,32 +73,33 @@ public class NewsDataSource{
     {
         final String dateString = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"))
                 .format(Calendar.getInstance().getTime());
-        if(event.dataLoadedType == DataLoadedEvent.TAG_NEWSDATASOURCE)
-        {
-            for(int i=0;i<allNewsGroups.size();i++)
-            {
+        if(event.dataLoadedType == DataLoadedEvent.TAG_NEWSDATASOURCE){
+            for(int i=0;i<allNewsGroups.size();i++){
                 NewsGroup ng = allNewsGroups.get(i);
-                for(int j=0;j<ng.newsSources.size();j++)
-                {
+                for(int j=0;j<ng.newsSources.size();j++){
                     NewsSource ns = ng.newsSources.get(j);
-                    String url = NewsSource.BASE_URL+ ns.getRssLink()+"&feedId="+ns.getId();
-//                            +"&date="+dateString;
-                    StringRequest stringRequest = new StringRequest(
-                            Request.Method.GET, url, new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            addNewSource(response);
-                        }
-                    }, new Response.ErrorListener(){
-                        @Override
-                        public void onErrorResponse(VolleyError volleyError) {
-                            volleyError.printStackTrace();
-                        }
-                    });
-                    StiriApp.queue.add(stringRequest);
+                    getNewsSourceItems(ns);
                 }
             }
         }
+    }
+    public void getNewsSourceItems(NewsSource ns)
+    {
+        String url = NewsSource.BASE_URL+ ns.getRssLink()+"&feedId="+ns.getId();
+//                            +"&date="+dateString;
+        StringRequest stringRequest = new StringRequest(
+                Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                addNewSource(response);
+            }
+        }, new Response.ErrorListener(){
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        });
+        StiriApp.queue.add(stringRequest);
     }
     public void addNewSource(String response)
     {
@@ -108,25 +112,19 @@ public class NewsDataSource{
             for(int i=0;i<newsItems.size();i++)
                 if(newsItems.get(i).getDescription()=="null")
                     getNewsItemPaperized(newsItems.get(i));
-            for(int i=0;i<allNewsGroups.size();i++)
-                for(int j=0;j<allNewsGroups.get(i).newsSources.size();j++)
-                    if(allNewsGroups.get(i).newsSources.get(j).getId()==feedId){
-                        NewsGroup ng = allNewsGroups.get(i);
-                        ng.newsSources.get(j).setNumberOfUnreadNews(newsItems.size());
-                        ng.newsSources.get(j).news = newsItems;
-                        sqlHelper.insertNewsSourceInDb(ng.newsSources.get(j));
-                        sqlHelper.insertNewsItemsInDb(ng.newsSources.get(j));
-                        sqlHelper.insertNewsGroupInDb(ng);
-                    }
+            NewsSource ns = getNewsSource(feedId);
+            ns.news = newsItems;
+            ns.setNumberOfUnreadNews(newsItems.size());
+            sqlHelper.insertNewsSourceInDb(ns);
+            sqlHelper.insertNewsItemsInDb(ns);
             BusProvider.getInstance().post(new
                     DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
-        }
-        catch(Exception e){
+        } catch(Exception e){
             e.printStackTrace();
         }
     }
     //MODIFYING DATA
-    public void addNewsSource(NewsSource newsSource, int groupId)
+    public void addNewsSource(final NewsSource newsSource,final int groupId)
     {
         httpClient = new AsyncHttpClient();
         RequestParams requestParams = new RequestParams();
@@ -137,7 +135,11 @@ public class NewsDataSource{
                 new AsyncHttpResponseHandler(){
             @Override
             public void onSuccess(String s) {
-                addNewSource(s);
+                int newsSourceId = JSONParsing.getNewsSourceId(s);
+                newsSource.setId(newsSourceId);
+                newsSource.setGroupId(groupId);
+                sqlHelper.insertNewsSourceInDb(newsSource);
+                getNewsSourceItems(newsSource);
             }
         });
     }

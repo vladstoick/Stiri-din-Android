@@ -42,13 +42,11 @@ public class JSONParsing {
         }
 
     }
-    public static ArrayList<NewsItem> parseFeed(JSONArray newsJArray)
-    {
+    public static ArrayList<NewsItem> parseFeed(JSONArray newsJArray) {
         try{
 
             ArrayList<NewsItem> newsItems = new ArrayList<NewsItem>();
-            for(int i=0; i < newsJArray.length(); i++)
-            {
+            for(int i=0; i < newsJArray.length(); i++){
                 JSONObject jo = newsJArray.getJSONObject(i);
                 NewsItem ni = new NewsItem(jo.getString(NewsItem.TAG_TITLE),
                         jo.getString(NewsItem.TAG_DESCRIPTION),
@@ -57,8 +55,7 @@ public class JSONParsing {
             }
             return newsItems;
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
             return new ArrayList<NewsItem>();
         }
 
@@ -67,6 +64,16 @@ public class JSONParsing {
         try {
             JSONObject jsonObject = new JSONObject(response);
             return jsonObject.getInt(NewsGroup.TAG_ID);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
+    public static int getNewsSourceId(String response)
+    {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            return jsonObject.getInt("feed_id");
         } catch (JSONException e) {
             e.printStackTrace();
             return -1;
