@@ -53,7 +53,7 @@ public class NewsDataSource{
             @Override
             public void onResponse(String s) {
                 allNewsGroups = JSONParsing.parseNewsDataSource(s);
-                sqlHelper.deleteAllNewsGroups();
+                sqlHelper.deleteAllNewsGroupsAndNewsSources();
                 for(int i = 0 ;i < allNewsGroups.size(); i++ ){
                     sqlHelper.insertNewsGroupInDb(allNewsGroups.get(i));
                     for(int j=0 ; j < allNewsGroups.get(i).newsSources.size() ; j ++)

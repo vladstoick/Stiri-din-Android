@@ -148,9 +148,10 @@ public class SqlHelper extends SQLiteOpenHelper{
         SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
         sqlLiteDatabase.update(NEWSITEMS_TABLE,values, COLUMN_URL + " = " + url, null);
     }
-    public void deleteAllNewsGroups()
+    public void deleteAllNewsGroupsAndNewsSources()
     {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         sqLiteDatabase.delete(GROUPS_TABLE,null,null);
+        sqLiteDatabase.delete(SOURCES_TABLE,null,null);
     }
 }
