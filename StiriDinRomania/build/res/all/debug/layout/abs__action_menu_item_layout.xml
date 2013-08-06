@@ -14,17 +14,16 @@
      limitations under the License.
 -->
 
-<com.actionbarsherlock.internal.view.menu.ActionMenuItemView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:addStatesFromChildren="true"
-        android:gravity="center"
-        android:focusable="true"
-        android:paddingLeft="4dip"
-        android:paddingRight="4dip"
-        style="?attr/actionButtonStyle">
+<com.actionbarsherlock.internal.view.menu.ActionMenuItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:addStatesFromChildren="true"
+    android:gravity="center"
+    android:focusable="true"
+    android:paddingLeft="4dip"
+    android:paddingRight="4dip"
+    style="?attr/actionButtonStyle">
     <ImageButton android:id="@+id/abs__imageButton"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -37,22 +36,22 @@
                  android:scaleType="fitCenter"
                  android:adjustViewBounds="true"
                  android:background="@null"
-                 android:focusable="false"/>
+                 android:focusable="false" />
     <com.actionbarsherlock.internal.widget.CapitalizingButton android:id="@+id/abs__textButton"
-                                                              android:layout_width="wrap_content"
-                                                              android:layout_height="wrap_content"
-                                                              android:layout_gravity="center"
-                                                              android:visibility="gone"
-                                                              android:textAppearance="?attr/actionMenuTextAppearance"
-                                                              style="?attr/buttonStyleSmall"
-                                                              android:textColor="?attr/actionMenuTextColor"
-                                                              android:singleLine="true"
-                                                              android:ellipsize="none"
-                                                              android:background="@null"
-                                                              android:paddingTop="4dip"
-                                                              android:paddingBottom="4dip"
-                                                              android:paddingLeft="4dip"
-                                                              android:paddingRight="4dip"
-                                                              android:focusable="false"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textAppearance="?attr/actionMenuTextAppearance"
+            style="?attr/buttonStyleSmall"
+            android:textColor="?attr/actionMenuTextColor"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:background="@null"
+            android:paddingTop="4dip"
+            android:paddingBottom="4dip"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
+            android:focusable="false" />
 </com.actionbarsherlock.internal.view.menu.ActionMenuItemView>
-        <!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__action_menu_item_layout.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\abs__action_menu_item_layout.xml -->
+<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__action_menu_item_layout.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\abs__action_menu_item_layout.xml -->

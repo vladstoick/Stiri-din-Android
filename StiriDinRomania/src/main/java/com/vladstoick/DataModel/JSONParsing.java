@@ -1,5 +1,8 @@
 package com.vladstoick.DataModel;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -79,5 +82,19 @@ public class JSONParsing {
             e.printStackTrace();
             return -1;
         }
+    }
+
+    public static int parseServerLogin(String response, SharedPreferences.Editor editor){
+        try{
+            JSONObject jsonObject = new JSONObject(response);
+            int userId = jsonObject.getInt("id");
+            editor.putInt("user_id", userId);
+            editor.commit();
+            return userId;
+        } catch (Exception e){
+            e.printStackTrace();;
+            return -1;
+        }
+
     }
 }

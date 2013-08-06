@@ -5,6 +5,7 @@
         android:layout_width="match_parent"
         android:background="@android:color/white"
         android:layout_height="match_parent">
+
     <TextView
             android:paddingLeft="@dimen/left_and_right_margin"
             android:paddingRight="@dimen/left_and_right_margin"
@@ -17,6 +18,7 @@
             android:textSize="@dimen/large_font"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"/>
+
     <WebView
             android:paddingLeft="@dimen/left_and_right_margin"
             android:paddingRight="@dimen/left_and_right_margin"

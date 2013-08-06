@@ -19,11 +19,4 @@
             android:layout_width="wrap_content"
             android:minWidth="250dp"
             android:layout_height="wrap_content"/>
-
-    <Button
-            android:text="@string/login_microsoft"
-            android:layout_width="wrap_content"
-            android:minWidth="250dp"
-            android:layout_height="wrap_content"
-            android:onClick="microsoftLogin"/>
 </LinearLayout><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_login.xml -->

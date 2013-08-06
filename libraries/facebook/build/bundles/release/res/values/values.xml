@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\attrs.xml -->
-    <attr name="confirm_logout" format="boolean" />
-    <attr name="done_button_background" format="reference" />
-    <attr name="done_button_text" format="string" />
-    <attr name="extra_fields" format="string" />
-    <attr name="fetch_user_info" format="boolean" />
-    <attr name="is_cropped" format="boolean" />
-    <attr name="login_text" format="string" />
-    <attr name="logout_text" format="string" />
-    <attr name="multi_select" format="boolean" />
-    <attr name="radius_in_meters" format="integer" />
-    <attr name="results_limit" format="integer" />
-    <attr name="search_text" format="string" />
-    <attr name="show_pictures" format="boolean" />
-    <attr name="show_search_box" format="boolean" />
-    <attr name="show_title_bar" format="boolean" />
-    <attr name="title_bar_background" format="reference" />
-    <attr name="title_text" format="string" />
     <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\styles.xml -->
     <color name="com_facebook_blue">#3B5998</color>
     <color name="com_facebook_loginfragment_connected_shadow_color">#000000</color>

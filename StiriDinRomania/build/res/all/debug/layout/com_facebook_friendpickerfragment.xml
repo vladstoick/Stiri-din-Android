@@ -33,13 +33,14 @@
             android:cacheColorHint="#FFFFFF"
             />
 
-    <ProgressBar android:indeterminate="true"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:id="@+id/com_facebook_picker_activity_circle"
-                 style="@android:style/Widget.ProgressBar"
-                 android:layout_centerInParent="true"
-                 android:visibility="invisible"
+    <ProgressBar
+            android:indeterminate="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/com_facebook_picker_activity_circle"
+            style="@android:style/Widget.ProgressBar"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
             />
 </RelativeLayout>
-        <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_friendpickerfragment.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_friendpickerfragment.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_friendpickerfragment.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_friendpickerfragment.xml -->

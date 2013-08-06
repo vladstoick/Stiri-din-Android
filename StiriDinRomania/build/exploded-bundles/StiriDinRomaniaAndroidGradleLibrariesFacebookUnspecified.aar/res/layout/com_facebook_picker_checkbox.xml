@@ -16,11 +16,11 @@
 -->
 
 <CheckBox
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/com_facebook_picker_checkbox"
-    android:layout_width="23dip"
-    android:layout_height="23dip"
-    android:focusable="false"
-    android:clickable="false"
-    android:button="@drawable/com_facebook_button_check" />
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/com_facebook_picker_checkbox"
+        android:layout_width="23dip"
+        android:layout_height="23dip"
+        android:focusable="false"
+        android:clickable="false"
+        android:button="@drawable/com_facebook_button_check"/>
 <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_checkbox.xml -->

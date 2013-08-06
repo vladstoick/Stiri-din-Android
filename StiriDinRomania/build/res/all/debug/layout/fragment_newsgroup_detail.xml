@@ -7,4 +7,4 @@
           android:padding="16dp"
           android:textIsSelectable="true"
           tools:context=".NewsGroupDetailFragment"/>
-        <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsgroup_detail.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsgroup_detail.xml -->

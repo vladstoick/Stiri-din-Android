@@ -16,9 +16,9 @@
 -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:background="#FFFFFF">
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#FFFFFF">
 
     <include layout="@layout/com_facebook_picker_title_bar_stub"/>
 
@@ -33,13 +33,14 @@
             android:cacheColorHint="#FFFFFF"
             />
 
-    <ProgressBar android:indeterminate="true"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:id="@+id/com_facebook_picker_activity_circle"
-                 style="@android:style/Widget.ProgressBar"
-                 android:layout_centerInParent="true"
-                 android:visibility="invisible"
+    <ProgressBar
+            android:indeterminate="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/com_facebook_picker_activity_circle"
+            style="@android:style/Widget.ProgressBar"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
             />
 </RelativeLayout>
 <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_friendpickerfragment.xml -->

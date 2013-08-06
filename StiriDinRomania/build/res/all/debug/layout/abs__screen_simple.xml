@@ -22,18 +22,18 @@ enabled.
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:fitsSystemWindows="true"
-              android:orientation="vertical">
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
     <ViewStub android:id="@+id/abs__action_mode_bar_stub"
               android:inflatedId="@+id/abs__action_mode_bar"
               android:layout="@layout/abs__action_mode_bar"
               android:layout_width="fill_parent"
-              android:layout_height="wrap_content"/>
+              android:layout_height="wrap_content" />
     <com.actionbarsherlock.internal.nineoldandroids.widget.NineFrameLayout
-            android:id="@+id/abs__content"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:foregroundGravity="fill_horizontal|top"
-            android:foreground="?attr/windowContentOverlay"/>
+         android:id="@+id/abs__content"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:foregroundGravity="fill_horizontal|top"
+         android:foreground="?attr/windowContentOverlay" />
 </LinearLayout>
-        <!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__screen_simple.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\abs__screen_simple.xml -->
+<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__screen_simple.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\abs__screen_simple.xml -->

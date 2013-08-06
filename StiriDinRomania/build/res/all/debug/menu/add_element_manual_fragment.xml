@@ -11,4 +11,4 @@
             android:showAsAction="ifRoom|withText"
             android:icon="@drawable/navigation_cancel"/>
 </menu>
-        <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\add_element_manual_fragment.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\add_element_manual_fragment.xml -->

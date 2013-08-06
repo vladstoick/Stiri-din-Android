@@ -16,8 +16,8 @@
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false"
-          android:drawable="@drawable/abs__ic_clear_disabled"/>
+        android:drawable="@drawable/abs__ic_clear_disabled" />
     <item
-            android:drawable="@drawable/abs__ic_clear_normal"/>
+         android:drawable="@drawable/abs__ic_clear_normal" />
 </selector>
-        <!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/drawable/abs__ic_clear.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\drawable\abs__ic_clear.xml -->
+<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/drawable/abs__ic_clear.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\drawable\abs__ic_clear.xml -->

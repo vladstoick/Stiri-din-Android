@@ -14,6 +14,7 @@
     <string name="com_facebook_logo_content_description">Logo de Facebook</string>
     <string name="com_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
     <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d estuvieron aquí</string>
-    <string name="com_facebook_placepicker_subtitle_were_here_only_format">es:%1$,d estuvieron aquí</string>
+    <string name="com_facebook_placepicker_subtitle_were_here_only_format">es:%1$,d estuvieron
+        aquí</string>
 
 </resources>

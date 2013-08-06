@@ -15,15 +15,15 @@
 -->
 
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-           android:id="@+id/abs__icon"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center_vertical"
-           android:layout_marginLeft="8dip"
-           android:layout_marginRight="-8dip"
-           android:layout_marginTop="8dip"
-           android:layout_marginBottom="8dip"
-           android:scaleType="centerInside"
-           android:duplicateParentState="true"/>
+    android:id="@+id/abs__icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_marginLeft="8dip"
+    android:layout_marginRight="-8dip"
+    android:layout_marginTop="8dip"
+    android:layout_marginBottom="8dip"
+    android:scaleType="centerInside"
+    android:duplicateParentState="true" />
 
-        <!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__list_menu_item_icon.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\abs__list_menu_item_icon.xml -->
+<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__list_menu_item_icon.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\abs__list_menu_item_icon.xml -->

@@ -330,9 +330,6 @@
                             name="large"
                             value="-4" />
                     </attr>
-                    <attr
-                        name="is_cropped"
-                        format="boolean" />
                 </declare-styleable>
 
                 <attr
@@ -343,32 +340,8 @@
                     format="integer" />
 
                 <declare-styleable name="com_facebook_friend_picker_fragment" >
-                    <attr
-                        name="multi_select"
-                        format="boolean" />
                 </declare-styleable>
                 <declare-styleable name="com_facebook_picker_fragment" >
-                    <attr
-                        name="show_pictures"
-                        format="boolean" />
-                    <attr
-                        name="extra_fields"
-                        format="string" />
-                    <attr
-                        name="show_title_bar"
-                        format="boolean" />
-                    <attr
-                        name="title_text"
-                        format="string" />
-                    <attr
-                        name="done_button_text"
-                        format="string" />
-                    <attr
-                        name="title_bar_background"
-                        format="reference" />
-                    <attr
-                        name="done_button_background"
-                        format="reference" />
                 </declare-styleable>
 
                 <attr
@@ -395,48 +368,24 @@
                 <attr
                     name="login_text"
                     format="string" />
-
-                <declare-styleable name="com_facebook_place_picker_fragment" >
-                    <attr
-                        name="radius_in_meters"
-                        format="integer" />
-                    <attr
-                        name="results_limit"
-                        format="integer" />
-                    <attr
-                        name="search_text"
-                        format="string" />
-                    <attr
-                        name="show_search_box"
-                        format="boolean" />
-                </declare-styleable>
-
                 <attr
                     name="search_text"
                     format="string" />
+
+                <declare-styleable name="com_facebook_place_picker_fragment" >
+                </declare-styleable>
+
                 <attr
                     name="fetch_user_info"
                     format="boolean" />
                 <attr
-                    name="title_bar_background"
-                    format="reference" />
-                <attr
                     name="extra_fields"
                     format="string" />
+                <attr
+                    name="title_bar_background"
+                    format="reference" />
 
                 <declare-styleable name="com_facebook_login_view" >
-                    <attr
-                        name="confirm_logout"
-                        format="boolean" />
-                    <attr
-                        name="fetch_user_info"
-                        format="boolean" />
-                    <attr
-                        name="login_text"
-                        format="string" />
-                    <attr
-                        name="logout_text"
-                        format="string" />
                 </declare-styleable>
 
                 <attr
@@ -472,21 +421,21 @@
                 </string>
                 <string name="com_facebook_loginview_logged_in_using_facebook" >Logged in using Facebook
                 </string>
-                <string name="com_facebook_logo_content_description" >Facebook Logo
-                </string>
-                <string name="com_facebook_loginview_log_in_button" >Log In
-                </string>
                 <string name="com_facebook_choose_friends" >Choose Friends
                 </string>
                 <string name="com_facebook_picker_done_button_text" >Done
+                </string>
+                <string name="com_facebook_loginview_log_in_button" >Log In
+                </string>
+                <string name="com_facebook_logo_content_description" >Facebook Logo
                 </string>
                 <string name="com_facebook_loginview_log_out_button" >Log Out
                 </string>
                 <string name="com_facebook_loginfragment_log_in_button" >Log In…
                 </string>
-                <string name="com_facebook_loginfragment_not_logged_in" >Not Logged In
-                </string>
                 <string name="com_facebook_loginfragment_logged_in" >Logged In
+                </string>
+                <string name="com_facebook_loginfragment_not_logged_in" >Not Logged In
                 </string>
             </file>
             <file
@@ -578,26 +527,24 @@ center
 
                 <color name="com_facebook_loginfragment_not_connected_text_color" >#A6AED7
                 </color>
-
-                <dimen name="com_facebook_loginview_width" >205dp
-                </dimen>
-                <dimen name="com_facebook_loginfragment_profile_picture_width" >64dp
-                </dimen>
-
                 <color name="com_facebook_loginfragment_connected_text_color" >#FFFFFF
                 </color>
 
+                <dimen name="com_facebook_loginfragment_profile_picture_width" >64dp
+                </dimen>
+                <dimen name="com_facebook_loginview_width" >205dp
+                </dimen>
                 <dimen name="com_facebook_loginfragment_profile_picture_height" >64dp
                 </dimen>
             </file>
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-es\strings.xml"
                 qualifiers="es" >
-                <string name="com_facebook_loginview_log_out_action" >Cerrar sesión
+                <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
                 </string>
                 <string name="com_facebook_loginfragment_logged_in" >Sesión iniciada
                 </string>
-                <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
+                <string name="com_facebook_loginview_log_out_action" >Cerrar sesión
                 </string>
                 <string name="com_facebook_loginview_cancel_action" >Cancelar
                 </string>
@@ -608,9 +555,9 @@ center
                 </string>
                 <string name="com_facebook_loginview_logged_in_using_facebook" >Sesión iniciada con Facebook
                 </string>
-                <string name="com_facebook_loginfragment_log_in_button" >Iniciar Sesión…
-                </string>
                 <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d estuvieron aquí
+                </string>
+                <string name="com_facebook_loginfragment_log_in_button" >Iniciar Sesión…
                 </string>
                 <string name="com_facebook_logo_content_description" >Logo de Facebook
                 </string>
@@ -646,33 +593,33 @@ center
                 </string>
                 <string name="com_facebook_loginview_logged_in_as" >מחובר בשם: %1$s
                 </string>
-                <string name="com_facebook_loginfragment_logged_in" >מחובר
-                </string>
                 <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
+                </string>
+                <string name="com_facebook_loginfragment_logged_in" >מחובר
                 </string>
             </file>
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-iw\strings.xml"
                 qualifiers="iw" >
-                <string name="com_facebook_loginview_log_in_button" >התחבר
+                <string name="com_facebook_loginfragment_logged_in" >מחובר
                 </string>
                 <string name="com_facebook_loginfragment_log_in_button" >התחבר…
                 </string>
-                <string name="com_facebook_loginfragment_logged_in" >מחובר
+                <string name="com_facebook_loginview_log_in_button" >התחבר
                 </string>
                 <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
                 </string>
                 <string name="com_facebook_loginview_log_out_button" >התנתק
                 </string>
-                <string name="com_facebook_loginview_logged_in_as" >מחובר בשם: %1$s
-                </string>
                 <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d היו פה
+                </string>
+                <string name="com_facebook_loginview_logged_in_as" >מחובר בשם: %1$s
                 </string>
                 <string name="com_facebook_loginview_logged_in_using_facebook" >מחובר באמצעות פייסבוק
                 </string>
-                <string name="com_facebook_loginview_log_out_action" >התנתק
-                </string>
                 <string name="com_facebook_loginfragment_not_logged_in" >לא מחובר
+                </string>
+                <string name="com_facebook_loginview_log_out_action" >התנתק
                 </string>
                 <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
                 </string>
