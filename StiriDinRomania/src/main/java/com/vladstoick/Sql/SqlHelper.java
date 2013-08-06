@@ -110,12 +110,11 @@ public class SqlHelper extends SQLiteOpenHelper{
         ContentValues values = new ContentValues();
         values.put(SqlHelper.COLUMN_TITLE,ng.getTitle());
         values.put(SqlHelper.COLUMN_ID,ng.getId());
+        values.put(SqlHelper.COLUMN_NOFEEDS,ng.newsSources.size());
         SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
         sqlLiteDatabase.insertWithOnConflict(SqlHelper.GROUPS_TABLE,null,values,
                 SQLiteDatabase.CONFLICT_REPLACE);
-        SQLiteDatabase sqlLiteDatabaseReadable = this.getReadableDatabase();
-        ng = getNewsGroup(ng.getId());
-        values.put(SqlHelper.COLUMN_NOFEEDS,ng.newsSources.size());
+
     }
     public void insertNewsItemsInDb(NewsSource ns)
     {
@@ -161,6 +160,6 @@ public class SqlHelper extends SQLiteOpenHelper{
         ContentValues values = new ContentValues();
         values.put(SqlHelper.COLUMN_NOFEEDS,ng.newsSources.size());
         SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
-        sqlLiteDatabase.update(GROUPS_TABLE ,values, COLUMN_ID + " = " + groupId  , null);
+        sqlLiteDatabase.update(GROUPS_TABLE ,values, COLUMN_ID + " = " + groupId ,  null);
     }
 }

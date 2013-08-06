@@ -28,7 +28,7 @@
         <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsItemDetailActivity" android:parentActivityName=".NewsItemListActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsItemListActivity"/>
         </activity>
-        <activity android:label="@string/add_element_fragment_title" android:name="com.vladstoick.stiridinromania.AddElementAcitvitiy" android:parentActivityName="NewsGroupListActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:label="@string/add_element_fragment_title" android:name="com.vladstoick.stiridinromania.AddElementAcitvitiy" android:parentActivityName="NewsGroupListActivity" android:uiOptions="splitActionBarWhenNarrow" android:windowSoftInputMode="adjustResize">
             <meta-data android:name="android.support.UI_OPTIONS" android:value="splitActionBarWhenNarrow"/>
         </activity>
     </application>
