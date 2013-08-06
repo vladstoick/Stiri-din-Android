@@ -12,7 +12,6 @@ import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.Utils.AllGroupsFragmentAdapter;
-import com.vladstoick.Utils.Tags;
 import com.vladstoick.stiridinromania.StiriApp;
 
 import java.util.ArrayList;

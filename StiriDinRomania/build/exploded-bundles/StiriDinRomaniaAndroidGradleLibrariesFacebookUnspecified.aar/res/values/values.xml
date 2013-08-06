@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\styles.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/styles.xml -->
     <color name="com_facebook_blue">#3B5998</color>
     <color name="com_facebook_loginfragment_connected_shadow_color">#000000</color>
     <color name="com_facebook_loginfragment_connected_text_color">#FFFFFF</color>
     <color name="com_facebook_loginfragment_not_connected_text_color">#A6AED7</color>
     <color name="com_facebook_loginview_text_color">#FFFFFF</color>
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\attrs.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/attrs.xml -->
     <declare-styleable name="com_facebook_friend_picker_fragment">
         <attr name="multi_select" format="boolean" />
     </declare-styleable>
@@ -42,7 +42,7 @@
         </attr>
         <attr name="is_cropped" format="boolean" />
     </declare-styleable>
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\styles.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/styles.xml -->
     <dimen name="com_facebook_loginfragment_profile_picture_height">64dp</dimen>
     <dimen name="com_facebook_loginfragment_profile_picture_width">64dp</dimen>
     <dimen name="com_facebook_loginview_height">44dp</dimen>
@@ -55,7 +55,7 @@
     <dimen name="com_facebook_profilepictureview_preset_size_large">180dp</dimen>
     <dimen name="com_facebook_profilepictureview_preset_size_normal">100dp</dimen>
     <dimen name="com_facebook_profilepictureview_preset_size_small">50dp</dimen>
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\strings.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/strings.xml -->
     <string name="com_facebook_choose_friends">Choose Friends</string>
     <string name="com_facebook_dialogloginactivity_ok_button">OK</string>
     <string name="com_facebook_loading">Loading...</string>
@@ -74,7 +74,7 @@
     <string name="com_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
     <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d were here</string>
     <string name="com_facebook_placepicker_subtitle_were_here_only_format">%1$,d were here</string>
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\styles.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/styles.xml -->
     <style name="com_facebook_loginview_default_style" parent="@android:style/Widget.Button">
         <item name="android:width">@dimen/com_facebook_loginview_width</item>
         <item name="android:height">@dimen/com_facebook_loginview_height</item>

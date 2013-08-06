@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\dimens.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/dimens.xml -->
     <dimen name="list_view_width">500dp</dimen>
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="add">Adaugă</string>
     <string name="add_element_feed_description">Descrierea feedului</string>

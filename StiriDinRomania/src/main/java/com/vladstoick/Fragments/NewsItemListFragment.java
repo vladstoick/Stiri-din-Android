@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Utils.NewsItemListFragmentAdapter;
 

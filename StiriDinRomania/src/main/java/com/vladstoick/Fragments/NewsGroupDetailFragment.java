@@ -9,9 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.OttoBus.BusProvider;

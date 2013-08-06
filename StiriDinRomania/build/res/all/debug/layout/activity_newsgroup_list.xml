@@ -8,4 +8,4 @@
     android:layout_marginRight="16dp"
     tools:context=".NewsGroupListActivity"
     tools:layout="@android:layout/list_content" />
-<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_list.xml -->
+<!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml -->

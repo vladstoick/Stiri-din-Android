@@ -60,4 +60,4 @@
             android:layout_marginBottom="@dimen/top_and_bottom_margin"
             android:layout_marginTop="@dimen/top_and_bottom_margin"/>
     
-</LinearLayout><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_add_elements_manually.xml -->
+</LinearLayout><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/layout/fragment_add_elements_manually.xml -->
