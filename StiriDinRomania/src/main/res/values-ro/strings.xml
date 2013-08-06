@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--NEWSITEM DETAIL FRAMGENT-->
+    <string name="see_full_article">Pagina Web</string>
     <!--ALL GROUPS ACITIVTY-->
     <string name="all_groups_title">Gruprile tale</string>
     <!--ADD SOURCE FRAGMENT-->

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/ok"
+        android:id="@+id/action_add"
+        android:showAsAction="ifRoom|withText"
+        android:icon="@drawable/navigation_accept"
+        />
+    <item
+        android:title="@string/cancel"
+        android:id="@+id/action_cancel"
+        android:showAsAction="ifRoom|withText"
+        android:icon="@drawable/navigation_cancel"/>
+</menu>
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\add_element_manual_fragment.xml -->

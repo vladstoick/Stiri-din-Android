@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--NEWS ITEM DETAIL FRAGMENT-->
+    <string name="see_full_article">Web Page</string>
     <!-- ALL GROUPS ACITIVTY -->
     <string name="all_groups_title">Your groups</string>
     <!-- ADD FRAGMENT -->
@@ -39,13 +40,4 @@
     <string name="login_message">News from Romania uses your name in order to sync your news across
         all devices</string>
     <string name="logout">Log out</string>
-    <string name="title_newsitem_list">NewsItems</string>
-    <string name="title_newsitem_detail">NewsItem Detail</string>
-    <string name="title_newsgroup_list">NewsSources</string>
-    <string name="title_newsgroup_detail">NewsGroup Detail</string>
-    <string name="title_activity_add_elements_acitvitiy">MainActivity</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-
 </resources>

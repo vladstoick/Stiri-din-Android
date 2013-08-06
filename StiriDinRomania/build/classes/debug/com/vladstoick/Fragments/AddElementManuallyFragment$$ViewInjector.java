@@ -7,15 +7,15 @@ import butterknife.Views.Finder;
 public class AddElementManuallyFragment$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Fragments.AddElementManuallyFragment target, Object source) {
     View view;
-    view = finder.findById(source, 2130968654);
+    view = finder.findById(source, 2131099726);
     target.mGroupSpinner = (android.widget.Spinner) view;
-    view = finder.findById(source, 2130968655);
+    view = finder.findById(source, 2131099727);
     target.mGroupTitle = (android.widget.EditText) view;
-    view = finder.findById(source, 2130968656);
+    view = finder.findById(source, 2131099728);
     target.mSourceTitle = (android.widget.EditText) view;
-    view = finder.findById(source, 2130968657);
+    view = finder.findById(source, 2131099729);
     target.mSourceDescription = (android.widget.EditText) view;
-    view = finder.findById(source, 2130968658);
+    view = finder.findById(source, 2131099730);
     target.mSourceRss = (android.widget.EditText) view;
   }
 
