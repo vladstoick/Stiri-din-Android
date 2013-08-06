@@ -43,6 +43,7 @@
             android:layout_marginTop="@dimen/top_and_bottom_margin"/>
     <EditText
             android:singleLine="true"
+
             android:id="@+id/add_element_feed_description"
             android:hint="@string/add_element_feed_description"
             android:layout_width="match_parent"
@@ -51,6 +52,7 @@
             android:layout_marginTop="@dimen/top_and_bottom_margin"/>
     <EditText
             android:singleLine="true"
+            android:inputType="textUri"
             android:id="@+id/add_element_feed_rss"
             android:hint="@string/add_element_feed_rss"
             android:layout_width="match_parent"
