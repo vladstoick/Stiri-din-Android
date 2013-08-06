@@ -19,6 +19,7 @@ package com.facebook;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+
 import com.facebook.internal.SessionAuthorizationType;
 import com.facebook.internal.SessionTracker;
 
@@ -26,13 +27,13 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * <p>Basic implementation of an Activity that uses a Session to perform 
+ * <p>Basic implementation of an Activity that uses a Session to perform
  * Single Sign On (SSO).</p>
- * 
+ * <p/>
  * <p>Numerous Activity lifecycle methods are overridden in this class
  * to manage session information. If you override Activity lifecycle methods,
  * be sure to call the appropriate {@code super} method.
- * 
+ * <p/>
  * <p>The methods in this class are not thread-safe</p>
  */
 public class FacebookActivity extends FragmentActivity {
@@ -100,20 +101,20 @@ public class FacebookActivity extends FragmentActivity {
     }
 
     // METHOD TO BE OVERRIDDEN
-    
+
     /**
      * Called when the session state changes. Override this method to take action
      * on session state changes.
-     * 
-     * @param state the new Session state
+     *
+     * @param state     the new Session state
      * @param exception any exceptions that occurred during the state change
      */
     protected void onSessionStateChange(SessionState state, Exception exception) {
     }
 
-    /** 
+    /**
      * Use the supplied Session object instead of the active Session.
-     * 
+     *
      * @param newSession the Session object to use
      */
     protected void setSession(Session newSession) {
@@ -133,27 +134,27 @@ public class FacebookActivity extends FragmentActivity {
 
     /**
      * Determines whether the current session is open.
-     * 
+     *
      * @return true if the current session is open
      */
     protected final boolean isSessionOpen() {
         return sessionTracker.getOpenSession() != null;
     }
-    
+
     /**
      * Gets the current state of the session or null if no session has been created.
-     * 
+     *
      * @return the current state of the session
      */
     protected final SessionState getSessionState() {
         Session currentSession = sessionTracker.getSession();
         return (currentSession != null) ? currentSession.getState() : null;
     }
-    
+
     /**
-     * Gets the access token associated with the current session or null if no 
+     * Gets the access token associated with the current session or null if no
      * session has been created.
-     * 
+     *
      * @return the access token
      */
     protected final String getAccessToken() {
@@ -162,16 +163,16 @@ public class FacebookActivity extends FragmentActivity {
     }
 
     /**
-     * Gets the date at which the current session will expire or null if no session 
+     * Gets the date at which the current session will expire or null if no session
      * has been created.
-     * 
+     *
      * @return the date at which the current session will expire
      */
     protected final Date getExpirationDate() {
         Session currentSession = sessionTracker.getOpenSession();
         return (currentSession != null) ? currentSession.getExpirationDate() : null;
     }
-    
+
     /**
      * Closes the current session.
      */
@@ -181,7 +182,7 @@ public class FacebookActivity extends FragmentActivity {
             currentSession.close();
         }
     }
-    
+
     /**
      * Closes the current session as well as clearing the token cache.
      */
@@ -191,11 +192,11 @@ public class FacebookActivity extends FragmentActivity {
             currentSession.closeAndClearTokenInformation();
         }
     }
-    
+
     /**
-     * Gets the permissions associated with the current session or null if no session 
+     * Gets the permissions associated with the current session or null if no session
      * has been created.
-     * 
+     *
      * @return the permissions associated with the current session
      */
     protected final List<String> getSessionPermissions() {
@@ -216,7 +217,7 @@ public class FacebookActivity extends FragmentActivity {
     protected final void openSession() {
         openSessionForRead(null, null);
     }
-    
+
     /**
      * Opens a new session with read permissions. If either applicationID or permissions
      * is null, this method will default to using the values from the associated
@@ -229,13 +230,13 @@ public class FacebookActivity extends FragmentActivity {
      * </p>
      *
      * @param applicationId the applicationID, can be null
-     * @param permissions the permissions list, can be null
+     * @param permissions   the permissions list, can be null
      */
     protected final void openSessionForRead(String applicationId, List<String> permissions) {
         openSessionForRead(applicationId, permissions, SessionLoginBehavior.SSO_WITH_FALLBACK,
                 Session.DEFAULT_AUTHORIZE_ACTIVITY_CODE);
     }
-    
+
     /**
      * Opens a new session with read permissions. If either applicationID or permissions
      * is null, this method will default to using the values from the associated
@@ -248,12 +249,12 @@ public class FacebookActivity extends FragmentActivity {
      * </p>
      *
      * @param applicationId the applicationID, can be null
-     * @param permissions the permissions list, can be null
-     * @param behavior the login behavior to use with the session
-     * @param activityCode the activity code to use for the SSO activity
+     * @param permissions   the permissions list, can be null
+     * @param behavior      the login behavior to use with the session
+     * @param activityCode  the activity code to use for the SSO activity
      */
     protected final void openSessionForRead(String applicationId, List<String> permissions,
-            SessionLoginBehavior behavior, int activityCode) {
+                                            SessionLoginBehavior behavior, int activityCode) {
         openSession(applicationId, permissions, behavior, activityCode, SessionAuthorizationType.READ);
     }
 
@@ -269,7 +270,7 @@ public class FacebookActivity extends FragmentActivity {
      * </p>
      *
      * @param applicationId the applicationID, can be null
-     * @param permissions the permissions list, cannot be null
+     * @param permissions   the permissions list, cannot be null
      */
     protected final void openSessionForPublish(String applicationId, List<String> permissions) {
         openSessionForPublish(applicationId, permissions, SessionLoginBehavior.SSO_WITH_FALLBACK,
@@ -288,17 +289,17 @@ public class FacebookActivity extends FragmentActivity {
      * </p>
      *
      * @param applicationId the applicationID, can be null
-     * @param permissions the permissions list, cannot be null
-     * @param behavior the login behavior to use with the session
-     * @param activityCode the activity code to use for the SSO activity
+     * @param permissions   the permissions list, cannot be null
+     * @param behavior      the login behavior to use with the session
+     * @param activityCode  the activity code to use for the SSO activity
      */
     protected final void openSessionForPublish(String applicationId, List<String> permissions,
-            SessionLoginBehavior behavior, int activityCode) {
+                                               SessionLoginBehavior behavior, int activityCode) {
         openSession(applicationId, permissions, behavior, activityCode, SessionAuthorizationType.PUBLISH);
     }
 
     private void openSession(String applicationId, List<String> permissions,
-            SessionLoginBehavior behavior, int activityCode, SessionAuthorizationType authType) {
+                             SessionLoginBehavior behavior, int activityCode, SessionAuthorizationType authType) {
         Session currentSession = sessionTracker.getSession();
         if (currentSession == null || currentSession.getState().isClosed()) {
             Session session = new Session.Builder(this).setApplicationId(applicationId).build();
@@ -324,11 +325,11 @@ public class FacebookActivity extends FragmentActivity {
     private class DefaultSessionStatusCallback implements Session.StatusCallback {
 
         @Override
-        public void call(Session session, 
+        public void call(Session session,
                          SessionState state,
                          Exception exception) {
             FacebookActivity.this.onSessionStateChange(state, exception);
         }
-        
+
     }
 }

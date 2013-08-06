@@ -101,14 +101,16 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
             fragmentTransaction) {
 
     }
+
     public class AddElementPagerAdapter extends FragmentPagerAdapter {
         List<SherlockFragment> fragments;
-        public AddElementPagerAdapter(FragmentManager fm, List<SherlockFragment> fragments)
-        {
+
+        public AddElementPagerAdapter(FragmentManager fm, List<SherlockFragment> fragments) {
             super(fm);
             this.fragments = fragments;
 
         }
+
         @Override
         public Fragment getItem(int position) {
             return this.fragments.get(position);
@@ -122,10 +124,11 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
         @Override
         public CharSequence getPageTitle(int position) {
             Locale locale = Locale.getDefault();
-            switch(position)
-            {
-                case 0: return getString(R.string.manual).toUpperCase(locale);
-                case 1: return getString(R.string.recommended).toUpperCase(locale);
+            switch (position) {
+                case 0:
+                    return getString(R.string.manual).toUpperCase(locale);
+                case 1:
+                    return getString(R.string.recommended).toUpperCase(locale);
             }
             return "";
         }

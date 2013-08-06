@@ -1,4 +1,5 @@
 package com.vladstoick.stiridinromania;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,6 +28,7 @@ public class LoginActivity extends SherlockFragmentActivity {
     private static String TAG = "LOGINACTIVITY";
     private String USER_ID_TAG = "userId";
     private String token;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -71,26 +73,24 @@ public class LoginActivity extends SherlockFragmentActivity {
                                     editor.commit();
                                     AsyncHttpClient client = new AsyncHttpClient();
                                     RequestParams params = new RequestParams();
-                                    params.put("fbtoken",token );
-                                    params.put("fbaccount",fbaccount );
+                                    params.put("fbtoken", token);
+                                    params.put("fbaccount", fbaccount);
                                     client.post("http://stiriromania.eu01.aws.af.cm/user/login",
                                             params, new AsyncHttpResponseHandler() {
                                         @Override
                                         public void onSuccess(String s) {
                                             super.onSuccess(s);
-                                            try{
-                                            JSONObject jsonObject = new JSONObject(s);
+                                            try {
+                                                JSONObject jsonObject = new JSONObject(s);
                                                 SharedPreferences settings =
                                                         getSharedPreferences("appPref",
-                                                        Context.MODE_PRIVATE);
+                                                                Context.MODE_PRIVATE);
                                                 SharedPreferences.Editor editor = settings.edit();
                                                 userId = jsonObject.getInt("id");
-                                                editor.putInt("user_id", userId );
+                                                editor.putInt("user_id", userId);
                                                 editor.commit();
                                                 gotoAllGroupsActivity();
-                                            }
-                                            catch (Exception e)
-                                            {
+                                            } catch (Exception e) {
                                                 e.printStackTrace();
                                             }
                                         }
@@ -109,8 +109,8 @@ public class LoginActivity extends SherlockFragmentActivity {
     }
 
     private void gotoAllGroupsActivity() {
-        ((StiriApp)getApplication()).newsDataSource = new NewsDataSource(userId,
-                (StiriApp)getApplication());
+        ((StiriApp) getApplication()).newsDataSource = new NewsDataSource(userId,
+                (StiriApp) getApplication());
         Intent intent = new Intent(this, NewsGroupListActivity.class);
         startActivity(intent);
         finish();

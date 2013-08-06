@@ -38,6 +38,7 @@
     <string name="login_facebook">Login with Facebook</string>
     <string name="login_microsoft">Login with Microsoft</string>
     <string name="login_message">News from Romania uses your name in order to sync your news across
-        all devices</string>
+        all devices
+    </string>
     <string name="logout">Log out</string>
 </resources>

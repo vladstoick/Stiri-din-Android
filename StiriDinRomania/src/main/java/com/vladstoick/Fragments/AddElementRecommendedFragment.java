@@ -11,7 +11,9 @@ import com.actionbarsherlock.app.SherlockFragment;
  * Created by Vlad on 8/4/13.
  */
 public class AddElementRecommendedFragment extends SherlockFragment {
-    public AddElementRecommendedFragment(){}
+    public AddElementRecommendedFragment() {
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return super.onCreateView(inflater, container, savedInstanceState);

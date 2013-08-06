@@ -1,13 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="@dimen/left_and_right_margin"
-    android:baselineAligned="false"
-    android:divider="?android:attr/dividerHorizontal"
-    android:orientation="horizontal"
-    android:showDividers="middle"
-    tools:context=".NewsGroupListActivity">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="@dimen/left_and_right_margin"
+              android:baselineAligned="false"
+              android:divider="?android:attr/dividerHorizontal"
+              android:orientation="horizontal"
+              android:showDividers="middle"
+              tools:context=".NewsGroupListActivity">
 
     <!--
     This layout is a two-pane layout for the NewsSources
@@ -21,19 +21,19 @@
     -->
 
     <fragment
-        android:id="@+id/newsgroup_list"
-        android:name="com.vladstoick.Fragments.NewsGroupListFragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:layout_marginRight="@dimen/left_and_right_margin"
-        tools:layout="@android:layout/list_content" />
+            android:id="@+id/newsgroup_list"
+            android:name="com.vladstoick.Fragments.NewsGroupListFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/left_and_right_margin"
+            tools:layout="@android:layout/list_content"/>
 
     <FrameLayout
-        tools:layout="@android:layout/fragment_newsitem_detail"
-        android:id="@+id/newsgroup_detail_container"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+            tools:layout="@android:layout/fragment_newsitem_detail"
+            android:id="@+id/newsgroup_detail_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
 
 </LinearLayout>

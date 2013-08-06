@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.facebook.*;
 import com.facebook.android.R;
 import com.facebook.model.GraphUser;
@@ -49,8 +50,8 @@ public class LoginFragment extends FacebookFragment {
     private static final String ID = "id";
     private static final String PICTURE = "picture";
     private static final String FIELDS = "fields";
-    
-    private static final String REQUEST_FIELDS = TextUtils.join(",", new String[] {ID, NAME, PICTURE});
+
+    private static final String REQUEST_FIELDS = TextUtils.join(",", new String[]{ID, NAME, PICTURE});
 
     private LoginButton loginButton;
     private TextView connectedStateLabel;
@@ -66,7 +67,7 @@ public class LoginFragment extends FacebookFragment {
         loginButton = (LoginButton) view.findViewById(R.id.com_facebook_loginfragment_login_button);
         loginButton.setFragment(this);
         connectedStateLabel = (TextView) view.findViewById(R.id.com_facebook_loginfragment_profile_name);
-        
+
         // if no background is set for some reason, then default to Facebook blue
         if (view.getBackground() == null) {
             view.setBackgroundColor(getResources().getColor(R.color.com_facebook_blue));
@@ -129,7 +130,6 @@ public class LoginFragment extends FacebookFragment {
      * (by managing the session explicitly).
      *
      * @param permissions the read permissions to use
-     *
      * @throws UnsupportedOperationException if setPublishPermissions has been called
      */
     public void setReadPermissions(List<String> permissions) {
@@ -154,9 +154,8 @@ public class LoginFragment extends FacebookFragment {
      * (by managing the session explicitly).
      *
      * @param permissions the read permissions to use
-     *
      * @throws UnsupportedOperationException if setReadPermissions has been called
-     * @throws IllegalArgumentException if permissions is null or empty
+     * @throws IllegalArgumentException      if permissions is null or empty
      */
     public void setPublishPermissions(List<String> permissions) {
         loginButton.setPublishPermissions(permissions);
@@ -189,8 +188,8 @@ public class LoginFragment extends FacebookFragment {
      * will be used.
      *
      * @return loginBehavior The {@link SessionLoginBehavior SessionLoginBehavior} that
-     *                      specifies what behaviors should be attempted during
-     *                      authorization.
+     * specifies what behaviors should be attempted during
+     * authorization.
      */
     public SessionLoginBehavior getLoginBehavior() {
         return loginButton.getLoginBehavior();
@@ -228,7 +227,7 @@ public class LoginFragment extends FacebookFragment {
     /**
      * Sets the callback interface that will be called whenever the status of the Session
      * associated with this LoginButton changes.
-
+     *
      * @return the callback interface
      */
     public Session.StatusCallback getSessionStatusCallback() {
@@ -244,7 +243,7 @@ public class LoginFragment extends FacebookFragment {
             sessionStatusCallback.call(getSession(), state, exception);
         }
     }
-    
+
     private void fetchUserInfo() {
         final Session currentSession = getSession();
         if (currentSession != null && currentSession.isOpened()) {
@@ -271,7 +270,7 @@ public class LoginFragment extends FacebookFragment {
             user = null;
         }
     }
-    
+
     private void updateUI() {
         if (!isAdded()) {
             return;
@@ -280,7 +279,7 @@ public class LoginFragment extends FacebookFragment {
             connectedStateLabel.setTextColor(getResources().getColor(R.color.com_facebook_loginfragment_connected_text_color));
             connectedStateLabel.setShadowLayer(1f, 0f, -1f,
                     getResources().getColor(R.color.com_facebook_loginfragment_connected_shadow_color));
-            
+
             if (user != null) {
                 ImageRequest request = getImageRequest();
                 if (request != null) {

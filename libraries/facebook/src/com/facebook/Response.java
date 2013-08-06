@@ -17,12 +17,14 @@
 package com.facebook;
 
 import android.content.Context;
+
 import com.facebook.model.GraphObject;
 import com.facebook.model.GraphObjectList;
 import com.facebook.internal.CacheableRequestBatch;
 import com.facebook.internal.FileLruCache;
 import com.facebook.internal.Logger;
 import com.facebook.internal.Utility;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -65,7 +67,7 @@ public class Response {
     private static FileLruCache responseCache;
 
     private Response(Request request, HttpURLConnection connection, GraphObject graphObject,
-            GraphObjectList<GraphObject> graphObjects, boolean isFromCache) {
+                     GraphObjectList<GraphObject> graphObjects, boolean isFromCache) {
         if (graphObject != null && graphObjects != null) {
             throw new FacebookException("Expected either a graphObject or multiple graphObjects, but not both.");
         }
@@ -185,7 +187,7 @@ public class Response {
      *
      * @param direction enum indicating whether to page forward or backward
      * @return a Request that will retrieve the next page of results in the desired
-     *         direction, or null if no paging information is available
+     * direction, or null if no paging information is available
      */
     public Request getRequestForPagedResults(PagingDirection direction) {
         String link = null;
@@ -323,7 +325,7 @@ public class Response {
     }
 
     static List<Response> createResponsesFromStream(InputStream stream, HttpURLConnection connection,
-            RequestBatch requests, boolean isFromCache) throws FacebookException, JSONException, IOException {
+                                                    RequestBatch requests, boolean isFromCache) throws FacebookException, JSONException, IOException {
 
         String responseString = Utility.readStreamToString(stream);
         Logger.log(LoggingBehaviors.INCLUDE_RAW_RESPONSES, RESPONSE_LOG_TAG,
@@ -341,7 +343,7 @@ public class Response {
     }
 
     private static List<Response> createResponsesFromObject(HttpURLConnection connection, List<Request> requests,
-            Object object, boolean isFromCache) throws FacebookException, JSONException {
+                                                            Object object, boolean isFromCache) throws FacebookException, JSONException {
         assert (connection != null) || isFromCache;
 
         int numRequests = requests.size();
@@ -394,7 +396,7 @@ public class Response {
     }
 
     private static Response createResponseFromObject(Request request, HttpURLConnection connection, Object object,
-            boolean isFromCache, Object originalResult) throws JSONException {
+                                                     boolean isFromCache, Object originalResult) throws JSONException {
         if (object instanceof JSONObject) {
             JSONObject jsonObject = (JSONObject) object;
 
@@ -430,7 +432,7 @@ public class Response {
     }
 
     static List<Response> constructErrorResponses(List<Request> requests, HttpURLConnection connection,
-            FacebookException error) {
+                                                  FacebookException error) {
         int count = requests.size();
         List<Response> responses = new ArrayList<Response>(count);
         for (int i = 0; i < count; ++i) {

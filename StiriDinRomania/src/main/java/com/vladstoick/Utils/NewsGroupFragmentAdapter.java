@@ -23,19 +23,25 @@ import butterknife.Views;
  */
 public class NewsGroupFragmentAdapter extends BaseAdapter {
     static class RowHolder {
-        @InjectView(R.id.newsSourceTitle)TextView mTitle;
-        @InjectView(R.id.description)TextView mDescription;
-        @InjectView(R.id.numberOfNews)TextView mNumberOfNews;
-        public RowHolder(View view){
-            Views.inject(this,view);
+        @InjectView(R.id.newsSourceTitle)
+        TextView mTitle;
+        @InjectView(R.id.description)
+        TextView mDescription;
+        @InjectView(R.id.numberOfNews)
+        TextView mNumberOfNews;
+
+        public RowHolder(View view) {
+            Views.inject(this, view);
         }
     }
 
     private final Context context;
     private NewsGroup data;
-    public void setData(NewsGroup data){
+
+    public void setData(NewsGroup data) {
         this.data = data;
     }
+
     public NewsGroupFragmentAdapter(NewsGroup data, Context context) {
         this.context = context;
         this.data = data;
@@ -67,12 +73,11 @@ public class NewsGroupFragmentAdapter extends BaseAdapter {
             row = inflater.inflate(R.layout.list_row_newsgroup, parent, false);
             holder = new RowHolder(row);
             row.setTag(holder);
-        }
-        else
+        } else
             holder = (RowHolder) row.getTag();
         holder.mTitle.setText(ns.getTitle());
         holder.mDescription.setText(ns.getDescription());
-        holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews()+ "");
+        holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews() + "");
         return row;
     }
 }

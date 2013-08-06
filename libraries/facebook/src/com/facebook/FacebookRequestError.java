@@ -17,6 +17,7 @@
 package com.facebook;
 
 import com.facebook.internal.Utility;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -24,7 +25,9 @@ import java.net.HttpURLConnection;
 
 public class FacebookRequestError {
 
-    /** Represents an invalid or unknown error code from the server. */
+    /**
+     * Represents an invalid or unknown error code from the server.
+     */
     public static final int INVALID_ERROR_CODE = -1;
 
     /**
@@ -58,9 +61,9 @@ public class FacebookRequestError {
     private final FacebookException exception;
 
     private FacebookRequestError(int requestStatusCode, int errorCode,
-            int subErrorCode, String errorType, String errorMessage, JSONObject requestResultBody,
-            JSONObject requestResult, Object batchRequestResult, HttpURLConnection connection,
-            FacebookException exception) {
+                                 int subErrorCode, String errorType, String errorMessage, JSONObject requestResultBody,
+                                 JSONObject requestResult, Object batchRequestResult, HttpURLConnection connection,
+                                 FacebookException exception) {
         this.requestStatusCode = requestStatusCode;
         this.errorCode = errorCode;
         this.subErrorCode = subErrorCode;
@@ -78,8 +81,8 @@ public class FacebookRequestError {
     }
 
     private FacebookRequestError(int requestStatusCode, int errorCode,
-            int subErrorCode, String errorType, String errorMessage, JSONObject requestResultBody,
-            JSONObject requestResult, Object batchRequestResult, HttpURLConnection connection) {
+                                 int subErrorCode, String errorType, String errorMessage, JSONObject requestResultBody,
+                                 JSONObject requestResult, Object batchRequestResult, HttpURLConnection connection) {
         this(requestStatusCode, errorCode, subErrorCode, errorType, errorMessage,
                 requestResultBody, requestResult, batchRequestResult, connection, null);
     }
@@ -210,8 +213,9 @@ public class FacebookRequestError {
                 .append("}")
                 .toString();
     }
+
     static FacebookRequestError checkResponseAndCreateError(JSONObject singleResult,
-            Object batchResult, HttpURLConnection connection) {
+                                                            Object batchResult, HttpURLConnection connection) {
         try {
             if (singleResult.has(CODE_KEY)) {
                 int responseCode = singleResult.getInt(CODE_KEY);

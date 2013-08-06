@@ -2,319 +2,319 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res" >
+        <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res" >
             <file
                 name="com_facebook_button_check"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_button_check.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_button_check.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_check_off"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_button_check_off.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_button_check_off.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_check_on"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_button_check_on.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_button_check_on.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_button_grey_focused.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_button_grey_focused.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_button_grey_normal.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_button_grey_normal.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_button_grey_pressed.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_button_grey_pressed.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_close"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_close.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_close.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_icon"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_icon.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_icon.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_list_divider"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_list_divider.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_list_divider.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_list_section_header_background"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_list_section_header_background.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_list_section_header_background.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_loginbutton_blue.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_loginbutton_blue.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_focused"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_loginbutton_blue_focused.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_loginbutton_blue_focused.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_normal"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_loginbutton_blue_normal.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_loginbutton_blue_normal.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_pressed"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_loginbutton_blue_pressed.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_loginbutton_blue_pressed.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_silver"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_loginbutton_silver.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_loginbutton_silver.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_loginfragment_background_gradient"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_loginfragment_background_gradient.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_loginfragment_background_gradient.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_logo.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_logo.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_item_background"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_picker_item_background.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_picker_item_background.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_focused"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_picker_list_focused.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_picker_list_focused.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_longpressed"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_picker_list_longpressed.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_picker_list_longpressed.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_pressed"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_picker_list_pressed.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_picker_list_pressed.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_picker_list_selector.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_picker_list_selector.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector_background_transition"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_picker_list_selector_background_transition.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_list_selector_disabled"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_picker_list_selector_disabled.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_picker_list_selector_disabled.9.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_picker_top_button"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_picker_top_button.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_picker_top_button.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_place_default_icon"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_place_default_icon.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_place_default_icon.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_default_icon"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_profile_default_icon.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_profile_default_icon.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_picture_blank_portrait"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_profile_picture_blank_portrait.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_profile_picture_blank_portrait.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_profile_picture_blank_square"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_profile_picture_blank_square.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_profile_picture_blank_square.png"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_top_background"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_top_background.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_top_background.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_top_button"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_top_button.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_top_button.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_button_grey_focused.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_button_grey_focused.9.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_button_grey_normal.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_button_grey_normal.9.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_button_grey_pressed.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_button_grey_pressed.9.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_close"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_close.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_close.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_icon"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_icon.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_icon.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_focused"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_loginbutton_blue_focused.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_loginbutton_blue_focused.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_normal"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_loginbutton_blue_normal.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_loginbutton_blue_normal.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_pressed"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_loginbutton_blue_pressed.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_loginbutton_blue_pressed.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-hdpi/com_facebook_logo.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-hdpi\com_facebook_logo.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
                 name="com_facebook_close"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-ldpi/com_facebook_close.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-ldpi\com_facebook_close.png"
                 qualifiers="ldpi"
                 type="drawable" />
             <file
                 name="com_facebook_icon"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-ldpi/com_facebook_icon.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-ldpi\com_facebook_icon.png"
                 qualifiers="ldpi"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_focused"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-xhdpi/com_facebook_button_grey_focused.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-xhdpi\com_facebook_button_grey_focused.9.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_normal"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-xhdpi/com_facebook_button_grey_normal.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-xhdpi\com_facebook_button_grey_normal.9.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="com_facebook_button_grey_pressed"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-xhdpi\com_facebook_button_grey_pressed.9.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="com_facebook_close"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-xhdpi/com_facebook_close.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-xhdpi\com_facebook_close.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_focused"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-xhdpi/com_facebook_loginbutton_blue_focused.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-xhdpi\com_facebook_loginbutton_blue_focused.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_normal"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-xhdpi\com_facebook_loginbutton_blue_normal.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="com_facebook_loginbutton_blue_pressed"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-xhdpi\com_facebook_loginbutton_blue_pressed.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="com_facebook_logo"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable-xhdpi/com_facebook_logo.png"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable-xhdpi\com_facebook_logo.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
                 name="com_facebook_friendpickerfragment"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_friendpickerfragment.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_friendpickerfragment.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_loginfragment"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_loginfragment.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_loginfragment.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_activity_circle_row"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_activity_circle_row.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_activity_circle_row.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_checkbox"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_checkbox.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_checkbox.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_image"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_image.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_image.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_list_row"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_list_row.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_list_row.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_list_section_header"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_list_section_header.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_list_section_header.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_search_box"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_search_box.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_search_box.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_title_bar"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_title_bar.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_title_bar.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_picker_title_bar_stub"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_title_bar_stub.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_title_bar_stub.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_placepickerfragment"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_placepickerfragment.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_placepickerfragment.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="com_facebook_placepickerfragment_list_row"
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_placepickerfragment_list_row.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/attrs.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="com_facebook_profile_picture_view" >
                     <attr name="preset_size" >
@@ -330,6 +330,9 @@
                             name="large"
                             value="-4" />
                     </attr>
+                    <attr
+                        name="is_cropped"
+                        format="boolean" />
                 </declare-styleable>
 
                 <attr
@@ -340,8 +343,32 @@
                     format="integer" />
 
                 <declare-styleable name="com_facebook_friend_picker_fragment" >
+                    <attr
+                        name="multi_select"
+                        format="boolean" />
                 </declare-styleable>
                 <declare-styleable name="com_facebook_picker_fragment" >
+                    <attr
+                        name="show_pictures"
+                        format="boolean" />
+                    <attr
+                        name="extra_fields"
+                        format="string" />
+                    <attr
+                        name="show_title_bar"
+                        format="boolean" />
+                    <attr
+                        name="title_text"
+                        format="string" />
+                    <attr
+                        name="done_button_text"
+                        format="string" />
+                    <attr
+                        name="title_bar_background"
+                        format="reference" />
+                    <attr
+                        name="done_button_background"
+                        format="reference" />
                 </declare-styleable>
 
                 <attr
@@ -368,24 +395,48 @@
                 <attr
                     name="login_text"
                     format="string" />
+
+                <declare-styleable name="com_facebook_place_picker_fragment" >
+                    <attr
+                        name="radius_in_meters"
+                        format="integer" />
+                    <attr
+                        name="results_limit"
+                        format="integer" />
+                    <attr
+                        name="search_text"
+                        format="string" />
+                    <attr
+                        name="show_search_box"
+                        format="boolean" />
+                </declare-styleable>
+
                 <attr
                     name="search_text"
                     format="string" />
-
-                <declare-styleable name="com_facebook_place_picker_fragment" >
-                </declare-styleable>
-
                 <attr
                     name="fetch_user_info"
                     format="boolean" />
                 <attr
-                    name="extra_fields"
-                    format="string" />
-                <attr
                     name="title_bar_background"
                     format="reference" />
+                <attr
+                    name="extra_fields"
+                    format="string" />
 
                 <declare-styleable name="com_facebook_login_view" >
+                    <attr
+                        name="confirm_logout"
+                        format="boolean" />
+                    <attr
+                        name="fetch_user_info"
+                        format="boolean" />
+                    <attr
+                        name="login_text"
+                        format="string" />
+                    <attr
+                        name="logout_text"
+                        format="string" />
                 </declare-styleable>
 
                 <attr
@@ -399,7 +450,7 @@
                     format="boolean" />
             </file>
             <file
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/strings.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\strings.xml"
                 qualifiers="" >
                 <string name="com_facebook_loginview_log_out_action" >Log Out
                 </string>
@@ -407,9 +458,9 @@
                 </string>
                 <string name="com_facebook_nearby" >Nearby
                 </string>
-                <string name="com_facebook_loginview_logged_in_as" >Logged in as: %1$s
-                </string>
                 <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
+                </string>
+                <string name="com_facebook_loginview_logged_in_as" >Logged in as: %1$s
                 </string>
                 <string name="com_facebook_loading" >Loading...
                 </string>
@@ -421,25 +472,25 @@
                 </string>
                 <string name="com_facebook_loginview_logged_in_using_facebook" >Logged in using Facebook
                 </string>
-                <string name="com_facebook_choose_friends" >Choose Friends
-                </string>
-                <string name="com_facebook_picker_done_button_text" >Done
+                <string name="com_facebook_logo_content_description" >Facebook Logo
                 </string>
                 <string name="com_facebook_loginview_log_in_button" >Log In
                 </string>
-                <string name="com_facebook_logo_content_description" >Facebook Logo
+                <string name="com_facebook_choose_friends" >Choose Friends
+                </string>
+                <string name="com_facebook_picker_done_button_text" >Done
                 </string>
                 <string name="com_facebook_loginview_log_out_button" >Log Out
                 </string>
                 <string name="com_facebook_loginfragment_log_in_button" >Log In…
                 </string>
-                <string name="com_facebook_loginfragment_logged_in" >Logged In
-                </string>
                 <string name="com_facebook_loginfragment_not_logged_in" >Not Logged In
+                </string>
+                <string name="com_facebook_loginfragment_logged_in" >Logged In
                 </string>
             </file>
             <file
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/styles.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\styles.xml"
                 qualifiers="" >
                 <dimen name="com_facebook_profilepictureview_preset_size_normal" >100dp
                 </dimen>
@@ -463,11 +514,12 @@
                 </dimen>
                 <dimen name="com_facebook_loginview_padding_bottom" >0dp
                 </dimen>
-                <dimen name="com_facebook_loginview_height" >44dp
-                </dimen>
 
                 <color name="com_facebook_loginview_text_color" >#FFFFFF
                 </color>
+
+                <dimen name="com_facebook_loginview_height" >44dp
+                </dimen>
 
                 <style
                     name="com_facebook_loginview_silver_style"
@@ -526,26 +578,24 @@ center
 
                 <color name="com_facebook_loginfragment_not_connected_text_color" >#A6AED7
                 </color>
+
+                <dimen name="com_facebook_loginview_width" >205dp
+                </dimen>
+                <dimen name="com_facebook_loginfragment_profile_picture_width" >64dp
+                </dimen>
+
                 <color name="com_facebook_loginfragment_connected_text_color" >#FFFFFF
                 </color>
 
-                <dimen name="com_facebook_loginfragment_profile_picture_width" >64dp
-                </dimen>
-                <dimen name="com_facebook_loginview_width" >205dp
-                </dimen>
                 <dimen name="com_facebook_loginfragment_profile_picture_height" >64dp
                 </dimen>
             </file>
             <file
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-es/strings.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-es\strings.xml"
                 qualifiers="es" >
                 <string name="com_facebook_loginview_log_out_action" >Cerrar sesión
                 </string>
                 <string name="com_facebook_loginfragment_logged_in" >Sesión iniciada
-                </string>
-                <string name="com_facebook_loginview_logged_in_using_facebook" >Sesión iniciada con Facebook
-                </string>
-                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d estuvieron aquí
                 </string>
                 <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
                 </string>
@@ -553,9 +603,14 @@ center
                 </string>
                 <string name="com_facebook_loginfragment_not_logged_in" >No has iniciado sesión
                 </string>
-                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >es:%1$,d estuvieron aquí
+                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >es:%1$,d estuvieron
+        aquí
+                </string>
+                <string name="com_facebook_loginview_logged_in_using_facebook" >Sesión iniciada con Facebook
                 </string>
                 <string name="com_facebook_loginfragment_log_in_button" >Iniciar Sesión…
+                </string>
+                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d estuvieron aquí
                 </string>
                 <string name="com_facebook_logo_content_description" >Logo de Facebook
                 </string>
@@ -567,7 +622,7 @@ center
                 </string>
             </file>
             <file
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-he/strings.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-he\strings.xml"
                 qualifiers="he" >
                 <string name="com_facebook_loginview_cancel_action" >בטל
                 </string>
@@ -597,15 +652,21 @@ center
                 </string>
             </file>
             <file
-                path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-iw/strings.xml"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-iw\strings.xml"
                 qualifiers="iw" >
+                <string name="com_facebook_loginview_log_in_button" >התחבר
+                </string>
                 <string name="com_facebook_loginfragment_log_in_button" >התחבר…
                 </string>
                 <string name="com_facebook_loginfragment_logged_in" >מחובר
                 </string>
+                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
+                </string>
                 <string name="com_facebook_loginview_log_out_button" >התנתק
                 </string>
                 <string name="com_facebook_loginview_logged_in_as" >מחובר בשם: %1$s
+                </string>
+                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d היו פה
                 </string>
                 <string name="com_facebook_loginview_logged_in_using_facebook" >מחובר באמצעות פייסבוק
                 </string>
@@ -615,22 +676,16 @@ center
                 </string>
                 <string name="com_facebook_placepicker_subtitle_catetory_only_format" >%1$s
                 </string>
-                <string name="com_facebook_logo_content_description" >Facebook Logo
-                </string>
-                <string name="com_facebook_loginview_log_in_button" >התחבר
-                </string>
-                <string name="com_facebook_placepicker_subtitle_were_here_only_format" >%1$,d היו פה
-                </string>
-                <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d היו פה
-                </string>
                 <string name="com_facebook_loginview_cancel_action" >בטל
+                </string>
+                <string name="com_facebook_logo_content_description" >Facebook Logo
                 </string>
             </file>
         </source>
-        <source path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/build/res/rs/release" />
+        <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\build\res\rs\release" />
     </dataSet>
     <dataSet config="release" >
-        <source path="/Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/src/release/res" />
+        <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\src\release\res" />
     </dataSet>
 
 </merger>

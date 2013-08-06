@@ -19,12 +19,14 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent">
+
     <ViewStub
             android:id="@+id/com_facebook_picker_profile_pic_stub"
             android:inflatedId="@+id/com_facebook_picker_image"
             android:layout="@layout/com_facebook_picker_image"
             android:layout_width="50dip"
-            android:layout_height="50dip" />
+            android:layout_height="50dip"/>
+
     <LinearLayout
             android:orientation="vertical"
             android:focusable="false"
@@ -33,6 +35,7 @@
             android:layout_marginRight="16dp"
             android:layout_gravity="center_vertical"
             android:layout_weight="1">
+
         <TextView
                 android:id="@+id/com_facebook_picker_title"
                 android:layout_width="fill_parent"
@@ -46,6 +49,7 @@
                 android:lines="1"
                 android:textSize="16sp"
                 android:gravity="left|center_vertical"/>
+
         <TextView
                 android:id="@+id/picker_subtitle"
                 android:layout_width="fill_parent"
@@ -68,4 +72,4 @@
             android:layout_height="23dip"
             android:layout_marginRight="10dip"/-->
 </LinearLayout>
-<!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_placepickerfragment_list_row.xml -->

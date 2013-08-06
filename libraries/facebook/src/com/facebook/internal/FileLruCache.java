@@ -18,8 +18,10 @@ package com.facebook.internal;
 
 import android.content.Context;
 import android.util.Log;
+
 import com.facebook.LoggingBehaviors;
 import com.facebook.Settings;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -509,7 +511,7 @@ public final class FileLruCache {
             byte[] buffer = new byte[1024];
             long total = 0;
             while (total < byteCount) {
-                int count = read(buffer, 0, (int)Math.min(byteCount - total, buffer.length));
+                int count = read(buffer, 0, (int) Math.min(byteCount - total, buffer.length));
                 if (count < 0) {
                     return total;
                 }
@@ -591,7 +593,7 @@ public final class FileLruCache {
         public boolean equals(Object another) {
             return
                     (another instanceof ModifiedFile) &&
-                    (compareTo((ModifiedFile)another) == 0);
+                            (compareTo((ModifiedFile) another) == 0);
         }
     }
 

@@ -14,7 +14,8 @@
      limitations under the License.
 -->
 
-<com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/abs__action_mode_close_button"
         android:focusable="true"
         android:clickable="true"
@@ -27,7 +28,7 @@
                android:layout_height="wrap_content"
                android:layout_gravity="center"
                android:scaleType="center"
-               android:src="?attr/actionModeCloseDrawable" />
+               android:src="?attr/actionModeCloseDrawable"/>
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_gravity="center"
@@ -36,6 +37,6 @@
               android:textAppearance="?android:attr/textAppearanceSmall"
               android:textSize="12sp"
               android:textAllCaps="true"
-              android:text="@string/abs__action_mode_done" />
+              android:text="@string/abs__action_mode_done"/>
 </com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout>
-<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout-large/abs__action_mode_close_item.xml --><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/layout-large/abs__action_mode_close_item.xml -->
+        <!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout-large/abs__action_mode_close_item.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout-large\abs__action_mode_close_item.xml -->

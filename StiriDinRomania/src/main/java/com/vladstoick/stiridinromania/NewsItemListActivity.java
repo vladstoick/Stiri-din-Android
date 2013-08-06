@@ -20,11 +20,11 @@ import com.vladstoick.Utils.Tags;
  * lead to a {@link NewsItemDetailActivity} representing
  * item details. On tablets, the activity presents the list of items and
  * item details side-by-side using two vertical panes.
- * <p>
+ * <p/>
  * The activity makes heavy use of fragments. The list of items is a
  * {@link com.vladstoick.Fragments.NewsItemListFragment} and the item details
  * (if present) is a {@link com.vladstoick.Fragments.NewsItemDetailFragment}.
- * <p>
+ * <p/>
  * This activity also implements the required
  * {@link com.vladstoick.Fragments.NewsItemListFragment.Callbacks} interface
  * to listen for item selections.
@@ -43,10 +43,9 @@ public class NewsItemListActivity extends SherlockFragmentActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newsitem_list);
-        if(getIntent().getExtras()!=null )
-        {
+        if (getIntent().getExtras() != null) {
             newsSourceId = getIntent().getExtras().getInt(Tags.NEWSOURCE_TAG_ID);
-            newsSource = ((StiriApp)getApplication()).newsDataSource.getNewsSource(newsSourceId);
+            newsSource = ((StiriApp) getApplication()).newsDataSource.getNewsSource(newsSourceId);
             setTitle(newsSource.getTitle());
             ((NewsItemListFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.newsitem_list))
@@ -74,10 +73,10 @@ public class NewsItemListActivity extends SherlockFragmentActivity
      */
     @Override
     public void onItemSelected(String id) {
-        NewsItem ni = null ;
-        for(int i=0;i<newsSource.news.size();i++)
-            if(id==newsSource.news.get(i).getUrlLink())
-                ni=newsSource.news.get(i);
+        NewsItem ni = null;
+        for (int i = 0; i < newsSource.news.size(); i++)
+            if (id == newsSource.news.get(i).getUrlLink())
+                ni = newsSource.news.get(i);
         if (mTwoPane) {
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a
@@ -101,6 +100,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
             startActivity(detailIntent);
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
         switch (item.getItemId()) {

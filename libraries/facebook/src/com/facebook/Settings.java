@@ -23,9 +23,11 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+
 import com.facebook.android.Util;
 import com.facebook.model.GraphObject;
 import com.facebook.internal.Validate;
+
 import org.json.JSONException;
 
 import java.lang.reflect.Field;
@@ -72,7 +74,7 @@ public final class Settings {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     *
+     * <p/>
      * Returns the types of extended logging that are currently enabled.
      *
      * @return a set containing enabled logging behaviors
@@ -86,11 +88,10 @@ public final class Settings {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     *
+     * <p/>
      * Enables a particular extended logging in the sdk.
      *
-     * @param behavior
-     *          The LoggingBehavior to enable
+     * @param behavior The LoggingBehavior to enable
      */
     public static final void addLoggingBehavior(LoggingBehaviors behavior) {
         synchronized (loggingBehaviors) {
@@ -101,11 +102,10 @@ public final class Settings {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     *
+     * <p/>
      * Disables a particular extended logging behavior in the sdk.
      *
-     * @param behavior
-     *          The LoggingBehavior to disable
+     * @param behavior The LoggingBehavior to disable
      */
     public static final void removeLoggingBehavior(LoggingBehaviors behavior) {
         synchronized (loggingBehaviors) {
@@ -116,7 +116,7 @@ public final class Settings {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     *
+     * <p/>
      * Disables all extended logging behaviors.
      */
     public static final void clearLoggingBehaviors() {
@@ -128,11 +128,10 @@ public final class Settings {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     *
+     * <p/>
      * Checks if a particular extended logging behavior is enabled.
      *
-     * @param behavior
-     *          The LoggingBehavior to check
+     * @param behavior The LoggingBehavior to check
      * @return whether behavior is enabled
      */
     public static final boolean isLoggingBehaviorEnabled(LoggingBehaviors behavior) {
@@ -143,7 +142,7 @@ public final class Settings {
 
     /**
      * Returns the Executor used by the SDK for non-AsyncTask background work.
-     *
+     * <p/>
      * By default this uses AsyncTask Executor via reflection if the API level is high enough.
      * Otherwise this creates a new Executor with defaults similar to those used in AsyncTask.
      *
@@ -166,8 +165,7 @@ public final class Settings {
     /**
      * Sets the Executor used by the SDK for non-AsyncTask background work.
      *
-     * @param executor
-     *          the Executor to use; must not be null.
+     * @param executor the Executor to use; must not be null.
      */
     public static void setExecutor(Executor executor) {
         Validate.notNull(executor, "executor");
@@ -220,6 +218,7 @@ public final class Settings {
     /**
      * Manually publish install attribution to the Facebook graph.  Internally handles tracking repeat calls to prevent
      * multiple installs being published to the graph.
+     *
      * @param context
      * @return returns false on error.  Applications should retry until true is returned.  Safe to call again after
      * true is returned.
@@ -231,7 +230,7 @@ public final class Settings {
             }
             String attributionId = Settings.getAttributionId(context.getContentResolver());
             SharedPreferences preferences = context.getSharedPreferences(ATTRIBUTION_PREFERENCES, Context.MODE_PRIVATE);
-            String pingKey = applicationId+"ping";
+            String pingKey = applicationId + "ping";
             long lastPing = preferences.getLong(pingKey, 0);
             if (lastPing == 0 && attributionId != null) {
                 Bundle supportsAttributionParams = new Bundle();
@@ -247,7 +246,7 @@ public final class Settings {
                             "%s contains %s instead of a Boolean", SUPPORTS_ATTRIBUTION, doesSupportAttribution));
                 }
 
-                if ((Boolean)doesSupportAttribution) {
+                if ((Boolean) doesSupportAttribution) {
                     GraphObject publishParams = GraphObject.Factory.create();
                     publishParams.setProperty(ANALYTICS_EVENT, MOBILE_INSTALL_EVENT);
                     publishParams.setProperty(ATTRIBUTION_KEY, attributionId);
@@ -273,7 +272,7 @@ public final class Settings {
     }
 
     public static String getAttributionId(ContentResolver contentResolver) {
-        String [] projection = {ATTRIBUTION_ID_COLUMN_NAME};
+        String[] projection = {ATTRIBUTION_ID_COLUMN_NAME};
         Cursor c = contentResolver.query(ATTRIBUTION_ID_CONTENT_URI, projection, null, null, null);
         if (c == null || !c.moveToFirst()) {
             return null;

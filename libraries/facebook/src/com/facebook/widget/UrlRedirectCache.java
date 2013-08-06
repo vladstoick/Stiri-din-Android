@@ -17,6 +17,7 @@
 package com.facebook.widget;
 
 import android.content.Context;
+
 import com.facebook.internal.FileLruCache;
 import com.facebook.internal.Utility;
 
@@ -33,7 +34,7 @@ class UrlRedirectCache {
 
     private volatile static FileLruCache urlRedirectCache;
 
-    synchronized static FileLruCache getCache(Context context) throws IOException{
+    synchronized static FileLruCache getCache(Context context) throws IOException {
         if (urlRedirectCache == null) {
             urlRedirectCache = new FileLruCache(context.getApplicationContext(), TAG, new FileLruCache.Limits());
         }

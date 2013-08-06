@@ -17,8 +17,9 @@ import java.util.Date;
  * Created by Vlad on 8/1/13.
  */
 public class StiriApp extends Application {
-    public NewsDataSource newsDataSource = null ;
+    public NewsDataSource newsDataSource = null;
     public static RequestQueue queue;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -29,6 +30,7 @@ public class StiriApp extends Application {
         queue = Volley.newRequestQueue(this);
 
     }
+
     @Override
     public void onTerminate() {
         BusProvider.getInstance().unregister(this);

@@ -31,9 +31,8 @@ public class FacebookGraphObjectException extends FacebookException {
 
     /**
      * Constructs a new FacebookGraphObjectException.
-     * 
-     * @param message
-     *            the detail message of this exception
+     *
+     * @param message the detail message of this exception
      */
     public FacebookGraphObjectException(String message) {
         super(message);
@@ -41,11 +40,9 @@ public class FacebookGraphObjectException extends FacebookException {
 
     /**
      * Constructs a new FacebookGraphObjectException.
-     * 
-     * @param message
-     *            the detail message of this exception
-     * @param throwable
-     *            the cause of this exception
+     *
+     * @param message   the detail message of this exception
+     * @param throwable the cause of this exception
      */
     public FacebookGraphObjectException(String message, Throwable throwable) {
         super(message, throwable);
@@ -53,9 +50,8 @@ public class FacebookGraphObjectException extends FacebookException {
 
     /**
      * Constructs a new FacebookGraphObjectException.
-     * 
-     * @param throwable
-     *            the cause of this exception
+     *
+     * @param throwable the cause of this exception
      */
     public FacebookGraphObjectException(Throwable throwable) {
         super(throwable);

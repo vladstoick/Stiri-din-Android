@@ -41,15 +41,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce4bd01f-0e24-4761-9107-6fc7ef347aeb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/volley" afterPath="$PROJECT_DIR$/libraries/volley" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/AccessToken.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/AccessToken.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/AddElementAcitvitiy.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/AddElementAcitvitiy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/AddElementManuallyFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/AddElementManuallyFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/AddElementManuallySpinnerAdapter.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/AddElementManuallySpinnerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/AddElementRecommendedFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/AddElementRecommendedFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/AllGroupsFragmentAdapter.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/AllGroupsFragmentAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/AndroidManifest.xml" afterPath="$PROJECT_DIR$/libraries/facebook/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/AsyncFacebookRunner.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/AsyncFacebookRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/DataModifiedEvent.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/DataModifiedEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/DialogError.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/DialogError.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/Facebook.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/Facebook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookActivity.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookAuthorizationException.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookAuthorizationException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookDialogException.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookDialogException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookException.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/FacebookFragment.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/FacebookFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookGraphObjectException.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookGraphObjectException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookRequestError.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/FacebookRequestError.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/FbDialog.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/FbDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/internal/FileLruCache.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/internal/FileLruCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/FriendPickerFragment.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/FriendPickerFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphLocation.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphLocation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphMultiResult.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphMultiResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphObject.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/GraphObjectAdapter.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/GraphObjectAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphObjectList.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphObjectList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/GraphObjectPagingLoader.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/GraphObjectPagingLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphPlace.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphPlace.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphUser.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/GraphUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/ImageDownloader.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/ImageDownloader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/ImageRequest.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/ImageRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/ImageResponseCache.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/ImageResponseCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/JsonUtil.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/JsonUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/internal/Logger.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/internal/Logger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/LoginActivity.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/LoginButton.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/LoginButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/LoginFragment.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/LoginFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsGroup.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsGroup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupDetailActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsGroupFragmentAdapter.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsGroupFragmentAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsItem.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemDetailActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemDetailActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemListActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemListActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemListFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsItemListFragmentAdapter.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsItemListFragmentAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsSource.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/NewsSourceFeedLoaded.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/NewsSourceFeedLoaded.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DialogFragment/NoConnectionDialogFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DialogFragment/NoConnectionDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/OpenGraphAction.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/OpenGraphAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/PickerFragment.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/PickerFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/PlacePickerFragment.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/PlacePickerFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/ProfilePictureView.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/ProfilePictureView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/PropertyName.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/model/PropertyName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/actionbarsherlock/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/actionbarsherlock/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/facebook/android/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/vladstoick/stiridinromania/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/vladstoick/stiridinromania/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/build/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/libraries/facebook/build/source/r/debug/com/facebook/android/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/build/source/r/release/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/libraries/facebook/build/source/r/release/com/facebook/android/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/Request.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/Request.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/RequestBatch.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/RequestBatch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/Response.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/Response.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/Session.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/Session.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/SessionState.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/SessionState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/internal/SessionTracker.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/internal/SessionTracker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/Settings.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/Settings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/SharedPreferencesTokenCache.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/SharedPreferencesTokenCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/SimpleGraphObjectCursor.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/SimpleGraphObjectCursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/StiriApp.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/StiriApp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/StiriDinRomania.iml" afterPath="$PROJECT_DIR$/StiriDinRomania/StiriDinRomania.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomaniaAndroidGradle.iml" afterPath="$PROJECT_DIR$/StiriDinRomaniaAndroidGradle.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/TestSession.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/TestSession.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/TokenCache.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/TokenCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/UrlRedirectCache.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/UrlRedirectCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/Util.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/android/Util.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/internal/Utility.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/internal/Utility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/WebDialog.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/WebDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/WorkQueue.java" afterPath="$PROJECT_DIR$/libraries/facebook/src/com/facebook/widget/WorkQueue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_home.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_home.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_tab.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_tab.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_tab_bar_view.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_tab_bar_view.xml" />
@@ -107,59 +184,99 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_right_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_right_holo_light.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_addelements.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_addelements.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-sw600dp/activity_addelements.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-sw600dp/activity_addelements.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_addelements.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_addelements.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout-sw600dp/activity_addelements.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout-sw600dp/activity_addelements.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_login.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_detail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_twopane.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_twopane.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_detail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_list.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_twopane.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsitem_twopane.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/add_element_manual_fragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/add_element_manual_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build.gradle" afterPath="$PROJECT_DIR$/StiriDinRomania/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/build.gradle" afterPath="$PROJECT_DIR$/libraries/facebook/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/add_element_manual_fragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/add_element_manual_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/values/attrs.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/values/attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/build.xml" afterPath="$PROJECT_DIR$/libraries/facebook/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_button_check.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_button_check.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_button_check.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_button_check.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_friendpickerfragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_friendpickerfragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_friendpickerfragment.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_friendpickerfragment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginbutton_blue.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginbutton_blue.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_loginbutton_blue.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_loginbutton_blue.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginbutton_silver.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginbutton_silver.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_loginbutton_silver.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_loginbutton_silver.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_loginfragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_loginfragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_loginfragment.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_loginfragment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginfragment_background_gradient.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginfragment_background_gradient.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_loginfragment_background_gradient.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_loginfragment_background_gradient.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_activity_circle_row.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_activity_circle_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_activity_circle_row.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_activity_circle_row.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_checkbox.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_checkbox.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_checkbox.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_checkbox.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_image.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_image.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_image.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_image.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_item_background.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_item_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_picker_item_background.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_picker_item_background.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_list_row.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_list_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_list_row.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_list_row.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_list_section_header.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_list_section_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_list_section_header.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_list_section_header.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_list_selector.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_list_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_picker_list_selector.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_picker_list_selector.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_list_selector_background_transition.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_list_selector_background_transition.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_picker_list_selector_background_transition.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_search_box.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_search_box.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_search_box.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_search_box.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_title_bar.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_title_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_title_bar.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_title_bar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_title_bar_stub.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_title_bar_stub.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_title_bar_stub.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_picker_title_bar_stub.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_top_button.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_top_button.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_placepickerfragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_placepickerfragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_placepickerfragment.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_placepickerfragment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_placepickerfragment_list_row.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_placepickerfragment_list_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/layout/com_facebook_placepickerfragment_list_row.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_top_background.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_top_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_top_background.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_top_background.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_top_button.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_top_button.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_top_button.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/drawable/com_facebook_top_button.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/facebook.iml" afterPath="$PROJECT_DIR$/libraries/facebook/facebook.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_add_elements_manually.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_add_elements_manually.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_add_elements_manually.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_add_elements_manually.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsgroup.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsgroup_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsgroup_detail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsgroup_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsgroup_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsitem.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsitem.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem_detail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsitem_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsitem_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_allgroups.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_allgroups.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_allgroups.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_allgroups.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsgroup.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsitem.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsitem.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_group_list_activity.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_group_list_activity.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_item_detail_fragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_item_detail_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/news_item_detail_fragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/news_item_detail_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/sherlock_spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/sherlock_spinner_dropdown_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-v14/sherlock_spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-v14/sherlock_spinner_dropdown_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/sherlock_spinner_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/sherlock_spinner_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-v14/sherlock_spinner_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-v14/sherlock_spinner_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/spinner_row_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/spinner_row_newsgroup.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/spinner_row_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/spinner_row_newsgroup.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/spinner_row_newsgroup_dropdown.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/spinner_row_newsgroup_dropdown.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/spinner_row_newsgroup_dropdown.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/spinner_row_newsgroup_dropdown.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/values-es/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/values/style.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/values/style.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_18_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_18_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/res/values/styles.xml" afterPath="$PROJECT_DIR$/libraries/facebook/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-es/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-es/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-he/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-he/values.xml" />
@@ -198,38 +315,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/AddElementManuallyFragment.java" line="0" class="AddElementManuallyFragment.java" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" line="96" class="com.vladstoick.Fragments.NewsGroupDetailFragment" package="com.vladstoick.Fragments">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -267,6 +352,38 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/AddElementManuallyFragment.java" line="0" class="AddElementManuallyFragment.java" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" line="102" class="com.vladstoick.Fragments.NewsGroupDetailFragment" package="com.vladstoick.Fragments">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -281,9 +398,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="SqlHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Sql/SqlHelper.java">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="83" selection-start="7616" selection-end="7616" vertical-scroll-proportion="0.0" vertical-offset="2415" max-vertical-offset="2565">
+            <state line="167" column="82" selection-start="7612" selection-end="7612" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="2992">
               <folding />
             </state>
           </provider>
@@ -292,18 +409,16 @@
       <file leaf-file-name="NewsItemDetailFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="21" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="1485">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="84" column="21" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="1751">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/values/style.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="66" selection-start="703" selection-end="703" vertical-scroll-proportion="0.3314917" vertical-offset="0" max-vertical-offset="543">
+            <state line="14" column="66" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="391">
               <folding />
             </state>
           </provider>
@@ -312,7 +427,7 @@
       <file leaf-file-name="NewsItemDetailActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="26" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1125">
+            <state line="46" column="26" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -321,18 +436,36 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="26" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1170">
+            <state line="63" column="30" selection-start="2722" selection-end="2722" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsDataSource.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="NewsDataSource.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
+            <state line="193" column="36" selection-start="7986" selection-end="7986" vertical-scroll-proportion="0.5424312" vertical-offset="2808" max-vertical-offset="3910">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1693#2420#0" expanded="true" />
+                <element signature="e#2409#2410#0" expanded="true" />
+                <element signature="e#2422#2612#0" expanded="true" />
+                <element signature="e#2601#2602#0" expanded="true" />
+                <element signature="e#3575#3748#0" expanded="true" />
+                <element signature="e#3737#3738#0" expanded="true" />
+                <element signature="e#3750#3940#0" expanded="true" />
+                <element signature="e#3929#3930#0" expanded="true" />
+                <element signature="e#5498#6025#0" expanded="true" />
+                <element signature="e#6006#6007#0" expanded="true" />
+                <element signature="e#6199#6568#0" expanded="true" />
+                <element signature="e#6549#6550#0" expanded="true" />
+                <element signature="e#6878#7377#0" expanded="true" />
+                <element signature="e#7366#7367#0" expanded="true" />
+                <element signature="e#7617#8200#0" expanded="true" />
+                <element signature="e#8181#8182#0" expanded="true" />
+                <element signature="e#8202#8392#0" expanded="true" />
+                <element signature="e#8381#8382#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -365,6 +498,30 @@
           <key>
             <ExternalProjectPojo>
               <option name="name" value="StiriDinRomaniaAndroidGradle" />
+              <option name="path" value="C:\Programming\Android\StiriDinRomaniaAndroidGradle" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="StiriDinRomaniaAndroidGradle" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="StiriDinRomania" />
+                <option name="path" value="$PROJECT_DIR$/StiriDinRomania" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="facebook" />
+                <option name="path" value="$PROJECT_DIR$/libraries/facebook" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="StiriDinRomaniaAndroidGradle" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
@@ -389,7 +546,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1375801206000" />
+        <entry key="$PROJECT_DIR$" value="1375375672519" />
+        <entry key="C:\Programming\Android\StiriDinRomaniaAndroidGradle" value="1375375672519" />
       </map>
     </option>
   </component>
@@ -403,7 +561,6 @@
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/AddElementAcitvitiy.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_add_elements_manually.xml" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/values-ro/strings.xml" />
@@ -412,13 +569,15 @@
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/news_item_detail_fragment.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/values/style.xml" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="970" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -446,7 +605,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -964,6 +1122,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -977,6 +1136,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -1193,7 +1353,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="970" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1203,22 +1363,22 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282353" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.28619152" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.28619152" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.28619152" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.6703786" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67176473" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3282353" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22329059" sideWeight="0.6714922" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1337,9 +1497,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Sql/SqlHelper.java">
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="83" selection-start="7616" selection-end="7616" vertical-scroll-proportion="0.0" vertical-offset="1865" max-vertical-offset="2737">
+        <state line="167" column="82" selection-start="7612" selection-end="7612" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="2992">
           <folding />
         </state>
       </provider>
@@ -1360,7 +1520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="26" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="1326">
+        <state line="63" column="30" selection-start="2722" selection-end="2722" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
@@ -1379,13 +1539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="26" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="1190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/news_group_list_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577">
@@ -1400,28 +1553,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="21" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0" vertical-offset="348" max-vertical-offset="1485">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="84" column="21" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="1751">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/values/style.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="66" selection-start="703" selection-end="703" vertical-scroll-proportion="0.3314917" vertical-offset="0" max-vertical-offset="543">
+        <state line="14" column="66" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="391">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsItemDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="26" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="36" selection-start="7986" selection-end="7986" vertical-scroll-proportion="0.5424312" vertical-offset="2808" max-vertical-offset="3910">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1693#2420#0" expanded="true" />
+            <element signature="e#2409#2410#0" expanded="true" />
+            <element signature="e#2422#2612#0" expanded="true" />
+            <element signature="e#2601#2602#0" expanded="true" />
+            <element signature="e#3575#3748#0" expanded="true" />
+            <element signature="e#3737#3738#0" expanded="true" />
+            <element signature="e#3750#3940#0" expanded="true" />
+            <element signature="e#3929#3930#0" expanded="true" />
+            <element signature="e#5498#6025#0" expanded="true" />
+            <element signature="e#6006#6007#0" expanded="true" />
+            <element signature="e#6199#6568#0" expanded="true" />
+            <element signature="e#6549#6550#0" expanded="true" />
+            <element signature="e#6878#7377#0" expanded="true" />
+            <element signature="e#7366#7367#0" expanded="true" />
+            <element signature="e#7617#8200#0" expanded="true" />
+            <element signature="e#8181#8182#0" expanded="true" />
+            <element signature="e#8202#8392#0" expanded="true" />
+            <element signature="e#8381#8382#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

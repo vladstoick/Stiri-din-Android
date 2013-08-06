@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 public class NewsSource implements Parcelable {
     public static String TAG = "NEWSSORUCE";
-    public static String BASE_URL="http://37.139.8.146:3000/?url=";
+    public static String BASE_URL = "http://37.139.8.146:3000/?url=";
     public static String TAG_RSSLINK = "url";
     private String rssLink;
     public static String TAG_TITLE = "title";
@@ -38,6 +38,7 @@ public class NewsSource implements Parcelable {
     private int id;
     private int groupId;
     private int numberOfUnreadNews;
+
     public NewsSource(String rssLink, String title, String description, int id) {
         this.rssLink = rssLink;
         this.title = title;
@@ -46,10 +47,11 @@ public class NewsSource implements Parcelable {
         news = new ArrayList<NewsItem>();
 
     }
-    public NewsSource()
-    {}
-    public NewsSource(Cursor cursor)
-    {
+
+    public NewsSource() {
+    }
+
+    public NewsSource(Cursor cursor) {
         this.id = cursor.getInt(0);
         this.title = cursor.getString(1);
         this.description = cursor.getString(2);
@@ -58,10 +60,11 @@ public class NewsSource implements Parcelable {
         this.numberOfUnreadNews = cursor.getInt(5);
         news = new ArrayList<NewsItem>();
     }
-    public void loadFeed(StiriApp app)
-    {
+
+    public void loadFeed(StiriApp app) {
         BusProvider.getInstance().register(this);
     }
+
     public int getNumberOfUnreadNews() {
         return numberOfUnreadNews;
     }
@@ -148,7 +151,7 @@ public class NewsSource implements Parcelable {
         in.readTypedList(news, NewsItem.CREATOR);
         this.groupId = in.readInt();
         this.numberOfUnreadNews = in.readInt();
-        this.id=in.readInt();
+        this.id = in.readInt();
     }
 
 }

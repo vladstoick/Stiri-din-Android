@@ -26,6 +26,7 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+
 import com.facebook.FacebookException;
 import com.facebook.LoggingBehaviors;
 import com.facebook.android.R;
@@ -47,7 +48,8 @@ public class ProfilePictureView extends FrameLayout {
     public interface OnErrorListener {
         /**
          * Called when a network or other error is encountered.
-         * @param error     a FacebookException representing the error that was encountered.
+         *
+         * @param error a FacebookException representing the error that was encountered.
          */
         void onError(FacebookException error);
     }
@@ -212,7 +214,7 @@ public class ProfilePictureView extends FrameLayout {
      * Sets the profile Id for this profile photo
      *
      * @param profileId The profileId
-     *               NULL/Empty String will show the blank profile photo
+     *                  NULL/Empty String will show the blank profile photo
      */
     public final void setProfileId(String profileId) {
         boolean force = Utility.isNullOrEmpty(this.profileId) || !this.profileId.equalsIgnoreCase(profileId);
@@ -294,6 +296,7 @@ public class ProfilePictureView extends FrameLayout {
     /**
      * Some of the current state is returned as a Bundle to allow quick restoration
      * of the ProfilePictureView object in scenarios like orientation changes.
+     *
      * @return a Parcelable containing the current state
      */
     @Override
@@ -314,6 +317,7 @@ public class ProfilePictureView extends FrameLayout {
 
     /**
      * If the passed in state is a Bundle, an attempt is made to restore from it.
+     *
      * @param state a Parcelable containing the current state
      */
     @Override
@@ -321,13 +325,13 @@ public class ProfilePictureView extends FrameLayout {
         if (state.getClass() != Bundle.class) {
             super.onRestoreInstanceState(state);
         } else {
-            Bundle instanceState = (Bundle)state;
+            Bundle instanceState = (Bundle) state;
             super.onRestoreInstanceState(instanceState.getParcelable(SUPER_STATE_KEY));
 
             profileId = instanceState.getString(PROFILE_ID_KEY);
             presetSizeType = instanceState.getInt(PRESET_SIZE_KEY);
             isCropped = instanceState.getBoolean(IS_CROPPED_KEY);
-            imageContents = (Bitmap)instanceState.getParcelable(BITMAP_KEY);
+            imageContents = (Bitmap) instanceState.getParcelable(BITMAP_KEY);
             queryWidth = instanceState.getInt(BITMAP_WIDTH_KEY);
             queryHeight = instanceState.getInt(BITMAP_HEIGHT_KEY);
 
@@ -394,17 +398,17 @@ public class ProfilePictureView extends FrameLayout {
         try {
             ImageRequest.Builder requestBuilder = new ImageRequest.Builder(
                     getContext(),
-                    ImageRequest.getProfilePictureUrl(profileId, queryWidth,  queryHeight));
+                    ImageRequest.getProfilePictureUrl(profileId, queryWidth, queryHeight));
 
             ImageRequest request = requestBuilder.setAllowCachedRedirects(allowCachedResponse)
                     .setCallerTag(this)
                     .setCallback(
-                    new ImageRequest.Callback() {
-                        @Override
-                        public void onCompleted(ImageResponse response) {
-                            processResponse(response);
-                        }
-                    })
+                            new ImageRequest.Callback() {
+                                @Override
+                                public void onCompleted(ImageResponse response) {
+                                    processResponse(response);
+                                }
+                            })
                     .build();
 
             // Make sure to cancel the old request before sending the new one to prevent

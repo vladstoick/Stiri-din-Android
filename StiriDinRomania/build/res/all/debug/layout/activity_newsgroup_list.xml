@@ -1,11 +1,11 @@
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/newsgroup_list"
-    android:name="com.vladstoick.Fragments.NewsGroupListFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    tools:context=".NewsGroupListActivity"
-    tools:layout="@android:layout/list_content" />
-<!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml -->
+          xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/newsgroup_list"
+          android:name="com.vladstoick.Fragments.NewsGroupListFragment"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          tools:context=".NewsGroupListActivity"
+          tools:layout="@android:layout/list_content"/>
+        <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_list.xml -->

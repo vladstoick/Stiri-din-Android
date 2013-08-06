@@ -15,7 +15,7 @@
 -->
 
 <transition xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/abs__list_pressed_holo_light"  />
-    <item android:drawable="@drawable/abs__list_longpressed_holo"  />
+    <item android:drawable="@drawable/abs__list_pressed_holo_light"/>
+    <item android:drawable="@drawable/abs__list_longpressed_holo"/>
 </transition>
-<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/drawable/abs__list_selector_background_transition_holo_light.xml --><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/drawable/abs__list_selector_background_transition_holo_light.xml -->
+        <!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/drawable/abs__list_selector_background_transition_holo_light.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\drawable\abs__list_selector_background_transition_holo_light.xml -->

@@ -20,12 +20,14 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         >
+
     <ViewStub
             android:id="@+id/com_facebook_picker_profile_pic_stub"
             android:inflatedId="@+id/com_facebook_picker_image"
             android:layout="@layout/com_facebook_picker_image"
             android:layout_width="50dip"
-            android:layout_height="50dip" />
+            android:layout_height="50dip"/>
+
     <TextView
             android:id="@+id/com_facebook_picker_title"
             android:layout_width="100dip"
@@ -38,6 +40,7 @@
             android:ellipsize="end"
             android:textSize="18sp"
             android:gravity="left|center_vertical"/>
+
     <ViewStub
             android:id="@+id/com_facebook_picker_checkbox_stub"
             android:inflatedId="@+id/com_facebook_picker_checkbox"
@@ -46,4 +49,4 @@
             android:layout_height="23dip"
             android:layout_marginRight="10dip"/>
 </LinearLayout>
-<!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_list_row.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_list_row.xml -->

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/dimens.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\dimens.xml -->
     <dimen name="list_view_width">500dp</dimen>
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/strings.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="add">Adaugă</string>
     <string name="add_element_feed_description">Descrierea feedului</string>
@@ -22,7 +22,8 @@
     <string name="groups">Grupuri</string>
     <string name="login_facebook">Loghează-te cu Facebook</string>
     <string name="login_message">Ştiri din România va folosi doar numele tău pentru a sync-ui datele
-        pe toate device-urile tale</string>
+        pe toate device-urile tale
+    </string>
     <string name="login_microsoft">Loghează-te cu Microsoft</string>
     <string name="logout">Deloghează-te</string>
     <string name="manual">Manual</string>

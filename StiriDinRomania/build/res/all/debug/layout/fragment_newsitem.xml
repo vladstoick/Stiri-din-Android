@@ -8,4 +8,4 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/listView"/>
-</LinearLayout><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/layout/fragment_newsitem.xml -->
+</LinearLayout><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_newsitem.xml -->

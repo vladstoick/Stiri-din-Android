@@ -14,7 +14,7 @@ import com.vladstoick.Utils.NewsItemListFragmentAdapter;
  * also supports tablet devices by allowing list items to be given an
  * 'activated' state upon selection. This helps indicate which item is
  * currently being viewed in a {@link com.vladstoick.Fragments.NewsItemDetailFragment}.
- * <p>
+ * <p/>
  * Activities containing this fragment MUST implement the {@link Callbacks}
  * interface.
  */
@@ -58,25 +58,27 @@ public class NewsItemListFragment extends ListFragment {
         public void onItemSelected(String id) {
         }
     };
-    public static NewsItemListFragment newInstance(NewsSource newsSource)
-    {
+
+    public static NewsItemListFragment newInstance(NewsSource newsSource) {
         NewsItemListFragment fragment = new NewsItemListFragment();
         Bundle extras = new Bundle();
-        extras.putParcelable(NewsSource.TAG,newsSource);
+        extras.putParcelable(NewsSource.TAG, newsSource);
         fragment.setArguments(extras);
         return fragment;
     }
+
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
     public NewsItemListFragment() {
     }
-    public void setData(NewsSource ns)
-    {
+
+    public void setData(NewsSource ns) {
         this.ns = ns;
-        setListAdapter(new NewsItemListFragmentAdapter(getActivity(),ns));
+        setListAdapter(new NewsItemListFragmentAdapter(getActivity(), ns));
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

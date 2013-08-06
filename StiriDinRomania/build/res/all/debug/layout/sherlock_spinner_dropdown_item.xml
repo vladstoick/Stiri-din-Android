@@ -17,11 +17,11 @@
 ** limitations under the License.
 */
 -->
-<TextView xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:id="@android:id/text1"
-    style="?attr/spinnerDropDownItemStyle"
-    android:singleLine="true"
-    android:layout_width="match_parent"
-    android:layout_height="?attr/dropdownListPreferredItemHeight"
-    android:ellipsize="marquee" />
-<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/sherlock_spinner_dropdown_item.xml --><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/layout/sherlock_spinner_dropdown_item.xml -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@android:id/text1"
+          style="?attr/spinnerDropDownItemStyle"
+          android:singleLine="true"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/dropdownListPreferredItemHeight"
+          android:ellipsize="marquee"/>
+        <!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/sherlock_spinner_dropdown_item.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\sherlock_spinner_dropdown_item.xml -->

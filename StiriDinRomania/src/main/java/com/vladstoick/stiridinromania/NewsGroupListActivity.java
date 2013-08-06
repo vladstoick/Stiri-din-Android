@@ -18,18 +18,18 @@ import com.vladstoick.Utils.Tags;
  * lead to a {@link com.vladstoick.stiridinromania.NewsGroupDetailActivity} representing
  * item details. On tablets, the activity presents the list of items and
  * item details side-by-side using two vertical panes.
- * <p>
+ * <p/>
  * The activity makes heavy use of fragments. The list of items is a
  * {@link com.vladstoick.Fragments.NewsGroupListFragment} and the item details
  * (if present) is a {@link com.vladstoick.Fragments.NewsGroupDetailFragment}.
- * <p>
+ * <p/>
  * This activity also implements the required
  * {@link com.vladstoick.Fragments.NewsGroupListFragment.Callbacks} interface
  * to listen for item selections.
  */
 public class NewsGroupListActivity extends SherlockFragmentActivity
         implements NewsGroupListFragment.Callbacks,
-        NewsGroupDetailFragment.NewsGroupDetailFragmentCommunicationInterface{
+        NewsGroupDetailFragment.NewsGroupDetailFragmentCommunicationInterface {
 
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -86,21 +86,20 @@ public class NewsGroupListActivity extends SherlockFragmentActivity
     @Override
     public void selectedNewsSource(int id) {
         Intent intent = new Intent(this, NewsItemListActivity.class);
-        intent.putExtra(Tags.NEWSOURCE_TAG_ID,id);
+        intent.putExtra(Tags.NEWSOURCE_TAG_ID, id);
         startActivity(intent);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.news_group_list_activity,menu);
+        getSupportMenuInflater().inflate(R.menu.news_group_list_activity, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
-            case R.id.action_add:{
+        switch (item.getItemId()) {
+            case R.id.action_add: {
                 Intent intent = new Intent(this, AddElementAcitvitiy.class);
                 startActivity(intent);
                 break;

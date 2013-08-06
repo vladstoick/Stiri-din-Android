@@ -5,11 +5,12 @@
         android:layout_marginLeft="@dimen/left_and_right_margin"
         android:layout_marginRight="@dimen/left_and_right_margin"
         android:layout_height="match_parent">
+
     <fragment
-        android:id="@+id/newsitem_list"
-        android:name="com.vladstoick.Fragments.NewsItemListFragment"
-        android:layout_height="match_parent"
-        tools:layout="@android:layout/list_content"
-        android:layout_width="match_parent"
-    />
+            android:id="@+id/newsitem_list"
+            android:name="com.vladstoick.Fragments.NewsItemListFragment"
+            android:layout_height="match_parent"
+            tools:layout="@android:layout/list_content"
+            android:layout_width="match_parent"
+            />
 </LinearLayout>

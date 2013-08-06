@@ -15,13 +15,13 @@
 -->
 
 <CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/abs__checkbox"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical"
-    android:focusable="false"
-    android:clickable="false"
-    android:duplicateParentState="true" />
+          android:id="@+id/abs__checkbox"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:focusable="false"
+          android:clickable="false"
+          android:duplicateParentState="true"/>
 
 
-<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__list_menu_item_checkbox.xml --><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/layout/abs__list_menu_item_checkbox.xml -->
+        <!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__list_menu_item_checkbox.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\abs__list_menu_item_checkbox.xml -->

@@ -28,6 +28,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.CookieSyncManager;
+
 import com.facebook.android.Util;
 import com.facebook.internal.ServerProtocol;
 import com.facebook.internal.SessionAuthorizationType;
@@ -67,7 +68,7 @@ public class Session implements Serializable {
      * The default activity code used for authorization.
      *
      * @see #openForRead(OpenRequest)
-     *      open
+     * open
      */
     public static final int DEFAULT_AUTHORIZE_ACTIVITY_CODE = 0xface;
 
@@ -174,8 +175,8 @@ public class Session implements Serializable {
         private final AuthorizationRequest pendingRequest;
 
         SerializationProxyV1(String applicationId, SessionState state,
-                AccessToken tokenInfo, Date lastAttemptedTokenExtendDate,
-                boolean shouldAutoPublish, AuthorizationRequest pendingRequest) {
+                             AccessToken tokenInfo, Date lastAttemptedTokenExtendDate,
+                             boolean shouldAutoPublish, AuthorizationRequest pendingRequest) {
             this.applicationId = applicationId;
             this.state = state;
             this.tokenInfo = tokenInfo;
@@ -194,8 +195,8 @@ public class Session implements Serializable {
      * Used by version 1 of the serialization proxy, do not modify.
      */
     private Session(String applicationId, SessionState state,
-            AccessToken tokenInfo, Date lastAttemptedTokenExtendDate,
-            boolean shouldAutoPublish, AuthorizationRequest pendingRequest) {
+                    AccessToken tokenInfo, Date lastAttemptedTokenExtendDate,
+                    boolean shouldAutoPublish, AuthorizationRequest pendingRequest) {
         this.applicationId = applicationId;
         this.state = state;
         this.tokenInfo = tokenInfo;
@@ -271,7 +272,7 @@ public class Session implements Serializable {
      * authorization.
      *
      * @return a Bundle containing data that was returned from Facebook during
-     *         authorization.
+     * authorization.
      */
     public final Bundle getAuthorizationBundle() {
         synchronized (this.lock) {
@@ -523,8 +524,8 @@ public class Session implements Serializable {
      * @param callback          a callback that will be called when the session status changes; may be null
      */
     public final void openWithImportedAccessToken(String accessToken, Date expirationTime,
-            Date lastRefreshTime, AccessTokenSource accessTokenSource, List<String> permissions,
-            StatusCallback callback) {
+                                                  Date lastRefreshTime, AccessTokenSource accessTokenSource, List<String> permissions,
+                                                  StatusCallback callback) {
         AccessToken newToken = new AccessToken(accessToken, expirationTime, permissions, accessTokenSource,
                 lastRefreshTime);
         openWithAccessToken(newToken, callback);
@@ -590,7 +591,7 @@ public class Session implements Serializable {
      * @param data            The Intent passed as the data parameter from the forwarded
      *                        call.
      * @return A boolean indicating whether the requestCode matched a pending
-     *         authorization request for this Session.
+     * authorization request for this Session.
      */
     public final boolean onActivityResult(Activity currentActivity, int requestCode, int resultCode, Intent data) {
         Validate.notNull(currentActivity, "currentActivity");
@@ -916,7 +917,7 @@ public class Session implements Serializable {
      * @return The new Session or null if one could not be created
      */
     public static Session openActiveSession(Activity activity, boolean allowLoginUI,
-            StatusCallback callback) {
+                                            StatusCallback callback) {
         return openActiveSession(activity, allowLoginUI, new OpenRequest(activity).setCallback(callback));
     }
 
@@ -959,7 +960,7 @@ public class Session implements Serializable {
      * @return The new Session or null if one could not be created
      */
     public static Session openActiveSession(Context context, Fragment fragment,
-            boolean allowLoginUI, StatusCallback callback) {
+                                            boolean allowLoginUI, StatusCallback callback) {
         return openActiveSession(context, allowLoginUI, new OpenRequest(fragment).setCallback(callback));
     }
 
@@ -980,8 +981,8 @@ public class Session implements Serializable {
      * the token that has been passed in, or calls to the Facebook API may fail.
      *
      * @param context           the Context to use for creation the session
-     * @param applicationId the Facebook Application ID to associate with the session; if null, this
-     *                      will be read from the package's metadata
+     * @param applicationId     the Facebook Application ID to associate with the session; if null, this
+     *                          will be read from the package's metadata
      * @param accessToken       the actual access token obtained from Facebook
      * @param expirationTime    the expiration date associated with the token
      * @param lastRefreshTime   the last time the token was refreshed (or when it was first obtained)
@@ -993,8 +994,8 @@ public class Session implements Serializable {
      * @param callback          a callback that will be called when the session status changes; may be null
      */
     public static Session openActiveSessionWithImportedAccessToken(Context context, String applicationId,
-            String accessToken, Date expirationTime, Date lastRefreshTime, AccessTokenSource accessTokenSource,
-            List<String> permissions, StatusCallback callback) {
+                                                                   String accessToken, Date expirationTime, Date lastRefreshTime, AccessTokenSource accessTokenSource,
+                                                                   List<String> permissions, StatusCallback callback) {
         Session session = new Session(context, applicationId, null, true, false);
 
         setActiveSession(session);
@@ -1759,7 +1760,7 @@ public class Session implements Serializable {
          * Constructor to be used for V1 serialization only, DO NOT CHANGE.
          */
         private AuthorizationRequest(SessionLoginBehavior loginBehavior, int requestCode,
-                List<String> permissions, boolean suppressLoginActivityVerification) {
+                                     List<String> permissions, boolean suppressLoginActivityVerification) {
             startActivityDelegate = new StartActivityDelegate() {
                 @Override
                 public void startActivityForResult(Intent intent, int requestCode) {
@@ -1876,7 +1877,7 @@ public class Session implements Serializable {
             private final List<String> permissions;
 
             private AuthRequestSerializationProxyV1(SessionLoginBehavior loginBehavior,
-                    int requestCode, List<String> permissions, boolean suppressVerification) {
+                                                    int requestCode, List<String> permissions, boolean suppressVerification) {
                 this.loginBehavior = loginBehavior;
                 this.requestCode = requestCode;
                 this.permissions = permissions;

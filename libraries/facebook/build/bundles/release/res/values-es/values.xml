@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-es/strings.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-es\strings.xml -->
     <string name="com_facebook_loginfragment_log_in_button">Iniciar Sesión…</string>
     <string name="com_facebook_loginfragment_logged_in">Sesión iniciada</string>
     <string name="com_facebook_loginfragment_not_logged_in">No has iniciado sesión</string>
@@ -14,6 +14,7 @@
     <string name="com_facebook_logo_content_description">Logo de Facebook</string>
     <string name="com_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
     <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d estuvieron aquí</string>
-    <string name="com_facebook_placepicker_subtitle_were_here_only_format">es:%1$,d estuvieron aquí</string>
+    <string name="com_facebook_placepicker_subtitle_were_here_only_format">es:%1$,d estuvieron
+        aquí</string>
 
 </resources>

@@ -25,16 +25,19 @@ import butterknife.Views;
  * Created by vlad on 7/19/13.
  */
 public class NewsGroupDetailFragment extends SherlockFragment {
-    public interface NewsGroupDetailFragmentCommunicationInterface{
+    public interface NewsGroupDetailFragmentCommunicationInterface {
         public void selectedNewsSource(int id);
     }
+
     int newsGroupId;
     public static String TAG = "NEWSGROUPFRAGMENT";
     private NewsGroup newsGroup;
     private View mView;
-    @InjectView(R.id.newsGroupListView) ListView mList;
+    @InjectView(R.id.newsGroupListView)
+    ListView mList;
     private NewsGroupDetailFragmentCommunicationInterface mListener;
     NewsGroupFragmentAdapter adapter;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +47,14 @@ public class NewsGroupDetailFragment extends SherlockFragment {
             newsGroup = savedInstanceState.getParcelable(Tags.NEWSGROUP_TAG);
         else if (getArguments() != null) {
             newsGroupId = getArguments().getInt(Tags.NEWSGROUP_TAG_ID);
-            StiriApp app = (StiriApp)(getSherlockActivity().getApplication());
+            StiriApp app = (StiriApp) (getSherlockActivity().getApplication());
             newsGroup = app.newsDataSource.getNewsGroup(newsGroupId);
         }
     }
+
     public NewsGroupDetailFragment() {
     }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -67,6 +72,7 @@ public class NewsGroupDetailFragment extends SherlockFragment {
         mListener = null;
         BusProvider.getInstance().unregister(this);
     }
+
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -77,7 +83,7 @@ public class NewsGroupDetailFragment extends SherlockFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_newsgroup, container, false);
-        Views.inject(this,mView);
+        Views.inject(this, mView);
         adapter = new NewsGroupFragmentAdapter(newsGroup, getSherlockActivity());
         mList.setAdapter(adapter);
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -88,10 +94,10 @@ public class NewsGroupDetailFragment extends SherlockFragment {
         });
         return mView;
     }
+
     @Subscribe
-    public void onDataLoaded(DataLoadedEvent event)
-    {
-        newsGroup = ((StiriApp)(getSherlockActivity()).getApplication())
+    public void onDataLoaded(DataLoadedEvent event) {
+        newsGroup = ((StiriApp) (getSherlockActivity()).getApplication())
                 .newsDataSource.getNewsGroup(newsGroupId);
         adapter.setData(newsGroup);
         adapter.notifyDataSetChanged();

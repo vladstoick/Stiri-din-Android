@@ -21,22 +21,24 @@ import butterknife.Views;
 /**
  * Created by Vlad on 8/2/13.
  */
-public class NewsItemListFragmentAdapter extends BaseAdapter{
-    static class Holder
-    {
-        @InjectView(R.id.title) TextView mTitle;
-        public Holder(View mView)
-        {
-            Views.inject(this,mView);
+public class NewsItemListFragmentAdapter extends BaseAdapter {
+    static class Holder {
+        @InjectView(R.id.title)
+        TextView mTitle;
+
+        public Holder(View mView) {
+            Views.inject(this, mView);
         }
     }
+
     NewsSource ns;
     Context context;
-    public NewsItemListFragmentAdapter(Context context, NewsSource ns)
-    {
+
+    public NewsItemListFragmentAdapter(Context context, NewsSource ns) {
         this.context = context;
         this.ns = ns;
     }
+
     @Override
     public int getCount() {
         return ns.news.size();

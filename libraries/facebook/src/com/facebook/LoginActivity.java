@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.webkit.CookieSyncManager;
+
 import com.facebook.android.*;
 import com.facebook.internal.ServerProtocol;
 import com.facebook.internal.Utility;
@@ -49,21 +50,21 @@ public class LoginActivity extends Activity {
         if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("AndroidManifest Error")
-                   .setMessage("WebView login requires INTERNET permission")
-                   .setCancelable(true)
-                   .setPositiveButton(R.string.com_facebook_dialogloginactivity_ok_button,
-                           new DialogInterface.OnClickListener() {
-                               @Override
-                               public void onClick(DialogInterface dialogInterface, int i) {
-                                   finish();
-                               }
-                           })
-                   .setOnCancelListener(new DialogInterface.OnCancelListener() {
-                       @Override
-                       public void onCancel(DialogInterface dialogInterface) {
-                           finish();
-                       }
-                   });
+                    .setMessage("WebView login requires INTERNET permission")
+                    .setCancelable(true)
+                    .setPositiveButton(R.string.com_facebook_dialogloginactivity_ok_button,
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    finish();
+                                }
+                            })
+                    .setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialogInterface) {
+                            finish();
+                        }
+                    });
             errorDialog = builder.create();
             errorDialog.show();
             setResult(Activity.RESULT_CANCELED);

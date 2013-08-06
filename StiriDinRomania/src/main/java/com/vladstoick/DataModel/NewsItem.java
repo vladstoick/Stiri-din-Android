@@ -15,13 +15,14 @@ public class NewsItem implements Parcelable {
     private String description;
     private String urlLink;
     private int sourceId;
+
     public NewsItem(String title, String description, String urlLink) {
         this.title = title;
         this.description = description;
         this.urlLink = urlLink;
     }
-    public NewsItem(Cursor cursor)
-    {
+
+    public NewsItem(Cursor cursor) {
         this.urlLink = cursor.getString(0);
         this.title = cursor.getString(1);
         this.description = cursor.getString(2);
@@ -59,6 +60,7 @@ public class NewsItem implements Parcelable {
     public void setUrlLink(String urlLink) {
         this.urlLink = urlLink;
     }
+
     public String getMobilizedUrlLink() {
         return "http://parserizer.eu01.aws.af.cm/?url=" + this.urlLink;
     }

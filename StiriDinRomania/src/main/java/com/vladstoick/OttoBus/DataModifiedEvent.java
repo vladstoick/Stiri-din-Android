@@ -9,14 +9,17 @@ public class DataModifiedEvent {
     public final String dataModifiedType;
     public int id;
     public String title;
+
     public DataModifiedEvent(String type, int id) {
         this.dataModifiedType = type;
         this.id = id;
     }
-    public DataModifiedEvent(String type, String title){
+
+    public DataModifiedEvent(String type, String title) {
         this.title = title;
-        this.dataModifiedType=type;
+        this.dataModifiedType = type;
     }
+
     @Override
     public String toString() {
         return this.dataModifiedType;

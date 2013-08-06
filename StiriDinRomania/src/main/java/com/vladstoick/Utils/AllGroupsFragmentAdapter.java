@@ -21,10 +21,13 @@ import butterknife.Views;
  */
 public class AllGroupsFragmentAdapter extends BaseAdapter {
     static class RowHolder {
-        @InjectView(R.id.groupTitle) TextView mTitle;
-        @InjectView(R.id.numberOfGroups)TextView mNumberOfGroups;
-        public RowHolder(View view){
-            Views.inject(this,view);
+        @InjectView(R.id.groupTitle)
+        TextView mTitle;
+        @InjectView(R.id.numberOfGroups)
+        TextView mNumberOfGroups;
+
+        public RowHolder(View view) {
+            Views.inject(this, view);
         }
     }
 
@@ -68,10 +71,10 @@ public class AllGroupsFragmentAdapter extends BaseAdapter {
 
         int noGroups = ng.getNoFeeds();
         String noGroupsString;
-        if(noGroups == 1)
+        if (noGroups == 1)
             noGroupsString = noGroups + " " + context.getString(R.string.feed).toLowerCase();
         else
-            noGroupsString = noGroups + " " +context.getString(R.string.feeds).toLowerCase();
+            noGroupsString = noGroups + " " + context.getString(R.string.feeds).toLowerCase();
         holder.mNumberOfGroups.setText(noGroupsString);
         return row;
     }

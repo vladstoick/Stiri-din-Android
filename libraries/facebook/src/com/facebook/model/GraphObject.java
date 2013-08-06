@@ -19,6 +19,7 @@ package com.facebook.model;
 import com.facebook.FacebookGraphObjectException;
 import com.facebook.internal.Utility;
 import com.facebook.internal.Validate;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,6 +44,7 @@ import java.util.*;
 public interface GraphObject {
     /**
      * Returns a new proxy that treats this graph object as a different GraphObject-derived type.
+     *
      * @param graphObjectClass the type of GraphObject to return
      * @return a new instance of the GraphObject-derived-type that references the same underlying data
      */
@@ -51,18 +53,21 @@ public interface GraphObject {
     /**
      * Returns a Java Collections map of names and properties.  Modifying the returned map modifies the
      * inner JSON representation.
+     *
      * @return a Java Collections map representing the GraphObject state
      */
     public Map<String, Object> asMap();
 
     /**
      * Gets the underlying JSONObject representation of this graph object.
+     *
      * @return the underlying JSONObject representation of this graph object
      */
     public JSONObject getInnerJSONObject();
 
     /**
      * Gets a property of the GraphObject
+     *
      * @param propertyName the name of the property to get
      * @return the value of the named property
      */
@@ -70,13 +75,15 @@ public interface GraphObject {
 
     /**
      * Sets a property of the GraphObject
-     * @param propertyName the name of the property to set
+     *
+     * @param propertyName  the name of the property to set
      * @param propertyValue the value of the named property to set
      */
     public void setProperty(String propertyName, Object propertyValue);
 
     /**
      * Removes a property of the GraphObject
+     *
      * @param propertyName the name of the property to remove
      */
     public void removeProperty(String propertyName);
@@ -90,9 +97,9 @@ public interface GraphObject {
      */
     final class Factory {
         private static final HashSet<Class<?>> verifiedGraphObjectClasses = new HashSet<Class<?>>();
-        private static final SimpleDateFormat[] dateFormats = new SimpleDateFormat[] {
+        private static final SimpleDateFormat[] dateFormats = new SimpleDateFormat[]{
                 new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ", Locale.US),
-                new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US), new SimpleDateFormat("yyyy-MM-dd", Locale.US), };
+                new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US), new SimpleDateFormat("yyyy-MM-dd", Locale.US),};
 
         // No objects of this type should exist.
         private Factory() {
@@ -100,11 +107,10 @@ public interface GraphObject {
 
         /**
          * Creates a GraphObject proxy that provides typed access to the data in an underlying JSONObject.
+         *
          * @param json the JSONObject containing the data to be exposed
          * @return a GraphObject that represents the underlying data
-         *
-         * @throws com.facebook.FacebookException
-         *            If the passed in Class is not a valid GraphObject interface
+         * @throws com.facebook.FacebookException If the passed in Class is not a valid GraphObject interface
          */
         public static GraphObject create(JSONObject json) {
             return create(json, GraphObject.class);
@@ -112,12 +118,11 @@ public interface GraphObject {
 
         /**
          * Creates a GraphObject-derived proxy that provides typed access to the data in an underlying JSONObject.
-         * @param json the JSONObject containing the data to be exposed
+         *
+         * @param json             the JSONObject containing the data to be exposed
          * @param graphObjectClass the GraphObject-derived type to return
          * @return a graphObjectClass that represents the underlying data
-         *
-         * @throws com.facebook.FacebookException
-         *            If the passed in Class is not a valid GraphObject interface
+         * @throws com.facebook.FacebookException If the passed in Class is not a valid GraphObject interface
          */
         public static <T extends GraphObject> T create(JSONObject json, Class<T> graphObjectClass) {
             return createGraphObjectProxy(graphObjectClass, json);
@@ -125,10 +130,9 @@ public interface GraphObject {
 
         /**
          * Creates a GraphObject proxy that initially contains no data.
-         * @return a GraphObject with no data
          *
-         * @throws com.facebook.FacebookException
-         *            If the passed in Class is not a valid GraphObject interface
+         * @return a GraphObject with no data
+         * @throws com.facebook.FacebookException If the passed in Class is not a valid GraphObject interface
          */
         public static GraphObject create() {
             return create(GraphObject.class);
@@ -136,11 +140,10 @@ public interface GraphObject {
 
         /**
          * Creates a GraphObject-derived proxy that initially contains no data.
+         *
          * @param graphObjectClass the GraphObject-derived type to return
          * @return a graphObjectClass with no data
-         *
-         * @throws com.facebook.FacebookException
-         *            If the passed in Class is not a valid GraphObject interface
+         * @throws com.facebook.FacebookException If the passed in Class is not a valid GraphObject interface
          */
         public static <T extends GraphObject> T create(Class<T> graphObjectClass) {
             return createGraphObjectProxy(graphObjectClass, new JSONObject());
@@ -148,6 +151,7 @@ public interface GraphObject {
 
         /**
          * Determines if two GraphObjects represent the same underlying graph object, based on their IDs.
+         *
          * @param a a graph object
          * @param b another graph object
          * @return true if both graph objects have an ID and it is the same ID, false otherwise
@@ -169,12 +173,11 @@ public interface GraphObject {
 
         /**
          * Creates a GraphObjectList-derived proxy that provides typed access to the data in an underlying JSONArray.
-         * @param array the JSONArray containing the data to be exposed
+         *
+         * @param array            the JSONArray containing the data to be exposed
          * @param graphObjectClass the GraphObject-derived type to return
          * @return a graphObjectClass that represents the underlying data
-         *
-         * @throws com.facebook.FacebookException
-         *            If the passed in Class is not a valid GraphObject interface
+         * @throws com.facebook.FacebookException If the passed in Class is not a valid GraphObject interface
          */
         public static <T> GraphObjectList<T> createList(JSONArray array, Class<T> graphObjectClass) {
             return new GraphObjectListImpl<T>(array, graphObjectClass);
@@ -182,11 +185,10 @@ public interface GraphObject {
 
         /**
          * Creates a GraphObjectList-derived proxy that initially contains no data.
+         *
          * @param graphObjectClass the GraphObject-derived type to return
          * @return a GraphObjectList with no data
-         *
-         * @throws com.facebook.FacebookException
-         *            If the passed in Class is not a valid GraphObject interface
+         * @throws com.facebook.FacebookException If the passed in Class is not a valid GraphObject interface
          */
         public static <T> GraphObjectList<T> createList(Class<T> graphObjectClass) {
             return createList(new JSONArray(), graphObjectClass);
@@ -195,7 +197,7 @@ public interface GraphObject {
         private static <T extends GraphObject> T createGraphObjectProxy(Class<T> graphObjectClass, JSONObject state) {
             verifyCanProxyClass(graphObjectClass);
 
-            Class<?>[] interfaces = new Class[] { graphObjectClass };
+            Class<?>[] interfaces = new Class[]{graphObjectClass};
             GraphObjectProxy graphObjectProxy = new GraphObjectProxy(state, graphObjectClass);
 
             @SuppressWarnings("unchecked")
@@ -276,7 +278,7 @@ public interface GraphObject {
         // If expectedType is a generic type, expectedTypeAsParameterizedType must be provided in order to determine
         // generic parameter types.
         static <U> U coerceValueToExpectedType(Object value, Class<U> expectedType,
-                ParameterizedType expectedTypeAsParameterizedType) {
+                                               ParameterizedType expectedTypeAsParameterizedType) {
             if (value == null) {
                 return null;
             }
@@ -577,9 +579,9 @@ public interface GraphObject {
                     } else if (Iterable.class.isAssignableFrom(value.getClass())) {
                         JSONArray jsonArray = new JSONArray();
                         Iterable<?> iterable = (Iterable<?>) value;
-                        for (Object o : iterable ) {
+                        for (Object o : iterable) {
                             if (GraphObject.class.isAssignableFrom(o.getClass())) {
-                                jsonArray.put(((GraphObject)o).getInnerJSONObject());
+                                jsonArray.put(((GraphObject) o).getInnerJSONObject());
                             } else {
                                 jsonArray.put(o);
                             }
@@ -685,7 +687,7 @@ public interface GraphObject {
                 if (GraphObject.class.isAssignableFrom(itemType)) {
                     if (graphObjectClass.isAssignableFrom(itemType)) {
                         @SuppressWarnings("unchecked")
-                        GraphObjectList<U> result = (GraphObjectList<U>)this;
+                        GraphObjectList<U> result = (GraphObjectList<U>) this;
                         return result;
                     }
 

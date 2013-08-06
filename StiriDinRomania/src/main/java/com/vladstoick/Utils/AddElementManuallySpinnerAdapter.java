@@ -21,21 +21,22 @@ import butterknife.Views;
 /**
  * Created by Vlad on 8/4/13.
  */
-public     class AddElementManuallySpinnerAdapter implements SpinnerAdapter {
+public class AddElementManuallySpinnerAdapter implements SpinnerAdapter {
     class RowHolder {
         @InjectView(R.id.spinner_title)
         TextView mTitle;
         @InjectView(R.id.spinner_image)
         ImageView mAddImage;
-        public RowHolder(View view)
-        {
+
+        public RowHolder(View view) {
             Views.inject(this, view);
         }
     }
+
     ArrayList<NewsGroup> newsGroups;
     Context context;
-    public AddElementManuallySpinnerAdapter(ArrayList<NewsGroup> newsGroups, Context context)
-    {
+
+    public AddElementManuallySpinnerAdapter(ArrayList<NewsGroup> newsGroups, Context context) {
         this.newsGroups = newsGroups;
         this.context = context;
     }
@@ -47,21 +48,18 @@ public     class AddElementManuallySpinnerAdapter implements SpinnerAdapter {
         RowHolder holder;
         final NewsGroup newsGroup;
         newsGroup = getItem(position);
-        if(row==null){
+        if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(R.layout.spinner_row_newsgroup_dropdown, parent, false);
             holder = new RowHolder(row);
             row.setTag(holder);
-        }
-        else
+        } else
             holder = (RowHolder) row.getTag();
         holder.mTitle.setText(newsGroup.getTitle());
-        if(position == getCount() - 1 )
-        {
+        if (position == getCount() - 1) {
             holder.mAddImage.setImageResource(R.drawable.content_new_dark);
             holder.mAddImage.setVisibility(View.VISIBLE);
-        }
-        else
+        } else
             holder.mAddImage.setVisibility(View.INVISIBLE);
         return row;
     }
@@ -78,15 +76,14 @@ public     class AddElementManuallySpinnerAdapter implements SpinnerAdapter {
 
     @Override
     public int getCount() {
-        return newsGroups.size() +1 ;
+        return newsGroups.size() + 1;
     }
 
     @Override
     public NewsGroup getItem(int position) {
-        if(position!= getCount() - 1)
+        if (position != getCount() - 1)
             return newsGroups.get(position);
-        else
-        {
+        else {
             NewsGroup newsGroup = new NewsGroup();
             newsGroup.setTitle(context.getString(R.string.new_group));
             return newsGroup;
@@ -95,7 +92,7 @@ public     class AddElementManuallySpinnerAdapter implements SpinnerAdapter {
 
     @Override
     public long getItemId(int position) {
-        if(position!= getCount() - 1)
+        if (position != getCount() - 1)
             return newsGroups.get(position).getId();
         return -1;
     }
@@ -111,13 +108,12 @@ public     class AddElementManuallySpinnerAdapter implements SpinnerAdapter {
         RowHolder holder;
         final NewsGroup newsGroup;
         newsGroup = getItem(position);
-        if(row==null){
+        if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(R.layout.spinner_row_newsgroup, parent, false);
             holder = new RowHolder(row);
             row.setTag(holder);
-        }
-        else
+        } else
             holder = (RowHolder) row.getTag();
         holder.mTitle.setText(newsGroup.getTitle());
         return row;

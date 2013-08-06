@@ -5,6 +5,7 @@
                 android:paddingBottom="@dimen/top_and_bottom_margin"
                 android:paddingTop="@dimen/top_and_bottom_margin"
                 android:layout_height="match_parent">
+
     <TextView
 
             android:text="@string/lorem_w_5"

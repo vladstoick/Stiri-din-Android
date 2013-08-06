@@ -18,6 +18,7 @@ package com.facebook.widget;
 
 import android.content.Context;
 import android.net.Uri;
+
 import com.facebook.internal.Validate;
 
 import java.net.MalformedURLException;
@@ -29,6 +30,7 @@ class ImageRequest {
         /**
          * This method should always be called on the UI thread. ImageDownloader makes
          * sure to do this when it is responsible for issuing the ImageResponse
+         *
          * @param response
          */
         void onCompleted(ImageResponse response);
@@ -53,7 +55,7 @@ class ImageRequest {
             String userId,
             int width,
             int height)
-        throws MalformedURLException {
+            throws MalformedURLException {
 
         Validate.notNullOrEmpty(userId, "userId");
 

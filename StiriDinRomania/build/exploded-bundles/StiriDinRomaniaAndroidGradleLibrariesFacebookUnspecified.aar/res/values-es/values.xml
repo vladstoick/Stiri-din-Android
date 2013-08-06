@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-es/strings.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-es\strings.xml -->
     <string name="com_facebook_loginfragment_log_in_button">Iniciar Sesión…</string>
     <string name="com_facebook_loginfragment_logged_in">Sesión iniciada</string>
     <string name="com_facebook_loginfragment_not_logged_in">No has iniciado sesión</string>

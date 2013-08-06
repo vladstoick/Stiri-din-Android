@@ -17,6 +17,7 @@
 package com.facebook.widget;
 
 import android.database.CursorIndexOutOfBoundsException;
+
 import com.facebook.model.GraphObject;
 
 import java.util.ArrayList;

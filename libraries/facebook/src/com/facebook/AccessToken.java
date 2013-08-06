@@ -19,6 +19,7 @@ package com.facebook;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+
 import com.facebook.internal.Utility;
 
 import java.io.InvalidObjectException;
@@ -99,7 +100,7 @@ final class AccessToken implements Serializable {
     }
 
     private static AccessToken createNew(List<String> requestedPermissions, Bundle bundle, AccessTokenSource source,
-            Date expirationBase) {
+                                         Date expirationBase) {
         String token = bundle.getString(ACCESS_TOKEN_KEY);
         Date expires = getExpiresInDate(bundle, expirationBase);
 
@@ -187,7 +188,7 @@ final class AccessToken implements Serializable {
         private final Date lastRefresh;
 
         private SerializationProxyV1(String token, Date expires,
-                List<String> permissions, AccessTokenSource source, Date lastRefresh) {
+                                     List<String> permissions, AccessTokenSource source, Date lastRefresh) {
             this.expires = expires;
             this.permissions = permissions;
             this.token = token;

@@ -13,9 +13,10 @@ import com.vladstoick.stiridinromania.R;
  */
 public class NoConnectionDialogFragment extends SherlockDialogFragment {
     public static String TAG = "NoConnectionDialogFragment";
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new  AlertDialog.Builder(getSherlockActivity()).
+        AlertDialog.Builder builder = new AlertDialog.Builder(getSherlockActivity()).
                 setTitle(getString(R.string.nointernet))
                 .setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                     @Override

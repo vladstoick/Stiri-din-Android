@@ -22,7 +22,7 @@ import java.util.ArrayList;
  * also supports tablet devices by allowing list items to be given an
  * 'activated' state upon selection. This helps indicate which item is
  * currently being viewed in a {@link NewsGroupDetailFragmentaa}.
- * <p>
+ * <p/>
  * Activities containing this fragment MUST implement the {@link Callbacks}
  * interface.
  */
@@ -30,11 +30,13 @@ public class NewsGroupListFragment extends SherlockListFragment {
     private AllGroupsFragmentAdapter adapter;
     private ArrayList<NewsGroup> newsDataSource;
     private static final String STATE_ACTIVATED_POSITION = "activated_position";
-    private Callbacks mCallbacks ;
+    private Callbacks mCallbacks;
     private int mActivatedPosition = ListView.INVALID_POSITION;
+
     public interface Callbacks {
         public void onItemSelected(int id);
     }
+
     public NewsGroupListFragment() {
     }
 
@@ -43,8 +45,9 @@ public class NewsGroupListFragment extends SherlockListFragment {
         super.onCreate(savedInstanceState);
         BusProvider.getInstance().register(this);
     }
+
     private void setAdapter() {
-        newsDataSource = ((StiriApp)(getSherlockActivity().getApplication())).newsDataSource
+        newsDataSource = ((StiriApp) (getSherlockActivity().getApplication())).newsDataSource
                 .getAllNewsGroups();
         Context context = getSherlockActivity();
         if (newsDataSource != null) {
@@ -53,6 +56,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
             setListAdapter(adapter);
         }
     }
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -76,7 +80,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        mCallbacks = null ;
+        mCallbacks = null;
         BusProvider.getInstance().unregister(this);
     }
 
@@ -93,6 +97,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
             outState.putInt(STATE_ACTIVATED_POSITION, mActivatedPosition);
         }
     }
+
     public void setActivateOnItemClick(boolean activateOnItemClick) {
         getListView().setChoiceMode(activateOnItemClick
                 ? ListView.CHOICE_MODE_SINGLE
@@ -107,9 +112,9 @@ public class NewsGroupListFragment extends SherlockListFragment {
         }
         mActivatedPosition = position;
     }
+
     @Subscribe
-    public void onDataLoaded(DataLoadedEvent event)
-    {
+    public void onDataLoaded(DataLoadedEvent event) {
         setAdapter();
     }
 }

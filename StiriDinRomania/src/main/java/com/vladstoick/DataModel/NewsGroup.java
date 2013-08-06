@@ -3,6 +3,7 @@ package com.vladstoick.DataModel;
 import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import java.util.ArrayList;
 
 /**
@@ -38,16 +39,17 @@ public class NewsGroup implements Parcelable {
     public int getId() {
         return id;
     }
-    public NewsGroup(Cursor cursor)
-    {
+
+    public NewsGroup(Cursor cursor) {
         this.id = cursor.getInt(0);
         this.title = cursor.getString(1);
         this.noFeeds = cursor.getInt(2);
     }
-    public NewsGroup()
-    {
+
+    public NewsGroup() {
         newsSources = new ArrayList<NewsSource>();
     }
+
     public NewsGroup(String title, int id) {
         this.title = title;
         this.id = id;
@@ -71,6 +73,7 @@ public class NewsGroup implements Parcelable {
         this.title = in.readString();
         in.readTypedList(newsSources, NewsSource.CREATOR);
     }
+
     public static final Parcelable.Creator<NewsGroup> CREATOR
             = new Parcelable.Creator<NewsGroup>() {
         public NewsGroup createFromParcel(Parcel in) {

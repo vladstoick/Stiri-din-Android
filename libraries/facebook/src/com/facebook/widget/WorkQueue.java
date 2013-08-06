@@ -215,7 +215,9 @@ class WorkQueue {
 
     interface WorkItem {
         boolean cancel();
+
         boolean isRunning();
+
         void moveToFront();
     }
 }

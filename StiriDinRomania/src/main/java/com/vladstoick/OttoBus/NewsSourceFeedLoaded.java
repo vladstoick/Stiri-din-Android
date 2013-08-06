@@ -10,8 +10,8 @@ import java.util.ArrayList;
  */
 public class NewsSourceFeedLoaded {
     public NewsSource ns;
-    public NewsSourceFeedLoaded(NewsSource ns)
-    {
-        this.ns=ns;
+
+    public NewsSourceFeedLoaded(NewsSource ns) {
+        this.ns = ns;
     }
 }

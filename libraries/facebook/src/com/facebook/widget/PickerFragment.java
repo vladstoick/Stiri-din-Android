@@ -32,6 +32,7 @@ import android.view.ViewGroup;
 import android.view.ViewStub;
 import android.view.animation.AlphaAnimation;
 import android.widget.*;
+
 import com.facebook.*;
 import com.facebook.android.R;
 import com.facebook.model.GraphObject;
@@ -818,7 +819,7 @@ public abstract class PickerFragment<T extends GraphObject> extends Fragment {
 
                         @Override
                         public void onLoadFinished(Loader<SimpleGraphObjectCursor<T>> loader,
-                                SimpleGraphObjectCursor<T> data) {
+                                                   SimpleGraphObjectCursor<T> data) {
                             if (loader != LoadingStrategy.this.loader) {
                                 throw new FacebookException("Received callback for unknown loader.");
                             }

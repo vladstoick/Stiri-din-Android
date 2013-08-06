@@ -25,8 +25,10 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
+
 import com.facebook.FacebookException;
 import com.facebook.Session;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -140,7 +142,7 @@ public final class Utility {
 
     public static void disconnectQuietly(URLConnection connection) {
         if (connection instanceof HttpURLConnection) {
-            ((HttpURLConnection)connection).disconnect();
+            ((HttpURLConnection) connection).disconnect();
         }
     }
 

@@ -45,6 +45,7 @@ public class FacebookDialogException extends FacebookException {
 
     /**
      * Gets the URL that the dialog was trying to load.
+     *
      * @return the URL
      */
     public String getFailingUrl() {

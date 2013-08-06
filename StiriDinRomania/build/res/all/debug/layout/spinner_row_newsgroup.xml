@@ -7,9 +7,9 @@
               android:layout_height="match_parent">
     <TextView
             android:textSize="@dimen/medium_font"
-        android:text="@string/lorem_w_5"
-        android:id="@+id/spinner_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            android:text="@string/lorem_w_5"
+            android:id="@+id/spinner_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-</LinearLayout><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/layout/spinner_row_newsgroup.xml -->
+</LinearLayout><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\spinner_row_newsgroup.xml -->
