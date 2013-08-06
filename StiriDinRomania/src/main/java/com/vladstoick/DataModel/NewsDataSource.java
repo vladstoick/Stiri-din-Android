@@ -142,6 +142,7 @@ public class NewsDataSource{
                 newsSource.setGroupId(groupId);
                 sqlHelper.insertNewsSourceInDb(newsSource);
                 getNewsSourceItems(newsSource);
+                sqlHelper.updateNewsGroup(groupId);
             }
         });
     }
