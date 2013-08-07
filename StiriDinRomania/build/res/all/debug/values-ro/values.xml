@@ -37,6 +37,7 @@
     <string name="feeds">Feeduri</string>
     <string name="group">Grup</string>
     <string name="groups">Grupuri</string>
+    <string name="loading">Se încarcă</string>
     <string name="login_facebook">Loghează-te cu Facebook</string>
     <string name="login_message">Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale</string>

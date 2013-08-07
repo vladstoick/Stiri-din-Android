@@ -8976,6 +8976,8 @@ center
                 </string>
                 <string name="rename" >Rename
                 </string>
+                <string name="loading" >Loading
+                </string>
                 <string name="see_full_article" >Web Page
                 </string>
                 <string name="cancel" >Cancel
@@ -9009,9 +9011,9 @@ center
                 </string>
                 <string name="add_element_feed_rss" >The rss address of the feed
                 </string>
-                <string name="logout" >Log out
-                </string>
                 <string name="group" >Group
+                </string>
+                <string name="logout" >Log out
                 </string>
                 <string name="feeds" >Feeds
                 </string>
@@ -9144,6 +9146,8 @@ center
                 </string>
                 <string name="all_groups_title" >Gruprile tale
                 </string>
+                <string name="loading" >Se încarcă
+                </string>
                 <string name="group" >Grup
                 </string>
                 <string name="feed" >Feed
@@ -9154,9 +9158,9 @@ center
                 </string>
                 <string name="new_group" >Adaugă un grup nou
                 </string>
-                <string name="manual" >Manual
-                </string>
                 <string name="cancel" >Anulează
+                </string>
+                <string name="manual" >Manual
                 </string>
                 <string name="login_message" >Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale

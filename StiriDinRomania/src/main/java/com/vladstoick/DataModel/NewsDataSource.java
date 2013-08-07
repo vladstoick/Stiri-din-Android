@@ -18,6 +18,7 @@ import com.loopj.android.http.RequestParams;
 import com.squareup.otto.Subscribe;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
+import com.vladstoick.OttoBus.NewsItemLoadedEvent;
 import com.vladstoick.sql.SqlHelper;
 import com.vladstoick.stiridinromania.StiriApp;
 
@@ -189,9 +190,10 @@ public class NewsDataSource {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         try {
-                            updateNewsItem(jsonObject.getString("url"), jsonObject.getString("response"));
+                            String url = jsonObject.getString("url");
+                            updateNewsItem(url,jsonObject.getString("response"));
                             BusProvider.getInstance().post(
-                                    new DataLoadedEvent(DataLoadedEvent.TAG_NEWSITEM));
+                                    new NewsItemLoadedEvent(getNewsItem(url)));
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -216,6 +218,10 @@ public class NewsDataSource {
 
     public NewsSource getNewsSource(int id) {
         return sqlHelper.getNewsSource(id);
+    }
+
+    public NewsItem getNewsItem(String url){
+        return  sqlHelper.getNewsItem(url);
     }
 
     public void updateNewsItem(String url, String paperized) {

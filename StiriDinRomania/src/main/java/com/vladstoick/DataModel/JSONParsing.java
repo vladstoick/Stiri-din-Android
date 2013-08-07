@@ -84,9 +84,8 @@ public class JSONParsing {
         }
     }
 
-    public static int parseServerLogin(String response, SharedPreferences.Editor editor){
+    public static int parseServerLogin(JSONObject jsonObject , SharedPreferences.Editor editor){
         try{
-            JSONObject jsonObject = new JSONObject(response);
             int userId = jsonObject.getInt("id");
             editor.putInt("user_id", userId);
             editor.commit();

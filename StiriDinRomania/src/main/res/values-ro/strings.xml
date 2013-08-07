@@ -17,6 +17,7 @@
     <string name="delete_dialog_fragment_title">Vrei să ștergi acest element?</string>
     <string name="delete_dialog_fragment_message">Ești sigur?</string>
     <!--GENERAL-->
+    <string name="loading">Se încarcă</string>
     <string name="nointernet">Nu aveți internet</string>
     <string name="delete">Șterge</string>
     <string name="rename">Redenumește</string>

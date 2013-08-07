@@ -108,6 +108,14 @@ public class SqlHelper extends SQLiteOpenHelper {
         return ng;
     }
 
+    public NewsItem getNewsItem(String url){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
+                SqlHelper.COLUMN_URL + " = \"" + url +"\"", null, null, null, null, null);
+        cursor.moveToFirst();
+        NewsItem ni = new NewsItem(cursor);
+        return ni;
+    }
     //SQLITE Helper
     public void insertNewsGroupInDb(NewsGroup ng) {
         ContentValues values = new ContentValues();
@@ -149,9 +157,14 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     public void updateNewsItem(String url, String paperized) {
         ContentValues values = new ContentValues();
-        values.put(SqlHelper.COLUMN_DESCRIPTION, url);
+        values.put(SqlHelper.COLUMN_DESCRIPTION, paperized);
         SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
-        sqlLiteDatabase.update(NEWSITEMS_TABLE, values, COLUMN_URL + " = " + url, null);
+        try{
+            sqlLiteDatabase.update(NEWSITEMS_TABLE, values, COLUMN_URL + " = \"" + url + "\"",
+                    null);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void deleteAllNewsGroupsAndNewsSources() {

@@ -12,8 +12,12 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsItem;
+import com.vladstoick.OttoBus.BusProvider;
+import com.vladstoick.OttoBus.NewsItemLoadedEvent;
 import com.vladstoick.stiridinromania.R;
+import com.vladstoick.stiridinromania.StiriApp;
 
 import butterknife.InjectView;
 import butterknife.Views;
@@ -56,15 +60,28 @@ public class NewsItemDetailFragment extends SherlockFragment {
         outState.putInt(ARG_MODE, isInMode);
     }
 
+    @Subscribe public void onItemViewLoaded(NewsItemLoadedEvent event){
+        if(mItem.getUrlLink().equals(event.ni.getUrlLink()) ){
+            mItem = event.ni;
+            mWebView.loadData(mItem.getDescription(), "text/html; charset=utf-8", null);
+        }
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_newsitem_detail, container, false);
         Views.inject(this, rootView);
-
         if (mItem != null) {
             mTitle.setText(mItem.getTitle());
-            mWebView.loadData(mItem.getDescription(), "text/html; charset=utf-8", null);
+            if(!mItem.getDescription().equals("null")){
+                mWebView.loadData(mItem.getDescription(), "text/html; charset=utf-8", null);
+            } else {
+                BusProvider.getInstance().register(this);
+                mWebView.loadData(getString(R.string.loading), "text/html; charset=utf-8", null);
+                ((StiriApp)(getSherlockActivity().getApplication())).newsDataSource
+                        .getNewsItemPaperized(mItem);
+            }
             mWebView.setWebViewClient(new WebViewClient());
         }
         return rootView;

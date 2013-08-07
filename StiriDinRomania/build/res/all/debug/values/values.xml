@@ -661,6 +661,7 @@
     <string name="feeds">Feeds</string>
     <string name="group">Group</string>
     <string name="groups">Groups</string>
+    <string name="loading">Loading</string>
     <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values\strings.xml -->
     <string name="location_client_ulr_inactive_age_under_13" translatable="false">        AgeUnder13</string>
     <string name="location_client_ulr_inactive_age_unknown" translatable="false">AgeUnknown</string>
