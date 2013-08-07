@@ -45,26 +45,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce4bd01f-0e24-4761-9107-6fc7ef347aeb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/LoginRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/OttoBus/NewsItemLoadedEvent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/volley" afterPath="$PROJECT_DIR$/libraries/volley" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/facebook/android/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/google/android/gms/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/vladstoick/stiridinromania/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/vladstoick/stiridinromania/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/LoginRequest.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/LoginRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/Utils.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/values-ro/strings.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/values-ro/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ro/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ro/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StiriDinRomaniaAndroidGradle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,6 +149,36 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" line="132" class="com.vladstoick.stiridinromania.LoginActivity$1$1" package="com.vladstoick.stiridinromania">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/LoginRequest.java" line="29" class="com.vladstoick.Utils.LoginRequest" package="com.vladstoick.Utils">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -198,17 +212,26 @@
       <file leaf-file-name="LoginActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="68" selection-start="4244" selection-end="4244" vertical-scroll-proportion="0.3956422" vertical-offset="1236" max-vertical-offset="2414">
+            <state line="151" column="16" selection-start="5722" selection-end="5722" vertical-scroll-proportion="1.9747707" vertical-offset="352" max-vertical-offset="2448">
               <folding>
-                <element signature="e#4124#5249#0" expanded="true" />
-                <element signature="e#4645#4942#0" expanded="true" />
-                <element signature="e#4919#4920#0" expanded="true" />
-                <element signature="e#4944#5217#0" expanded="true" />
-                <element signature="e#5194#5195#0" expanded="true" />
-                <element signature="e#5242#5243#0" expanded="true" />
-                <element signature="e#5296#5862#0" expanded="true" />
-                <element signature="e#5855#5856#0" expanded="true" />
+                <element signature="e#4121#5345#0" expanded="true" />
+                <element signature="e#4642#4992#0" expanded="true" />
+                <element signature="e#4969#4970#0" expanded="true" />
+                <element signature="e#4994#5267#0" expanded="true" />
+                <element signature="e#5244#5245#0" expanded="true" />
+                <element signature="e#5338#5339#0" expanded="true" />
+                <element signature="e#5392#5951#0" expanded="true" />
+                <element signature="e#5944#5945#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="URLEncoder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/CLI/android-sdk/sources/android-17/java/net/URLEncoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="0" selection-start="2045" selection-end="2045" vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="799">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -216,7 +239,7 @@
       <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+            <state line="25" column="5" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -225,9 +248,10 @@
       <file leaf-file-name="LoginRequest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/LoginRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="31" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="1224">
+            <state line="29" column="0" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="1241">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#589#605#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -236,7 +260,7 @@
       <file leaf-file-name="JSONParsing.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="12" selection-start="3129" selection-end="3129" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1666">
+            <state line="88" column="12" selection-start="3129" selection-end="3129" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1666">
               <folding />
             </state>
           </provider>
@@ -337,9 +361,9 @@
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemDetailFragment.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/Utils.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/LoginRequest.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java" />
       </list>
     </option>
@@ -1204,7 +1228,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22329059" sideWeight="0.6714922" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="51" y="605" width="1874" height="359" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.28619152" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1216,7 +1240,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6726058" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6714922" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739422" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1314,13 +1338,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsItemListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2652">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/values-ro/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="37" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
@@ -1396,29 +1413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="31" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="1224">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="12" selection-start="3129" selection-end="3129" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_login.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1433,18 +1427,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="5" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/JSONParsing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="12" selection-start="3129" selection-end="3129" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/CLI/android-sdk/sources/android-17/java/net/URLEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="2045" selection-end="2045" vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/LoginRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="1241">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#589#605#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="68" selection-start="4244" selection-end="4244" vertical-scroll-proportion="0.3956422" vertical-offset="1236" max-vertical-offset="2414">
+        <state line="151" column="16" selection-start="5722" selection-end="5722" vertical-scroll-proportion="1.9747707" vertical-offset="352" max-vertical-offset="2448">
           <folding>
-            <element signature="e#4124#5249#0" expanded="true" />
-            <element signature="e#4645#4942#0" expanded="true" />
-            <element signature="e#4919#4920#0" expanded="true" />
-            <element signature="e#4944#5217#0" expanded="true" />
-            <element signature="e#5194#5195#0" expanded="true" />
-            <element signature="e#5242#5243#0" expanded="true" />
-            <element signature="e#5296#5862#0" expanded="true" />
-            <element signature="e#5855#5856#0" expanded="true" />
+            <element signature="e#4121#5345#0" expanded="true" />
+            <element signature="e#4642#4992#0" expanded="true" />
+            <element signature="e#4969#4970#0" expanded="true" />
+            <element signature="e#4994#5267#0" expanded="true" />
+            <element signature="e#5244#5245#0" expanded="true" />
+            <element signature="e#5338#5339#0" expanded="true" />
+            <element signature="e#5392#5951#0" expanded="true" />
+            <element signature="e#5944#5945#0" expanded="true" />
           </folding>
         </state>
       </provider>

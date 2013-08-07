@@ -11,14 +11,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.Map;
 
 
 /**
  * Created by Vlad on 8/7/13.
  */
-public class LoginRequest extends Request<JSONObject> {
-    private Map<String, String> params;
+public class LoginRequest<T> extends Request<JSONObject> {
+    private Map<String, String> params = new HashMap<String, String>();
     private Response.Listener listener;
     public static final String TAG_FB = "facebook";
     public static final String TAG_G = "google";

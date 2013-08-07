@@ -54,7 +54,7 @@ public class LoginActivity extends SherlockFragmentActivity implements View.OnCl
                 .build();
         mConnectionProgressDialog = new ProgressDialog(this);
         SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
-        if (settings.getString("user_id_fb", null) != null) {
+        if (settings.getString("user_id", null) != null) {
             userId = settings.getInt("user_id", 0);
             gotoAllGroupsActivity();
         }
@@ -131,6 +131,7 @@ public class LoginActivity extends SherlockFragmentActivity implements View.OnCl
                         @Override
                         public void onResponse(JSONObject jsonObject) {
                             userId = JSONParsing.parseServerLogin(jsonObject, editor);
+                            gotoAllGroupsActivity();
                         }
                     }, new com.android.volley.Response.ErrorListener() {
                         @Override
@@ -139,6 +140,7 @@ public class LoginActivity extends SherlockFragmentActivity implements View.OnCl
                         }
                     }
              );
+            StiriApp.queue.add(loginRequest);
         }
     };
     Session.StatusCallback sessionCallback = new Session.StatusCallback() {
@@ -147,7 +149,7 @@ public class LoginActivity extends SherlockFragmentActivity implements View.OnCl
             if (session.isOpened()) {
                 final SharedPreferences.Editor editor =
                         getSharedPreferences("appPref", Context.MODE_PRIVATE).edit();
-                String token = session.getAccessToken();
+                token = session.getAccessToken();
                 editor.putString("user_token_fb", token);
                 editor.commit();
                 Request.executeMeRequestAsync(session, graphUserCallback);
