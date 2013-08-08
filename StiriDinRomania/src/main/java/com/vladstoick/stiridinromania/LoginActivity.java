@@ -41,7 +41,7 @@ public class LoginActivity extends SherlockFragmentActivity
         GooglePlayServicesClient.OnConnectionFailedListener {
     private int userId = 0;
     public String token;
-
+    ProgressDialog pd;
     public static final String TAG = "LOGIN";
     private static final int REQUEST_CODE_RESOLVE_ERR = 9000;
     private ProgressDialog mConnectionProgressDialog;
@@ -49,6 +49,8 @@ public class LoginActivity extends SherlockFragmentActivity
     private ConnectionResult mConnectionResult;
 
     public void onCreate(Bundle savedInstanceState) {
+        pd = new ProgressDialog(this);
+        pd.setMessage(getString(R.string.loading));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         LoginButton fbLoginButton = (LoginButton) findViewById(R.id.login_facebook);
@@ -135,6 +137,7 @@ public class LoginActivity extends SherlockFragmentActivity
                     new com.android.volley.Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject jsonObject) {
+                            pd.dismiss();
                             userId = JSONParsing.parseServerLogin(jsonObject, editor);
                             gotoAllGroupsActivity();
                         }
@@ -151,6 +154,7 @@ public class LoginActivity extends SherlockFragmentActivity
     @Override
     public void call(Session session, SessionState state, Exception exception) {
         if (session.isOpened()) {
+            pd.show();
             final SharedPreferences.Editor editor =
                     getSharedPreferences("appPref", Context.MODE_PRIVATE).edit();
             token = session.getAccessToken();
