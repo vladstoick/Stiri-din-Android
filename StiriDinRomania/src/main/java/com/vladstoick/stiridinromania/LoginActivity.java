@@ -32,6 +32,9 @@ import com.vladstoick.Utils.LoginRequest;
 
 import org.json.JSONObject;
 
+import butterknife.InjectView;
+import butterknife.Views;
+
 /**
  * Created by vlad on 7/17/13.
  */
@@ -42,26 +45,27 @@ public class LoginActivity extends SherlockFragmentActivity
     private int userId = 0;
     public String token;
     ProgressDialog pd;
-    public static final String TAG = "LOGIN";
     private static final int REQUEST_CODE_RESOLVE_ERR = 9000;
     private ProgressDialog mConnectionProgressDialog;
     private PlusClient mPlusClient;
     private ConnectionResult mConnectionResult;
 
     public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
         pd = new ProgressDialog(this);
         pd.setMessage(getString(R.string.loading));
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         LoginButton fbLoginButton = (LoginButton) findViewById(R.id.login_facebook);
         fbLoginButton.setSessionStatusCallback(this);
         findViewById(R.id.login_google).setOnClickListener(this);
         mPlusClient = new PlusClient.Builder(this, this, this)
-                .setVisibleActivities("http://schemas.google.com/AddActivity", "http://schemas.google.com/BuyActivity")
+                .setVisibleActivities("http://schemas.google.com/AddActivity",
+                        "http://schemas.google.com/BuyActivity")
                 .build();
         mConnectionProgressDialog = new ProgressDialog(this);
         SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
-        if (settings.getString("user_id", null) != null) {
+        if (settings.getInt("user_id", 0) != 0) {
             userId = settings.getInt("user_id", 0);
             gotoAllGroupsActivity();
         }
