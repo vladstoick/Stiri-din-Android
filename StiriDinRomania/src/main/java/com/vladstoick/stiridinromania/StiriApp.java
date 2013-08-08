@@ -7,7 +7,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 
-
+import com.newrelic.agent.android.NewRelic;
 import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.OttoBus.BusProvider;
 
@@ -24,9 +24,9 @@ public class StiriApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-//        NewRelic.withApplicationToken(
-//                "AAda1a6278e5ef8e4349079aa07d6b5039aaa395a0"
-//        ).start(this);
+        NewRelic.withApplicationToken(
+                "AAda1a6278e5ef8e4349079aa07d6b5039aaa395a0"
+        ).start(this);
         BusProvider.getInstance().register(this);
         queue = Volley.newRequestQueue(this);
 
