@@ -36,6 +36,7 @@ import com.loopj.android.http.RequestParams;
 import com.vladstoick.DataModel.JSONParsing;
 import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.Utils.LoginRequest;
+import com.vladstoick.Utils.Tags;
 
 import org.json.JSONObject;
 
@@ -63,7 +64,9 @@ public class LoginActivity extends SherlockFragmentActivity
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
-        if (settings.getInt("user_id", 0) != 0) gotoAllGroupsActivity();
+        if (settings.getInt("user_id", 0) != 0){
+            gotoAllGroupsActivity();
+        }
         getSupportActionBar().hide();
         pd = new ProgressDialog(this);
         pd.setCancelable(false);
@@ -75,6 +78,8 @@ public class LoginActivity extends SherlockFragmentActivity
         mPlusClient = new PlusClient.Builder(this, this, this)
                 .setVisibleActivities(null)
                 .build();
+        if(mConnectionResult !=null)
+            mPlusClient.clearDefaultAccount();
     }
 
     @Override

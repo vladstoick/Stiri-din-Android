@@ -9,4 +9,5 @@ public class Tags {
     public static String NEWSOURCE_TAG = "NS";
     public static String NEWSOURCE_TAG_ID = "NS_ID";
     public static String NEWSDATASOURCE_TAG = "NDS";
+    public static String LOGOUT_TAG = "LOGOUT";
 }

@@ -1,6 +1,8 @@
 package com.vladstoick.stiridinromania;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -103,6 +105,14 @@ public class NewsGroupListActivity extends SherlockFragmentActivity
                 Intent intent = new Intent(this, AddElementAcitvitiy.class);
                 startActivity(intent);
                 break;
+            }
+            case R.id.action_logout:{
+                SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
+                settings.edit().remove("user_id").commit();
+                ((StiriApp)getApplication()).newsDataSource = null;
+                Intent intent = new Intent(this,LoginActivity.class);
+                intent.putExtra(Tags.LOGOUT_TAG,true);
+                startActivity(intent);
             }
         }
         return super.onOptionsItemSelected(item);
