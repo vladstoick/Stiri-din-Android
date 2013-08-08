@@ -29,7 +29,7 @@
     <string name="group">Group</string>
     <string name="groups">Groups</string>
     <string name="app_id">498421953559265</string>
-    <string name="app_name">News from Romania</string>
+    <string name="app_name">News from</string>
     <string name="action_settings">Settings</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
@@ -38,8 +38,6 @@
     <!-- LOGIN ACTIVITY -->
     <string name="login_facebook">Login with Facebook</string>
     <string name="login_microsoft">Login with Microsoft</string>
-    <string name="login_message">News from Romania uses your name in order to sync your news across
-        all devices
-    </string>
+    <string name="login_message">We use your name in order to sync your news across all devices</string>
     <string name="logout">Log out</string>
 </resources>

@@ -7,9 +7,12 @@ import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.android.volley.VolleyError;
@@ -19,8 +22,12 @@ import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
+import com.google.android.gms.auth.GoogleAuthException;
+import com.google.android.gms.auth.GoogleAuthUtil;
+import com.google.android.gms.auth.UserRecoverableAuthException;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
+import com.google.android.gms.common.Scopes;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.plus.PlusClient;
 import com.loopj.android.http.AsyncHttpClient;
@@ -31,6 +38,10 @@ import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.Utils.LoginRequest;
 
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import butterknife.InjectView;
 import butterknife.Views;
@@ -46,57 +57,39 @@ public class LoginActivity extends SherlockFragmentActivity
     public String token;
     ProgressDialog pd;
     private static final int REQUEST_CODE_RESOLVE_ERR = 9000;
-    private ProgressDialog mConnectionProgressDialog;
     private PlusClient mPlusClient;
     private ConnectionResult mConnectionResult;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
+        if (settings.getInt("user_id", 0) != 0) gotoAllGroupsActivity();
+        getSupportActionBar().hide();
         pd = new ProgressDialog(this);
+        pd.setCancelable(false);
         pd.setMessage(getString(R.string.loading));
         setContentView(R.layout.activity_login);
         LoginButton fbLoginButton = (LoginButton) findViewById(R.id.login_facebook);
         fbLoginButton.setSessionStatusCallback(this);
         findViewById(R.id.login_google).setOnClickListener(this);
         mPlusClient = new PlusClient.Builder(this, this, this)
-                .setVisibleActivities("http://schemas.google.com/AddActivity",
-                        "http://schemas.google.com/BuyActivity")
+                .setVisibleActivities(null)
                 .build();
-        mConnectionProgressDialog = new ProgressDialog(this);
-        SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
-        if (settings.getInt("user_id", 0) != 0) {
-            userId = settings.getInt("user_id", 0);
-            gotoAllGroupsActivity();
-        }
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-//            case R.id.login_facebook:
-//                facebookLogin();
-//                break;
             case R.id.login_google:
                 googleLogin();
                 break;
         }
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_RESOLVE_ERR && resultCode == RESULT_OK) {
-            mConnectionResult = null;
-            mPlusClient.connect();
-        } else {
-            Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
-        }
-    }
-
     public void googleLogin() {
         if (mConnectionResult == null) {
-            mConnectionProgressDialog.show();
+            pd.show();
+            mPlusClient.connect();
         } else {
             try {
                 mConnectionResult.startResolutionForResult(this, REQUEST_CODE_RESOLVE_ERR);
@@ -109,25 +102,88 @@ public class LoginActivity extends SherlockFragmentActivity
     }
 
     @Override
-    public void onConnected(Bundle bundle) {
-        gotoAllGroupsActivity();
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data == null )
+            return;
+        if (requestCode == REQUEST_CODE_RESOLVE_ERR && resultCode == RESULT_OK) {
+            mConnectionResult = null;
+            mPlusClient.connect();
+        } else {
+            Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
+        }
     }
 
+    @Override
+    public void onConnected(Bundle bundle) {
+        final String gUserId= mPlusClient.getCurrentPerson().getId();
+        final SharedPreferences.Editor editor =
+                getSharedPreferences("appPref", Context.MODE_PRIVATE).edit();
+        editor.putString("user_id_google", gUserId);
+        editor.commit();
+        AsyncTask<Void, Void, String> task = new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... params) {
+                try {
+                    token = GoogleAuthUtil.getToken(getApplicationContext(),
+                            mPlusClient.getAccountName(),
+                            "oauth2:" + Scopes.PLUS_LOGIN);
+                    return token;
+                } catch (Exception e){
+                    e.printStackTrace();
+                    return null;
+                }
+            }
+            @Override
+            protected void onPostExecute(String token) {
+                super.onPostExecute(token);
+                LoginRequest loginRequest =
+                        new LoginRequest(LoginRequest.TAG_G, token,gUserId,
+                                new com.android.volley.Response.Listener<JSONObject>() {
+                                    @Override
+                                    public void onResponse(JSONObject jsonObject) {
+                                        pd.dismiss();
+                                        userId = JSONParsing.parseServerLogin(jsonObject, editor);
+                                        gotoAllGroupsActivity();
+                                    }
+                                }, new com.android.volley.Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError volleyError) {
+                                volleyError.printStackTrace();
+                            }
+                        }
+                        );
+                StiriApp.queue.add(loginRequest);
+            }
+        };
+        task.execute();
+    }
     @Override
     public void onDisconnected() {
 
     }
 
     @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
+    public void onConnectionFailed(ConnectionResult result) {
+        if (pd.isShowing()) {
+            // The user clicked the sign-in button already. Start to resolve
+            // connection errors. Wait until onConnected() to dismiss the
+            // connection dialog.
+            if (result.hasResolution()) {
+                try {
+                    result.startResolutionForResult(this, REQUEST_CODE_RESOLVE_ERR);
+                } catch (IntentSender.SendIntentException e) {
+                    mPlusClient.connect();
+                }
+            }
+        }
 
+        // Save the intent so that we can start an activity when the user clicks
+        // the sign-in button.
+        mConnectionResult = result;
     }
 
     //FACEBOOK LOGIN
-
-    public void facebookLogin() {
-        Session.openActiveSession(this, true, sessionCallback);
-    }
 
     Request.GraphUserCallback graphUserCallback = new Request.GraphUserCallback() {
         @Override
@@ -167,12 +223,7 @@ public class LoginActivity extends SherlockFragmentActivity
             Request.executeMeRequestAsync(session, graphUserCallback);
         }
     }
-    Session.StatusCallback sessionCallback = new Session.StatusCallback() {
-        @Override
-        public void call(Session session, SessionState state, Exception exception) {
 
-        }
-    };
 
     //GENERAL
     private void gotoAllGroupsActivity() {
