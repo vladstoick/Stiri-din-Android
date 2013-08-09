@@ -111,7 +111,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     public NewsItem getNewsItem(String url){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
-                SqlHelper.COLUMN_URL + " = \"" + url +"\"", null, null, null, null, null);
+                SqlHelper.COLUMN_URL + " = \'" + url +"\'", null, null, null, null, null);
         cursor.moveToFirst();
         NewsItem ni = new NewsItem(cursor);
         return ni;
