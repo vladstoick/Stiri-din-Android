@@ -109,7 +109,6 @@ public class NewsGroupListActivity extends SherlockFragmentActivity
             case R.id.action_logout:{
                 SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
                 settings.edit().remove("user_id").commit();
-                ((StiriApp)getApplication()).newsDataSource = null;
                 Intent intent = new Intent(this,LoginActivity.class);
                 intent.putExtra(Tags.LOGOUT_TAG,true);
                 startActivity(intent);

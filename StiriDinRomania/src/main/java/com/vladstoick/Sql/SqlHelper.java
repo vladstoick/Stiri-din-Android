@@ -160,7 +160,7 @@ public class SqlHelper extends SQLiteOpenHelper {
         values.put(SqlHelper.COLUMN_DESCRIPTION, paperized);
         SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
         try{
-            sqlLiteDatabase.update(NEWSITEMS_TABLE, values, COLUMN_URL + " = \"" + url + "\"",
+            sqlLiteDatabase.update(NEWSITEMS_TABLE, values, COLUMN_URL + " =  '" + url+ "'" ,
                     null);
         }catch (Exception e){
             e.printStackTrace();

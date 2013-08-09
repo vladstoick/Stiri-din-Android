@@ -51,7 +51,6 @@ public class NewsGroupListFragment extends SherlockListFragment {
                 .getAllNewsGroups();
         Context context = getSherlockActivity();
         if (newsDataSource != null) {
-
             adapter = new AllGroupsFragmentAdapter(newsDataSource, context);
             setListAdapter(adapter);
         }

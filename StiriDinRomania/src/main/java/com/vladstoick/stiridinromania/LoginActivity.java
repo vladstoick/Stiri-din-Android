@@ -65,8 +65,12 @@ public class LoginActivity extends SherlockFragmentActivity
         super.onCreate(savedInstanceState);
         SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
         if (settings.getInt("user_id", 0) != 0){
+            ((StiriApp)getApplication()).newsDataSource =
+                    new NewsDataSource(settings.getInt("user_id", 0),getApplication());
             gotoAllGroupsActivity();
+            return;
         }
+        ((StiriApp)getApplication()).newsDataSource = null;
         getSupportActionBar().hide();
         pd = new ProgressDialog(this);
         pd.setCancelable(false);
@@ -80,6 +84,7 @@ public class LoginActivity extends SherlockFragmentActivity
                 .build();
         if(mConnectionResult !=null)
             mPlusClient.clearDefaultAccount();
+
     }
 
     @Override
@@ -149,6 +154,8 @@ public class LoginActivity extends SherlockFragmentActivity
                                     public void onResponse(JSONObject jsonObject) {
                                         pd.dismiss();
                                         userId = JSONParsing.parseServerLogin(jsonObject, editor);
+                                        ((StiriApp)getApplication()).newsDataSource =
+                                                new NewsDataSource(userId,getApplication());
                                         gotoAllGroupsActivity();
                                     }
                                 }, new com.android.volley.Response.ErrorListener() {
@@ -204,6 +211,8 @@ public class LoginActivity extends SherlockFragmentActivity
                         public void onResponse(JSONObject jsonObject) {
                             pd.dismiss();
                             userId = JSONParsing.parseServerLogin(jsonObject, editor);
+                            ((StiriApp)getApplication()).newsDataSource =
+                                    new NewsDataSource(userId,getApplication());
                             gotoAllGroupsActivity();
                         }
                     }, new com.android.volley.Response.ErrorListener() {
@@ -232,8 +241,6 @@ public class LoginActivity extends SherlockFragmentActivity
 
     //GENERAL
     private void gotoAllGroupsActivity() {
-        ((StiriApp) getApplication()).newsDataSource = new NewsDataSource(userId,
-                (StiriApp) getApplication());
         Intent intent = new Intent(this, NewsGroupListActivity.class);
         startActivity(intent);
         finish();

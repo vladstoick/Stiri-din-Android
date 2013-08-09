@@ -1,5 +1,6 @@
 package com.vladstoick.DataModel;
 
+import android.app.Application;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -42,7 +43,7 @@ public class NewsDataSource {
     private Date updateAt;
 
     //CONSTRUCTORS
-    public NewsDataSource(int userId, StiriApp app) {
+    public NewsDataSource(int userId, Application app) {
         this.userId = userId;
         loadDataFromInternet();
         sqlHelper = new SqlHelper(app);
