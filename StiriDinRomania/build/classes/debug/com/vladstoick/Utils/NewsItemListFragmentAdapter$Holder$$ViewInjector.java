@@ -7,7 +7,7 @@ import butterknife.Views.Finder;
 public class NewsItemListFragmentAdapter$Holder$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Utils.NewsItemListFragmentAdapter.Holder target, Object source) {
     View view;
-    view = finder.findById(source, 2130968674);
+    view = finder.findById(source, 2130968675);
     target.mTitle = (android.widget.TextView) view;
   }
 

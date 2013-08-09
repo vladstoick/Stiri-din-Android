@@ -386,11 +386,11 @@
                     name="cameraTargetLng"
                     format="float" />
                 <attr
-                    name="uiCompass"
-                    format="boolean" />
-                <attr
                     name="cameraZoom"
                     format="float" />
+                <attr
+                    name="uiCompass"
+                    format="boolean" />
                 <attr
                     name="cameraTilt"
                     format="float" />
@@ -693,12 +693,12 @@
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-be\strings.xml"
                 qualifiers="be" >
                 <string
-                    name="common_google_play_services_unsupported_text"
-                    msgid="3542578567569488671" >"Службы Google Play, да якiх прывязаны некаторыя прыкладаннi, не падтрымлiваюцца на вашай прыладзе. Па дапамогу звярнiцеся да вытворцы."
-                </string>
-                <string
                     name="common_google_play_services_unknown_issue"
                     msgid="4762332809710093730" >"Невядомая праблема са службамі Google Play."
+                </string>
+                <string
+                    name="common_google_play_services_unsupported_text"
+                    msgid="3542578567569488671" >"Службы Google Play, да якiх прывязаны некаторыя прыкладаннi, не падтрымлiваюцца на вашай прыладзе. Па дапамогу звярнiцеся да вытворцы."
                 </string>
                 <string
                     name="common_google_play_services_update_title"
@@ -1177,20 +1177,20 @@
                     msgid="2429381841831957106" >"Sign in with Google"
                 </string>
                 <string
-                    name="common_google_play_services_update_text"
-                    msgid="448354684997260580" >"This app won\'t run unless you update Google Play services."
-                </string>
-                <string
-                    name="common_signin_button_text"
-                    msgid="9071884888741449141" >"Sign in"
-                </string>
-                <string
                     name="common_google_play_services_enable_text"
                     msgid="7627896071867667758" >"This app won\'t work unless you enable Google Play services."
                 </string>
                 <string
                     name="common_google_play_services_update_title"
                     msgid="6006316683626838685" >"Update Google Play services"
+                </string>
+                <string
+                    name="common_google_play_services_update_text"
+                    msgid="448354684997260580" >"This app won\'t run unless you update Google Play services."
+                </string>
+                <string
+                    name="common_signin_button_text"
+                    msgid="9071884888741449141" >"Sign in"
                 </string>
                 <string
                     name="common_google_play_services_unsupported_title"
@@ -9246,6 +9246,21 @@ center
                 <dimen name="logo_size" >120dp
                 </dimen>
             </file>
+            <file
+                name="ic_action_overflow"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-hdpi\ic_action_overflow.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_action_overflow"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-mdpi\ic_action_overflow.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_action_overflow"
+                path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\drawable-xhdpi\ic_action_overflow.png"
+                qualifiers="xhdpi"
+                type="drawable" />
         </source>
         <source path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\rs\debug" />
     </dataSet>

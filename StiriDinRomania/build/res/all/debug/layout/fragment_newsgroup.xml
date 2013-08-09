@@ -9,7 +9,7 @@
     <ListView
             android:paddingLeft="@dimen/left_and_right_margin"
             android:paddingRight="@dimen/left_and_right_margin"
-            tools:listitem="@layout/list_row_newsgroup"
+            tools:listitem="@layout/list_row_newssource"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/newsGroupListView"

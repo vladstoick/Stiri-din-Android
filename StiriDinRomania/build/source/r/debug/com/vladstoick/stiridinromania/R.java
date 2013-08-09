@@ -1134,12 +1134,13 @@ containing a value of this type.
         public static final int content_edit=0x7f0200a8;
         public static final int content_new=0x7f0200a9;
         public static final int content_new_dark=0x7f0200aa;
-        public static final int ic_launcher=0x7f0200ab;
-        public static final int location_web_site=0x7f0200ac;
-        public static final int logo=0x7f0200ad;
-        public static final int navigation_accept=0x7f0200ae;
-        public static final int navigation_cancel=0x7f0200af;
-        public static final int navigation_refresh=0x7f0200b0;
+        public static final int ic_action_overflow=0x7f0200ab;
+        public static final int ic_launcher=0x7f0200ac;
+        public static final int location_web_site=0x7f0200ad;
+        public static final int logo=0x7f0200ae;
+        public static final int navigation_accept=0x7f0200af;
+        public static final int navigation_cancel=0x7f0200b0;
+        public static final int navigation_refresh=0x7f0200b1;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f040026;
@@ -1183,11 +1184,11 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040019;
         public static final int abs__title=0x7f040021;
         public static final int abs__up=0x7f040015;
-        public static final int action_add=0x7f040065;
-        public static final int action_cancel=0x7f040066;
-        public static final int action_full_article=0x7f040069;
-        public static final int action_logout=0x7f040068;
-        public static final int action_refresh=0x7f040067;
+        public static final int action_add=0x7f040066;
+        public static final int action_cancel=0x7f040067;
+        public static final int action_full_article=0x7f04006a;
+        public static final int action_logout=0x7f040069;
+        public static final int action_refresh=0x7f040068;
         public static final int add_element_feed_description=0x7f040056;
         public static final int add_element_feed_rss=0x7f040057;
         public static final int add_element_feed_title=0x7f040055;
@@ -1211,7 +1212,7 @@ containing a value of this type.
         public static final int com_facebook_picker_title_bar_stub=0x7f04004e;
         public static final int com_facebook_picker_top_bar=0x7f04004b;
         public static final int com_facebook_placepickerfragment_search_box_stub=0x7f040050;
-        public static final int description=0x7f040061;
+        public static final int description=0x7f040062;
         public static final int disableHome=0x7f04000d;
         public static final int edit_query=0x7f04002c;
         public static final int groupTitle=0x7f04005d;
@@ -1223,7 +1224,7 @@ containing a value of this type.
         public static final int login_facebook=0x7f040039;
         public static final int login_google=0x7f04003a;
         public static final int newsGroupListView=0x7f040058;
-        public static final int newsSourceTitle=0x7f040060;
+        public static final int newsSourceTitle=0x7f040061;
         public static final int news_item_detail_title=0x7f04005b;
         public static final int news_item_detail_webView=0x7f04005c;
         public static final int newsgroup_detail=0x7f040059;
@@ -1234,7 +1235,8 @@ containing a value of this type.
         public static final int none=0x7f040001;
         public static final int normal=0x7f040002;
         public static final int numberOfGroups=0x7f04005e;
-        public static final int numberOfNews=0x7f04005f;
+        public static final int numberOfNews=0x7f040060;
+        public static final int overflow_icon=0x7f04005f;
         public static final int pager=0x7f040038;
         public static final int picker_subtitle=0x7f040052;
         public static final int satellite=0x7f040003;
@@ -1243,11 +1245,11 @@ containing a value of this type.
         public static final int showHome=0x7f040009;
         public static final int showTitle=0x7f04000b;
         public static final int small=0x7f04000e;
-        public static final int spinner_image=0x7f040064;
-        public static final int spinner_title=0x7f040063;
+        public static final int spinner_image=0x7f040065;
+        public static final int spinner_title=0x7f040064;
         public static final int tabMode=0x7f040007;
         public static final int terrain=0x7f040004;
-        public static final int title=0x7f040062;
+        public static final int title=0x7f040063;
         public static final int useLogo=0x7f040008;
         public static final int wrap_content=0x7f040000;
     }
@@ -1309,7 +1311,7 @@ containing a value of this type.
         public static final int fragment_newsitem=0x7f03002c;
         public static final int fragment_newsitem_detail=0x7f03002d;
         public static final int list_row_allgroups=0x7f03002e;
-        public static final int list_row_newsgroup=0x7f03002f;
+        public static final int list_row_newssource =0x7f03002f;
         public static final int list_row_newsitem=0x7f030030;
         public static final int sherlock_spinner_dropdown_item=0x7f030031;
         public static final int sherlock_spinner_item=0x7f030032;

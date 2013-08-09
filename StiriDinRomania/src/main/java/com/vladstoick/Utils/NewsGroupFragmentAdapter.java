@@ -12,8 +12,6 @@ import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.stiridinromania.R;
 
-import java.util.ArrayList;
-
 import butterknife.InjectView;
 import butterknife.Views;
 
@@ -70,7 +68,7 @@ public class NewsGroupFragmentAdapter extends BaseAdapter {
         final NewsSource ns = getItem(position);
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(R.layout.list_row_newsgroup, parent, false);
+            row = inflater.inflate(R.layout.list_row_newssource, parent, false);
             holder = new RowHolder(row);
             row.setTag(holder);
         } else
