@@ -47,6 +47,7 @@ public class NewsDataSource {
 
     public void loadDataFromInternet() {
         isDataLoaded = false;
+        httpClient = new AsyncHttpClient();
         StringRequest request = new StringRequest(Request.Method.GET,
                 BASE_URL + userId, new Response.Listener<String>() {
             @Override
@@ -68,8 +69,7 @@ public class NewsDataSource {
             public void onErrorResponse(VolleyError volleyError) {
                 volleyError.printStackTrace();
             }
-        }
-        );
+        });
         StiriApp.queue.add(request);
     }
 
@@ -165,6 +165,12 @@ public class NewsDataSource {
     public void renameElement(RenameDialogFragment.ElementRenamedEvent event){
         if(event.type == RenameDialogFragment.GROUP_TAG){
             sqlHelper.renameNewsGroup(event);
+            RequestParams requestParams = new RequestParams();
+            requestParams.put("title",event.newName);
+            httpClient.put(BASE_URL + userId + "/" + event.id,
+                    requestParams, new AsyncHttpResponseHandler(){
+
+            });
         } else {
             sqlHelper.renameNewsSource(event);
         }
