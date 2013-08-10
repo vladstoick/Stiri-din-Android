@@ -147,9 +147,15 @@ public class NewsGroupListFragment extends SherlockListFragment {
                 break;
             }
             case R.id.action_refresh:{
-                refreshItem = item;
-                ((StiriApp)(getActivity().getApplication())).newsDataSource.loadDataFromInternet();
-                item.setActionView(R.layout.actionbar_refresh);
+                if(Utils.isOnline(getSherlockActivity()) == true){
+                    ((StiriApp)(getActivity().getApplication())).newsDataSource.loadDataFromInternet();
+                    item.setActionView(R.layout.actionbar_refresh);
+                } else {
+                    NoConnectionDialogFragment ndf = new NoConnectionDialogFragment();
+                    ndf.show(getSherlockActivity().getSupportFragmentManager(),
+                            NoConnectionDialogFragment.TAG);
+                }
+                break;
             }
         }
         return super.onOptionsItemSelected(item);

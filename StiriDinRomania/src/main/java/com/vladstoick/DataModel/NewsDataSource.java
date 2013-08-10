@@ -15,6 +15,7 @@ import com.vladstoick.DialogFragment.RenameDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.OttoBus.NewsItemLoadedEvent;
+import com.vladstoick.Utils.Utils;
 import com.vladstoick.sql.SqlHelper;
 import com.vladstoick.stiridinromania.StiriApp;
 
@@ -35,12 +36,14 @@ public class NewsDataSource {
     private int userId;
     private SqlHelper sqlHelper;
     private Date updateAt;
-    public boolean isDataLoaded = false;
+    public boolean isDataLoaded = true;
     public AsyncHttpClient client;
     //CONSTRUCTORS
     public NewsDataSource(int userId, Application app) {
         this.userId = userId;
-        loadDataFromInternet();
+        if(Utils.isOnline(app)){
+            loadDataFromInternet();
+        }
         sqlHelper = new SqlHelper(app);
         BusProvider.getInstance().register(this);
     }
