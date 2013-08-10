@@ -41,8 +41,9 @@ public class NewsGroupListFragment extends SherlockListFragment {
         newsDataSource = ((StiriApp) (getSherlockActivity().getApplication())).newsDataSource
                 .getAllNewsGroups();
         Context context = getSherlockActivity();
+        StiriApp stiriApp = (StiriApp)(getSherlockActivity().getApplication());
         if (newsDataSource != null) {
-            adapter = new AllGroupsFragmentAdapter(newsDataSource, context);
+            adapter = new AllGroupsFragmentAdapter(newsDataSource, context, stiriApp);
             setListAdapter(adapter);
         }
         getListView().setItemsCanFocus(true);

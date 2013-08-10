@@ -166,7 +166,10 @@ public class SqlHelper extends SQLiteOpenHelper {
             e.printStackTrace();
         }
     }
-
+    public void deleteNewsGroup(int groupId){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(GROUPS_TABLE, COLUMN_ID + " = " + groupId , null);
+    }
     public void deleteAllNewsGroupsAndNewsSources() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         sqLiteDatabase.delete(GROUPS_TABLE, null, null);

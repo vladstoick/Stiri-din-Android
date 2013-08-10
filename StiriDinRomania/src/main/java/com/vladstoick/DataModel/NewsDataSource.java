@@ -154,14 +154,15 @@ public class NewsDataSource {
     }
 
     public void deleteNewsGroup(final int id) {
+        sqlHelper.deleteNewsGroup(id);
         httpClient = new AsyncHttpClient();
+        BusProvider.getInstance().post(new DataLoadedEvent(
+                DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
         httpClient.delete(BASE_URL + userId + "/" + id,
                 new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(String s) {
-//                        allNewsGroups.remove(position);
-                        BusProvider.getInstance().post(new DataLoadedEvent(
-                                DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+
                     }
                 });
 
