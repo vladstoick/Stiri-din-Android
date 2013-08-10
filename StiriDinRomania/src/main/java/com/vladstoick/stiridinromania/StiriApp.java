@@ -21,7 +21,7 @@ public class StiriApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-//        NewRelic.withApplicationToken("AAda1a6278e5ef8e4349079aa07d6b5039aaa395a0").start(this);
+        NewRelic.withApplicationToken("AAda1a6278e5ef8e4349079aa07d6b5039aaa395a0").start(this);
         BusProvider.getInstance().register(this);
         queue = Volley.newRequestQueue(this);
 

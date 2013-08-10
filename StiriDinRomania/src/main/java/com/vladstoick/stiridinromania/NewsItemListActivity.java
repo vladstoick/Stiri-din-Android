@@ -42,6 +42,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_newsitem_list);
         if (getIntent().getExtras() != null) {
             newsSourceId = getIntent().getExtras().getInt(Tags.NEWSOURCE_TAG_ID);
@@ -73,6 +74,8 @@ public class NewsItemListActivity extends SherlockFragmentActivity
      */
     @Override
     public void onItemSelected(String id) {
+
+        //TODO SCAPA
         NewsItem ni = null;
         for (int i = 0; i < newsSource.news.size(); i++)
             if (id == newsSource.news.get(i).getUrlLink())
@@ -82,7 +85,6 @@ public class NewsItemListActivity extends SherlockFragmentActivity
             // adding or replacing the detail fragment using a
             // fragment transaction.
             Bundle arguments = new Bundle();
-            //TODO scapa
 
             arguments.putParcelable(NewsItemDetailFragment.ARG_ITEM, ni);
 
