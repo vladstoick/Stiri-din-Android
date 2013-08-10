@@ -171,7 +171,11 @@ public class SqlHelper extends SQLiteOpenHelper {
     }
 
     public void renameNewsSource(RenameDialogFragment.ElementRenamedEvent event){
-
+        NewsSource newsSource = getNewsSource(event.id);
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_TITLE,event.newName);
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.update(SOURCES_TABLE, values, COLUMN_ID + " = " + event.id, null);
     }
 
     public void deleteNewsSource(int sourceId){

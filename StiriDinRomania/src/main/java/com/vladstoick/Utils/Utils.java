@@ -1,14 +1,8 @@
 package com.vladstoick.Utils;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.util.Log;
-
-import com.vladstoick.stiridinromania.LoginActivity;
 
 /**
  * Created by Vlad on 8/2/13.

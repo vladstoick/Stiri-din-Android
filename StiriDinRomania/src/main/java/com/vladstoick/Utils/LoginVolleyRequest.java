@@ -5,7 +5,6 @@ import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.HttpHeaderParser;
-import com.google.gson.JsonParseException;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,16 +23,17 @@ public class LoginVolleyRequest<T> extends Request<JSONObject> {
     public static final String TAG_FB = "facebook";
     public static final String TAG_G = "google";
     public static final String url = "http://stiriromania.eu01.aws.af.cm/user/login";
+
     public LoginVolleyRequest(String type, String token, String account,
                               Response.Listener<JSONObject> listener,
                               Response.ErrorListener errorListener) {
-        super(Method.POST, url , errorListener);
+        super(Method.POST, url, errorListener);
         this.listener = listener;
-        if(type == TAG_FB) {
-            params.put("fbaccount",account);
-            params.put("fbtoken",token);
+        if (type == TAG_FB) {
+            params.put("fbaccount", account);
+            params.put("fbtoken", token);
         } else {
-            params.put("gaccount",account);
+            params.put("gaccount", account);
             params.put("gtoken", token);
         }
     }
@@ -45,13 +45,13 @@ public class LoginVolleyRequest<T> extends Request<JSONObject> {
 
     @Override
     protected Response<JSONObject> parseNetworkResponse(NetworkResponse response) {
-        try{
+        try {
             String json = new String(response.data, HttpHeaderParser.parseCharset
-                     (response.headers));
+                    (response.headers));
             JSONObject jsonObject;
             jsonObject = new JSONObject(json);
             return Response.success(jsonObject, HttpHeaderParser.parseCacheHeaders(response));
-        } catch (JSONException e){
+        } catch (JSONException e) {
             e.printStackTrace();
             return null;
         } catch (UnsupportedEncodingException e) {

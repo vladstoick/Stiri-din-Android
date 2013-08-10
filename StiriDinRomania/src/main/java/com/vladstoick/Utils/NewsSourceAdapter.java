@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsSource;
+import com.vladstoick.DialogFragment.RenameDialogFragment;
+import com.vladstoick.Fragments.NewsGroupDetailFragment;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
 
@@ -32,10 +34,14 @@ import butterknife.Views;
  */
 public class NewsSourceAdapter extends BaseAdapter {
     static class RowHolder {
-        @InjectView(R.id.newsSourceTitle) TextView mTitle;
-        @InjectView(R.id.description) TextView mDescription;
-        @InjectView(R.id.numberOfNews) TextView mNumberOfNews;
-        @InjectView(R.id.overflow_icon) ImageButton mButton;
+        @InjectView(R.id.newsSourceTitle)
+        TextView mTitle;
+        @InjectView(R.id.description)
+        TextView mDescription;
+        @InjectView(R.id.numberOfNews)
+        TextView mNumberOfNews;
+        @InjectView(R.id.overflow_icon)
+        ImageButton mButton;
 
         public RowHolder(View view) {
             Views.inject(this, view);
@@ -45,14 +51,18 @@ public class NewsSourceAdapter extends BaseAdapter {
     private final Context context;
     private NewsGroup data;
     public StiriApp app;
+    public NewsGroupDetailFragment fragment;
+
     public void setData(NewsGroup data) {
         this.data = data;
     }
 
-    public NewsSourceAdapter(NewsGroup data, Context context, StiriApp app) {
+    public NewsSourceAdapter(NewsGroup data, Context context, StiriApp app,
+                             NewsGroupDetailFragment fragment) {
         this.context = context;
         this.data = data;
         this.app = app;
+        this.fragment = fragment;
     }
 
     @Override
@@ -86,10 +96,10 @@ public class NewsSourceAdapter extends BaseAdapter {
         holder.mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Build.VERSION.SDK_INT<=11){
-                    buildPopUpWindow(v,ns);
-                } else{
-                    buildPopUpMenu(v,ns);
+                if (Build.VERSION.SDK_INT <= 11) {
+                    buildPopUpWindow(v, ns);
+                } else {
+                    buildPopUpMenu(v, ns);
                 }
 
             }
@@ -99,19 +109,21 @@ public class NewsSourceAdapter extends BaseAdapter {
         holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews() + "");
         return row;
     }
+
     @TargetApi(11)
-    public void buildPopUpMenu(View v,final NewsSource newsSource){
-        PopupMenu popupMenu = new PopupMenu(context,v);
+    public void buildPopUpMenu(View v, final NewsSource newsSource) {
+        PopupMenu popupMenu = new PopupMenu(context, v);
         MenuInflater inflater = popupMenu.getMenuInflater();
         inflater.inflate(R.menu.popupmenu_newsgroup, popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch ( item.getItemId() ){
-                    case R.id.action_delete:{
+                switch (item.getItemId()) {
+                    case R.id.action_delete: {
                         deleteSource(newsSource);
                         return true;
-                    }case R.id.action_rename:{
+                    }
+                    case R.id.action_rename: {
                         renameSource(newsSource);
                         return true;
                     }
@@ -121,18 +133,20 @@ public class NewsSourceAdapter extends BaseAdapter {
         });
         popupMenu.show();
     }
-    public void buildPopUpWindow(View v,final NewsSource newsSource){
+
+    public void buildPopUpWindow(View v, final NewsSource newsSource) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         ArrayList<String> list = new ArrayList<String>();
-        list.add("adda");list.add("ggdgd");
-        builder.setItems(R.array.popupmenu_newsgroup,new DialogInterface.OnClickListener() {
+        list.add("adda");
+        list.add("ggdgd");
+        builder.setItems(R.array.popupmenu_newsgroup, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                switch (which){
-                    case 0:{
+                switch (which) {
+                    case 0: {
                         deleteSource(newsSource);
                     }
-                    case 1:{
+                    case 1: {
                         renameSource(newsSource);
                     }
                 }
@@ -143,10 +157,14 @@ public class NewsSourceAdapter extends BaseAdapter {
         builder.show();
     }
 
-    public void deleteSource(final NewsSource newsSource){
+    public void deleteSource(final NewsSource newsSource) {
         app.newsDataSource.deleteNewsSource(newsSource);
     }
-    public void renameSource(final NewsSource newsSource){
 
+    public void renameSource(final NewsSource newsSource) {
+        RenameDialogFragment renameDialogFragment =
+                new RenameDialogFragment(RenameDialogFragment.SOURCE_TAG, newsSource.getId());
+        renameDialogFragment.show(fragment.getSherlockActivity().getSupportFragmentManager(),
+                RenameDialogFragment.TAG);
     }
 }

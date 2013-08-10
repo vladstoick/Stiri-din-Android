@@ -3,8 +3,6 @@ package com.vladstoick.Utils;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.DialogFragment;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
@@ -18,7 +16,6 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockFragment;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DialogFragment.RenameDialogFragment;
 import com.vladstoick.Fragments.NewsGroupListFragment;
@@ -35,18 +32,23 @@ import butterknife.Views;
  */
 public class NewsGroupAdapter extends BaseAdapter {
     static class RowHolder {
-        @InjectView(R.id.overflow_icon) ImageButton mButton;
-        @InjectView(R.id.groupTitle) TextView mTitle;
-        @InjectView(R.id.numberOfGroups) TextView mNumberOfGroups;
+        @InjectView(R.id.overflow_icon)
+        ImageButton mButton;
+        @InjectView(R.id.groupTitle)
+        TextView mTitle;
+        @InjectView(R.id.numberOfGroups)
+        TextView mNumberOfGroups;
 
         public RowHolder(View view) {
             Views.inject(this, view);
         }
     }
+
     public NewsGroupListFragment fragment;
     private final Context context;
     private ArrayList<NewsGroup> data;
     private StiriApp app;
+
     public NewsGroupAdapter(ArrayList<NewsGroup> data, Context context, StiriApp app,
                             NewsGroupListFragment fragment) {
         this.context = context;
@@ -86,10 +88,10 @@ public class NewsGroupAdapter extends BaseAdapter {
         holder.mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Build.VERSION.SDK_INT>11){
-                    buildPopUpMenu(v,ng);
+                if (Build.VERSION.SDK_INT > 11) {
+                    buildPopUpMenu(v, ng);
                 } else {
-                    buildPopUpWindow(v,ng);
+                    buildPopUpWindow(v, ng);
                 }
             }
         });
@@ -103,19 +105,21 @@ public class NewsGroupAdapter extends BaseAdapter {
         holder.mNumberOfGroups.setText(noGroupsString);
         return row;
     }
+
     @TargetApi(11)
-    public void buildPopUpMenu(View v,final NewsGroup ng){
-        PopupMenu popupMenu = new PopupMenu(context,v);
+    public void buildPopUpMenu(View v, final NewsGroup ng) {
+        PopupMenu popupMenu = new PopupMenu(context, v);
         MenuInflater inflater = popupMenu.getMenuInflater();
         inflater.inflate(R.menu.popupmenu_newsgroup, popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch ( item.getItemId() ){
-                    case R.id.action_delete:{
+                switch (item.getItemId()) {
+                    case R.id.action_delete: {
                         deleteGroup(ng);
                         return true;
-                    }case R.id.action_rename:{
+                    }
+                    case R.id.action_rename: {
                         renameGroup(ng);
                         return true;
                     }
@@ -125,18 +129,20 @@ public class NewsGroupAdapter extends BaseAdapter {
         });
         popupMenu.show();
     }
-    public void buildPopUpWindow(View v,final NewsGroup ng){
+
+    public void buildPopUpWindow(View v, final NewsGroup ng) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         ArrayList<String> list = new ArrayList<String>();
-        list.add("adda");list.add("ggdgd");
-        builder.setItems(R.array.popupmenu_newsgroup,new DialogInterface.OnClickListener() {
+        list.add("adda");
+        list.add("ggdgd");
+        builder.setItems(R.array.popupmenu_newsgroup, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                switch (which){
-                    case 0:{
+                switch (which) {
+                    case 0: {
                         deleteGroup(ng);
                     }
-                    case 1:{
+                    case 1: {
                         renameGroup(ng);
                     }
                 }
@@ -146,12 +152,14 @@ public class NewsGroupAdapter extends BaseAdapter {
         builder.create();
         builder.show();
     }
-    public void deleteGroup(NewsGroup ng){
+
+    public void deleteGroup(NewsGroup ng) {
         app.newsDataSource.deleteNewsGroup(ng.getId());
     }
-    public void renameGroup(NewsGroup ng){
+
+    public void renameGroup(NewsGroup ng) {
         RenameDialogFragment renameDialogFragment =
-                new RenameDialogFragment(RenameDialogFragment.GROUP_TAG,ng.getId());
+                new RenameDialogFragment(RenameDialogFragment.GROUP_TAG, ng.getId());
         renameDialogFragment.show(fragment.getSherlockActivity().getSupportFragmentManager(),
                 RenameDialogFragment.TAG);
     }

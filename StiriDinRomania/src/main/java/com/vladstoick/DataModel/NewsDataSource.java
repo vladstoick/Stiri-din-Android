@@ -92,15 +92,18 @@ public class NewsDataSource {
 
     @Subscribe
     public void renameElement(RenameDialogFragment.ElementRenamedEvent event){
+        String url;
+        RequestParams requestParams = new RequestParams();
+        requestParams.put("title",event.newName);
         if(event.type == RenameDialogFragment.GROUP_TAG){
             sqlHelper.renameNewsGroup(event);
-            RequestParams requestParams = new RequestParams();
-            requestParams.put("title",event.newName);
-            httpClient.put(BASE_URL + userId + "/" + event.id,
-                    requestParams, new AsyncHttpResponseHandler(){});
+            url = BASE_URL + userId + "/" + event.id;
         } else {
             sqlHelper.renameNewsSource(event);
+            NewsSource ns = getNewsSource(event.id);
+            url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId();
         }
+        httpClient.put(url, requestParams, new AsyncHttpResponseHandler(){});
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
     }

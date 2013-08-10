@@ -8,11 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.squareup.otto.Subscribe;
-import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
-import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.stiridinromania.R;
 
 import butterknife.InjectView;

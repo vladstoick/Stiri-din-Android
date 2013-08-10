@@ -85,7 +85,7 @@ public class NewsGroupDetailFragment extends SherlockFragment {
         mView = inflater.inflate(R.layout.fragment_newsgroup, container, false);
         Views.inject(this, mView);
         adapter = new NewsSourceAdapter(newsGroup, getSherlockActivity(),
-                (StiriApp) getSherlockActivity().getApplication());
+                (StiriApp) getSherlockActivity().getApplication(), this);
         mList.setAdapter(adapter);
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
