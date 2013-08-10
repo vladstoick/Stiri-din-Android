@@ -9,12 +9,14 @@
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:scaleType="centerInside"
+            android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:id="@+id/overflow_icon"
             android:background="@null"
             android:src="@drawable/ic_action_overflow"
-            android:layout_width="20dp"
-            android:layout_height="20dp"/>
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     <TextView
             android:focusable="false"

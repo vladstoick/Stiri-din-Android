@@ -370,11 +370,11 @@
                     name="uiRotateGestures"
                     format="boolean" />
                 <attr
-                    name="cameraZoom"
-                    format="float" />
-                <attr
                     name="uiCompass"
                     format="boolean" />
+                <attr
+                    name="cameraZoom"
+                    format="float" />
                 <attr
                     name="useViewLifecycle"
                     format="boolean" />
@@ -573,22 +573,6 @@
                     msgid="6006316683626838685" >"Google Play አገልግሎቶችን ያዘምኑ"
                 </string>
                 <string
-                    name="common_google_play_services_enable_title"
-                    msgid="529078775174559253" >"Google Play አገልግሎቶችን አንቃ"
-                </string>
-                <string
-                    name="common_google_play_services_enable_text"
-                    msgid="7627896071867667758" >"Google Play አገልግሎቶችን እስካላነቁ ድረስ ይህ መተግበሪያ አይሰራም።"
-                </string>
-                <string
-                    name="common_signin_button_text_long"
-                    msgid="2429381841831957106" >"በGoogle ይግቡ"
-                </string>
-                <string
-                    name="common_google_play_services_enable_button"
-                    msgid="4181637455539816337" >"Google Play አገልግሎቶችን አንቃ"
-                </string>
-                <string
                     name="common_google_play_services_update_text"
                     msgid="448354684997260580" >"Google Play አገልግሎቶችን እስኪያዘምኑ ድረስ ይህ መተግበሪያ አይሰራም።"
                 </string>
@@ -613,12 +597,28 @@
                     msgid="4762332809710093730" >"በGoogle Play አገልግሎቶች ላይ ያልታወቀ ችግር።"
                 </string>
                 <string
+                    name="common_google_play_services_enable_title"
+                    msgid="529078775174559253" >"Google Play አገልግሎቶችን አንቃ"
+                </string>
+                <string
+                    name="common_google_play_services_enable_text"
+                    msgid="7627896071867667758" >"Google Play አገልግሎቶችን እስካላነቁ ድረስ ይህ መተግበሪያ አይሰራም።"
+                </string>
+                <string
                     name="common_google_play_services_install_title"
                     msgid="26645092511305524" >"Google Play አገልግሎቶችን አግኝ"
                 </string>
                 <string
                     name="common_google_play_services_unsupported_text"
                     msgid="3542578567569488671" >"የGoogle Play አገልግሎቶች፣ አንዳንድ መተግበሪያዎችዎ በእሱ ላይ ጥገኛ የሆኑት፣ በመሣሪያዎ አይደገፍም። እባክዎ ለእርዳታ አምራቹን ያግኙ።"
+                </string>
+                <string
+                    name="common_signin_button_text_long"
+                    msgid="2429381841831957106" >"በGoogle ይግቡ"
+                </string>
+                <string
+                    name="common_google_play_services_enable_button"
+                    msgid="4181637455539816337" >"Google Play አገልግሎቶችን አንቃ"
                 </string>
                 <string
                     name="common_google_play_services_install_button"
@@ -721,12 +721,12 @@
                     msgid="8685301130651051380" >"Гэта прыкладанне не будзе працаваць без службаў Google Play, якіх няма ў вашым тэлефоне."
                 </string>
                 <string
-                    name="common_google_play_services_unknown_issue"
-                    msgid="4762332809710093730" >"Невядомая праблема са службамі Google Play."
-                </string>
-                <string
                     name="common_google_play_services_unsupported_text"
                     msgid="3542578567569488671" >"Службы Google Play, да якiх прывязаны некаторыя прыкладаннi, не падтрымлiваюцца на вашай прыладзе. Па дапамогу звярнiцеся да вытворцы."
+                </string>
+                <string
+                    name="common_google_play_services_unknown_issue"
+                    msgid="4762332809710093730" >"Невядомая праблема са службамі Google Play."
                 </string>
                 <string
                     name="common_google_play_services_enable_text"
@@ -1021,6 +1021,30 @@
                     msgid="4181637455539816337" >"Google Play-Dienste aktivieren"
                 </string>
                 <string
+                    name="common_google_play_services_enable_title"
+                    msgid="529078775174559253" >"Google Play-Dienste aktivieren"
+                </string>
+                <string
+                    name="common_google_play_services_install_text_phone"
+                    msgid="8685301130651051380" >"Zur Nutzung dieser App sind Google Play-Dienste erforderlich, die auf Ihrem Telefon nicht installiert sind."
+                </string>
+                <string
+                    name="common_signin_button_text"
+                    msgid="9071884888741449141" >"Anmelden"
+                </string>
+                <string
+                    name="common_google_play_services_update_text"
+                    msgid="448354684997260580" >"Diese App wird nur ausgeführt, wenn Sie die Google Play-Dienste aktualisieren."
+                </string>
+                <string
+                    name="common_google_play_services_unsupported_text"
+                    msgid="3542578567569488671" >"Google Play-Dienste, auf denen einige Ihrer Apps basieren, werden von diesem Gerät nicht unterstützt. Wenden Sie sich für weitere Informationen an den Hersteller."
+                </string>
+                <string
+                    name="common_google_play_services_update_button"
+                    msgid="8932944190611227642" >"Aktualisieren"
+                </string>
+                <string
                     name="common_google_play_services_enable_text"
                     msgid="7627896071867667758" >"Diese App funktioniert nur, wenn Sie die Google Play-Dienste aktivieren."
                 </string>
@@ -1041,36 +1065,12 @@
                     msgid="2429381841831957106" >"Über Google anmelden"
                 </string>
                 <string
-                    name="common_google_play_services_enable_title"
-                    msgid="529078775174559253" >"Google Play-Dienste aktivieren"
-                </string>
-                <string
                     name="common_google_play_services_update_title"
                     msgid="6006316683626838685" >"Google Play-Dienste aktualisieren"
                 </string>
                 <string
-                    name="common_google_play_services_install_text_phone"
-                    msgid="8685301130651051380" >"Zur Nutzung dieser App sind Google Play-Dienste erforderlich, die auf Ihrem Telefon nicht installiert sind."
-                </string>
-                <string
-                    name="common_signin_button_text"
-                    msgid="9071884888741449141" >"Anmelden"
-                </string>
-                <string
-                    name="common_google_play_services_unsupported_text"
-                    msgid="3542578567569488671" >"Google Play-Dienste, auf denen einige Ihrer Apps basieren, werden von diesem Gerät nicht unterstützt. Wenden Sie sich für weitere Informationen an den Hersteller."
-                </string>
-                <string
-                    name="common_google_play_services_update_text"
-                    msgid="448354684997260580" >"Diese App wird nur ausgeführt, wenn Sie die Google Play-Dienste aktualisieren."
-                </string>
-                <string
                     name="common_google_play_services_install_title"
                     msgid="26645092511305524" >"Google Play-Dienste installieren"
-                </string>
-                <string
-                    name="common_google_play_services_update_button"
-                    msgid="8932944190611227642" >"Aktualisieren"
                 </string>
             </file>
             <file
@@ -1177,20 +1177,20 @@
                     msgid="2429381841831957106" >"Sign in with Google"
                 </string>
                 <string
-                    name="common_signin_button_text"
-                    msgid="9071884888741449141" >"Sign in"
-                </string>
-                <string
-                    name="common_google_play_services_enable_text"
-                    msgid="7627896071867667758" >"This app won\'t work unless you enable Google Play services."
-                </string>
-                <string
                     name="common_google_play_services_update_title"
                     msgid="6006316683626838685" >"Update Google Play services"
                 </string>
                 <string
                     name="common_google_play_services_update_text"
                     msgid="448354684997260580" >"This app won\'t run unless you update Google Play services."
+                </string>
+                <string
+                    name="common_signin_button_text"
+                    msgid="9071884888741449141" >"Sign in"
+                </string>
+                <string
+                    name="common_google_play_services_enable_text"
+                    msgid="7627896071867667758" >"This app won\'t work unless you enable Google Play services."
                 </string>
                 <string
                     name="common_google_play_services_unsupported_title"
@@ -1204,30 +1204,6 @@
             <file
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-es\strings.xml"
                 qualifiers="es" >
-                <string
-                    name="common_signin_button_text"
-                    msgid="9071884888741449141" >"Iniciar sesión"
-                </string>
-                <string
-                    name="common_google_play_services_install_button"
-                    msgid="8515591849428043265" >"Descargar servicios de Google Play"
-                </string>
-                <string
-                    name="common_google_play_services_update_text"
-                    msgid="448354684997260580" >"Esta aplicación no se ejecutará si no actualizas los servicios de Google Play."
-                </string>
-                <string
-                    name="common_google_play_services_install_title"
-                    msgid="26645092511305524" >"Descargar servicios de Google Play"
-                </string>
-                <string
-                    name="common_google_play_services_update_title"
-                    msgid="6006316683626838685" >"Actualizar servicios de Google Play"
-                </string>
-                <string
-                    name="common_google_play_services_install_text_phone"
-                    msgid="8685301130651051380" >"Esta aplicación no se ejecutará si tu teléfono no tiene instalados los servicios de Google Play."
-                </string>
                 <string
                     name="common_google_play_services_unknown_issue"
                     msgid="4762332809710093730" >"Error desconocido relacionado con los servicios de Google Play"
@@ -1249,8 +1225,24 @@
                     msgid="6334768798839376943" >"Servicios de Google Play"
                 </string>
                 <string
+                    name="common_signin_button_text"
+                    msgid="9071884888741449141" >"Iniciar sesión"
+                </string>
+                <string
+                    name="common_google_play_services_install_button"
+                    msgid="8515591849428043265" >"Descargar servicios de Google Play"
+                </string>
+                <string
                     name="common_google_play_services_unsupported_text"
                     msgid="3542578567569488671" >"Tu dispositivo no es compatible con los servicios de Google Play, de los cuales dependen tus aplicaciones. Para obtener asistencia, ponte en contacto el fabricante."
+                </string>
+                <string
+                    name="common_google_play_services_update_text"
+                    msgid="448354684997260580" >"Esta aplicación no se ejecutará si no actualizas los servicios de Google Play."
+                </string>
+                <string
+                    name="common_google_play_services_install_title"
+                    msgid="26645092511305524" >"Descargar servicios de Google Play"
                 </string>
                 <string
                     name="common_google_play_services_update_button"
@@ -1259,6 +1251,14 @@
                 <string
                     name="common_google_play_services_install_text_tablet"
                     msgid="1589957570365247855" >"Esta aplicación no se ejecutará si tu tablet no tiene instalados los servicios de Google Play."
+                </string>
+                <string
+                    name="common_google_play_services_update_title"
+                    msgid="6006316683626838685" >"Actualizar servicios de Google Play"
+                </string>
+                <string
+                    name="common_google_play_services_install_text_phone"
+                    msgid="8685301130651051380" >"Esta aplicación no se ejecutará si tu teléfono no tiene instalados los servicios de Google Play."
                 </string>
                 <string
                     name="common_google_play_services_enable_title"
@@ -1397,6 +1397,10 @@
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-fa\strings.xml"
                 qualifiers="fa" >
                 <string
+                    name="common_google_play_services_install_button"
+                    msgid="8515591849428043265" >"دریافت خدمات Google Play"
+                </string>
+                <string
                     name="common_google_play_services_install_text_phone"
                     msgid="8685301130651051380" >"این برنامه بدون خدمات Google Play اجرا نمی‌شود، این خدمات در تلفن شما وجود ندارد."
                 </string>
@@ -1425,6 +1429,10 @@
                     msgid="4181637455539816337" >"فعال کردن خدمات Google Play"
                 </string>
                 <string
+                    name="common_google_play_services_install_text_tablet"
+                    msgid="1589957570365247855" >"این برنامه بدون خدمات Google Play اجرا نمی‌شود، این خدمات در رایانهٔ لوحی شما وجود ندارد."
+                </string>
+                <string
                     name="common_google_play_services_install_title"
                     msgid="26645092511305524" >"دریافت خدمات Google Play"
                 </string>
@@ -1437,24 +1445,16 @@
                     msgid="8932944190611227642" >"به‌روزرسانی"
                 </string>
                 <string
-                    name="common_google_play_services_unsupported_text"
-                    msgid="3542578567569488671" >"خدمات Google Play، که برخی از برنامه‌های شما به آن وابسته است، توسط دستگاه شما پشتیبانی نمی‌شود. لطفاً برای دریافت کمک با سازنده تماس بگیرید."
-                </string>
-                <string
-                    name="common_google_play_services_install_button"
-                    msgid="8515591849428043265" >"دریافت خدمات Google Play"
-                </string>
-                <string
-                    name="common_google_play_services_install_text_tablet"
-                    msgid="1589957570365247855" >"این برنامه بدون خدمات Google Play اجرا نمی‌شود، این خدمات در رایانهٔ لوحی شما وجود ندارد."
-                </string>
-                <string
                     name="common_google_play_services_enable_text"
                     msgid="7627896071867667758" >"تا زمانی‌که خدمات Google Play را فعال نکنید این برنامه کار نمی‌کند."
                 </string>
                 <string
                     name="common_google_play_services_unsupported_title"
                     msgid="6334768798839376943" >"خدمات Google Play"
+                </string>
+                <string
+                    name="common_google_play_services_unsupported_text"
+                    msgid="3542578567569488671" >"خدمات Google Play، که برخی از برنامه‌های شما به آن وابسته است، توسط دستگاه شما پشتیبانی نمی‌شود. لطفاً برای دریافت کمک با سازنده تماس بگیرید."
                 </string>
             </file>
             <file
@@ -3321,18 +3321,6 @@
                     msgid="7627896071867667758" >"Ця програма не працюватиме, поки ви не ввімкнете Google Play Послуги."
                 </string>
                 <string
-                    name="common_google_play_services_install_text_phone"
-                    msgid="8685301130651051380" >"Ця програма не запуститься без Google Play Послуг, яких немає у вашому телефоні."
-                </string>
-                <string
-                    name="common_google_play_services_update_button"
-                    msgid="8932944190611227642" >"Оновити"
-                </string>
-                <string
-                    name="common_google_play_services_enable_title"
-                    msgid="529078775174559253" >"Увімкнути Google Play Послуги"
-                </string>
-                <string
                     name="common_google_play_services_update_title"
                     msgid="6006316683626838685" >"Оновити Google Play Послуги"
                 </string>
@@ -3349,8 +3337,20 @@
                     msgid="1589957570365247855" >"Ця програма не запуститься без Google Play Послуг, яких немає на вашому планшетному ПК."
                 </string>
                 <string
+                    name="common_google_play_services_install_text_phone"
+                    msgid="8685301130651051380" >"Ця програма не запуститься без Google Play Послуг, яких немає у вашому телефоні."
+                </string>
+                <string
                     name="common_google_play_services_install_title"
                     msgid="26645092511305524" >"Установити Google Play Послуги"
+                </string>
+                <string
+                    name="common_google_play_services_update_button"
+                    msgid="8932944190611227642" >"Оновити"
+                </string>
+                <string
+                    name="common_google_play_services_enable_title"
+                    msgid="529078775174559253" >"Увімкнути Google Play Послуги"
                 </string>
                 <string
                     name="common_signin_button_text"
@@ -3445,24 +3445,8 @@
                 path="C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-zh-rCN\strings.xml"
                 qualifiers="zh-rCN" >
                 <string
-                    name="common_google_play_services_update_text"
-                    msgid="448354684997260580" >"您必须先更新 Google Play 服务才能运行此应用。"
-                </string>
-                <string
                     name="common_google_play_services_enable_title"
                     msgid="529078775174559253" >"启用 Google Play 服务"
-                </string>
-                <string
-                    name="common_google_play_services_install_button"
-                    msgid="8515591849428043265" >"获取 Google Play 服务"
-                </string>
-                <string
-                    name="common_google_play_services_update_button"
-                    msgid="8932944190611227642" >"更新"
-                </string>
-                <string
-                    name="common_google_play_services_unsupported_text"
-                    msgid="3542578567569488671" >"您的设备不支持部分应用所依赖的 Google Play 服务。请与设备制造商联系，以寻求帮助。"
                 </string>
                 <string
                     name="common_google_play_services_install_title"
@@ -3489,12 +3473,28 @@
                     msgid="6006316683626838685" >"更新 Google Play 服务"
                 </string>
                 <string
+                    name="common_google_play_services_enable_text"
+                    msgid="7627896071867667758" >"您必须先启用 Google Play 服务才能运行此应用。"
+                </string>
+                <string
                     name="common_google_play_services_unknown_issue"
                     msgid="4762332809710093730" >"Google Play 服务出现未知问题。"
                 </string>
                 <string
-                    name="common_google_play_services_enable_text"
-                    msgid="7627896071867667758" >"您必须先启用 Google Play 服务才能运行此应用。"
+                    name="common_google_play_services_update_text"
+                    msgid="448354684997260580" >"您必须先更新 Google Play 服务才能运行此应用。"
+                </string>
+                <string
+                    name="common_google_play_services_install_button"
+                    msgid="8515591849428043265" >"获取 Google Play 服务"
+                </string>
+                <string
+                    name="common_google_play_services_update_button"
+                    msgid="8932944190611227642" >"更新"
+                </string>
+                <string
+                    name="common_google_play_services_unsupported_text"
+                    msgid="3542578567569488671" >"您的设备不支持部分应用所依赖的 Google Play 服务。请与设备制造商联系，以寻求帮助。"
                 </string>
                 <string
                     name="common_google_play_services_install_text_tablet"
@@ -6656,6 +6656,7 @@ true
                     -->
                     <!-- Color for text that appears within action menu items. -->
 
+
                     <!-- =================== -->
                     <!-- Action mode styles -->
                     <!-- =================== -->
@@ -6665,7 +6666,9 @@ true
                     <!-- Drawable to use for the close action mode button -->
                     <!-- Drawable to use for the Share action button in WebView selection action modes -->
 
+
                     <!-- PopupWindow style to use for action modes when showing as a window overlay. -->
+
 
                     <!-- ============= -->
                     <!-- Button styles -->
@@ -6674,18 +6677,24 @@ true
 
                     <!-- Small Button style. -->
 
+
                     <!-- Background drawable for standalone items that need focus/pressed states. -->
+
 
                     <!--
              This Drawable is overlaid over the foreground of the Window's content area, usually
              to place a shadow below the title.
                     -->
 
+
                     <!-- Text color, typeface, size, and style for the text inside of a popup menu. -->
+
 
                     <!-- Text color, typeface, size, and style for small text inside of a popup menu. -->
 
+
                     <!-- Text color, typeface, size, and style for "small" text. Defaults to secondary text color. -->
+
 
                     <!-- ============================ -->
                     <!-- SearchView styles and assets -->
@@ -6706,6 +6715,7 @@ true
                     <!-- Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color. -->
                     <!-- Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color. -->
 
+
                     <!-- =========== -->
                     <!-- List styles -->
                     <!-- =========== -->
@@ -6713,12 +6723,16 @@ true
 
                     <!-- A smaller, sleeker list item height. -->
 
+
                     <!-- The preferred padding along the left edge of list items. -->
                     <!-- The preferred padding along the right edge of list items. -->
 
+
                     <!-- The preferred TextAppearance for the primary text of small list items. -->
 
+
                     <!-- Drawable to use for generic vertical dividers. -->
+
 
                     <!-- Default ActivityChooserView style. -->
                     <!-- Drawable used as a background for activated items. -->
@@ -9004,10 +9018,10 @@ true
 
                 <string-array name="popupmenu_newsgroup" >
                     <item>
-Delete
+@string/delete
                     </item>
                     <item>
-Rename
+@string/rename
                     </item>
                 </string-array>
 
