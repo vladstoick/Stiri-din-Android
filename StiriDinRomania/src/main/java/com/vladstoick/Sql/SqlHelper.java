@@ -60,7 +60,9 @@ public class SqlHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
 
-    //ACCESSING DATA
+    //NEWSGROUP
+
+
     public ArrayList<NewsGroup> getAllNewsGroups() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(SqlHelper.GROUPS_TABLE, SqlHelper.GROUPS_COLUMNS,
@@ -72,23 +74,6 @@ public class SqlHelper extends SQLiteOpenHelper {
             cursor.moveToNext();
         }
         return newsGroups;
-    }
-
-    public NewsSource getNewsSource(int sourceId) {
-        NewsSource ns;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
-                SqlHelper.COLUMN_ID + " = " + sourceId, null, null, null, null, null);
-        cursor.moveToFirst();
-        ns = new NewsSource(cursor);
-        cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
-                SqlHelper.COLUMN_SOURCE_ID + " = " + sourceId, null, null, null, null, null);
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
-            ns.news.add(new NewsItem(cursor));
-            cursor.moveToNext();
-        }
-        return ns;
     }
 
     public NewsGroup getNewsGroup(int groupId) {
@@ -108,15 +93,6 @@ public class SqlHelper extends SQLiteOpenHelper {
         return ng;
     }
 
-    public NewsItem getNewsItem(String url){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
-                SqlHelper.COLUMN_URL + " = \'" + url +"\'", null, null, null, null, null);
-        cursor.moveToFirst();
-        NewsItem ni = new NewsItem(cursor);
-        return ni;
-    }
-    //SQLITE Helper
     public void insertNewsGroupInDb(NewsGroup ng) {
         ContentValues values = new ContentValues();
         values.put(SqlHelper.COLUMN_TITLE, ng.getTitle());
@@ -126,6 +102,74 @@ public class SqlHelper extends SQLiteOpenHelper {
         sqlLiteDatabase.insertWithOnConflict(SqlHelper.GROUPS_TABLE, null, values,
                 SQLiteDatabase.CONFLICT_REPLACE);
 
+    }
+
+    public void updateNewsGroupNoFeeds(int groupId) {
+        NewsGroup ng = getNewsGroup(groupId);
+        ContentValues values = new ContentValues();
+        values.put(SqlHelper.COLUMN_NOFEEDS, ng.newsSources.size());
+        SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
+        sqlLiteDatabase.update(GROUPS_TABLE, values, COLUMN_ID + " = " + groupId, null);
+    }
+
+    public void deleteNewsGroup(int groupId){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(GROUPS_TABLE, COLUMN_ID + " = " + groupId , null);
+    }
+
+    //NEWSOURCE
+    public NewsSource getNewsSource(int sourceId) {
+        NewsSource ns;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
+                SqlHelper.COLUMN_ID + " = " + sourceId, null, null, null, null, null);
+        cursor.moveToFirst();
+        ns = new NewsSource(cursor);
+        cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
+                SqlHelper.COLUMN_SOURCE_ID + " = " + sourceId, null, null, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            ns.news.add(new NewsItem(cursor));
+            cursor.moveToNext();
+        }
+        return ns;
+    }
+
+    public ArrayList<NewsSource> getAllNewsSources(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
+                null, null, null, null, null, null);
+        cursor.moveToFirst();
+        ArrayList<NewsSource> newsSources = new ArrayList<NewsSource>();
+        while (!cursor.isAfterLast()) {
+            newsSources.add(new NewsSource(cursor));
+            cursor.moveToNext();
+        }
+        return newsSources;
+    }
+
+    public void insertNewsSourceInDb(NewsSource ns) {
+        ContentValues values = new ContentValues();
+        SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
+        values.put(SqlHelper.COLUMN_TITLE, ns.getTitle());
+        values.put(SqlHelper.COLUMN_ID, ns.getId());
+        values.put(SqlHelper.COLUMN_DESCRIPTION, ns.getDescription());
+        values.put(SqlHelper.COLUMN_URL, ns.getRssLink());
+        values.put(SqlHelper.COLUMN_GROUP_ID, ns.getGroupId());
+        values.put(SqlHelper.COLUMN_NOUNREADNEWS, ns.getNumberOfUnreadNews());
+        sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
+                SQLiteDatabase.CONFLICT_REPLACE);
+    }
+
+    //NEWSITEM
+
+    public NewsItem getNewsItem(String url){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
+                SqlHelper.COLUMN_URL + " = \'" + url +"\'", null, null, null, null, null);
+        cursor.moveToFirst();
+        NewsItem ni = new NewsItem(cursor);
+        return ni;
     }
 
     public void insertNewsItemsInDb(NewsSource ns) {
@@ -142,18 +186,6 @@ public class SqlHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void insertNewsSourceInDb(NewsSource ns) {
-        ContentValues values = new ContentValues();
-        SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
-        values.put(SqlHelper.COLUMN_TITLE, ns.getTitle());
-        values.put(SqlHelper.COLUMN_ID, ns.getId());
-        values.put(SqlHelper.COLUMN_DESCRIPTION, ns.getDescription());
-        values.put(SqlHelper.COLUMN_URL, ns.getRssLink());
-        values.put(SqlHelper.COLUMN_GROUP_ID, ns.getGroupId());
-        values.put(SqlHelper.COLUMN_NOUNREADNEWS, ns.getNumberOfUnreadNews());
-        sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
-                SQLiteDatabase.CONFLICT_REPLACE);
-    }
 
     public void updateNewsItem(String url, String paperized) {
         ContentValues values = new ContentValues();
@@ -166,21 +198,13 @@ public class SqlHelper extends SQLiteOpenHelper {
             e.printStackTrace();
         }
     }
-    public void deleteNewsGroup(int groupId){
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        sqLiteDatabase.delete(GROUPS_TABLE, COLUMN_ID + " = " + groupId , null);
-    }
+
+    //GENERAL
+
     public void deleteAllNewsGroupsAndNewsSources() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         sqLiteDatabase.delete(GROUPS_TABLE, null, null);
         sqLiteDatabase.delete(SOURCES_TABLE, null, null);
     }
 
-    public void updateNewsGroup(int groupId) {
-        NewsGroup ng = getNewsGroup(groupId);
-        ContentValues values = new ContentValues();
-        values.put(SqlHelper.COLUMN_NOFEEDS, ng.newsSources.size());
-        SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
-        sqlLiteDatabase.update(GROUPS_TABLE, values, COLUMN_ID + " = " + groupId, null);
-    }
 }
