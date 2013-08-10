@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\dimens.xml -->
+    <dimen name="list_view_width">500dp</dimen>
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml -->
+    <string name="action_settings">Settings</string>
+    <string name="add">Adaugă</string>
+    <string name="add_element_feed_description">Descrierea feedului</string>
+    <string name="add_element_feed_rss">Adresa rss a feedului</string>
+    <string name="add_element_feed_title">Numele feedului</string>
+    <string name="add_element_fragment_title">Adaugă un feed nou</string>
+    <string name="all_groups_title">Gruprile tale</string>
+    <string name="app_name">Ştiri din România</string>
+    <string name="cancel">Anulează</string>
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ro\strings.xml -->
+    <string name="common_google_play_services_enable_button" msgid="4181637455539816337">"Activaţi Servicii Google Play"</string>
+    <string name="common_google_play_services_enable_text" msgid="7627896071867667758">"Această aplicaţie nu va funcţiona decât dacă activaţi Servicii Google Play."</string>
+    <string name="common_google_play_services_enable_title" msgid="529078775174559253">"Activaţi Servicii Google Play"</string>
+    <string name="common_google_play_services_install_button" msgid="8515591849428043265">"Obţineţi Servicii Google Play"</string>
+    <string name="common_google_play_services_install_text_phone" msgid="8685301130651051380">"Această aplicaţie nu poate rula fără Servicii Google Play, care lipsesc de pe telefon."</string>
+    <string name="common_google_play_services_install_text_tablet" msgid="1589957570365247855">"Această aplicaţie nu poate rula fără Servicii Google Play, care lipsesc de pe tabletă."</string>
+    <string name="common_google_play_services_install_title" msgid="26645092511305524">"Descărcaţi Servicii Google Play"</string>
+    <string name="common_google_play_services_unknown_issue" msgid="4762332809710093730">"Problemă necunoscută privind Servicii Google Play."</string>
+    <string name="common_google_play_services_unsupported_text" msgid="3542578567569488671">"Gadgetul nu acceptă serviciile Google Play, pe care se bazează unele dintre aplicații. Pentru asistență, contactați producătorul gadgetului."</string>
+    <string name="common_google_play_services_unsupported_title" msgid="6334768798839376943">"Servicii Google Play"</string>
+    <string name="common_google_play_services_update_button" msgid="8932944190611227642">"Actualizaţi"</string>
+    <string name="common_google_play_services_update_text" msgid="448354684997260580">"Această aplicaţie nu poate rula decât dacă actualizaţi Servicii Google Play."</string>
+    <string name="common_google_play_services_update_title" msgid="6006316683626838685">"Actualizaţi Servicii Google Play"</string>
+    <string name="common_signin_button_text" msgid="9071884888741449141">"Conectați"</string>
+    <string name="common_signin_button_text_long" msgid="2429381841831957106">"Conectați-vă cu Google"</string>
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml -->
+    <string name="delete">Șterge</string>
+    <string name="delete_dialog_fragment_message">Ești sigur?</string>
+    <string name="delete_dialog_fragment_title">Vrei să ștergi acest element?</string>
+    <string name="feed">Feed</string>
+    <string name="feeds">Feeduri</string>
+    <string name="group">Grup</string>
+    <string name="groups">Grupuri</string>
+    <string name="loading">Se încarcă</string>
+    <string name="login_facebook">Loghează-te cu Facebook</string>
+    <string name="login_message">Ştiri din România va folosi doar numele tău pentru a sync-ui datele
+        pe toate device-urile tale</string>
+    <string name="login_microsoft">Loghează-te cu Microsoft</string>
+    <string name="logout">Deloghează-te</string>
+    <string name="manual">Manual</string>
+    <string name="new_group">Adaugă un grup nou</string>
+    <string name="nointernet">Nu aveți internet</string>
+    <string name="ok">OK</string>
+    <string name="recommended">Recomandate</string>
+    <string name="rename">Redenumește</string>
+    <string name="see_full_article">Pagina Web</string>
+    <string name="update_data">Acutalizează</string>
+
+</resources>

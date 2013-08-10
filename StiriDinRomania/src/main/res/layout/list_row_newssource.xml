@@ -7,13 +7,14 @@
                 android:paddingTop="@dimen/top_and_bottom_margin"
                 android:layout_height="wrap_content">
     <ImageButton
-            android:background="@null"
             android:id="@+id/overflow_icon"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:scaleType="centerInside"
             android:src="@drawable/ic_action_overflow"
-            android:layout_height="wrap_content"/>
+            android:layout_alignParentRight="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
     <TextView
             android:layout_toLeftOf="@id/overflow_icon"
             android:fontFamily="sans-serif-condensed"

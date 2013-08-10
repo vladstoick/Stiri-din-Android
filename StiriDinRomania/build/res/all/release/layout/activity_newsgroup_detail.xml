@@ -1,0 +1,8 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/newsgroup_detail_container"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".NewsGroupDetailActivity"
+             tools:ignore="MergeRootFrame"/>
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_detail.xml -->

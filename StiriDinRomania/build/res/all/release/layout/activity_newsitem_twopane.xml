@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="@dimen/left_and_right_margin"
+              android:layout_marginRight="@dimen/left_and_right_margin"
+              android:baselineAligned="false"
+              android:divider="?android:attr/dividerHorizontal"
+              android:orientation="horizontal"
+              android:showDividers="middle"
+              tools:context=".NewsItemListActivity">
+
+    <!--
+    This layout is a two-pane layout for the NewsItems
+    master/detail flow. See res/values-large/refs.xml and
+    res/values-sw600dp/refs.xml for an example of layout aliases
+    that replace the single-pane version of the layout with
+    this two-pane version.
+
+    For more on layout aliases, see:
+    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
+    -->
+    <fragment
+            android:id="@+id/newsitem_list"
+            android:name="com.vladstoick.Fragments.NewsItemListFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/left_and_right_margin"
+            tools:layout="@android:layout/list_content"/>
+
+    <FrameLayout
+            android:id="@+id/newsitem_detail_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            tools:layout="@layout/fragment_newsitem_detail"/>
+
+
+</LinearLayout>
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsitem_twopane.xml -->

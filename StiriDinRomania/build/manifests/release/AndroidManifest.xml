@@ -1,0 +1,46 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.vladstoick.stiridinromania">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.vladstoick.stiridinromania.gcm.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE"/>
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="18"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.vladstoick.stiridinromania.StiriApp" android:theme="@style/Theme.Styled">
+        <receiver android:name="com.vladstoick.stiridinromania.GCMBroadcastReciever" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.example.gcm"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.vladstoick.stiridinromania.GCMIntentService"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <activity android:name="com.facebook.LoginActivity"/>
+        <activity android:name="com.vladstoick.stiridinromania.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsGroupListActivity">
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsGroupDetailActivity" android:parentActivityName=".NewsGroupListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsGroupListActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsItemListActivity" android:parentActivityName=".NewsGroupActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsGroupActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.NewsItemDetailActivity" android:parentActivityName=".NewsItemListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsItemListActivity"/>
+        </activity>
+        <activity android:label="@string/add_element_fragment_title" android:name="com.vladstoick.stiridinromania.AddElementAcitvitiy" android:parentActivityName="NewsGroupListActivity" android:uiOptions="splitActionBarWhenNarrow" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="android.support.UI_OPTIONS" android:value="splitActionBarWhenNarrow"/>
+        </activity>
+    </application>
+
+</manifest>

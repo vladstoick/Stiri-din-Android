@@ -4,6 +4,10 @@
     <string name="see_full_article">Web Page</string>
     <!-- ALL GROUPS ACITIVTY -->
     <string name="all_groups_title">Your groups</string>
+    <string-array name="popupmenu_newsgroup">
+        <item >Delete</item>
+        <item >Rename</item>
+    </string-array>
     <!-- ADD FRAGMENT -->
     <string name="manual">Manual</string>
     <string name="recommended">Recommended</string>
