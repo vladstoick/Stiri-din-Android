@@ -194,8 +194,11 @@ public class NewsDataSource {
 
     public void deleteNewsSource(NewsSource ns){
         sqlHelper.deleteNewsSource(ns.getId());
+        sqlHelper.updateNewsGroupNoFeeds(ns.getGroupId());
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+        String url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId();
+        httpClient.delete(url, new AsyncHttpResponseHandler(){});
     }
     //NEWSITEM
 
