@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,16 +14,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
-import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.actionbarsherlock.internal.widget.PopupWindowCompat;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
 
-import java.lang.annotation.Target;
 import java.util.ArrayList;
 
 import butterknife.InjectView;
@@ -75,7 +70,7 @@ public class AllGroupsFragmentAdapter extends BaseAdapter {
         final NewsGroup ng = getItem(position);
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(R.layout.list_row_allgroups, parent, false);
+            row = inflater.inflate(R.layout.list_row_newsgroup, parent, false);
             holder = new RowHolder(row);
             row.setTag(holder);
         } else {
