@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
+import com.vladstoick.DialogFragment.RenameDialogFragment;
 
 import java.util.ArrayList;
 
@@ -104,6 +105,14 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     }
 
+    public void renameNewsGroup(RenameDialogFragment.ElementRenamedEvent event){
+        NewsGroup ng = getNewsGroup(event.id);
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_TITLE,event.newName);
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.update(GROUPS_TABLE, values, COLUMN_ID + " = " + event.id, null);
+    }
+
     public void updateNewsGroupNoFeeds(int groupId) {
         NewsGroup ng = getNewsGroup(groupId);
         ContentValues values = new ContentValues();
@@ -159,6 +168,10 @@ public class SqlHelper extends SQLiteOpenHelper {
         values.put(SqlHelper.COLUMN_NOUNREADNEWS, ns.getNumberOfUnreadNews());
         sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
                 SQLiteDatabase.CONFLICT_REPLACE);
+    }
+
+    public void renameNewsSource(RenameDialogFragment.ElementRenamedEvent event){
+
     }
 
     //NEWSITEM

@@ -3,6 +3,8 @@ package com.vladstoick.Utils;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DialogFragment;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
@@ -16,7 +18,10 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.actionbarsherlock.app.SherlockFragment;
 import com.vladstoick.DataModel.NewsGroup;
+import com.vladstoick.DialogFragment.RenameDialogFragment;
+import com.vladstoick.Fragments.NewsGroupListFragment;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
 
@@ -38,14 +43,16 @@ public class NewsGroupAdapter extends BaseAdapter {
             Views.inject(this, view);
         }
     }
-
+    public NewsGroupListFragment fragment;
     private final Context context;
     private ArrayList<NewsGroup> data;
     private StiriApp app;
-    public NewsGroupAdapter(ArrayList<NewsGroup> data, Context context, StiriApp app) {
+    public NewsGroupAdapter(ArrayList<NewsGroup> data, Context context, StiriApp app,
+                            NewsGroupListFragment fragment) {
         this.context = context;
         this.data = data;
         this.app = app;
+        this.fragment = fragment;
     }
 
     @Override
@@ -143,6 +150,9 @@ public class NewsGroupAdapter extends BaseAdapter {
         app.newsDataSource.deleteNewsGroup(ng.getId());
     }
     public void renameGroup(NewsGroup ng){
-
+        RenameDialogFragment renameDialogFragment =
+                new RenameDialogFragment(RenameDialogFragment.GROUP_TAG,ng.getId());
+        renameDialogFragment.show(fragment.getSherlockActivity().getSupportFragmentManager(),
+                RenameDialogFragment.TAG);
     }
 }

@@ -11,6 +11,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.squareup.otto.Subscribe;
+import com.vladstoick.DialogFragment.RenameDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.OttoBus.NewsItemLoadedEvent;
@@ -35,6 +36,7 @@ public class NewsDataSource {
     private SqlHelper sqlHelper;
     private Date updateAt;
     public boolean isDataLoaded = false;
+    public AsyncHttpClient client;
     //CONSTRUCTORS
     public NewsDataSource(int userId, Application app) {
         this.userId = userId;
@@ -127,7 +129,6 @@ public class NewsDataSource {
 
     //MODIFYING DATA
     public void addNewsSource(final NewsSource newsSource, final int groupId) {
-        httpClient = new AsyncHttpClient();
         RequestParams requestParams = new RequestParams();
         requestParams.put("title", newsSource.getTitle());
         requestParams.put("description", newsSource.getDescription());
@@ -160,9 +161,18 @@ public class NewsDataSource {
                 });
 
     }
+    @Subscribe
+    public void renameElement(RenameDialogFragment.ElementRenamedEvent event){
+        if(event.type == RenameDialogFragment.GROUP_TAG){
+            sqlHelper.renameNewsGroup(event);
+        } else {
+            sqlHelper.renameNewsSource(event);
+        }
+        BusProvider.getInstance().post(new DataLoadedEvent(
+                DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+    }
 
     public void addNewsGroupAndNewsSource(final String groupTitle, final NewsSource ns) {
-        httpClient = new AsyncHttpClient();
         RequestParams requestParams = new RequestParams();
         requestParams.put("title", groupTitle);
         httpClient.post(BASE_URL + userId, requestParams, new AsyncHttpResponseHandler() {

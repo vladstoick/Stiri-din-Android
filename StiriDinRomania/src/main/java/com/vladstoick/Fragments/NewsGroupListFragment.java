@@ -57,7 +57,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
         Context context = getSherlockActivity();
         StiriApp stiriApp = (StiriApp)(getSherlockActivity().getApplication());
         if (newsDataSource != null) {
-            adapter = new NewsGroupAdapter(newsDataSource, context, stiriApp);
+            adapter = new NewsGroupAdapter(newsDataSource, context, stiriApp, this);
             setListAdapter(adapter);
         }
     }
