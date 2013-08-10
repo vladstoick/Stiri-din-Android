@@ -1,17 +1,11 @@
 package com.vladstoick.DataModel;
 
 import android.app.Application;
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.Parcel;
-import android.os.Parcelable;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -37,7 +31,6 @@ import java.util.Date;
 public class NewsDataSource {
     private AsyncHttpClient httpClient;
     private String BASE_URL = "http://stiriromania.eu01.aws.af.cm/user/";
-    private ArrayList<NewsGroup> allNewsGroups;
     private int userId;
     private SqlHelper sqlHelper;
     private Date updateAt;
@@ -55,7 +48,7 @@ public class NewsDataSource {
                 BASE_URL + userId, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
-                allNewsGroups = JSONParsing.parseNewsDataSource(s);
+                ArrayList<NewsGroup> allNewsGroups = JSONParsing.parseNewsDataSource(s);
                 sqlHelper.deleteAllNewsGroupsAndNewsSources();
                 for (int i = 0; i < allNewsGroups.size(); i++) {
                     for (int j = 0; j < allNewsGroups.get(i).newsSources.size(); j++)
@@ -81,12 +74,10 @@ public class NewsDataSource {
         final String dateString = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"))
                 .format(Calendar.getInstance().getTime());
         if (event.dataLoadedType == DataLoadedEvent.TAG_NEWSDATASOURCE) {
-            for (int i = 0; i < allNewsGroups.size(); i++) {
-                NewsGroup ng = allNewsGroups.get(i);
-                for (int j = 0; j < ng.newsSources.size(); j++) {
-                    NewsSource ns = ng.newsSources.get(j);
-                    getNewsSourceItems(ns);
-                }
+            ArrayList<NewsSource> newsSources = sqlHelper.getAllNewsSources();
+            for (int j = 0; j < newsSources.size(); j++) {
+                NewsSource ns = newsSources.get(j);
+                getNewsSourceItems(ns);
             }
         }
     }
@@ -148,7 +139,7 @@ public class NewsDataSource {
                         newsSource.setGroupId(groupId);
                         sqlHelper.insertNewsSourceInDb(newsSource);
                         getNewsSourceItems(newsSource);
-                        sqlHelper.updateNewsGroup(groupId);
+                        sqlHelper.updateNewsGroupNoFeeds(groupId);
                     }
                 });
     }
@@ -176,7 +167,6 @@ public class NewsDataSource {
             @Override
             public void onSuccess(String s) {
                 NewsGroup ng = new NewsGroup(groupTitle, JSONParsing.parseAddNewsGroupResponse(s));
-                allNewsGroups.add(ng);
                 sqlHelper.insertNewsGroupInDb(ng);
                 addNewsSource(ns, ng.getId());
                 BusProvider.getInstance().post(new
