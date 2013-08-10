@@ -44,7 +44,7 @@ public class NewsDataSource {
     }
 
     public void loadDataFromInternet() {
-        isDataLoaded = true;
+        isDataLoaded = false;
         StringRequest request = new StringRequest(Request.Method.GET,
                 BASE_URL + userId, new Response.Listener<String>() {
             @Override
@@ -58,6 +58,7 @@ public class NewsDataSource {
                 }
                 BusProvider.getInstance().post(new DataLoadedEvent(
                         DataLoadedEvent.TAG_NEWSDATASOURCE));
+                isDataLoaded = true;
 
             }
         }, new Response.ErrorListener() {
@@ -67,7 +68,6 @@ public class NewsDataSource {
             }
         }
         );
-
         StiriApp.queue.add(request);
     }
 

@@ -65,8 +65,6 @@ public class NewsGroupListFragment extends SherlockListFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if(!((StiriApp) (getSherlockActivity().getApplication())).newsDataSource.isDataLoaded)
-            refreshItem.setActionView(R.layout.actionbar_refresh);
         // Restore the previously serialized activated item position.
         if (savedInstanceState != null
                 && savedInstanceState.containsKey(STATE_ACTIVATED_POSITION)) {
@@ -130,6 +128,8 @@ public class NewsGroupListFragment extends SherlockListFragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.news_group_list_fragment,menu);
         refreshItem  = menu.findItem(R.id.action_refresh);
+        if(!((StiriApp) (getSherlockActivity().getApplication())).newsDataSource.isDataLoaded)
+            refreshItem.setActionView(R.layout.actionbar_refresh);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
