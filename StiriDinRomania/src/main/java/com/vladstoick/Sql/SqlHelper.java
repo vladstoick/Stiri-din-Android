@@ -174,6 +174,11 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     }
 
+    public void deleteNewsSource(int sourceId){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(SOURCES_TABLE, COLUMN_ID + " = " + sourceId , null);
+    }
+
     //NEWSITEM
 
     public NewsItem getNewsItem(String url){

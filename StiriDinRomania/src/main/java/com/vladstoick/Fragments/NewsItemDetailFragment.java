@@ -80,7 +80,7 @@ public class NewsItemDetailFragment extends SherlockFragment {
                 BusProvider.getInstance().register(this);
                 mWebView.loadData(getString(R.string.loading), "text/html; charset=utf-8", null);
                 ((StiriApp)(getSherlockActivity().getApplication())).newsDataSource
-                        .getNewsItemPaperized(mItem);
+                        .paperizeNewsItem(mItem);
             }
             mWebView.setWebViewClient(new WebViewClient());
         }

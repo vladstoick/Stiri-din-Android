@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.stiridinromania.R;
+import com.vladstoick.stiridinromania.StiriApp;
 
 import java.util.ArrayList;
 
@@ -43,14 +44,15 @@ public class NewsSourceAdapter extends BaseAdapter {
 
     private final Context context;
     private NewsGroup data;
-
+    public StiriApp app;
     public void setData(NewsGroup data) {
         this.data = data;
     }
 
-    public NewsSourceAdapter(NewsGroup data, Context context) {
+    public NewsSourceAdapter(NewsGroup data, Context context, StiriApp app) {
         this.context = context;
         this.data = data;
+        this.app = app;
     }
 
     @Override
@@ -142,7 +144,7 @@ public class NewsSourceAdapter extends BaseAdapter {
     }
 
     public void deleteSource(final NewsSource newsSource){
-
+        app.newsDataSource.deleteNewsSource(newsSource);
     }
     public void renameSource(final NewsSource newsSource){
 

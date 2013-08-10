@@ -73,6 +73,8 @@ public class NewsDataSource {
         StiriApp.queue.add(request);
     }
 
+
+
     @Subscribe
     public void OnDataLoaded(DataLoadedEvent event) {
         final String dateString = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"))
@@ -81,86 +83,13 @@ public class NewsDataSource {
             ArrayList<NewsSource> newsSources = sqlHelper.getAllNewsSources();
             for (int j = 0; j < newsSources.size(); j++) {
                 NewsSource ns = newsSources.get(j);
-                getNewsSourceItems(ns);
+                getNewsItems(ns);
             }
         }
     }
 
-    public void getNewsSourceItems(NewsSource ns) {
-        String url = NewsSource.BASE_URL + ns.getRssLink() + "&feedId=" + ns.getId();
-//                            +"&date="+dateString;
-        StringRequest stringRequest = new StringRequest(
-                Request.Method.GET, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                addNewSource(response);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError volleyError) {
-                volleyError.printStackTrace();
-            }
-        }
-        );
-        StiriApp.queue.add(stringRequest);
-    }
+    //MULTIPLE
 
-    public void addNewSource(String response) {
-        try {
-            JSONObject jsonObject = new JSONObject(response);
-            String sFeedId = jsonObject.getString("feedId");
-            int feedId = Integer.parseInt(sFeedId);
-            JSONArray feedArray = jsonObject.getJSONArray("articles");
-            ArrayList<NewsItem> newsItems = JSONParsing.parseFeed(feedArray);
-            for (int i = 0; i < newsItems.size(); i++)
-                if (newsItems.get(i).getDescription() == "null")
-                    getNewsItemPaperized(newsItems.get(i));
-            NewsSource ns = getNewsSource(feedId);
-            ns.news = newsItems;
-            ns.setNumberOfUnreadNews(newsItems.size());
-            sqlHelper.insertNewsSourceInDb(ns);
-            sqlHelper.insertNewsItemsInDb(ns);
-            BusProvider.getInstance().post(new
-                    DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    //MODIFYING DATA
-    public void addNewsSource(final NewsSource newsSource, final int groupId) {
-        RequestParams requestParams = new RequestParams();
-        requestParams.put("title", newsSource.getTitle());
-        requestParams.put("description", newsSource.getDescription());
-        requestParams.put("url", newsSource.getRssLink());
-        httpClient.post(BASE_URL + userId + "/" + groupId, requestParams,
-                new AsyncHttpResponseHandler() {
-                    @Override
-                    public void onSuccess(String s) {
-                        int newsSourceId = JSONParsing.getNewsSourceId(s);
-                        newsSource.setId(newsSourceId);
-                        newsSource.setGroupId(groupId);
-                        sqlHelper.insertNewsSourceInDb(newsSource);
-                        getNewsSourceItems(newsSource);
-                        sqlHelper.updateNewsGroupNoFeeds(groupId);
-                    }
-                });
-    }
-
-    public void deleteNewsGroup(final int id) {
-        sqlHelper.deleteNewsGroup(id);
-        httpClient = new AsyncHttpClient();
-        BusProvider.getInstance().post(new DataLoadedEvent(
-                DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
-        httpClient.delete(BASE_URL + userId + "/" + id,
-                new AsyncHttpResponseHandler() {
-                    @Override
-                    public void onSuccess(String s) {
-
-                    }
-                });
-
-    }
     @Subscribe
     public void renameElement(RenameDialogFragment.ElementRenamedEvent event){
         if(event.type == RenameDialogFragment.GROUP_TAG){
@@ -168,9 +97,7 @@ public class NewsDataSource {
             RequestParams requestParams = new RequestParams();
             requestParams.put("title",event.newName);
             httpClient.put(BASE_URL + userId + "/" + event.id,
-                    requestParams, new AsyncHttpResponseHandler(){
-
-            });
+                    requestParams, new AsyncHttpResponseHandler(){});
         } else {
             sqlHelper.renameNewsSource(event);
         }
@@ -193,7 +120,109 @@ public class NewsDataSource {
         });
     }
 
-    public void getNewsItemPaperized(NewsItem ni) {
+
+    //NEWSGROUP
+
+    public ArrayList<NewsGroup> getAllNewsGroups() {
+        return sqlHelper.getAllNewsGroups();
+    }
+
+    public NewsGroup getNewsGroup(int id) {
+        return sqlHelper.getNewsGroup(id);
+    }
+
+    public void deleteNewsGroup(final int id) {
+        sqlHelper.deleteNewsGroup(id);
+        BusProvider.getInstance().post(new DataLoadedEvent(
+                DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+        httpClient.delete(BASE_URL + userId + "/" + id,
+                new AsyncHttpResponseHandler() {
+                    @Override
+                    public void onSuccess(String s) {
+
+                    }
+                });
+
+    }
+
+   //NewsSource
+
+    public NewsSource getNewsSource(int id) {
+        return sqlHelper.getNewsSource(id);
+    }
+
+    public void addNewsSourceInDb(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            String sFeedId = jsonObject.getString("feedId");
+            int feedId = Integer.parseInt(sFeedId);
+            JSONArray feedArray = jsonObject.getJSONArray("articles");
+            ArrayList<NewsItem> newsItems = JSONParsing.parseFeed(feedArray);
+            for (int i = 0; i < newsItems.size(); i++)
+                if (newsItems.get(i).getDescription() == "null")
+                    paperizeNewsItem(newsItems.get(i));
+            NewsSource ns = getNewsSource(feedId);
+            ns.news = newsItems;
+            ns.setNumberOfUnreadNews(newsItems.size());
+            sqlHelper.insertNewsSourceInDb(ns);
+            sqlHelper.insertNewsItemsInDb(ns);
+            BusProvider.getInstance().post(new
+                    DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addNewsSource(final NewsSource newsSource, final int groupId) {
+        RequestParams requestParams = new RequestParams();
+        requestParams.put("title", newsSource.getTitle());
+        requestParams.put("description", newsSource.getDescription());
+        requestParams.put("url", newsSource.getRssLink());
+        httpClient.post(BASE_URL + userId + "/" + groupId, requestParams,
+                new AsyncHttpResponseHandler() {
+                    @Override
+                    public void onSuccess(String s) {
+                        int newsSourceId = JSONParsing.getNewsSourceId(s);
+                        newsSource.setId(newsSourceId);
+                        newsSource.setGroupId(groupId);
+                        sqlHelper.insertNewsSourceInDb(newsSource);
+                        getNewsItems(newsSource);
+                        sqlHelper.updateNewsGroupNoFeeds(groupId);
+                    }
+                });
+    }
+
+    public void deleteNewsSource(NewsSource ns){
+        sqlHelper.deleteNewsSource(ns.getId());
+        BusProvider.getInstance().post(new DataLoadedEvent(
+                DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+    }
+    //NEWSITEM
+
+    public void getNewsItems(NewsSource ns) {
+        String url = NewsSource.BASE_URL + ns.getRssLink() + "&feedId=" + ns.getId();
+//                            +"&date="+dateString;
+        StringRequest stringRequest = new StringRequest(
+                Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                addNewsSourceInDb(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        }
+        );
+        StiriApp.queue.add(stringRequest);
+    }
+
+    public NewsItem getNewsItem(String url){
+        return  sqlHelper.getNewsItem(url);
+    }
+
+    public void paperizeNewsItem(NewsItem ni) {
         String url = "http://37.139.8.146:8080/?url=" + ni.getUrlLink();
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -201,7 +230,7 @@ public class NewsDataSource {
                     public void onResponse(JSONObject jsonObject) {
                         try {
                             String url = jsonObject.getString("url");
-                            updateNewsItem(url,jsonObject.getString("response"));
+                            addPaperizedStringToNewsItem(url, jsonObject.getString("response"));
                             BusProvider.getInstance().post(
                                     new NewsItemLoadedEvent(getNewsItem(url)));
                         } catch (Exception e) {
@@ -218,23 +247,8 @@ public class NewsDataSource {
         StiriApp.queue.add(request);
     }
 
-    public ArrayList<NewsGroup> getAllNewsGroups() {
-        return sqlHelper.getAllNewsGroups();
-    }
 
-    public NewsGroup getNewsGroup(int id) {
-        return sqlHelper.getNewsGroup(id);
-    }
-
-    public NewsSource getNewsSource(int id) {
-        return sqlHelper.getNewsSource(id);
-    }
-
-    public NewsItem getNewsItem(String url){
-        return  sqlHelper.getNewsItem(url);
-    }
-
-    public void updateNewsItem(String url, String paperized) {
+    public void addPaperizedStringToNewsItem(String url, String paperized) {
         sqlHelper.updateNewsItem(url, paperized);
     }
 }
