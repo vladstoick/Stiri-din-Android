@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.vladstoick.DataModel.NewsSource;
-import com.vladstoick.Utils.NewsItemListFragmentAdapter;
+import com.vladstoick.Utils.NewsItemAdapter;
 
 /**
  * A list fragment representing a list of NewsItems. This fragment
@@ -76,7 +76,7 @@ public class NewsItemListFragment extends ListFragment {
 
     public void setData(NewsSource ns) {
         this.ns = ns;
-        setListAdapter(new NewsItemListFragmentAdapter(getActivity(), ns));
+        setListAdapter(new NewsItemAdapter(getActivity(), ns));
     }
 
     @Override

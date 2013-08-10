@@ -34,7 +34,7 @@ public class NewsDataSource {
     private int userId;
     private SqlHelper sqlHelper;
     private Date updateAt;
-
+    public boolean isDataLoaded = false;
     //CONSTRUCTORS
     public NewsDataSource(int userId, Application app) {
         this.userId = userId;
@@ -43,7 +43,8 @@ public class NewsDataSource {
         BusProvider.getInstance().register(this);
     }
 
-    private void loadDataFromInternet() {
+    public void loadDataFromInternet() {
+        isDataLoaded = true;
         StringRequest request = new StringRequest(Request.Method.GET,
                 BASE_URL + userId, new Response.Listener<String>() {
             @Override
@@ -55,9 +56,9 @@ public class NewsDataSource {
                         sqlHelper.insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
                     sqlHelper.insertNewsGroupInDb(allNewsGroups.get(i));
                 }
-
                 BusProvider.getInstance().post(new DataLoadedEvent(
                         DataLoadedEvent.TAG_NEWSDATASOURCE));
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -66,6 +67,7 @@ public class NewsDataSource {
             }
         }
         );
+
         StiriApp.queue.add(request);
     }
 

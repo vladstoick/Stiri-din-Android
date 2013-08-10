@@ -13,6 +13,7 @@ import com.vladstoick.Fragments.NewsGroupListFragment;
 import com.vladstoick.Utils.Tags;
 
 
+
 /**
  * An activity representing a list of NewsSources. This activity
  * has different presentations for handset and tablet-size devices. On
@@ -93,27 +94,29 @@ public class NewsGroupListActivity extends SherlockFragmentActivity
     }
 
     @Override
+    public void onAddNewGroupSelected() {
+        Intent intent = new Intent(this, AddElementAcitvitiy.class);
+        startActivity(intent);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.news_group_list_activity, menu);
+        getSupportMenuInflater().inflate(R.menu.news_group_list_activity,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_add: {
-                Intent intent = new Intent(this, AddElementAcitvitiy.class);
-                startActivity(intent);
-                break;
-            }
+        switch (item.getItemId()){
             case R.id.action_logout:{
                 SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
                 settings.edit().remove("user_id").commit();
                 Intent intent = new Intent(this,LoginActivity.class);
                 intent.putExtra(Tags.LOGOUT_TAG,true);
                 startActivity(intent);
+                return true;
             }
         }
-        return super.onOptionsItemSelected(item);
+        return false;
     }
 }

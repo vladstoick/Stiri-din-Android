@@ -2,30 +2,43 @@ package com.vladstoick.Fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockListFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsGroup;
+import com.vladstoick.DialogFragment.NoConnectionDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
-import com.vladstoick.Utils.AllGroupsFragmentAdapter;
+import com.vladstoick.Utils.NewsGroupAdapter;
+import com.vladstoick.Utils.Tags;
+import com.vladstoick.Utils.Utils;
+import com.vladstoick.stiridinromania.AddElementAcitvitiy;
+import com.vladstoick.stiridinromania.LoginActivity;
+import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
 
 import java.util.ArrayList;
 
 
 public class NewsGroupListFragment extends SherlockListFragment {
-    private AllGroupsFragmentAdapter adapter;
+    private NewsGroupAdapter adapter;
     private ArrayList<NewsGroup> newsDataSource;
     private static final String STATE_ACTIVATED_POSITION = "activated_position";
     private Callbacks mCallbacks;
+    MenuItem refreshItem;
     private int mActivatedPosition = ListView.INVALID_POSITION;
 
     public interface Callbacks {
         public void onItemSelected(int id);
+        public void onAddNewGroupSelected();
     }
 
     public NewsGroupListFragment() {
@@ -35,6 +48,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         BusProvider.getInstance().register(this);
+        setHasOptionsMenu(true);
     }
 
     private void setAdapter() {
@@ -43,7 +57,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
         Context context = getSherlockActivity();
         StiriApp stiriApp = (StiriApp)(getSherlockActivity().getApplication());
         if (newsDataSource != null) {
-            adapter = new AllGroupsFragmentAdapter(newsDataSource, context, stiriApp);
+            adapter = new NewsGroupAdapter(newsDataSource, context, stiriApp);
             setListAdapter(adapter);
         }
     }
@@ -51,6 +65,8 @@ public class NewsGroupListFragment extends SherlockListFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if(!((StiriApp) (getSherlockActivity().getApplication())).newsDataSource.isDataLoaded)
+            refreshItem.setActionView(R.layout.actionbar_refresh);
         // Restore the previously serialized activated item position.
         if (savedInstanceState != null
                 && savedInstanceState.containsKey(STATE_ACTIVATED_POSITION)) {
@@ -106,6 +122,36 @@ public class NewsGroupListFragment extends SherlockListFragment {
 
     @Subscribe
     public void onDataLoaded(DataLoadedEvent event) {
+        refreshItem.setActionView(null);
         setAdapter();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.news_group_list_fragment,menu);
+        refreshItem  = menu.findItem(R.id.action_refresh);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_add: {
+                if(Utils.isOnline(getSherlockActivity())==true){
+                    mCallbacks.onAddNewGroupSelected();
+                }else {
+                    NoConnectionDialogFragment ndf = new NoConnectionDialogFragment();
+                    ndf.show(getSherlockActivity().getSupportFragmentManager(),
+                            NoConnectionDialogFragment.TAG);
+                }
+                break;
+            }
+            case R.id.action_refresh:{
+                refreshItem = item;
+                ((StiriApp)(getActivity().getApplication())).newsDataSource.loadDataFromInternet();
+                item.setActionView(R.layout.actionbar_refresh);
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

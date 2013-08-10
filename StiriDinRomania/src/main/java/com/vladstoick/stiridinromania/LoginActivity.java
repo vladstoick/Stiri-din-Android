@@ -5,14 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.android.volley.VolleyError;
@@ -22,30 +17,16 @@ import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
-import com.google.android.gms.auth.GoogleAuthException;
 import com.google.android.gms.auth.GoogleAuthUtil;
-import com.google.android.gms.auth.UserRecoverableAuthException;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.Scopes;
-import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.plus.PlusClient;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 import com.vladstoick.DataModel.JSONParsing;
 import com.vladstoick.DataModel.NewsDataSource;
-import com.vladstoick.Utils.LoginRequest;
-import com.vladstoick.Utils.Tags;
+import com.vladstoick.Utils.LoginVolleyRequest;
 
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-
-import butterknife.InjectView;
-import butterknife.Views;
 
 /**
  * Created by vlad on 7/17/13.
@@ -147,8 +128,8 @@ public class LoginActivity extends SherlockFragmentActivity
             @Override
             protected void onPostExecute(String token) {
                 super.onPostExecute(token);
-                LoginRequest loginRequest =
-                        new LoginRequest(LoginRequest.TAG_G, token,gUserId,
+                LoginVolleyRequest loginVolleyRequest =
+                        new LoginVolleyRequest(LoginVolleyRequest.TAG_G, token,gUserId,
                                 new com.android.volley.Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject jsonObject) {
@@ -165,7 +146,7 @@ public class LoginActivity extends SherlockFragmentActivity
                             }
                         }
                         );
-                StiriApp.queue.add(loginRequest);
+                StiriApp.queue.add(loginVolleyRequest);
             }
         };
         task.execute();
@@ -205,7 +186,7 @@ public class LoginActivity extends SherlockFragmentActivity
                     getSharedPreferences("appPref", Context.MODE_PRIVATE).edit();
             editor.putString("user_id_fb", user.getId());
             editor.commit();
-            LoginRequest loginRequest = new LoginRequest(LoginRequest.TAG_FB, token, user.getId(),
+            LoginVolleyRequest loginVolleyRequest = new LoginVolleyRequest(LoginVolleyRequest.TAG_FB, token, user.getId(),
                     new com.android.volley.Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject jsonObject) {
@@ -222,7 +203,7 @@ public class LoginActivity extends SherlockFragmentActivity
                         }
                     }
              );
-            StiriApp.queue.add(loginRequest);
+            StiriApp.queue.add(loginVolleyRequest);
         }
     };
     @Override

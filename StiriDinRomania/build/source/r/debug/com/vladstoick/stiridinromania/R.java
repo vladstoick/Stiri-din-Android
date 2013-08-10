@@ -1265,8 +1265,8 @@ containing a value of this type.
         public static final int action_cancel=0x7f070066;
         public static final int action_delete=0x7f07006a;
         public static final int action_full_article=0x7f070069;
-        public static final int action_logout=0x7f070068;
-        public static final int action_refresh=0x7f070067;
+        public static final int action_logout=0x7f070067;
+        public static final int action_refresh=0x7f070068;
         public static final int action_rename=0x7f07006b;
         public static final int add_element_feed_description=0x7f070056;
         public static final int add_element_feed_rss=0x7f070057;
@@ -1360,46 +1360,48 @@ containing a value of this type.
         public static final int abs__search_dropdown_item_icons_2line=0x7f030012;
         public static final int abs__search_view=0x7f030013;
         public static final int abs__simple_dropdown_hint=0x7f030014;
-        public static final int activity_addelements=0x7f030015;
-        public static final int activity_login=0x7f030016;
-        public static final int activity_newsgroup_detail=0x7f030017;
+        public static final int actionbar_refresh=0x7f030015;
+        public static final int activity_addelements=0x7f030016;
+        public static final int activity_login=0x7f030017;
+        public static final int activity_newsgroup_detail=0x7f030018;
         /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-large\refs.xml 
  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw600dp\refs.xml 
          */
-        public static final int activity_newsgroup_list=0x7f030018;
-        public static final int activity_newsgroup_twopane=0x7f030019;
-        public static final int activity_newsitem_detail=0x7f03001a;
-        public static final int activity_newsitem_list=0x7f03001b;
-        public static final int activity_newsitem_twopane=0x7f03001c;
-        public static final int com_facebook_friendpickerfragment=0x7f03001d;
-        public static final int com_facebook_loginfragment=0x7f03001e;
-        public static final int com_facebook_picker_activity_circle_row=0x7f03001f;
-        public static final int com_facebook_picker_checkbox=0x7f030020;
-        public static final int com_facebook_picker_image=0x7f030021;
-        public static final int com_facebook_picker_list_row=0x7f030022;
-        public static final int com_facebook_picker_list_section_header=0x7f030023;
-        public static final int com_facebook_picker_search_box=0x7f030024;
-        public static final int com_facebook_picker_title_bar=0x7f030025;
-        public static final int com_facebook_picker_title_bar_stub=0x7f030026;
-        public static final int com_facebook_placepickerfragment=0x7f030027;
-        public static final int com_facebook_placepickerfragment_list_row=0x7f030028;
-        public static final int fragment_add_elements_manually=0x7f030029;
-        public static final int fragment_newsgroup=0x7f03002a;
-        public static final int fragment_newsitem=0x7f03002b;
-        public static final int fragment_newsitem_detail=0x7f03002c;
-        public static final int list_row_newsgroup=0x7f03002d;
-        public static final int list_row_newsitem=0x7f03002e;
-        public static final int list_row_newssource=0x7f03002f;
-        public static final int sherlock_spinner_dropdown_item=0x7f030030;
-        public static final int sherlock_spinner_item=0x7f030031;
-        public static final int spinner_row_newsgroup=0x7f030032;
-        public static final int spinner_row_newsgroup_dropdown=0x7f030033;
+        public static final int activity_newsgroup_list=0x7f030019;
+        public static final int activity_newsgroup_twopane=0x7f03001a;
+        public static final int activity_newsitem_detail=0x7f03001b;
+        public static final int activity_newsitem_list=0x7f03001c;
+        public static final int activity_newsitem_twopane=0x7f03001d;
+        public static final int com_facebook_friendpickerfragment=0x7f03001e;
+        public static final int com_facebook_loginfragment=0x7f03001f;
+        public static final int com_facebook_picker_activity_circle_row=0x7f030020;
+        public static final int com_facebook_picker_checkbox=0x7f030021;
+        public static final int com_facebook_picker_image=0x7f030022;
+        public static final int com_facebook_picker_list_row=0x7f030023;
+        public static final int com_facebook_picker_list_section_header=0x7f030024;
+        public static final int com_facebook_picker_search_box=0x7f030025;
+        public static final int com_facebook_picker_title_bar=0x7f030026;
+        public static final int com_facebook_picker_title_bar_stub=0x7f030027;
+        public static final int com_facebook_placepickerfragment=0x7f030028;
+        public static final int com_facebook_placepickerfragment_list_row=0x7f030029;
+        public static final int fragment_add_elements_manually=0x7f03002a;
+        public static final int fragment_newsgroup=0x7f03002b;
+        public static final int fragment_newsitem=0x7f03002c;
+        public static final int fragment_newsitem_detail=0x7f03002d;
+        public static final int list_row_newsgroup=0x7f03002e;
+        public static final int list_row_newsitem=0x7f03002f;
+        public static final int list_row_newssource=0x7f030030;
+        public static final int sherlock_spinner_dropdown_item=0x7f030031;
+        public static final int sherlock_spinner_item=0x7f030032;
+        public static final int spinner_row_newsgroup=0x7f030033;
+        public static final int spinner_row_newsgroup_dropdown=0x7f030034;
     }
     public static final class menu {
         public static final int add_element_manual_fragment=0x7f0c0000;
         public static final int news_group_list_activity=0x7f0c0001;
-        public static final int news_item_detail_fragment=0x7f0c0002;
-        public static final int popupmenu_newsgroup=0x7f0c0003;
+        public static final int news_group_list_fragment=0x7f0c0002;
+        public static final int news_item_detail_fragment=0x7f0c0003;
+        public static final int popupmenu_newsgroup=0x7f0c0004;
     }
     public static final class string {
         public static final int abs__action_bar_home_description=0x7f0a0000;

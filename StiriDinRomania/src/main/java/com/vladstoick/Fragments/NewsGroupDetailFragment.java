@@ -13,7 +13,7 @@ import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
-import com.vladstoick.Utils.NewsGroupFragmentAdapter;
+import com.vladstoick.Utils.NewsSourceAdapter;
 import com.vladstoick.Utils.Tags;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
@@ -36,7 +36,7 @@ public class NewsGroupDetailFragment extends SherlockFragment {
     @InjectView(R.id.newsGroupListView)
     ListView mList;
     private NewsGroupDetailFragmentCommunicationInterface mListener;
-    NewsGroupFragmentAdapter adapter;
+    NewsSourceAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,7 +84,7 @@ public class NewsGroupDetailFragment extends SherlockFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_newsgroup, container, false);
         Views.inject(this, mView);
-        adapter = new NewsGroupFragmentAdapter(newsGroup, getSherlockActivity());
+        adapter = new NewsSourceAdapter(newsGroup, getSherlockActivity());
         mList.setAdapter(adapter);
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
