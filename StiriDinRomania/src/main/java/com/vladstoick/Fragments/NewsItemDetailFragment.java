@@ -25,7 +25,7 @@ import com.vladstoick.stiridinromania.StiriApp;
 import butterknife.InjectView;
 import butterknife.Views;
 
-//import com.mycompany.myapp.dummy.DummyContent;
+//import com.vladstoick.stiridinromania.myapp.dummy.DummyContent;
 
 /**
  * A fragment representing a single NewsItem detail screen.

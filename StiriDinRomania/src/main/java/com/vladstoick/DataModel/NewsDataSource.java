@@ -164,14 +164,15 @@ public class NewsDataSource {
             int feedId = Integer.parseInt(sFeedId);
             JSONArray feedArray = jsonObject.getJSONArray("articles");
             ArrayList<NewsItem> newsItems = JSONParsing.parseFeed(feedArray);
-            for (int i = 0; i < newsItems.size(); i++)
-                if (newsItems.get(i).getDescription() == "null")
-                    paperizeNewsItem(newsItems.get(i));
             NewsSource ns = getNewsSource(feedId);
             ns.news = newsItems;
             ns.setNumberOfUnreadNews(newsItems.size());
             sqlHelper.insertNewsSourceInDb(ns);
             sqlHelper.insertNewsItemsInDb(ns);
+            newsItems = sqlHelper.getNewsItems(ns);
+            for (int i = 0; i < newsItems.size(); i++)
+                if (newsItems.get(i).getDescription() == "null")
+                    paperizeNewsItem(newsItems.get(i));
             BusProvider.getInstance().post(new
                     DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
         } catch (Exception e) {

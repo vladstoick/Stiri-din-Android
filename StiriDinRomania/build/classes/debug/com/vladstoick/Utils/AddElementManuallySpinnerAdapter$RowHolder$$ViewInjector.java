@@ -7,9 +7,9 @@ import butterknife.Views.Finder;
 public class AddElementManuallySpinnerAdapter$RowHolder$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Utils.AddElementManuallySpinnerAdapter.RowHolder target, Object source) {
     View view;
-    view = finder.findById(source, 2131165286);
+    view = finder.findById(source, 2131099751);
     target.mTitle = (android.widget.TextView) view;
-    view = finder.findById(source, 2131165287);
+    view = finder.findById(source, 2131099752);
     target.mAddImage = (android.widget.ImageView) view;
   }
 

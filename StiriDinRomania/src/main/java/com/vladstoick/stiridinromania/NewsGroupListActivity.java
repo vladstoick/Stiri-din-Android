@@ -1,5 +1,7 @@
 package com.vladstoick.stiridinromania;
 
+import android.app.SearchManager;
+import android.app.SearchableInfo;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +10,7 @@ import android.os.Bundle;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.widget.SearchView;
 import com.vladstoick.Fragments.NewsGroupDetailFragment;
 import com.vladstoick.Fragments.NewsGroupListFragment;
 import com.vladstoick.Utils.Tags;
@@ -102,6 +105,12 @@ public class NewsGroupListActivity extends SherlockFragmentActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getSupportMenuInflater().inflate(R.menu.news_group_list_activity,menu);
+        SearchManager searchManager =
+                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView =
+                (SearchView) menu.findItem(R.id.search).getActionView();
+        SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
+        searchView.setSearchableInfo(searchableInfo);
         return super.onCreateOptionsMenu(menu);
     }
 

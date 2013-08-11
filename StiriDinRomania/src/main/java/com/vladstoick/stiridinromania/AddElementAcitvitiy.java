@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NavUtils;
+
 import android.support.v4.view.ViewPager;
 import android.view.WindowManager;
 
@@ -84,10 +85,11 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
         }
     }
 
+
     @Override
     public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction
             fragmentTransaction) {
-
+        mViewPager.setCurrentItem(tab.getPosition());
     }
 
     @Override

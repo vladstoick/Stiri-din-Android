@@ -1,5 +1,6 @@
 package com.vladstoick.stiridinromania;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -110,7 +111,8 @@ public class NewsItemListActivity extends SherlockFragmentActivity
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
-                NavUtils.navigateUpTo(this, new Intent(this, NewsItemListActivity.class));
+//                if(mTwoPane)
+                    NavUtils.navigateUpTo(this, new Intent(this, NewsItemListActivity.class));
                 return true;
         }
         return super.onOptionsItemSelected(item);

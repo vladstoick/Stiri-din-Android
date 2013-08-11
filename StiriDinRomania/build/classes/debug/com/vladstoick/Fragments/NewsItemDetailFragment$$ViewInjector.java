@@ -7,13 +7,13 @@ import butterknife.Views.Finder;
 public class NewsItemDetailFragment$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Fragments.NewsItemDetailFragment target, Object source) {
     View view;
-    view = finder.findById(source, 2131165273);
+    view = finder.findById(source, 2131099737);
     target.mWebView = (android.webkit.WebView) view;
-    view = finder.findById(source, 2131165275);
+    view = finder.findById(source, 2131099739);
     target.mTitle = (android.widget.TextView) view;
-    view = finder.findById(source, 2131165276);
+    view = finder.findById(source, 2131099740);
     target.mPaperized = (android.widget.TextView) view;
-    view = finder.findById(source, 2131165274);
+    view = finder.findById(source, 2131099738);
     target.mScrollView = (android.widget.ScrollView) view;
   }
 

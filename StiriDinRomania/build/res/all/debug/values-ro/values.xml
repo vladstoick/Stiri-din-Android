@@ -49,6 +49,8 @@
     <string name="ok">OK</string>
     <string name="recommended">Recomandate</string>
     <string name="rename">Redenumește</string>
+    <string name="search">Caută</string>
+    <string name="search_hint">Titlul știrii</string>
     <string name="see_full_article">Pagina Web</string>
     <string name="update_data">Acutalizează</string>
 
