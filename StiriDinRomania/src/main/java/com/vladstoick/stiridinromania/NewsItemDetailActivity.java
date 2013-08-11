@@ -39,8 +39,8 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putParcelable(NewsItemDetailFragment.ARG_ITEM,
-                    getIntent().getParcelableExtra(NewsItemDetailFragment.ARG_ITEM));
+            arguments.putString(NewsItemDetailFragment.ARG_ITEM,
+                    getIntent().getStringExtra(NewsItemDetailFragment.ARG_ITEM));
             NewsItemDetailFragment fragment = new NewsItemDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()

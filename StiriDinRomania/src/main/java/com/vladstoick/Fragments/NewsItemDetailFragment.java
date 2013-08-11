@@ -50,7 +50,9 @@ public class NewsItemDetailFragment extends SherlockFragment {
         if (savedInstanceState != null && savedInstanceState.containsKey(ARG_MODE))
             isInMode = savedInstanceState.getInt(ARG_MODE);
         if (getArguments().containsKey(ARG_ITEM)) {
-            mItem = getArguments().getParcelable(ARG_ITEM);
+            String url =getArguments().getString(ARG_ITEM);
+            mItem = ((StiriApp)getSherlockActivity().getApplication())
+                    .newsDataSource.getNewsItem(url);
         }
     }
 

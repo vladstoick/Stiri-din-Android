@@ -32,7 +32,6 @@ import com.vladstoick.Utils.Tags;
 public class NewsItemListActivity extends SherlockFragmentActivity
         implements NewsItemListFragment.Callbacks {
     private int newsSourceId;
-    public NewsSource newsSource;
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -46,11 +45,12 @@ public class NewsItemListActivity extends SherlockFragmentActivity
         setContentView(R.layout.activity_newsitem_list);
         if (getIntent().getExtras() != null) {
             newsSourceId = getIntent().getExtras().getInt(Tags.NEWSOURCE_TAG_ID);
-            newsSource = ((StiriApp) getApplication()).newsDataSource.getNewsSource(newsSourceId);
+            NewsSource newsSource = ((StiriApp) getApplication())
+                    .newsDataSource.getNewsSource(newsSourceId);
             setTitle(newsSource.getTitle());
             ((NewsItemListFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.newsitem_list))
-                    .setData(newsSource);
+                    .setNewsSourceId(newsSourceId);
             if (findViewById(R.id.newsitem_detail_container) != null) {
                 // The detail container view will be present only in the
                 // large-screen layouts (res/values-large and
@@ -73,20 +73,16 @@ public class NewsItemListActivity extends SherlockFragmentActivity
      * indicating that the item with the given ID was selected.
      */
     @Override
-    public void onItemSelected(String id) {
+    public void onItemSelected(String url) {
 
         //TODO SCAPA
-        NewsItem ni = null;
-        for (int i = 0; i < newsSource.news.size(); i++)
-            if (id == newsSource.news.get(i).getUrlLink())
-                ni = newsSource.news.get(i);
         if (mTwoPane) {
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a
             // fragment transaction.
             Bundle arguments = new Bundle();
 
-            arguments.putParcelable(NewsItemDetailFragment.ARG_ITEM, ni);
+            arguments.putString(NewsItemDetailFragment.ARG_ITEM, url);
 
             NewsItemDetailFragment fragment = new NewsItemDetailFragment();
             fragment.setArguments(arguments);
@@ -98,7 +94,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
             // In single-pane mode, simply start the detail activity
             // for the selected item ID.
             Intent detailIntent = new Intent(this, NewsItemDetailActivity.class);
-            detailIntent.putExtra(NewsItemDetailFragment.ARG_ITEM, ni);
+            detailIntent.putExtra(NewsItemDetailFragment.ARG_ITEM, url);
             startActivity(detailIntent);
         }
     }
