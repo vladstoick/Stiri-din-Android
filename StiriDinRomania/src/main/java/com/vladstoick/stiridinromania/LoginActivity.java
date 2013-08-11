@@ -51,12 +51,12 @@ public class LoginActivity extends SherlockFragmentActivity
             gotoAllGroupsActivity();
             return;
         }
+        setContentView(R.layout.activity_login);
         ((StiriApp)getApplication()).newsDataSource = null;
         getSupportActionBar().hide();
         pd = new ProgressDialog(this);
         pd.setCancelable(false);
         pd.setMessage(getString(R.string.loading));
-        setContentView(R.layout.activity_login);
         LoginButton fbLoginButton = (LoginButton) findViewById(R.id.login_facebook);
         fbLoginButton.setSessionStatusCallback(this);
         findViewById(R.id.login_google).setOnClickListener(this);
