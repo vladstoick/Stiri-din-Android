@@ -14,4 +14,4 @@
             android:icon="@drawable/navigation_refresh"
             android:title="@string/update_data"/>
 
-</menu><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\news_group_list_fragment.xml -->
+</menu><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/menu/news_group_list_fragment.xml -->

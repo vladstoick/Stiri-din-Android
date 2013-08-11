@@ -5,9 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
@@ -27,11 +31,16 @@ import com.vladstoick.stiridinromania.StiriApp;
 
 import java.util.ArrayList;
 
+import butterknife.InjectView;
+import butterknife.Views;
 
-public class NewsGroupListFragment extends SherlockListFragment {
+
+public class NewsGroupListFragment extends SherlockFragment
+        implements ListView.OnItemClickListener{
     private NewsGroupAdapter adapter;
     private ArrayList<NewsGroup> newsDataSource;
     private static final String STATE_ACTIVATED_POSITION = "activated_position";
+    @InjectView(R.id.newsgroup_listview) ListView mListView;
     private Callbacks mCallbacks;
     MenuItem refreshItem;
     private int mActivatedPosition = ListView.INVALID_POSITION;
@@ -51,6 +60,14 @@ public class NewsGroupListFragment extends SherlockListFragment {
         setHasOptionsMenu(true);
     }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_newsgroup,container,true);
+        Views.inject(this,view);
+        mListView.setOnItemClickListener(this);
+        return view;
+    }
+
     private void setAdapter() {
         newsDataSource = ((StiriApp) (getSherlockActivity().getApplication())).newsDataSource
                 .getAllNewsGroups();
@@ -58,7 +75,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
         StiriApp stiriApp = (StiriApp)(getSherlockActivity().getApplication());
         if (newsDataSource != null) {
             adapter = new NewsGroupAdapter(newsDataSource, context, stiriApp, this);
-            setListAdapter(adapter);
+            mListView.setAdapter(adapter);
         }
     }
 
@@ -82,6 +99,7 @@ public class NewsGroupListFragment extends SherlockListFragment {
         mCallbacks = (Callbacks) activity;
     }
 
+
     @Override
     public void onDetach() {
         super.onDetach();
@@ -90,9 +108,8 @@ public class NewsGroupListFragment extends SherlockListFragment {
     }
 
     @Override
-    public void onListItemClick(ListView listView, View view, int position, long id) {
-        super.onListItemClick(listView, view, position, id);
-        mCallbacks.onItemSelected(newsDataSource.get(position).getId());
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        mCallbacks.onItemSelected(newsDataSource.get(i).getId());
     }
 
     @Override
@@ -104,16 +121,16 @@ public class NewsGroupListFragment extends SherlockListFragment {
     }
 
     public void setActivateOnItemClick(boolean activateOnItemClick) {
-        getListView().setChoiceMode(activateOnItemClick
+        mListView.setChoiceMode(activateOnItemClick
                 ? ListView.CHOICE_MODE_SINGLE
                 : ListView.CHOICE_MODE_NONE);
     }
 
     private void setActivatedPosition(int position) {
         if (position == ListView.INVALID_POSITION) {
-            getListView().setItemChecked(mActivatedPosition, false);
+            mListView.setItemChecked(mActivatedPosition, false);
         } else {
-            getListView().setItemChecked(position, true);
+            mListView.setItemChecked(position, true);
         }
         mActivatedPosition = position;
     }

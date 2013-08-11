@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-it\strings.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-it/strings.xml -->
     <string name="common_google_play_services_enable_button" msgid="4181637455539816337">"Attiva Google Play Services"</string>
     <string name="common_google_play_services_enable_text" msgid="7627896071867667758">"L\'app non funzionerà se non attivi Google Play Services."</string>
     <string name="common_google_play_services_enable_title" msgid="529078775174559253">"Attiva Google Play Services"</string>

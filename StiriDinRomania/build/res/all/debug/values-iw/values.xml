@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-iw\values.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values-iw/values.xml -->
     <string name="com_facebook_loginfragment_log_in_button">התחבר…</string>
     <string name="com_facebook_loginfragment_logged_in">מחובר</string>
     <string name="com_facebook_loginfragment_not_logged_in">לא מחובר</string>
@@ -15,7 +15,7 @@
     <string name="com_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
     <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d היו פה</string>
     <string name="com_facebook_placepicker_subtitle_were_here_only_format">%1$,d היו פה</string>
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-iw\strings.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-iw/strings.xml -->
     <string name="common_google_play_services_enable_button" msgid="4181637455539816337">"הפעל את שירותי Google Play"</string>
     <string name="common_google_play_services_enable_text" msgid="7627896071867667758">"יישום זה לא יעבוד אם לא תפעיל את שירותי Google Play."</string>
     <string name="common_google_play_services_enable_title" msgid="529078775174559253">"הפעלת שירותי Google Play"</string>

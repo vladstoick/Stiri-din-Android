@@ -8,4 +8,4 @@
                  android:layout_height="32dp"
                  android:layout_gravity="center"
                  style="?android:attr/indeterminateProgressStyle" />
-</FrameLayout><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\actionbar_refresh.xml -->
+</FrameLayout><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/layout/actionbar_refresh.xml -->

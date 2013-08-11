@@ -82,7 +82,7 @@ public class NewsGroupDetailFragment extends SherlockFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_newsgroup, container, false);
+        mView = inflater.inflate(R.layout.fragment_newssource, container, false);
         Views.inject(this, mView);
         adapter = new NewsSourceAdapter(newsGroup, getSherlockActivity(),
                 (StiriApp) getSherlockActivity().getApplication(), this);

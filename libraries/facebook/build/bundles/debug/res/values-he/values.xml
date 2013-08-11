@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-he\strings.xml -->
+    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-he/strings.xml -->
     <string name="com_facebook_loginfragment_log_in_button">התחבר…</string>
     <string name="com_facebook_loginfragment_logged_in">מחובר</string>
     <string name="com_facebook_loginfragment_not_logged_in">לא מחובר</string>
