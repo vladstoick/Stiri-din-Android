@@ -51,200 +51,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce4bd01f-0e24-4761-9107-6fc7ef347aeb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newssource.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsgroup_detail.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_allgroups.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newssource.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/actionbarsherlock/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/actionbarsherlock/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/vladstoick/stiridinromania/R.java" afterPath="$PROJECT_DIR$/StiriDinRomania/build/source/r/debug/com/vladstoick/stiridinromania/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/build/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/libraries/facebook/build/source/r/debug/com/facebook/android/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/build/source/r/release/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/libraries/facebook/build/source/r/release/com/facebook/android/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/StiriDinRomania.iml" afterPath="$PROJECT_DIR$/StiriDinRomania/StiriDinRomania.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_home.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_tab.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_tab.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_tab_bar_view.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_tab_bar_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_title_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_bar_title_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_menu_item_layout.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_menu_item_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_menu_layout.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_menu_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_mode_bar.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_mode_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_mode_close_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__action_mode_close_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-large/abs__action_mode_close_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-large/abs__action_mode_close_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__activated_background_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__activated_background_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__activated_background_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__activated_background_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__activity_chooser_view.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__activity_chooser_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__activity_chooser_view_list_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__activity_chooser_view_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__btn_cab_done_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__btn_cab_done_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__btn_cab_done_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__btn_cab_done_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__ic_clear.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__ic_clear.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__ic_clear_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__ic_clear_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__ic_menu_moreoverflow_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__ic_menu_moreoverflow_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__ic_menu_moreoverflow_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__ic_menu_moreoverflow_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__item_background_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__item_background_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__item_background_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__item_background_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__list_menu_item_checkbox.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__list_menu_item_checkbox.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__list_menu_item_icon.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__list_menu_item_icon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__list_menu_item_radio.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__list_menu_item_radio.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__list_selector_background_transition_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__list_selector_background_transition_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__list_selector_background_transition_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__list_selector_background_transition_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__list_selector_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__list_selector_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__list_selector_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__list_selector_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__popup_menu_item_layout.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__popup_menu_item_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/abs__primary_text_disable_only_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/abs__primary_text_disable_only_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/abs__primary_text_disable_only_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/abs__primary_text_disable_only_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/abs__primary_text_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/abs__primary_text_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/abs__primary_text_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/abs__primary_text_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__progress_horizontal_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__progress_horizontal_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__progress_horizontal_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__progress_horizontal_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__progress_medium_holo.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__progress_medium_holo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable-v11/abs__progress_medium_holo.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable-v11/abs__progress_medium_holo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__screen_action_bar.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__screen_action_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-xlarge/abs__screen_action_bar.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-xlarge/abs__screen_action_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__screen_action_bar_overlay.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__screen_action_bar_overlay.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-xlarge/abs__screen_action_bar_overlay.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-xlarge/abs__screen_action_bar_overlay.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__screen_simple.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__screen_simple.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__screen_simple_overlay_action_mode.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__screen_simple_overlay_action_mode.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__search_dropdown_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__search_dropdown_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__search_dropdown_item_icons_2line.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__search_dropdown_item_icons_2line.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__search_dropdown_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__search_dropdown_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__search_view.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__search_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__simple_dropdown_hint.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/abs__simple_dropdown_hint.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__spinner_ab_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__spinner_ab_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__spinner_ab_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__spinner_ab_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__tab_indicator_ab_holo.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__tab_indicator_ab_holo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_right_holo_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_right_holo_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_right_holo_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/abs__textfield_searchview_right_holo_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/actionbar_refresh.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/actionbar_refresh.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_addelements.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_addelements.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-sw600dp/activity_addelements.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-sw600dp/activity_addelements.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsgroup_twopane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_list.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_twopane.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/activity_newsitem_twopane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/add_element_manual_fragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/add_element_manual_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_button_check.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_button_check.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_friendpickerfragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_friendpickerfragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginbutton_blue.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginbutton_blue.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginbutton_silver.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginbutton_silver.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_loginfragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_loginfragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginfragment_background_gradient.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_loginfragment_background_gradient.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_activity_circle_row.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_activity_circle_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_checkbox.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_checkbox.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_image.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_image.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_item_background.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_item_background.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_list_row.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_list_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_list_section_header.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_list_section_header.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_list_selector.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_list_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_list_selector_background_transition.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_list_selector_background_transition.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_search_box.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_search_box.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_title_bar.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_title_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_title_bar_stub.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_picker_title_bar_stub.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_top_button.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_picker_top_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_placepickerfragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_placepickerfragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_placepickerfragment_list_row.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/com_facebook_placepickerfragment_list_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_top_background.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_top_background.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_top_button.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/com_facebook_top_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/common_signin_btn_icon_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/common_signin_btn_icon_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/common_signin_btn_icon_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/common_signin_btn_icon_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/common_signin_btn_text_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/common_signin_btn_text_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/common_signin_btn_text_dark.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/common_signin_btn_text_dark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/common_signin_btn_text_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/color/common_signin_btn_text_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/common_signin_btn_text_light.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/drawable/common_signin_btn_text_light.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/facebook/facebook.iml" afterPath="$PROJECT_DIR$/libraries/facebook/facebook.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_add_elements_manually.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_add_elements_manually.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/release/layout/fragment_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/release/layout/fragment_newsgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem_detail.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/fragment_newsitem_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsitem.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newsitem.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newssource.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/list_row_newssource.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_group_list_activity.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_group_list_activity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_group_list_fragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_group_list_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_item_detail_fragment.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/news_item_detail_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/popupmenu_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/menu/popupmenu_newsgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/sherlock_spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/sherlock_spinner_dropdown_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-v14/sherlock_spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-v14/sherlock_spinner_dropdown_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/sherlock_spinner_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/sherlock_spinner_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-v14/sherlock_spinner_item.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout-v14/sherlock_spinner_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/spinner_row_newsgroup.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/spinner_row_newsgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/spinner_row_newsgroup_dropdown.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/layout/spinner_row_newsgroup_dropdown.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-af/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-af/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-am/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-am/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ar/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ar/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-be/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-be/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-bg/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-bg/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ca/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ca/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-cs/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-cs/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-da/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-da/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-de/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-de/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-el/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-el/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-en-rGB/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-en-rGB/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-es/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-es/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-es-rUS/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-es-rUS/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-et/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-et/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-fa/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-fa/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-fi/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-fi/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-fr/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-fr/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-he/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-he/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-hi/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-hi/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-hr/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-hr/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-hu/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-hu/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-in/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-in/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-it/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-it/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-iw/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-iw/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ja/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ja/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ko/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ko/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-land/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-land/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large-hdpi-1024x600/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large-hdpi-1024x600/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large-land-hdpi-1024x600/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large-land-hdpi-1024x600/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large-land-mdpi-1024x600/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large-land-mdpi-1024x600/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large-mdpi-1024x600/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-large-mdpi-1024x600/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-lt/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-lt/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-lv/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-lv/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ms/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ms/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-nb/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-nb/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-nl/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-nl/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-pl/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-pl/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-pt/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-pt/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-pt-rBR/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-pt-rBR/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-pt-rPT/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-pt-rPT/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ro/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ro/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ru/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-ru/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sk/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sk/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sl/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sl/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-small/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-small/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sr/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sr/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sv/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sv/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sw/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sw/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sw600dp/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sw600dp/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sw720dp-land/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-sw720dp-land/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-th/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-th/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-tl/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-tl/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-tr/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-tr/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-uk/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-uk/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-v11/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-v11/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-v14/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-v14/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-vi/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-vi/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-w360dp/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-w360dp/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-w480dp/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-w480dp/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-w500dp/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-w500dp/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-w600dp/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-w600dp/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-xlarge/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-xlarge/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-zh-rCN/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-zh-rCN/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-zh-rTW/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-zh-rTW/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-zu/values.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/build/res/all/debug/values-zu/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StiriDinRomania/build.gradle" afterPath="$PROJECT_DIR$/StiriDinRomania/build.gradle" />
     </list>
     <ignored path="StiriDinRomaniaAndroidGradle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -348,10 +158,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NewsGroupListFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NewsGroupListFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="45" selection-start="2349" selection-end="2349" vertical-scroll-proportion="0.56478405" vertical-offset="170" max-vertical-offset="2310">
+            <state line="66" column="45" selection-start="2349" selection-end="2349" vertical-scroll-proportion="0.0" vertical-offset="710" max-vertical-offset="2310">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_row_newssource.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_newssource.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="51" selection-start="233" selection-end="233" vertical-scroll-proportion="-1.6666666" vertical-offset="30" max-vertical-offset="915">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="24" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
@@ -366,6 +197,15 @@
           </provider>
           <provider editor-type-id="android-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="37" selection-start="791" selection-end="791" vertical-scroll-proportion="0.15282393" vertical-offset="118" max-vertical-offset="1380">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -427,11 +267,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/news_group_list_fragment.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/menu/news_group_list_activity.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/stiridinromania/NewsGroupListActivity.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/UnitTesting/LoginActivityTest.java" />
-        <option value="$PROJECT_DIR$/StiriDinRomania/build.gradle" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DialogFragment/RenameDialogFragment.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Utils/NewsGroupAdapter.java" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/sql/SqlHelper.java" />
@@ -443,6 +281,8 @@
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/fragment_newsgroup.xml" />
         <option value="$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/build.gradle" />
+        <option value="$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -1186,13 +1026,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupDetailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="100" column="0" selection-start="3428" selection-end="3428" vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="1665">
@@ -1214,11 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.35355285" vertical-offset="102" max-vertical-offset="782" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Sql/SqlHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="137" column="0" selection-start="6022" selection-end="6022" vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="3570">
@@ -1236,13 +1064,6 @@
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/DataModel/NewsDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="136" column="0" selection-start="5071" selection-end="5071" vertical-scroll-proportion="-0.14731368" vertical-offset="1785" max-vertical-offset="3638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
           <folding />
         </state>
       </provider>
@@ -1300,7 +1121,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/java/com/vladstoick/Fragments/NewsGroupListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="45" selection-start="2349" selection-end="2349" vertical-scroll-proportion="0.56478405" vertical-offset="170" max-vertical-offset="2310">
+        <state line="66" column="45" selection-start="2349" selection-end="2349" vertical-scroll-proportion="0.0" vertical-offset="710" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/res/layout/list_row_newssource.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="51" selection-start="233" selection-end="233" vertical-scroll-proportion="-1.6666666" vertical-offset="30" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="24" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StiriDinRomania/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="37" selection-start="791" selection-end="791" vertical-scroll-proportion="0.15282393" vertical-offset="118" max-vertical-offset="1380">
           <folding />
         </state>
       </provider>
