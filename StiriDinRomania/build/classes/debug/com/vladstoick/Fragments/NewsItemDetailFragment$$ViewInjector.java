@@ -9,15 +9,18 @@ public class NewsItemDetailFragment$$ViewInjector {
     View view;
     view = finder.findById(source, 2131165273);
     target.mWebView = (android.webkit.WebView) view;
-    view = finder.findById(source, 2131165274);
-    target.mTitle = (android.widget.TextView) view;
     view = finder.findById(source, 2131165275);
+    target.mTitle = (android.widget.TextView) view;
+    view = finder.findById(source, 2131165276);
     target.mPaperized = (android.widget.TextView) view;
+    view = finder.findById(source, 2131165274);
+    target.mScrollView = (android.widget.ScrollView) view;
   }
 
   public static void reset(com.vladstoick.Fragments.NewsItemDetailFragment target) {
     target.mWebView = null;
     target.mTitle = null;
     target.mPaperized = null;
+    target.mScrollView = null;
   }
 }

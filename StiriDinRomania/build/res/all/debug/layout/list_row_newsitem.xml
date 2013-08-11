@@ -11,9 +11,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/medium_font"
-            android:text="Large Text"
-
-
+            android:text="@string/lorem_w_5"
             android:fontFamily="sans-serif-condensed"
             android:id="@+id/title"/>
 </LinearLayout><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\list_row_newsitem.xml -->

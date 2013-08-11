@@ -2,11 +2,13 @@ package com.vladstoick.Fragments;
 
 import android.os.Bundle;
 import android.text.Html;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -39,6 +41,7 @@ public class NewsItemDetailFragment extends SherlockFragment {
     @InjectView(R.id.news_item_detail_webView) WebView mWebView;
     @InjectView(R.id.news_item_detail_title) TextView mTitle;
     @InjectView(R.id.news_item_detail_paperized) TextView mPaperized;
+    @InjectView(R.id.news_item_scrollview) ScrollView mScrollView;
     public NewsItemDetailFragment() {
     }
 

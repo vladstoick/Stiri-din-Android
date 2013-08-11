@@ -11,6 +11,7 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"/>
         <ScrollView
+                android:id="@+id/news_item_scrollview"
                 android:layout_width="wrap_content"
                 android:fillViewport="true"
                 android:layout_height="wrap_content">
@@ -33,6 +34,7 @@
                 <TextView
 
                     android:id="@+id/news_item_detail_paperized"
+                    android:textSize="@dimen/medium_font"
                     android:layout_marginLeft="@dimen/left_and_right_margin"
                     android:layout_marginRight="@dimen/left_and_right_margin"
                     android:layout_width="wrap_content"

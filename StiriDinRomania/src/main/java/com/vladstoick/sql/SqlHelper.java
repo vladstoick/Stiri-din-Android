@@ -134,13 +134,7 @@ public class SqlHelper extends SQLiteOpenHelper {
                 SqlHelper.COLUMN_ID + " = " + sourceId, null, null, null, null, null);
         cursor.moveToFirst();
         ns = new NewsSource(cursor);
-        cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
-                SqlHelper.COLUMN_SOURCE_ID + " = " + sourceId, null, null, null, null, null);
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
-            ns.news.add(new NewsItem(cursor));
-            cursor.moveToNext();
-        }
+        ns.news = getNewsItems(ns);
         return ns;
     }
 
@@ -165,7 +159,9 @@ public class SqlHelper extends SQLiteOpenHelper {
         values.put(SqlHelper.COLUMN_DESCRIPTION, ns.getDescription());
         values.put(SqlHelper.COLUMN_URL, ns.getRssLink());
         values.put(SqlHelper.COLUMN_GROUP_ID, ns.getGroupId());
-        values.put(SqlHelper.COLUMN_NOUNREADNEWS, ns.getNumberOfUnreadNews());
+        int noUnreadNews = ns.getNumberOfUnreadNews();
+        if(getNewsItems(ns).size() != 0 ) noUnreadNews = getNewsItems(ns).size();
+        values.put(SqlHelper.COLUMN_NOUNREADNEWS, noUnreadNews);
         sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
                 SQLiteDatabase.CONFLICT_REPLACE);
     }
@@ -184,6 +180,19 @@ public class SqlHelper extends SQLiteOpenHelper {
     }
 
     //NEWSITEM
+
+    public ArrayList<NewsItem> getNewsItems(NewsSource ns){
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
+                SqlHelper.COLUMN_SOURCE_ID + " = " + ns.getId(), null, null, null, null, null);
+        ArrayList<NewsItem> news = new ArrayList<NewsItem>();
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            news.add(new NewsItem(cursor));
+            cursor.moveToNext();
+        }
+        return news;
+    }
 
     public NewsItem getNewsItem(String url){
         SQLiteDatabase db = this.getReadableDatabase();
