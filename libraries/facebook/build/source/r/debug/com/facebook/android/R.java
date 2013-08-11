@@ -151,7 +151,7 @@ containing a value of this type.
         public static int title_text=0x7f010008;
     }
     public static final class color {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/styles.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\styles.xml 
          */
         public static int com_facebook_blue=0x7f040000;
         public static int com_facebook_loginfragment_connected_shadow_color=0x7f040001;
@@ -160,7 +160,7 @@ containing a value of this type.
         public static int com_facebook_loginview_text_color=0x7f040004;
     }
     public static final class dimen {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/styles.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\styles.xml 
          */
         public static int com_facebook_loginfragment_profile_picture_height=0x7f060000;
         public static int com_facebook_loginfragment_profile_picture_width=0x7f060001;
@@ -248,14 +248,14 @@ containing a value of this type.
         public static int com_facebook_placepickerfragment_list_row=0x7f03000b;
     }
     public static final class string {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\strings.xml 
          */
         public static int com_facebook_choose_friends=0x7f070000;
         public static int com_facebook_dialogloginactivity_ok_button=0x7f070001;
         public static int com_facebook_loading=0x7f070002;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-es/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-he/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values-iw/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-es\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-he\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values-iw\strings.xml 
          */
         public static int com_facebook_loginfragment_log_in_button=0x7f070003;
         public static int com_facebook_loginfragment_logged_in=0x7f070004;
@@ -274,13 +274,13 @@ containing a value of this type.
         public static int com_facebook_placepicker_subtitle_were_here_only_format=0x7f070011;
     }
     public static final class style {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/styles.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\styles.xml 
          */
         public static int com_facebook_loginview_default_style=0x7f080000;
         public static int com_facebook_loginview_silver_style=0x7f080001;
     }
     public static final class styleable {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/values/attrs.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\values\attrs.xml 
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />

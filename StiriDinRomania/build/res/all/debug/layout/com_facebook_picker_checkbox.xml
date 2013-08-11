@@ -23,4 +23,4 @@
         android:focusable="false"
         android:clickable="false"
         android:button="@drawable/com_facebook_button_check"/>
-<!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_checkbox.xml --><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/layout/com_facebook_picker_checkbox.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_checkbox.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_checkbox.xml -->

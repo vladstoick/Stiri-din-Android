@@ -22,4 +22,4 @@
      android:layout_height="wrap_content"
      android:visibility="gone"
      style="?attr/actionModeStyle" />
-<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__action_mode_bar.xml --><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/layout/abs__action_mode_bar.xml -->
+<!-- From: file:/Users/jw/dev/ActionBarSherlock/target/checkout/actionbarsherlock/res/layout/abs__action_mode_bar.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\layout\abs__action_mode_bar.xml -->

@@ -21,4 +21,4 @@
           android:drawable="@drawable/com_facebook_loginbutton_blue_focused"/>
     <item android:drawable="@drawable/com_facebook_loginbutton_blue_normal"/>
 </selector>
-<!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/drawable/com_facebook_loginbutton_blue.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\drawable\com_facebook_loginbutton_blue.xml -->

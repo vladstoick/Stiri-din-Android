@@ -6,4 +6,4 @@
           android:layout_height="match_parent"
           tools:context=".NewsGroupListActivity"
           tools:layout="@android:layout/list_content"/>
-<!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/layout/activity_newsgroup_list.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_newsgroup_list.xml -->

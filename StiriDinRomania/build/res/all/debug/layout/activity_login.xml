@@ -30,4 +30,4 @@
             android:id="@+id/login_google"
             android:layout_width="250dp"
             android:layout_height="wrap_content" />
-</LinearLayout><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/layout/activity_login.xml -->
+</LinearLayout><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\activity_login.xml -->

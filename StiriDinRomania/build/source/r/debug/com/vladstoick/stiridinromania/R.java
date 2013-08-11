@@ -9,7 +9,7 @@ package com.vladstoick.stiridinromania;
 
 public final class R {
     public static final class array {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml 
          */
         public static final int popupmenu_newsgroup=0x7f040000;
     }
@@ -161,7 +161,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int activityChooserViewStyle=0x7f01006d;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -937,10 +937,10 @@ containing a value of this type.
         public static final int zOrderOnTop=0x7f010013;
     }
     public static final class bool {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-w480dp/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-w480dp\values.xml 
          */
         public static final int abs__action_bar_embed_tabs=0x7f050000;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-sw600dp/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-sw600dp\values.xml 
          */
         public static final int abs__action_bar_expanded_action_views_exclusive=0x7f050001;
         public static final int abs__config_actionMenuItemAllCaps=0x7f050002;
@@ -959,14 +959,14 @@ containing a value of this type.
         public static final int abs__primary_text_disable_only_holo_light=0x7f060016;
         public static final int abs__primary_text_holo_dark=0x7f060017;
         public static final int abs__primary_text_holo_light=0x7f060018;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
          */
         public static final int com_facebook_blue=0x7f060006;
         public static final int com_facebook_loginfragment_connected_shadow_color=0x7f060007;
         public static final int com_facebook_loginfragment_connected_text_color=0x7f060008;
         public static final int com_facebook_loginfragment_not_connected_text_color=0x7f060009;
         public static final int com_facebook_loginview_text_color=0x7f06000a;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values/colors.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values\colors.xml 
          */
         public static final int common_action_bar_splitter=0x7f06000b;
         public static final int common_signin_btn_dark_text_default=0x7f06000c;
@@ -982,13 +982,13 @@ containing a value of this type.
         public static final int common_signin_btn_text_light=0x7f06001a;
     }
     public static final class dimen {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-land/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-large-hdpi-1024x600/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-large-mdpi-1024x600/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-large-land-hdpi-1024x600/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-large-land-mdpi-1024x600/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-xlarge/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-land\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-hdpi-1024x600\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-mdpi-1024x600\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-land-hdpi-1024x600\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-large-land-mdpi-1024x600\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-xlarge\values.xml 
          */
         public static final int abs__action_bar_default_height=0x7f080000;
         public static final int abs__action_bar_icon_vertical_padding=0x7f080001;
@@ -1005,12 +1005,12 @@ containing a value of this type.
         public static final int abs__dropdownitem_text_padding_right=0x7f08000a;
         public static final int abs__search_view_preferred_width=0x7f08000b;
         public static final int abs__search_view_text_min_width=0x7f08000c;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/dimens.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-sw720dp-land/dimens.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\dimens.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw720dp-land\dimens.xml 
          */
         public static final int activity_horizontal_margin=0x7f08000d;
         public static final int activity_vertical_margin=0x7f08000e;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
          */
         public static final int com_facebook_loginfragment_profile_picture_height=0x7f08000f;
         public static final int com_facebook_loginfragment_profile_picture_width=0x7f080010;
@@ -1024,14 +1024,14 @@ containing a value of this type.
         public static final int com_facebook_profilepictureview_preset_size_large=0x7f080018;
         public static final int com_facebook_profilepictureview_preset_size_normal=0x7f080019;
         public static final int com_facebook_profilepictureview_preset_size_small=0x7f08001a;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/dimens.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\dimens.xml 
          */
         public static final int large_font=0x7f08001b;
         public static final int left_and_right_margin=0x7f08001c;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/dimens.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\dimens.xml 
          */
         public static final int list_view_width=0x7f080024;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-small/dimens.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-small\dimens.xml 
          */
         public static final int logo_size=0x7f08001d;
         public static final int medium_font=0x7f08001e;
@@ -1225,7 +1225,7 @@ containing a value of this type.
         public static final int abs__action_bar_subtitle=0x7f070017;
         public static final int abs__action_bar_title=0x7f070016;
         public static final int abs__action_context_bar=0x7f070027;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
          */
         public static final int abs__action_menu_divider=0x7f070010;
         public static final int abs__action_menu_presenter=0x7f070011;
@@ -1261,13 +1261,13 @@ containing a value of this type.
         public static final int abs__textButton=0x7f070019;
         public static final int abs__title=0x7f070021;
         public static final int abs__up=0x7f070015;
-        public static final int action_add=0x7f070066;
-        public static final int action_cancel=0x7f070067;
-        public static final int action_delete=0x7f07006b;
-        public static final int action_full_article=0x7f07006a;
-        public static final int action_logout=0x7f070068;
-        public static final int action_refresh=0x7f070069;
-        public static final int action_rename=0x7f07006c;
+        public static final int action_add=0x7f070067;
+        public static final int action_cancel=0x7f070068;
+        public static final int action_delete=0x7f07006c;
+        public static final int action_full_article=0x7f07006b;
+        public static final int action_logout=0x7f070069;
+        public static final int action_refresh=0x7f07006a;
+        public static final int action_rename=0x7f07006d;
         public static final int add_element_feed_description=0x7f070056;
         public static final int add_element_feed_rss=0x7f070057;
         public static final int add_element_feed_title=0x7f070055;
@@ -1291,31 +1291,32 @@ containing a value of this type.
         public static final int com_facebook_picker_title_bar_stub=0x7f07004e;
         public static final int com_facebook_picker_top_bar=0x7f07004b;
         public static final int com_facebook_placepickerfragment_search_box_stub=0x7f070050;
-        public static final int description=0x7f070063;
+        public static final int description=0x7f070064;
         public static final int disableHome=0x7f07000c;
         public static final int edit_query=0x7f07002c;
-        public static final int groupTitle=0x7f07005e;
+        public static final int groupTitle=0x7f07005f;
         public static final int homeAsUp=0x7f070009;
         public static final int hybrid=0x7f070004;
         public static final int large=0x7f07000f;
         public static final int listMode=0x7f070005;
         public static final int login_facebook=0x7f070039;
         public static final int login_google=0x7f07003a;
-        public static final int newsGroupListView=0x7f07005c;
-        public static final int newsSourceTitle=0x7f070062;
-        public static final int news_item_detail_title=0x7f070059;
-        public static final int news_item_detail_webView=0x7f07005a;
+        public static final int newsGroupListView=0x7f07005d;
+        public static final int newsSourceTitle=0x7f070063;
+        public static final int news_item_detail_paperized=0x7f07005b;
+        public static final int news_item_detail_title=0x7f07005a;
+        public static final int news_item_detail_webView=0x7f070059;
         public static final int newsgroup_detail_container=0x7f07003b;
         public static final int newsgroup_list=0x7f07003c;
         public static final int newsgroup_listview=0x7f070058;
         public static final int newsitem_detail_container=0x7f07003d;
         public static final int newsitem_list=0x7f07003e;
-        public static final int newsitem_listview=0x7f07005b;
+        public static final int newsitem_listview=0x7f07005c;
         public static final int none=0x7f070000;
         public static final int normal=0x7f070001;
-        public static final int numberOfGroups=0x7f07005f;
-        public static final int numberOfNews=0x7f070061;
-        public static final int overflow_icon=0x7f07005d;
+        public static final int numberOfGroups=0x7f070060;
+        public static final int numberOfNews=0x7f070062;
+        public static final int overflow_icon=0x7f07005e;
         public static final int pager=0x7f070038;
         public static final int picker_subtitle=0x7f070052;
         public static final int satellite=0x7f070002;
@@ -1324,18 +1325,18 @@ containing a value of this type.
         public static final int showHome=0x7f070008;
         public static final int showTitle=0x7f07000a;
         public static final int small=0x7f07000e;
-        public static final int spinner_image=0x7f070065;
-        public static final int spinner_title=0x7f070064;
+        public static final int spinner_image=0x7f070066;
+        public static final int spinner_title=0x7f070065;
         public static final int tabMode=0x7f070006;
         public static final int terrain=0x7f070003;
-        public static final int title=0x7f070060;
+        public static final int title=0x7f070061;
         public static final int useLogo=0x7f070007;
         public static final int wrap_content=0x7f07000d;
     }
     public static final class integer {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-w360dp/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-w500dp/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-w600dp/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-w360dp\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-w500dp\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-w600dp\values.xml 
          */
         public static final int abs__max_action_buttons=0x7f090000;
     }
@@ -1365,8 +1366,8 @@ containing a value of this type.
         public static final int activity_addelements=0x7f030016;
         public static final int activity_login=0x7f030017;
         public static final int activity_newsgroup_detail=0x7f030018;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-large/refs.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-sw600dp/refs.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-large\refs.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-sw600dp\refs.xml 
          */
         public static final int activity_newsgroup_list=0x7f030019;
         public static final int activity_newsgroup_twopane=0x7f03001a;
@@ -1419,8 +1420,8 @@ containing a value of this type.
         public static final int abs__searchview_description_voice=0x7f0a000a;
         public static final int abs__shareactionprovider_share_with=0x7f0a000b;
         public static final int abs__shareactionprovider_share_with_application=0x7f0a000c;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml 
          */
         public static final int action_settings=0x7f0a000d;
         public static final int add=0x7f0a000e;
@@ -1432,22 +1433,22 @@ containing a value of this type.
         public static final int all_groups_title=0x7f0a0014;
         public static final int app_id=0x7f0a0015;
         public static final int app_name=0x7f0a0016;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values\strings.xml 
          */
         public static final int auth_client_availability_notification_title=0x7f0a0017;
         public static final int auth_client_play_services_err_notification_msg=0x7f0a0018;
         public static final int auth_client_requested_by_msg=0x7f0a0019;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml 
          */
         public static final int cancel=0x7f0a001a;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
          */
         public static final int com_facebook_choose_friends=0x7f0a001b;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f0a001c;
         public static final int com_facebook_loading=0x7f0a001d;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values-es/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values-he/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values-iw/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-es\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-he\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-iw\values.xml 
          */
         public static final int com_facebook_loginfragment_log_in_button=0x7f0a001e;
         public static final int com_facebook_loginfragment_logged_in=0x7f0a001f;
@@ -1464,56 +1465,56 @@ containing a value of this type.
         public static final int com_facebook_placepicker_subtitle_catetory_only_format=0x7f0a002a;
         public static final int com_facebook_placepicker_subtitle_format=0x7f0a002b;
         public static final int com_facebook_placepicker_subtitle_were_here_only_format=0x7f0a002c;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-af/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-am/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-ar/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-be/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-bg/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-ca/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-cs/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-da/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-de/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-el/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-en-rGB/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-es/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-es-rUS/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-et/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-fa/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-fi/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-fr/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-hi/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-hr/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-hu/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-in/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-it/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-iw/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-ja/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-ko/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-lt/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-lv/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-ms/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-nb/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-nl/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-pl/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-pt/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-pt-rBR/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-pt-rPT/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-ro/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-ru/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-sk/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-sl/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-sr/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-sv/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-sw/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-th/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-tl/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-tr/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-uk/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-vi/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-zh-rCN/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-zh-rTW/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-zu/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-af\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-am\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ar\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-be\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-bg\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ca\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-cs\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-da\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-de\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-el\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-en-rGB\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-es\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-es-rUS\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-et\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-fa\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-fi\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-fr\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-hi\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-hr\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-hu\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-in\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-it\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-iw\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ja\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ko\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-lt\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-lv\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ms\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-nb\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-nl\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-pl\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-pt\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-pt-rBR\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-pt-rPT\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ro\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ru\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-sk\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-sl\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-sr\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-sv\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-sw\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-th\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-tl\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-tr\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-uk\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-vi\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-zh-rCN\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-zh-rTW\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-zu\strings.xml 
          */
         public static final int common_google_play_services_enable_button=0x7f0a002d;
         public static final int common_google_play_services_enable_text=0x7f0a002e;
@@ -1530,8 +1531,8 @@ containing a value of this type.
         public static final int common_google_play_services_update_title=0x7f0a0039;
         public static final int common_signin_button_text=0x7f0a003a;
         public static final int common_signin_button_text_long=0x7f0a003b;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/strings.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml 
          */
         public static final int delete=0x7f0a003c;
         public static final int delete_dialog_fragment_message=0x7f0a003d;
@@ -1541,12 +1542,12 @@ containing a value of this type.
         public static final int group=0x7f0a0041;
         public static final int groups=0x7f0a0042;
         public static final int loading=0x7f0a0043;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values\strings.xml 
          */
         public static final int location_client_ulr_inactive_age_under_13=0x7f0a0044;
         public static final int location_client_ulr_inactive_age_unknown=0x7f0a0045;
         public static final int location_client_ulr_inactive_unknown_restriction=0x7f0a0046;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/strings.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml 
          */
         public static final int login_facebook=0x7f0a0047;
         public static final int login_message=0x7f0a0048;
@@ -1564,7 +1565,7 @@ containing a value of this type.
         public static final int update_data=0x7f0a0054;
     }
     public static final class style {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/styles.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\styles.xml 
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -1575,11 +1576,11 @@ containing a value of this type.
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b0001;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
          */
         public static final int Sherlock___TextAppearance_Small=0x7f0b0002;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-v11/values.xml 
- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-v14/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-v11\values.xml 
+ From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values-v14\values.xml 
          */
         public static final int Sherlock___Theme=0x7f0b0003;
         public static final int Sherlock___Theme_DarkActionBar=0x7f0b0004;
@@ -1622,10 +1623,10 @@ containing a value of this type.
         public static final int Theme_Sherlock_Light_DarkActionBar=0x7f0b0029;
         public static final int Theme_Sherlock_Light_NoActionBar=0x7f0b002a;
         public static final int Theme_Sherlock_NoActionBar=0x7f0b002b;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/style.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\style.xml 
          */
         public static final int Theme_Styled=0x7f0b002c;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
          */
         public static final int Widget=0x7f0b002d;
         public static final int Widget_Sherlock_ActionBar=0x7f0b002e;
@@ -1674,17 +1675,17 @@ containing a value of this type.
         public static final int Widget_Sherlock_SearchAutoCompleteTextView=0x7f0b0059;
         public static final int Widget_Sherlock_Spinner_DropDown_ActionBar=0x7f0b005a;
         public static final int Widget_Sherlock_TextView_SpinnerItem=0x7f0b005b;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values/style.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\style.xml 
          */
         public static final int Widget_Styled_ActionBar=0x7f0b005c;
         public static final int Widget_Styled_ActionBar_TextStyle=0x7f0b005d;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
          */
         public static final int com_facebook_loginview_default_style=0x7f0b005e;
         public static final int com_facebook_loginview_silver_style=0x7f0b005f;
     }
     public static final class styleable {
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values/maps_attrs.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values\maps_attrs.xml 
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -1928,7 +1929,7 @@ containing a value of this type.
           @attr name com.vladstoick.stiridinromania:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 13;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\values\values.xml 
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4167,7 +4168,7 @@ containing a value of this type.
           @attr name android:focusable
         */
         public static final int SherlockView_android_focusable = 0;
-        /**  From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values/values.xml 
+        /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values\values.xml 
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />

@@ -64,4 +64,4 @@
             android:layout_marginRight="10dip"
             android:layout_toLeftOf="@id/com_facebook_picker_divider"/>
 </RelativeLayout>
-<!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/libraries/facebook/res/layout/com_facebook_picker_title_bar.xml --><!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/layout/com_facebook_picker_title_bar.xml -->
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\libraries\facebook\res\layout\com_facebook_picker_title_bar.xml --><!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\layout\com_facebook_picker_title_bar.xml -->

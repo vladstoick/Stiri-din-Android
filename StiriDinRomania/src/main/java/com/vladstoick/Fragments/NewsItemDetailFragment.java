@@ -1,6 +1,7 @@
 package com.vladstoick.Fragments;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,11 +36,9 @@ public class NewsItemDetailFragment extends SherlockFragment {
     private int isInMode = 0;
     public static final String ARG_MODE = "mode";
     private NewsItem mItem;
-    @InjectView(R.id.news_item_detail_webView)
-    WebView mWebView;
-    @InjectView(R.id.news_item_detail_title)
-    TextView mTitle;
-
+    @InjectView(R.id.news_item_detail_webView) WebView mWebView;
+    @InjectView(R.id.news_item_detail_title) TextView mTitle;
+    @InjectView(R.id.news_item_detail_paperized) TextView mPaperized;
     public NewsItemDetailFragment() {
     }
 
@@ -77,10 +76,10 @@ public class NewsItemDetailFragment extends SherlockFragment {
         if (mItem != null) {
             mTitle.setText(mItem.getTitle());
             if(!mItem.getDescription().equals("null")){
-                mWebView.loadData(mItem.getDescription(), "text/html; charset=utf-8", null);
+                mPaperized.setText(Html.fromHtml(mItem.getDescription()));
             } else {
                 BusProvider.getInstance().register(this);
-                mWebView.loadData(getString(R.string.loading), "text/html; charset=utf-8", null);
+                mPaperized.setText(getString(R.string.loading));
                 ((StiriApp)(getSherlockActivity().getApplication())).newsDataSource
                         .paperizeNewsItem(mItem);
             }
@@ -100,13 +99,16 @@ public class NewsItemDetailFragment extends SherlockFragment {
         switch (item.getItemId()) {
             case R.id.action_full_article: {
                 if (isInMode == 0) {
+                    mWebView.setVisibility(View.VISIBLE);
                     mTitle.setVisibility(View.GONE);
+                    mPaperized.setVisibility(View.GONE);
                     mWebView.loadUrl(mItem.getUrlLink());
                     isInMode = 1;
                 } else {
+                    mWebView.setVisibility(View.GONE);
                     mTitle.setVisibility(View.VISIBLE);
+                    mPaperized.setVisibility(View.VISIBLE);
                     isInMode = 0;
-                    mWebView.loadData(mItem.getDescription(), "text/html; charset=utf-8", null);
                 }
 
             }

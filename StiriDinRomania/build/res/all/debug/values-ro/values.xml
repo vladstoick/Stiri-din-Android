@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/dimens.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\dimens.xml -->
     <dimen name="list_view_width">500dp</dimen>
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/strings.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="add">Adaugă</string>
     <string name="add_element_feed_description">Descrierea feedului</string>
@@ -13,7 +13,7 @@
     <string name="all_groups_title">Gruprile tale</string>
     <string name="app_name">Ştiri din România</string>
     <string name="cancel">Anulează</string>
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-ro/strings.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-ro\strings.xml -->
     <string name="common_google_play_services_enable_button" msgid="4181637455539816337">"Activaţi Servicii Google Play"</string>
     <string name="common_google_play_services_enable_text" msgid="7627896071867667758">"Această aplicaţie nu va funcţiona decât dacă activaţi Servicii Google Play."</string>
     <string name="common_google_play_services_enable_title" msgid="529078775174559253">"Activaţi Servicii Google Play"</string>
@@ -29,7 +29,7 @@
     <string name="common_google_play_services_update_title" msgid="6006316683626838685">"Actualizaţi Servicii Google Play"</string>
     <string name="common_signin_button_text" msgid="9071884888741449141">"Conectați"</string>
     <string name="common_signin_button_text_long" msgid="2429381841831957106">"Conectați-vă cu Google"</string>
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/src/main/res/values-ro/strings.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-ro\strings.xml -->
     <string name="delete">Șterge</string>
     <string name="delete_dialog_fragment_message">Ești sigur?</string>
     <string name="delete_dialog_fragment_title">Vrei să ștergi acest element?</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-zh-rCN/strings.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-zh-rCN\strings.xml -->
     <string name="common_google_play_services_enable_button" msgid="4181637455539816337">"启用 Google Play 服务"</string>
     <string name="common_google_play_services_enable_text" msgid="7627896071867667758">"您必须先启用 Google Play 服务才能运行此应用。"</string>
     <string name="common_google_play_services_enable_title" msgid="529078775174559253">"启用 Google Play 服务"</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar/res/values-es/values.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\StiriDinRomaniaAndroidGradleLibrariesFacebookUnspecified.aar\res\values-es\values.xml -->
     <string name="com_facebook_loginfragment_log_in_button">Iniciar Sesión…</string>
     <string name="com_facebook_loginfragment_logged_in">Sesión iniciada</string>
     <string name="com_facebook_loginfragment_not_logged_in">No has iniciado sesión</string>
@@ -16,7 +16,7 @@
     <string name="com_facebook_placepicker_subtitle_format">%1$s • %2$,d estuvieron aquí</string>
     <string name="com_facebook_placepicker_subtitle_were_here_only_format">es:%1$,d estuvieron
         aquí</string>
-    <!-- From: /Users/vladstoick/prog/StiriDinRomaniaAndroidGradle/StiriDinRomania/build/exploded-bundles/ComGoogleAndroidGmsPlayServices3136.aar/res/values-es/strings.xml -->
+    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values-es\strings.xml -->
     <string name="common_google_play_services_enable_button" msgid="4181637455539816337">"Habilitar servicios de Google Play"</string>
     <string name="common_google_play_services_enable_text" msgid="7627896071867667758">"Esta aplicación no funcionará si no habilitas los servicios de Google Play."</string>
     <string name="common_google_play_services_enable_title" msgid="529078775174559253">"Habilitar servicios de Google Play"</string>
