@@ -15,6 +15,7 @@ import com.vladstoick.DialogFragment.RenameDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.OttoBus.NewsItemLoadedEvent;
+import com.vladstoick.OttoBus.SearchResultsEvent;
 import com.vladstoick.Utils.Utils;
 import com.vladstoick.sql.SqlHelper;
 import com.vladstoick.stiridinromania.StiriApp;
@@ -31,17 +32,18 @@ import java.util.Date;
  * Created by vlad on 7/20/13.
  */
 public class NewsDataSource {
+    public boolean isDataLoaded = true;
+    public AsyncHttpClient client;
     private AsyncHttpClient httpClient;
     private String BASE_URL = "http://stiriromania.eu01.aws.af.cm/user/";
     private int userId;
     private SqlHelper sqlHelper;
     private Date updateAt;
-    public boolean isDataLoaded = true;
-    public AsyncHttpClient client;
+
     //CONSTRUCTORS
     public NewsDataSource(int userId, Application app) {
         this.userId = userId;
-        if(Utils.isOnline(app)){
+        if (Utils.isOnline(app)) {
             loadDataFromInternet();
         }
         sqlHelper = new SqlHelper(app);
@@ -72,11 +74,10 @@ public class NewsDataSource {
             public void onErrorResponse(VolleyError volleyError) {
                 volleyError.printStackTrace();
             }
-        });
+        }
+        );
         StiriApp.queue.add(request);
     }
-
-
 
     @Subscribe
     public void OnDataLoaded(DataLoadedEvent event) {
@@ -94,11 +95,11 @@ public class NewsDataSource {
     //MULTIPLE
 
     @Subscribe
-    public void renameElement(RenameDialogFragment.ElementRenamedEvent event){
+    public void renameElement(RenameDialogFragment.ElementRenamedEvent event) {
         String url;
         RequestParams requestParams = new RequestParams();
-        requestParams.put("title",event.newName);
-        if(event.type == RenameDialogFragment.GROUP_TAG){
+        requestParams.put("title", event.newName);
+        if (event.type == RenameDialogFragment.GROUP_TAG) {
             sqlHelper.renameNewsGroup(event);
             url = BASE_URL + userId + "/" + event.id;
         } else {
@@ -106,7 +107,8 @@ public class NewsDataSource {
             NewsSource ns = getNewsSource(event.id);
             url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId();
         }
-        httpClient.put(url, requestParams, new AsyncHttpResponseHandler(){});
+        httpClient.put(url, requestParams, new AsyncHttpResponseHandler() {
+        });
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
     }
@@ -125,8 +127,6 @@ public class NewsDataSource {
             }
         });
     }
-
-
     //NEWSGROUP
 
     public ArrayList<NewsGroup> getAllNewsGroups() {
@@ -145,13 +145,12 @@ public class NewsDataSource {
                 new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(String s) {
-
                     }
                 });
 
     }
 
-   //NewsSource
+    //NewsSource
 
     public NewsSource getNewsSource(int id) {
         return sqlHelper.getNewsSource(id);
@@ -199,13 +198,14 @@ public class NewsDataSource {
                 });
     }
 
-    public void deleteNewsSource(NewsSource ns){
+    public void deleteNewsSource(NewsSource ns) {
         sqlHelper.deleteNewsSource(ns.getId());
         sqlHelper.updateNewsGroupNoFeeds(ns.getGroupId());
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
         String url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId();
-        httpClient.delete(url, new AsyncHttpResponseHandler(){});
+        httpClient.delete(url, new AsyncHttpResponseHandler() {
+        });
     }
     //NEWSITEM
 
@@ -228,12 +228,32 @@ public class NewsDataSource {
         StiriApp.queue.add(stringRequest);
     }
 
-    public NewsItem getNewsItem(String url){
-        return  sqlHelper.getNewsItem(url);
+    public NewsItem getNewsItem(String url) {
+        return sqlHelper.getNewsItem(url);
     }
 
-    public ArrayList<NewsItem> searchNewsItems(String query){
-        return  sqlHelper.searchNewsItem(query);
+    public ArrayList<NewsItem> searchNewsItemsLocal(String query) {
+        return sqlHelper.searchNewsItem(query);
+    }
+
+    public void searchNewsItemOnline(String query) {
+        String url = "http://37.139.8.146:8983/solr/collection1/select?start=0&rows=20" +
+                "&wt=json&indent=true&fl=title,content,url&q=description:" + query;
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jobj) {
+                        ArrayList<NewsItem> searchResults = JSONParsing.parseSearchResults(jobj);
+                        BusProvider.getInstance().post(new SearchResultsEvent(searchResults));
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        volleyError.printStackTrace();
+                    }
+                }
+        );
+        StiriApp.queue.add(request);
     }
 
     public void paperizeNewsItem(NewsItem ni) {
@@ -260,7 +280,6 @@ public class NewsDataSource {
         );
         StiriApp.queue.add(request);
     }
-
 
     public void addPaperizedStringToNewsItem(String url, String paperized) {
         sqlHelper.updateNewsItem(url, paperized);

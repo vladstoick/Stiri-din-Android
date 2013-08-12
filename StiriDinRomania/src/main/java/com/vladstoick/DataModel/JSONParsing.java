@@ -1,6 +1,5 @@
 package com.vladstoick.DataModel;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
 import org.json.JSONArray;
@@ -84,16 +83,33 @@ public class JSONParsing {
         }
     }
 
-    public static int parseServerLogin(JSONObject jsonObject , SharedPreferences.Editor editor){
-        try{
+    public static int parseServerLogin(JSONObject jsonObject, SharedPreferences.Editor editor) {
+        try {
             int userId = jsonObject.getInt("id");
             editor.putInt("user_id", userId);
             editor.commit();
             return userId;
-        } catch (Exception e){
-            e.printStackTrace();;
+        } catch (Exception e) {
+            e.printStackTrace();
+            ;
             return -1;
         }
+    }
 
+    public static ArrayList<NewsItem> parseSearchResults(JSONObject jsonObject) {
+        ArrayList<NewsItem> results = new ArrayList<NewsItem>();
+        try {
+            JSONObject response = jsonObject.getJSONObject("response");
+            JSONArray resultsArray = response.getJSONArray("docs");
+            for(int i=0; i<resultsArray.length(); i++){
+                JSONObject newsItem = resultsArray.getJSONObject(i);
+                NewsItem ni = new NewsItem(newsItem.getString("title"),newsItem.getString("content"),
+                        newsItem.getString("url"));
+                results.add(ni);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return results;
     }
 }

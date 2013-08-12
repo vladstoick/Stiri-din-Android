@@ -1,8 +1,6 @@
 package com.vladstoick.stiridinromania;
 
 import android.app.SearchManager;
-import android.app.SearchableInfo;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -10,13 +8,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragment;
@@ -24,15 +15,14 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
+import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.Fragments.SearchResultsFragment;
-import com.vladstoick.Utils.NewsItemAdapter;
+import com.vladstoick.OttoBus.BusProvider;
+import com.vladstoick.OttoBus.SearchResultsEvent;
 
 import java.util.ArrayList;
 import java.util.Locale;
-
-import butterknife.InjectView;
-import butterknife.Views;
 
 public class SearchResultsActivity extends SherlockFragmentActivity implements ActionBar.TabListener {
     SectionsPagerAdapter mSectionsPagerAdapter;
@@ -42,6 +32,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        BusProvider.getInstance().register(this);
         setContentView(R.layout.activity_searchresults);
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -57,6 +48,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
             @Override
             public void onPageSelected(int position) {
                 actionBar.setSelectedNavigationItem(position);
+                getData();
             }
         });
         for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
@@ -76,15 +68,22 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
     public void getData(){
         int selectedPosition = getSupportActionBar().getSelectedTab().getPosition();
         SearchResultsFragment fragment = mSectionsPagerAdapter.fragments.get(selectedPosition);
-        if(selectedPosition==0){
-            if(fragment!=null){
-                fragment.setData(getLocalResults(),this);
-            }
+        if(selectedPosition==0 && fragment!=null){
+            fragment.setData(getLocalResults(),this);
         }
+        if(selectedPosition==1){
+            ((StiriApp)getApplication()).newsDataSource.searchNewsItemOnline(query);
+        }
+    }
+
+    @Subscribe
+    public void onSearchResultsRecived(SearchResultsEvent event){
+        SearchResultsFragment fragment = mSectionsPagerAdapter.fragments.get(1);
+        fragment.setData(event.results,this);
     }
     private ArrayList<NewsItem> getLocalResults(){
         ArrayList<NewsItem> results = ((StiriApp)getApplication()).newsDataSource
-                .searchNewsItems(query);
+                .searchNewsItemsLocal(query);
         return results;
     }
 
@@ -96,10 +95,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getSupportMenuInflater().inflate(R.menu.search_results_activity, menu);
-        SearchManager searchManager =
-                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         searchView = (SearchView) menu.findItem(R.id.search).getActionView();
-        menu.findItem(R.id.search).expandActionView();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
@@ -108,20 +104,21 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
                 searchView.clearFocus();
                 return true;
             }
-
             @Override
             public boolean onQueryTextChange(String s) {
                 query = s;
-                if(getSupportActionBar().getSelectedTab().getPosition()==0){
-                    getData();
+                if(query.length()>3){
+//                    if(getSupportActionBar().getSelectedTab().getPosition()==0){
+                        getData();
+//                    }
                 }
                 return false;
             }
         });
         try {
             searchView.setQuery(query, false);
-            searchView.setIconified(false);
-            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+//            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
             searchView.clearFocus();
         } catch (Exception e) {
             e.printStackTrace();
