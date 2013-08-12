@@ -580,6 +580,7 @@
     <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\dimens.xml -->
     <dimen name="large_font">22sp</dimen>
     <dimen name="left_and_right_margin">16dp</dimen>
+    <dimen name="left_and_right_margin_with_overflow_icon">46dp</dimen>
     <dimen name="logo_size">250dp</dimen>
     <dimen name="medium_font">18sp</dimen>
     <dimen name="small_font">14sp</dimen>

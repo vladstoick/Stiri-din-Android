@@ -4,6 +4,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="left_and_right_margin">16dp</dimen>
+    <dimen name="left_and_right_margin_with_overflow_icon">46dp</dimen>
     <dimen name="top_and_bottom_margin">4dp</dimen>
     <dimen name="ultra_large_font">40sp</dimen>
     <dimen name="large_font">22sp</dimen>

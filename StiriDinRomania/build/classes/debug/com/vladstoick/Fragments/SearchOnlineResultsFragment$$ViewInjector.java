@@ -7,7 +7,7 @@ import butterknife.Views.Finder;
 public class SearchOnlineResultsFragment$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Fragments.SearchOnlineResultsFragment target, Object source) {
     View view;
-    view = finder.findById(source, 2131230813);
+    view = finder.findById(source, 2131230814);
     target.mListView = (android.widget.ListView) view;
     view = finder.findById(source, 2131230815);
     target.mProgressBar = (android.widget.ProgressBar) view;

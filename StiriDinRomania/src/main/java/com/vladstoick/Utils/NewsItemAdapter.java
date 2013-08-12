@@ -9,7 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.vladstoick.DataModel.NewsItem;
-import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.stiridinromania.R;
 
 import java.util.ArrayList;
@@ -60,7 +59,7 @@ public class NewsItemAdapter extends BaseAdapter {
         final NewsItem ni = getItem(position);
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(R.layout.list_row_newsitem, parent, false);
+            row = inflater.inflate(R.layout.list_row_newsitem_list, parent, false);
             holder = new Holder(row);
             row.setTag(holder);
         } else {

@@ -2,8 +2,6 @@ package com.vladstoick.Fragments;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
@@ -22,10 +19,7 @@ import com.vladstoick.DialogFragment.NoConnectionDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.Utils.NewsGroupAdapter;
-import com.vladstoick.Utils.Tags;
 import com.vladstoick.Utils.Utils;
-import com.vladstoick.stiridinromania.AddElementAcitvitiy;
-import com.vladstoick.stiridinromania.LoginActivity;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
 
@@ -62,7 +56,7 @@ public class NewsGroupListFragment extends SherlockFragment
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_newsgroup,container,true);
+        View view = inflater.inflate(R.layout.fragment_newsgroup_list,container,true);
         Views.inject(this,view);
         mListView.setOnItemClickListener(this);
         return view;

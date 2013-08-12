@@ -9,9 +9,9 @@ public class NewsGroupAdapter$RowHolder$$ViewInjector {
     View view;
     view = finder.findById(source, 2131230816);
     target.mButton = (android.widget.ImageButton) view;
-    view = finder.findById(source, 2131230817);
+    view = finder.findById(source, 2131230820);
     target.mTitle = (android.widget.TextView) view;
-    view = finder.findById(source, 2131230818);
+    view = finder.findById(source, 2131230821);
     target.mNumberOfGroups = (android.widget.TextView) view;
   }
 

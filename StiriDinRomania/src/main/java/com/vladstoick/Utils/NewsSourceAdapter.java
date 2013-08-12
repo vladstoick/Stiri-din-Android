@@ -88,7 +88,7 @@ public class NewsSourceAdapter extends BaseAdapter {
         final NewsSource ns = getItem(position);
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(R.layout.list_row_newssource, parent, false);
+            row = inflater.inflate(R.layout.list_row_newsgroup_detail, parent, false);
             holder = new RowHolder(row);
             row.setTag(holder);
         } else

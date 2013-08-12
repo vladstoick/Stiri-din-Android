@@ -7,11 +7,11 @@ import butterknife.Views.Finder;
 public class NewsSourceAdapter$RowHolder$$ViewInjector {
   public static void inject(Finder finder, final com.vladstoick.Utils.NewsSourceAdapter.RowHolder target, Object source) {
     View view;
-    view = finder.findById(source, 2131230821);
+    view = finder.findById(source, 2131230818);
     target.mTitle = (android.widget.TextView) view;
-    view = finder.findById(source, 2131230822);
+    view = finder.findById(source, 2131230819);
     target.mDescription = (android.widget.TextView) view;
-    view = finder.findById(source, 2131230820);
+    view = finder.findById(source, 2131230817);
     target.mNumberOfNews = (android.widget.TextView) view;
     view = finder.findById(source, 2131230816);
     target.mButton = (android.widget.ImageButton) view;

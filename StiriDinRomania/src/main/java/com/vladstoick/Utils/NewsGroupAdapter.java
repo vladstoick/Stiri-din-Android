@@ -79,7 +79,7 @@ public class NewsGroupAdapter extends BaseAdapter {
         final NewsGroup ng = getItem(position);
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(R.layout.list_row_newsgroup, parent, false);
+            row = inflater.inflate(R.layout.list_row_newsgroup_list, parent, false);
             holder = new RowHolder(row);
             row.setTag(holder);
         } else {

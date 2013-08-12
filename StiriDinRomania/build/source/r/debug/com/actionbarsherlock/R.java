@@ -136,8 +136,8 @@ public final class R {
 		public static final int abs__action_bar_title_text_size = 0x7f090005;
 		public static final int abs__action_button_min_width = 0x7f090006;
 		public static final int abs__config_prefDialogWidth = 0x7f090007;
-		public static final int abs__dialog_min_width_major = 0x7f090022;
-		public static final int abs__dialog_min_width_minor = 0x7f090023;
+		public static final int abs__dialog_min_width_major = 0x7f090023;
+		public static final int abs__dialog_min_width_minor = 0x7f090024;
 		public static final int abs__dropdownitem_icon_width = 0x7f090008;
 		public static final int abs__dropdownitem_text_padding_left = 0x7f090009;
 		public static final int abs__dropdownitem_text_padding_right = 0x7f09000a;
