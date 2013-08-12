@@ -62,6 +62,7 @@ public class SearchResultsFragment extends SherlockFragment{
                         NewsItemDetailActivity.class);
                 intent.putExtra(NewsItemDetailFragment.ARG_ITEM,newsItems.get(position)
                         .getUrlLink());
+                intent.putExtra(NewsItemDetailActivity.FROM_SEARCH,true);
                 startActivity(intent);
             }
         });

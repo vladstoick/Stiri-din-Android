@@ -2,8 +2,7 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:layout_marginLeft="@dimen/left_and_right_margin"
-              android:layout_marginRight="@dimen/left_and_right_margin"
+
               android:baselineAligned="false"
               android:divider="?android:attr/dividerHorizontal"
               android:orientation="horizontal"
@@ -26,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginRight="@dimen/left_and_right_margin"
+
             tools:layout="@android:layout/list_content"/>
 
     <FrameLayout
