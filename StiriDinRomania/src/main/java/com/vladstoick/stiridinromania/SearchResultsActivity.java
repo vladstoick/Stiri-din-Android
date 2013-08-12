@@ -100,8 +100,24 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
                 (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         searchView = (SearchView) menu.findItem(R.id.search).getActionView();
         menu.findItem(R.id.search).expandActionView();
-        SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
-        searchView.setSearchableInfo(searchableInfo);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                query = s;
+                getData();
+                searchView.clearFocus();
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                query = s;
+                if(getSupportActionBar().getSelectedTab().getPosition()==0){
+                    getData();
+                }
+                return false;
+            }
+        });
         try {
             searchView.setQuery(query, false);
             searchView.setIconified(false);

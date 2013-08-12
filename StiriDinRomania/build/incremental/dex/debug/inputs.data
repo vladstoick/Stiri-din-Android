@@ -1,7 +1,7 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1376309619777 1912 761a14206898b918cb71ed27d5115e9bea8421e2 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\SearchResultsActivity$SectionsPagerAdapter.class
+1376316745069 1912 2b17b2467092110f0f41225bc9b9f06a55a5fac5 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\SearchResultsActivity$SectionsPagerAdapter.class
 1376254195287 442 6de3f1ef0bd1100d4bbe31110b78e1b442532b61 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\R$array.class
 1376305480031 1503 9ef999764683d6e52c32dc6c819f95972366496f C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\Utils\NewsSourceAdapter$RowHolder$$ViewInjector.class
 1375388647605 18971 d8585db3f19c791f7594d27ad79761e8b2d554dc C:\Users\Vlad\.gradle\caches\artifacts-24\filestore\com.jakewharton\butterknife\2.0.1\jar\d8585db3f19c791f7594d27ad79761e8b2d554dc\butterknife-2.0.1.jar
@@ -87,7 +87,7 @@
 1376254195246 2087 7c3fb8b89eec398208274b4b1ced535a67d70703 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\facebook\android\R$styleable.class
 1376305479732 995 7003dde3b863b3eef07927ae4baba188f87d4b26 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\Utils\AddElementManuallySpinnerAdapter$RowHolder.class
 1376254194798 1219 1c31ef3bc5555c77f5d41bfd7b0d8f9051befe8e C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\StiriApp.class
-1376309803482 7437 ea076163a070c6f042868bd9578ab50f01b61e33 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\SearchResultsActivity.class
+1376316745073 7448 4466714c3e2d1f19f01aea6f0b08b34e99900008 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\SearchResultsActivity.class
 1376254195116 10344 6afd9f67d181401972020bfa682393d3cdd3a526 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\actionbarsherlock\R$styleable.class
 1376254195293 1982 a57a806a7ebc41e78a90fce8ea569e26e082dc5c C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\R$color.class
 1376254195134 686 afc03b45f63a91f9e7d913a35f6e41f954a10f71 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\facebook\android\R$color.class
@@ -142,6 +142,7 @@
 1376254195085 1133 eecf541ff778dded9f1d8434fce3a6680a30cedc C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\actionbarsherlock\R$string.class
 1376254194549 1141 d75db1b18b77c6cc5072433c388b52ed4dd9eed5 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\Fragments\AddElementManuallyFragment$$ViewInjector.java
 1376254195083 425 1409dc9fc1e53e049da1cd59d87ad724d089aaad C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\actionbarsherlock\R$integer.class
+1376316745066 1566 41b4c51b338cc9a415354035f244c9844e9772fa C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\SearchResultsActivity$2.class
 1376254195086 5853 3216a19473e1e4aa2c2503839823677c9c456c38 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\actionbarsherlock\R$style.class
 1376254194950 6767 b524e1e6e5e2233e6185a8a301866c5ef6cdc1d3 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\Utils\NewsGroupAdapter.class
 1376254195005 2888 7388640b4d189a8d44f5406002541ff823d075fc C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\classes\debug\com\vladstoick\stiridinromania\NewsGroupDetailActivity.class
