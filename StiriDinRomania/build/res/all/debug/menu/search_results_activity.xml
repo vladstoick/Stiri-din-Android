@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/search"
+          android:title="@string/search"
+          android:icon="@drawable/action_search"
+          android:showAsAction="collapseActionView|ifRoom"
+          android:iconifiedByDefault="true"
+          android:actionViewClass="com.actionbarsherlock.widget.SearchView" />
+</menu>
+<!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\menu\search_results_activity.xml -->

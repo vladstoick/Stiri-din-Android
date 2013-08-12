@@ -17,6 +17,8 @@
     <string name="delete_dialog_fragment_title">Vrei să ștergi acest element?</string>
     <string name="delete_dialog_fragment_message">Ești sigur?</string>
     <!--GENERAL-->
+    <string name="online">Online</string>
+    <string name="local">Local</string>
     <string name="search_hint">Titlul știrii</string>
     <string name="search">Caută</string>
     <string name="loading">Se încarcă</string>

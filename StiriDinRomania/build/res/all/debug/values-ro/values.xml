@@ -38,6 +38,7 @@
     <string name="group">Grup</string>
     <string name="groups">Grupuri</string>
     <string name="loading">Se încarcă</string>
+    <string name="local">Local</string>
     <string name="login_facebook">Loghează-te cu Facebook</string>
     <string name="login_message">Ştiri din România va folosi doar numele tău pentru a sync-ui datele
         pe toate device-urile tale</string>
@@ -47,6 +48,7 @@
     <string name="new_group">Adaugă un grup nou</string>
     <string name="nointernet">Nu aveți internet</string>
     <string name="ok">OK</string>
+    <string name="online">Online</string>
     <string name="recommended">Recomandate</string>
     <string name="rename">Redenumește</string>
     <string name="search">Caută</string>

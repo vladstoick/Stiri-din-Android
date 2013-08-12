@@ -1269,7 +1269,6 @@ containing a value of this type.
         public static final int action_logout=0x7f08006c;
         public static final int action_refresh=0x7f08006d;
         public static final int action_rename=0x7f080070;
-        public static final int action_settings=0x7f080071;
         public static final int add_element_feed_description=0x7f080056;
         public static final int add_element_feed_rss=0x7f080057;
         public static final int add_element_feed_title=0x7f080055;
@@ -1398,7 +1397,7 @@ containing a value of this type.
         public static final int fragment_newsitem_detail=0x7f03002e;
         public static final int fragment_newsitem_list=0x7f03002f;
         public static final int fragment_newssource=0x7f030030;
-        public static final int fragment_search_results_dummy=0x7f030031;
+        public static final int fragment_search_results=0x7f030031;
         public static final int list_row_newsgroup=0x7f030032;
         public static final int list_row_newsitem=0x7f030033;
         public static final int list_row_newssource=0x7f030034;
@@ -1413,8 +1412,7 @@ containing a value of this type.
         public static final int news_group_list_fragment=0x7f0d0002;
         public static final int news_item_detail_fragment=0x7f0d0003;
         public static final int popupmenu_newsgroup=0x7f0d0004;
-        public static final int search_results=0x7f0d0005;
-        public static final int searchable=0x7f0d0006;
+        public static final int search_results_activity=0x7f0d0005;
     }
     public static final class string {
         public static final int abs__action_bar_home_description=0x7f0b0000;
@@ -1553,35 +1551,37 @@ containing a value of this type.
         public static final int groups=0x7f0b0042;
         public static final int hello_world=0x7f0b0043;
         public static final int loading=0x7f0b0044;
+        public static final int local=0x7f0b0045;
         /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values\strings.xml 
          */
-        public static final int location_client_ulr_inactive_age_under_13=0x7f0b0045;
-        public static final int location_client_ulr_inactive_age_unknown=0x7f0b0046;
-        public static final int location_client_ulr_inactive_unknown_restriction=0x7f0b0047;
+        public static final int location_client_ulr_inactive_age_under_13=0x7f0b0046;
+        public static final int location_client_ulr_inactive_age_unknown=0x7f0b0047;
+        public static final int location_client_ulr_inactive_unknown_restriction=0x7f0b0048;
         /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml 
          */
-        public static final int login_facebook=0x7f0b0048;
-        public static final int login_message=0x7f0b0049;
-        public static final int login_microsoft=0x7f0b004a;
-        public static final int logout=0x7f0b004b;
-        public static final int lorem_w_5=0x7f0b004c;
-        public static final int manual=0x7f0b004d;
-        public static final int new_group=0x7f0b004e;
-        public static final int nointernet=0x7f0b004f;
-        public static final int ok=0x7f0b0050;
-        public static final int recommended=0x7f0b0051;
-        public static final int rename=0x7f0b0052;
-        public static final int search=0x7f0b0053;
-        public static final int search_hint=0x7f0b0054;
-        public static final int see_full_article=0x7f0b0055;
-        public static final int title_activity_search=0x7f0b0056;
-        public static final int title_activity_search_results=0x7f0b0057;
-        public static final int title_activity_searchable=0x7f0b0058;
-        public static final int title_section1=0x7f0b0059;
-        public static final int title_section2=0x7f0b005a;
-        public static final int title_section3=0x7f0b005b;
-        public static final int two_digit_int=0x7f0b005c;
-        public static final int update_data=0x7f0b005d;
+        public static final int login_facebook=0x7f0b0049;
+        public static final int login_message=0x7f0b004a;
+        public static final int login_microsoft=0x7f0b004b;
+        public static final int logout=0x7f0b004c;
+        public static final int lorem_w_5=0x7f0b004d;
+        public static final int manual=0x7f0b004e;
+        public static final int new_group=0x7f0b004f;
+        public static final int nointernet=0x7f0b0050;
+        public static final int ok=0x7f0b0051;
+        public static final int online=0x7f0b0052;
+        public static final int recommended=0x7f0b0053;
+        public static final int rename=0x7f0b0054;
+        public static final int search=0x7f0b0055;
+        public static final int search_hint=0x7f0b0056;
+        public static final int see_full_article=0x7f0b0057;
+        public static final int title_activity_search=0x7f0b0058;
+        public static final int title_activity_search_results=0x7f0b0059;
+        public static final int title_activity_searchable=0x7f0b005a;
+        public static final int title_section1=0x7f0b005b;
+        public static final int title_section2=0x7f0b005c;
+        public static final int title_section3=0x7f0b005d;
+        public static final int two_digit_int=0x7f0b005e;
+        public static final int update_data=0x7f0b005f;
     }
     public static final class style {
         /**  From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\styles.xml 

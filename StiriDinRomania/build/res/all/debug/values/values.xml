@@ -670,6 +670,7 @@
     <string name="groups">Groups</string>
     <string name="hello_world">Hello world!</string>
     <string name="loading">Loading</string>
+    <string name="local">Local</string>
     <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComGoogleAndroidGmsPlayServices3136.aar\res\values\strings.xml -->
     <string name="location_client_ulr_inactive_age_under_13" translatable="false">        AgeUnder13</string>
     <string name="location_client_ulr_inactive_age_unknown" translatable="false">AgeUnknown</string>
@@ -684,6 +685,7 @@
     <string name="new_group">Add a new group</string>
     <string name="nointernet">No internet connection</string>
     <string name="ok">OK</string>
+    <string name="online">Online</string>
     <string name="recommended">Recommended</string>
     <string name="rename">Rename</string>
     <string name="search">Search</string>

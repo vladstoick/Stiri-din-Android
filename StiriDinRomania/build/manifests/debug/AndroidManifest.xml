@@ -14,17 +14,17 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.vladstoick.stiridinromania.StiriApp" android:theme="@style/Theme.Styled">
+        <activity android:label="@string/search" android:launchMode="singleTop" android:name="com.vladstoick.stiridinromania.SearchResultsActivity" android:parentActivityName=".NewsGroupListActivity">
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" android:value=".SearchResultsActivity"/>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".NewsGroupListActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+        </activity>
         <activity android:name="com.vladstoick.stiridinromania.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:label="@string/search" android:name="com.vladstoick.stiridinromania.SearchableActivity">
-            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" android:value=".SearchableActivity"/>
-
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
         </activity>
 
@@ -47,10 +47,9 @@
         <activity android:label="@string/add_element_fragment_title" android:name="com.vladstoick.stiridinromania.AddElementAcitvitiy" android:parentActivityName="NewsGroupListActivity" android:windowSoftInputMode="adjustResize">
         </activity>
 
-        <meta-data android:name="android.app.default_searchable" android:value=".SearchableActivity"/>
+        <meta-data android:name="android.app.default_searchable" android:value=".SearchResultsActivity"/>
 
-        <activity android:label="@string/title_activity_search_results" android:name="com.vladstoick.stiridinromania.SearchResultsActivity">
-        </activity>
+
     </application>
 
 </manifest>
