@@ -236,7 +236,7 @@ public class NewsDataSource {
         return sqlHelper.searchNewsItem(query);
     }
 
-    public void searchNewsItemOnline(String query) {
+    public void searchNewsItemOnline(final String query) {
         String url = "http://37.139.8.146:8983/solr/collection1/select?start=0&rows=20" +
                 "&wt=json&indent=true&fl=title,content,url&q=description:" + query;
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -244,7 +244,8 @@ public class NewsDataSource {
                     @Override
                     public void onResponse(JSONObject jobj) {
                         ArrayList<NewsItem> searchResults = JSONParsing.parseSearchResults(jobj);
-                        BusProvider.getInstance().post(new SearchResultsEvent(searchResults));
+                        BusProvider.getInstance()
+                                .post(new SearchResultsEvent(searchResults,query));
                     }
                 }, new Response.ErrorListener() {
                     @Override

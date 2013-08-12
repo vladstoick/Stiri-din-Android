@@ -9,7 +9,9 @@ import java.util.ArrayList;
  */
 public class SearchResultsEvent {
     public ArrayList<NewsItem> results;
-    public SearchResultsEvent(ArrayList<NewsItem> results){
+    public String query;
+    public SearchResultsEvent(ArrayList<NewsItem> results,String query){
         this.results = results;
+        this.query = query;
     }
 }

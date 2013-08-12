@@ -107,7 +107,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
             @Override
             public boolean onQueryTextChange(String s) {
                 query = s;
-                if(query.length()>3){
+                if(query.length()>2){
 //                    if(getSupportActionBar().getSelectedTab().getPosition()==0){
                         getData();
 //                    }
