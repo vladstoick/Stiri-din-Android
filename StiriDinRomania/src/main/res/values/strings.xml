@@ -11,6 +11,7 @@
         <item>@string/rename</item>
     </string-array>
     <!-- ADD FRAGMENT -->
+    <string name="category">Category</string>
     <string name="manual">Manual</string>
     <string name="recommended">Recommended</string>
     <string name="new_group">Add a new group</string>

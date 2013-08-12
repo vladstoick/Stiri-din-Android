@@ -9,6 +9,7 @@
               android:layout_height="match_parent">
 
     <LinearLayout
+            android:layout_marginTop="@dimen/top_and_bottom_margin"
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:gravity="center_vertical"

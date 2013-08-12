@@ -5,6 +5,7 @@
     <!--ALL GROUPS ACITIVTY-->
     <string name="all_groups_title">Gruprile tale</string>
     <!--ADD SOURCE FRAGMENT-->
+    <string name="category">Categorie</string>
     <string name="manual">Manual</string>
     <string name="recommended">Recomandate</string>
     <string name="new_group">Adaugă un grup nou</string>
