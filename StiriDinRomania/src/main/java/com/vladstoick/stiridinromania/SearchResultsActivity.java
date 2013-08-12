@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -23,24 +24,33 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
+import com.vladstoick.DataModel.NewsItem;
+import com.vladstoick.Fragments.SearchResultsFragment;
+import com.vladstoick.Utils.NewsItemAdapter;
 
+import java.util.ArrayList;
 import java.util.Locale;
+
+import butterknife.InjectView;
+import butterknife.Views;
 
 public class SearchResultsActivity extends SherlockFragmentActivity implements ActionBar.TabListener {
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
     String query;
     SearchView searchView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        handleIntent(getIntent());
         setContentView(R.layout.activity_searchresults);
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        ArrayList<SearchResultsFragment> fragments = new ArrayList<SearchResultsFragment>();
+        fragments.add(new SearchResultsFragment());
+        fragments.add(new SearchResultsFragment());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter.fragments = fragments;
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
@@ -53,16 +63,29 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
             actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i))
                     .setTabListener(this));
         }
-
-
+        handleIntent(getIntent());
     }
 
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             query = intent.getStringExtra(SearchManager.QUERY);
-            Toast.makeText(getApplicationContext(), query, Toast.LENGTH_SHORT).show();
+            getData();
 
         }
+    }
+    public void getData(){
+        int selectedPosition = getSupportActionBar().getSelectedTab().getPosition();
+        SearchResultsFragment fragment = mSectionsPagerAdapter.fragments.get(selectedPosition);
+        if(selectedPosition==0){
+            if(fragment!=null){
+                fragment.setData(getLocalResults(),this);
+            }
+        }
+    }
+    private ArrayList<NewsItem> getLocalResults(){
+        ArrayList<NewsItem> results = ((StiriApp)getApplication()).newsDataSource
+                .searchNewsItems(query);
+        return results;
     }
 
     @Override
@@ -113,28 +136,17 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
     }
 
-    public static class SearchResultsFragment extends SherlockFragment {
-        public SearchResultsFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_search_results, container, false);
-            return rootView;
-        }
-    }
-
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
+        public ArrayList<SearchResultsFragment> fragments;
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
+
         }
 
         @Override
         public SherlockFragment getItem(int position) {
-            SherlockFragment fragment = new SearchResultsFragment();
-            return fragment;
+            return fragments.get(position);
+
         }
 
         @Override

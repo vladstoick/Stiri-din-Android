@@ -232,6 +232,10 @@ public class NewsDataSource {
         return  sqlHelper.getNewsItem(url);
     }
 
+    public ArrayList<NewsItem> searchNewsItems(String query){
+        return  sqlHelper.searchNewsItem(query);
+    }
+
     public void paperizeNewsItem(NewsItem ni) {
         String url = "http://37.139.8.146:8080/?url=" + ni.getUrlLink();
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,

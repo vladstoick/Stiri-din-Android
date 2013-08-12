@@ -1,7 +1,7 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1376253060655 676 e650f822207f238d29f659679cc87797efa51bd4 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_search_results.xml
+1376305243758 578 62e7e57c4b5429d50064ec7718a3c1515005d79b C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\layout\fragment_search_results.xml
 1376301976707 2913 e7d13b23ffa79c48ac108afce06422d3f631bc70 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values\strings.xml
 1376254184945 188 f0b1aadeb5b6cbe116e745a8756445f4dcd896e5 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\drawable-hdpi\abs__progress_secondary_holo_light.9.png
 1376254185068 190 ff8f2ae6a438ce32464f947e9588c982d4cfe424 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\exploded-bundles\ComActionbarsherlockActionbarsherlock440.aar\res\drawable-xhdpi\abs__list_selector_disabled_holo_dark.9.png

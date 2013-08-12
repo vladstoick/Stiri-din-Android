@@ -57,7 +57,7 @@ public class NewsItemListFragment extends SherlockFragment implements
     public void setNewsSourceId(int id) {
         this.ns = ((StiriApp)getSherlockActivity().
                 getApplication()).newsDataSource.getNewsSource(id);
-        mListView.setAdapter(new NewsItemAdapter(getActivity(), ns));
+        mListView.setAdapter(new NewsItemAdapter(getActivity(), ns.news));
     }
 
     @Override

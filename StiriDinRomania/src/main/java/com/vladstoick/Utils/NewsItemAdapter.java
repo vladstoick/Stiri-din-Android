@@ -12,6 +12,8 @@ import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.stiridinromania.R;
 
+import java.util.ArrayList;
+
 import butterknife.InjectView;
 import butterknife.Views;
 
@@ -28,22 +30,22 @@ public class NewsItemAdapter extends BaseAdapter {
         }
     }
 
-    NewsSource ns;
+    public ArrayList<NewsItem> news;
     Context context;
 
-    public NewsItemAdapter(Context context, NewsSource ns) {
+    public NewsItemAdapter(Context context, ArrayList<NewsItem> news) {
         this.context = context;
-        this.ns = ns;
+        this.news = news;
     }
 
     @Override
     public int getCount() {
-        return ns.news.size();
+        return news.size();
     }
 
     @Override
     public NewsItem getItem(int position) {
-        return ns.news.get(position);
+        return news.get(position);
     }
 
     @Override

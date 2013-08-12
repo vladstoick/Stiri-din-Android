@@ -183,7 +183,7 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     public ArrayList<NewsItem> getNewsItems(NewsSource ns){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
+        Cursor cursor = db.query(NEWSITEMS_TABLE, NEWSITEMS_COLUMNS,
                 SqlHelper.COLUMN_SOURCE_ID + " = " + ns.getId(), null, null, null, null, null);
         ArrayList<NewsItem> news = new ArrayList<NewsItem>();
         cursor.moveToFirst();
@@ -196,11 +196,24 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     public NewsItem getNewsItem(String url){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(SqlHelper.NEWSITEMS_TABLE, SqlHelper.NEWSITEMS_COLUMNS,
+        Cursor cursor = db.query(NEWSITEMS_TABLE, NEWSITEMS_COLUMNS,
                 SqlHelper.COLUMN_URL + " = \'" + url +"\'", null, null, null, null, null);
         cursor.moveToFirst();
         NewsItem ni = new NewsItem(cursor);
         return ni;
+    }
+
+    public ArrayList<NewsItem> searchNewsItem(String query){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(NEWSITEMS_TABLE, NEWSITEMS_COLUMNS,
+                SqlHelper.COLUMN_TITLE + " LIKE '%" + query + "%'", null, null, null, null, null);
+        ArrayList<NewsItem> results = new ArrayList<NewsItem>();
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()){
+            results.add(new NewsItem(cursor));
+            cursor.moveToNext();
+        }
+        return results;
     }
 
     public void insertNewsItemsInDb(NewsSource ns) {
