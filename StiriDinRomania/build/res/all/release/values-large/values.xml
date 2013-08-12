@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!-- From: C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\src\main\res\values-large\refs.xml -->
-    <item name="activity_newsgroup_list" type="layout">@layout/activity_newsgroup_twopane</item>
-    <item name="activity_newsitem_list" type="layout">@layout/activity_newsitem_twopane</item>
-
-</resources>

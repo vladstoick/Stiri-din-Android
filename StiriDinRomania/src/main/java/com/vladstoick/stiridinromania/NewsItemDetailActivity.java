@@ -60,6 +60,7 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
+                finish();
                 NavUtils.navigateUpTo(this, new Intent(this, NewsItemListActivity.class));
                 return true;
         }

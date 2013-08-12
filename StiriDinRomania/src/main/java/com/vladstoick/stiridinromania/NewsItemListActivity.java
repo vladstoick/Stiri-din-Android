@@ -112,7 +112,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
 //                if(mTwoPane)
-                    NavUtils.navigateUpTo(this, new Intent(this, NewsItemListActivity.class));
+                    NavUtils.navigateUpTo(this, new Intent(this, NewsGroupDetailActivity.class));
                 return true;
         }
         return super.onOptionsItemSelected(item);
