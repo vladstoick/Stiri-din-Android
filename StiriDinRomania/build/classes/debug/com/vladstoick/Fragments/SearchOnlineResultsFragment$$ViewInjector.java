@@ -9,9 +9,12 @@ public class SearchOnlineResultsFragment$$ViewInjector {
     View view;
     view = finder.findById(source, 2131230813);
     target.mListView = (android.widget.ListView) view;
+    view = finder.findById(source, 2131230815);
+    target.mProgressBar = (android.widget.ProgressBar) view;
   }
 
   public static void reset(com.vladstoick.Fragments.SearchOnlineResultsFragment target) {
     target.mListView = null;
+    target.mProgressBar = null;
   }
 }

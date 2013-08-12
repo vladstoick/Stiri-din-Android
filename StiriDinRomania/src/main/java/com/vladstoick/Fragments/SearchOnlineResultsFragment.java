@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -28,7 +29,10 @@ public class SearchOnlineResultsFragment extends SherlockFragment {
     NewsItemAdapter adapter;
     ArrayList<NewsItem> newsItems;
     @InjectView(R.id.newsitem_listview) ListView mListView;
+    @InjectView(R.id.progressBar) ProgressBar mProgressBar;
     public void setData(ArrayList<NewsItem> results,Activity activity){
+        mListView.setVisibility(View.VISIBLE);
+        mProgressBar.setVisibility(View.GONE);
         newsItems = results;
         adapter = new NewsItemAdapter(activity,results);
         adapter.notifyDataSetChanged();
@@ -39,7 +43,10 @@ public class SearchOnlineResultsFragment extends SherlockFragment {
             e.printStackTrace();
         }
     }
-
+    public void showProgressIndicator(){
+        mListView.setVisibility(View.GONE);
+        mProgressBar.setVisibility(View.VISIBLE);
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_search_online_results ,container, false);

@@ -2,7 +2,7 @@
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
 1376254190251 622 f1ef4a081a6ce4e3ce234c1cf59c40d35270c337 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\menu\add_element_manual_fragment.xml
-1376324165592 715 5812ee37e8b88498fcccaee571646633bae790e9 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\layout\fragment_search_online_results.xml
+1376331295466 1011 4d8a1ad15eb48ded89fce1385c076e4ccf2a9cdc C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\layout\fragment_search_online_results.xml
 1376254190362 254 bcffbc8839ae9f9d89c09df94b31b37b52219162 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\drawable-hdpi\abs__ic_go_search_api_holo_light.png
 1376254188972 2118 732ae83c1c0d371973e715ead6e499b0ec619c7d C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\drawable-hdpi\common_signin_btn_text_focus_light.9.png
 1376254190218 464 74a04fbf1bc79df0dd4e434f082c99fa3e8e7292 C:\Programming\Android\StiriDinRomaniaAndroidGradle\StiriDinRomania\build\res\all\debug\drawable-mdpi\abs__ic_menu_share_holo_dark.png

@@ -69,7 +69,6 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
     }
     public void getData(){
         int selectedPosition = getSupportActionBar().getSelectedTab().getPosition();
-
         if(selectedPosition==0){
             SearchResultsFragment fragment = (SearchResultsFragment)
                     mSectionsPagerAdapter.fragments.get(selectedPosition);
@@ -78,15 +77,20 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
             }
         }
         if(selectedPosition==1){
+            SearchOnlineResultsFragment fragment = (SearchOnlineResultsFragment)
+                    mSectionsPagerAdapter.fragments.get(selectedPosition);
+            fragment.showProgressIndicator();
             ((StiriApp)getApplication()).newsDataSource.searchNewsItemOnline(query);
         }
     }
 
     @Subscribe
     public void onSearchResultsRecived(SearchResultsEvent event){
-        SearchOnlineResultsFragment fragment = (SearchOnlineResultsFragment)
-                mSectionsPagerAdapter.fragments.get(1);
-        fragment.setData(event.results,this);
+        if(event.query == query){
+            SearchOnlineResultsFragment fragment = (SearchOnlineResultsFragment)
+                    mSectionsPagerAdapter.fragments.get(1);
+            fragment.setData(event.results,this);
+        }
     }
     private ArrayList<NewsItem> getLocalResults(){
         ArrayList<NewsItem> results = ((StiriApp)getApplication()).newsDataSource

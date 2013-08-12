@@ -2,8 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".SearchResultsActivity$DummySectionFragment">
+    <ProgressBar
+            android:layout_centerHorizontal="true"
+            android:id="@+id/progressBar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            style="Widget.Sherlock.Light.ProgressBar.Large"/>
     <ListView
             android:paddingLeft="@dimen/left_and_right_margin"
             android:paddingRight="@dimen/left_and_right_margin"
