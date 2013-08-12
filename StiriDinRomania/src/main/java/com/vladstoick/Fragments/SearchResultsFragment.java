@@ -1,15 +1,18 @@
 package com.vladstoick.Fragments;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.Utils.NewsItemAdapter;
+import com.vladstoick.stiridinromania.NewsItemDetailActivity;
 import com.vladstoick.stiridinromania.R;
 
 import java.util.ArrayList;
@@ -23,10 +26,12 @@ import butterknife.Views;
 public class SearchResultsFragment extends SherlockFragment{
     NewsItemAdapter adapter;
     @InjectView(R.id.newsitem_listview) public ListView mListView;
+    ArrayList<NewsItem> newsItems;
     public SearchResultsFragment() {
     }
 
     public void setData(ArrayList<NewsItem> results,Activity activity){
+        newsItems = results;
         adapter = new NewsItemAdapter(activity,results);
         adapter.notifyDataSetChanged();
         try{
@@ -50,7 +55,16 @@ public class SearchResultsFragment extends SherlockFragment{
                 e.printStackTrace();
             }
         }
-
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity().getBaseContext(),
+                        NewsItemDetailActivity.class);
+                intent.putExtra(NewsItemDetailFragment.ARG_ITEM,newsItems.get(position)
+                        .getUrlLink());
+                startActivity(intent);
+            }
+        });
         return rootView;
     }
 }
