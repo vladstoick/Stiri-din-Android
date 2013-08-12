@@ -70,7 +70,8 @@ public class NewsItemDetailFragment extends SherlockFragment {
     @Subscribe public void onItemViewLoaded(NewsItemLoadedEvent event){
         if(mItem.getUrlLink().equals(event.ni.getUrlLink()) ){
             mItem = event.ni;
-            mWebView.loadData(mItem.getDescription(), "text/html; charset=utf-8", null);
+            mPaperized.setText(Html.fromHtml(mItem.getDescription()));
+
         }
     }
 
