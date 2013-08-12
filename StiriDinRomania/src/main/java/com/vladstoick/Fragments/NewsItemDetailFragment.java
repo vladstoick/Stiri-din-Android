@@ -35,6 +35,7 @@ import butterknife.Views;
  */
 public class NewsItemDetailFragment extends SherlockFragment {
     public static final String ARG_ITEM = "item_id";
+    public static final String ARG_ITEM_JO = "item_jo";
     private int isInMode = 0;
     public static final String ARG_MODE = "mode";
     private NewsItem mItem;
@@ -55,6 +56,8 @@ public class NewsItemDetailFragment extends SherlockFragment {
             String url =getArguments().getString(ARG_ITEM);
             mItem = ((StiriApp)getSherlockActivity().getApplication())
                     .newsDataSource.getNewsItem(url);
+        } else if (getArguments().containsKey(ARG_ITEM_JO)){
+            mItem = getArguments().getParcelable(ARG_ITEM_JO);
         }
     }
 

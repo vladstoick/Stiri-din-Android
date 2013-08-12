@@ -17,6 +17,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
 import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsItem;
+import com.vladstoick.Fragments.SearchOnlineResultsFragment;
 import com.vladstoick.Fragments.SearchResultsFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.SearchResultsEvent;
@@ -29,6 +30,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
     ViewPager mViewPager;
     String query;
     SearchView searchView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,9 +38,9 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
         setContentView(R.layout.activity_searchresults);
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        ArrayList<SearchResultsFragment> fragments = new ArrayList<SearchResultsFragment>();
+        ArrayList<SherlockFragment> fragments = new ArrayList<SherlockFragment>();
         fragments.add(new SearchResultsFragment());
-        fragments.add(new SearchResultsFragment());
+        fragments.add(new SearchOnlineResultsFragment());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mSectionsPagerAdapter.fragments = fragments;
@@ -67,9 +69,13 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
     }
     public void getData(){
         int selectedPosition = getSupportActionBar().getSelectedTab().getPosition();
-        SearchResultsFragment fragment = mSectionsPagerAdapter.fragments.get(selectedPosition);
-        if(selectedPosition==0 && fragment!=null){
-            fragment.setData(getLocalResults(),this);
+
+        if(selectedPosition==0){
+            SearchResultsFragment fragment = (SearchResultsFragment)
+                    mSectionsPagerAdapter.fragments.get(selectedPosition);
+            if(fragment!=null){
+                fragment.setData(getLocalResults(),this);
+            }
         }
         if(selectedPosition==1){
             ((StiriApp)getApplication()).newsDataSource.searchNewsItemOnline(query);
@@ -78,7 +84,8 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
 
     @Subscribe
     public void onSearchResultsRecived(SearchResultsEvent event){
-        SearchResultsFragment fragment = mSectionsPagerAdapter.fragments.get(1);
+        SearchOnlineResultsFragment fragment = (SearchOnlineResultsFragment)
+                mSectionsPagerAdapter.fragments.get(1);
         fragment.setData(event.results,this);
     }
     private ArrayList<NewsItem> getLocalResults(){
@@ -108,9 +115,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
             public boolean onQueryTextChange(String s) {
                 query = s;
                 if(query.length()>2){
-//                    if(getSupportActionBar().getSelectedTab().getPosition()==0){
-                        getData();
-//                    }
+                    getData();
                 }
                 return false;
             }
@@ -118,7 +123,6 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
         try {
             searchView.setQuery(query, false);
 
-//            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
             searchView.clearFocus();
         } catch (Exception e) {
             e.printStackTrace();
@@ -150,7 +154,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
-        public ArrayList<SearchResultsFragment> fragments;
+        public ArrayList<SherlockFragment> fragments;
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
 

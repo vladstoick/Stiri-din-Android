@@ -19,8 +19,15 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
         if (savedInstanceState == null) {
             fromSearch = getIntent().getBooleanExtra(FROM_SEARCH,false);
             Bundle arguments = new Bundle();
-            arguments.putString(NewsItemDetailFragment.ARG_ITEM,
-                    getIntent().getStringExtra(NewsItemDetailFragment.ARG_ITEM));
+            Bundle extras = getIntent().getExtras();
+            if(extras.containsKey(NewsItemDetailFragment.ARG_ITEM)){
+                arguments.putString(NewsItemDetailFragment.ARG_ITEM,
+                        getIntent().getStringExtra(NewsItemDetailFragment.ARG_ITEM));
+            } else {
+                arguments.putParcelable(NewsItemDetailFragment.ARG_ITEM_JO,
+                        getIntent().getParcelableExtra(NewsItemDetailFragment.ARG_ITEM_JO));
+            }
+
             NewsItemDetailFragment fragment = new NewsItemDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()

@@ -1396,14 +1396,15 @@ containing a value of this type.
         public static final int fragment_newsitem_detail=0x7f03002e;
         public static final int fragment_newsitem_list=0x7f03002f;
         public static final int fragment_newssource=0x7f030030;
-        public static final int fragment_search_results=0x7f030031;
-        public static final int list_row_newsgroup=0x7f030032;
-        public static final int list_row_newsitem=0x7f030033;
-        public static final int list_row_newssource=0x7f030034;
-        public static final int sherlock_spinner_dropdown_item=0x7f030035;
-        public static final int sherlock_spinner_item=0x7f030036;
-        public static final int spinner_row_newsgroup=0x7f030037;
-        public static final int spinner_row_newsgroup_dropdown=0x7f030038;
+        public static final int fragment_search_online_results=0x7f030031;
+        public static final int fragment_search_results=0x7f030032;
+        public static final int list_row_newsgroup=0x7f030033;
+        public static final int list_row_newsitem=0x7f030034;
+        public static final int list_row_newssource=0x7f030035;
+        public static final int sherlock_spinner_dropdown_item=0x7f030036;
+        public static final int sherlock_spinner_item=0x7f030037;
+        public static final int spinner_row_newsgroup=0x7f030038;
+        public static final int spinner_row_newsgroup_dropdown=0x7f030039;
     }
     public static final class menu {
         public static final int add_element_manual_fragment=0x7f0d0000;
