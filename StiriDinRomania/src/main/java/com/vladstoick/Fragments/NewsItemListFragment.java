@@ -35,7 +35,7 @@ public class NewsItemListFragment extends SherlockFragment implements
     private Callbacks mCallbacks = null;
     private int mActivatedPosition = ListView.INVALID_POSITION;
     public interface Callbacks {
-        public void onItemSelected(String id);
+        public void onItemSelected(String id, int position);
     }
 
 
@@ -105,7 +105,7 @@ public class NewsItemListFragment extends SherlockFragment implements
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        mCallbacks.onItemSelected(ns.news.get(i).getUrlLink());
+        mCallbacks.onItemSelected(ns.news.get(i).getUrlLink(),i);
     }
 
     @Override

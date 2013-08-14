@@ -1,13 +1,10 @@
 package com.vladstoick.stiridinromania;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
 import com.vladstoick.Fragments.NewsItemListFragment;
@@ -74,7 +71,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
      * indicating that the item with the given ID was selected.
      */
     @Override
-    public void onItemSelected(String url) {
+    public void onItemSelected(String url, int position) {
 
         //TODO SCAPA
         if (mTwoPane) {
@@ -96,7 +93,9 @@ public class NewsItemListActivity extends SherlockFragmentActivity
             // for the selected item ID.
             Intent detailIntent = new Intent(this, NewsItemDetailActivity.class);
             detailIntent.putExtra(NewsItemDetailFragment.ARG_ITEM, url);
-            startActivity(detailIntent);
+            detailIntent.putExtra(NewsItemDetailFragment.ARG_NEWSOURCE, newsSourceId);
+            detailIntent.putExtra(NewsItemDetailFragment.ARG_ITEMPOSITION, position);
+                    startActivity(detailIntent);
         }
     }
 
