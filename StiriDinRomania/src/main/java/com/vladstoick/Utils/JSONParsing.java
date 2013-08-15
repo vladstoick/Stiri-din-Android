@@ -14,6 +14,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Created by vlad on 7/19/13.
@@ -60,6 +61,7 @@ public class JSONParsing {
                 JSONObject jo = newsJArray.getJSONObject(i);
                 String dateString = jo.getString(NewsItem.TAG_DATE);
                 final DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                fmt.setTimeZone(TimeZone.getTimeZone("UTC"));
                 Date date = fmt.parse(dateString);
                 NewsItem ni = new NewsItem(jo.getString(NewsItem.TAG_TITLE),
                         jo.getString(NewsItem.TAG_DESCRIPTION),

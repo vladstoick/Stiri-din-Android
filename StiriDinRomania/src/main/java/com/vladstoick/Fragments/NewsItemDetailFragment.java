@@ -22,6 +22,10 @@ import com.vladstoick.OttoBus.NewsItemLoadedEvent;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
 import butterknife.InjectView;
 import butterknife.Views;
 
@@ -44,7 +48,9 @@ public class NewsItemDetailFragment extends SherlockFragment {
     @InjectView(R.id.news_item_detail_webView) WebView mWebView;
     @InjectView(R.id.news_item_detail_title) TextView mTitle;
     @InjectView(R.id.news_item_detail_paperized) TextView mPaperized;
-    @InjectView(R.id.news_item_scrollview) ScrollView mScrollView;
+    @InjectView(R.id.news_item_detail_date) TextView mDate;
+//    @InjectView(R.id.news_item_scrollview) ScrollView mScrollView;
+
     public NewsItemDetailFragment() {
     }
 
@@ -84,6 +90,8 @@ public class NewsItemDetailFragment extends SherlockFragment {
         Views.inject(this, rootView);
         if (mItem != null) {
             mTitle.setText(mItem.getTitle());
+            mDate.setText(mItem.getPubDateAsString(getSherlockActivity().getApplicationContext()));
+
             if(!mItem.getDescription().equals("null")){
                 mPaperized.setText(Html.fromHtml(mItem.getDescription()));
             } else {

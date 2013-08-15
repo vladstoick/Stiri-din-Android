@@ -1,8 +1,12 @@
 package com.vladstoick.DataModel;
 
+import android.content.Context;
 import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 /**
  * Created by vlad on 7/19/13.
@@ -15,7 +19,7 @@ public class NewsItem implements Parcelable {
     private String title;
     private String description;
     private String urlLink;
-    private long pubDate;
+    private long pubDate = 0;
     private int sourceId;
 
     public NewsItem(String title, String description, String urlLink, long pubDate) {
@@ -31,6 +35,17 @@ public class NewsItem implements Parcelable {
         this.description = cursor.getString(2);
         this.sourceId = cursor.getInt(3);
         this.pubDate = cursor.getLong(4);
+    }
+
+    public String getPubDateAsString(Context context){
+        if(this.pubDate == 0){
+            return "";
+        }
+        Date articleDate = new Date(getPubDate());
+        DateFormat timeFormat = android.text.format.DateFormat
+                .getTimeFormat(context);
+        DateFormat dateFormat = android.text.format.DateFormat.getLongDateFormat(context);
+        return dateFormat.format(articleDate) + " " + timeFormat.format(articleDate);
     }
 
     public long getPubDate() {
