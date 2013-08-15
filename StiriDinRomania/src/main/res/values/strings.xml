@@ -10,7 +10,7 @@
         <item>@string/rename</item>
     </string-array>
     <!--NEWS GROUP LIST-->
-    <string name="nofeedsadded">You have no news sources added. You can add news sources by pressing the add button. The add button can be found in the action bar, or if you hardware buttons, it can be found by clicking the menu button</string>
+    <string name="nofeedsadded">You have no news sources added. You can add news sources by pressing the "+" button. The add button can be found in the action bar, or if you hardware buttons, it can be found by clicking the menu button on the device.</string>
     <string name="update_data">Refresh</string>
     <!--SEARCH-->
     <string name="search_hint">News title</string>

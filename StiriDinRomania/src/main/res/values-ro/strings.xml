@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--NEWSGROUP LIST VIEW-->
+    <string name="nofeedsadded">Nu ai nicio sursă de știri adăugată. Pentru a adăuga o sursă de știre trebuie să apeși pe butonul "+" care poate fi găsit în bara de sus ori în meniul invocat de butonul de pe telefon</string>
     <!--NEWSITEM DETAIL FRAMGENT-->
     <string name="see_full_article">Pagina Web</string>
     <!--ALL GROUPS ACITIVTY-->
