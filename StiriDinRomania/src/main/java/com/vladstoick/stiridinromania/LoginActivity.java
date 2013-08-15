@@ -22,7 +22,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.Scopes;
 import com.google.android.gms.plus.PlusClient;
-import com.vladstoick.DataModel.JSONParsing;
+import com.vladstoick.Utils.JSONParsing;
 import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.Utils.LoginVolleyRequest;
 

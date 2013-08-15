@@ -16,8 +16,8 @@ import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
 import com.vladstoick.OttoBus.NewsItemLoadedEvent;
 import com.vladstoick.OttoBus.SearchResultsEvent;
+import com.vladstoick.Utils.JSONParsing;
 import com.vladstoick.Utils.Utils;
-import com.vladstoick.sql.SqlHelper;
 import com.vladstoick.stiridinromania.StiriApp;
 
 import org.json.JSONArray;
@@ -31,15 +31,14 @@ import java.util.Date;
 /**
  * Created by vlad on 7/20/13.
  */
-public class NewsDataSource {
+public class
+        NewsDataSource {
     public boolean isDataLoaded = true;
     public AsyncHttpClient client;
     private AsyncHttpClient httpClient;
     private String BASE_URL = "http://stiriromania.eu01.aws.af.cm/user/";
     private int userId;
     private SqlHelper sqlHelper;
-    private Date updateAt;
-
     //CONSTRUCTORS
     public NewsDataSource(int userId, Application app) {
         this.userId = userId;
@@ -81,8 +80,8 @@ public class NewsDataSource {
 
     @Subscribe
     public void OnDataLoaded(DataLoadedEvent event) {
-        final String dateString = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"))
-                .format(Calendar.getInstance().getTime());
+//        final String dateString = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"))
+//                .format(Calendar.getInstance().getTime());
         if (event.dataLoadedType == DataLoadedEvent.TAG_NEWSDATASOURCE) {
             ArrayList<NewsSource> newsSources = sqlHelper.getAllNewsSources();
             for (int j = 0; j < newsSources.size(); j++) {

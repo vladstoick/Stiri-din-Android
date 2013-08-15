@@ -8,18 +8,21 @@ import android.os.Parcelable;
  * Created by vlad on 7/19/13.
  */
 public class NewsItem implements Parcelable {
+    public static String TAG_DATE = "date";
     public static String TAG_TITLE = "title";
     public static String TAG_DESCRIPTION = "description";
     public static String TAG_URLLINK = "url";
     private String title;
     private String description;
     private String urlLink;
+    private long pubDate;
     private int sourceId;
 
-    public NewsItem(String title, String description, String urlLink) {
+    public NewsItem(String title, String description, String urlLink, long pubDate) {
         this.title = title;
         this.description = description;
         this.urlLink = urlLink;
+        this.pubDate = pubDate;
     }
 
     public NewsItem(Cursor cursor) {
@@ -27,6 +30,15 @@ public class NewsItem implements Parcelable {
         this.title = cursor.getString(1);
         this.description = cursor.getString(2);
         this.sourceId = cursor.getInt(3);
+        this.pubDate = cursor.getLong(4);
+    }
+
+    public long getPubDate() {
+        return pubDate;
+    }
+
+    public void setPubDate(long pubDate) {
+        this.pubDate = pubDate;
     }
 
     public int getSourceId() {
@@ -88,6 +100,7 @@ public class NewsItem implements Parcelable {
         dest.writeString(description);
         dest.writeString(urlLink);
         dest.writeInt(sourceId);
+        dest.writeLong(pubDate);
     }
 
     private NewsItem(Parcel in) {
@@ -95,5 +108,6 @@ public class NewsItem implements Parcelable {
         this.description = in.readString();
         this.urlLink = in.readString();
         this.sourceId = in.readInt();
+        this.pubDate = in.readLong();
     }
 }

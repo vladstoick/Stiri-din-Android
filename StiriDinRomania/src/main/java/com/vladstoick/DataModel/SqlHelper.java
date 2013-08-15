@@ -1,4 +1,4 @@
-package com.vladstoick.sql;
+package com.vladstoick.DataModel;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,9 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.vladstoick.DataModel.NewsGroup;
-import com.vladstoick.DataModel.NewsItem;
-import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.DialogFragment.RenameDialogFragment;
 
 import java.util.ArrayList;
@@ -22,6 +19,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     public static String GROUPS_TABLE = "groups";
     public static String SOURCES_TABLE = "sources";
     public static String NEWSITEMS_TABLE = "newsitems";
+    public static String COLUMN_DATE = "date";
     public static String COLUMN_GROUP_ID = "groupid";
     public static String COLUMN_SOURCE_ID = "sourceid";
     public static String COLUMN_NOFEEDS = "nofeeds";
@@ -32,7 +30,8 @@ public class SqlHelper extends SQLiteOpenHelper {
     public static String COLUMN_DESCRIPTION = "description";
     private static String CREATE_NEWSITEMS_TABLE = "CREATE TABLE " + NEWSITEMS_TABLE + " ( " +
             COLUMN_URL + " text primary key , " + COLUMN_TITLE + " text not null , " +
-            COLUMN_DESCRIPTION + " text not null , " + COLUMN_SOURCE_ID + " int )";
+            COLUMN_DESCRIPTION + " text not null , " + COLUMN_SOURCE_ID + " int , " +
+            COLUMN_DATE+ " long )";
     private static String CREATE_GROUPS_TABLE = "CREATE TABLE " + GROUPS_TABLE + " ( " +
             COLUMN_ID + " int primary key , " + COLUMN_TITLE + " text not null , " +
             COLUMN_NOFEEDS + " int )";
@@ -44,7 +43,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     public static String[] SOURCES_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_DESCRIPTION,
             COLUMN_URL, COLUMN_GROUP_ID, COLUMN_NOUNREADNEWS};
     public static String[] NEWSITEMS_COLUMNS = {COLUMN_URL, COLUMN_TITLE, COLUMN_DESCRIPTION,
-            COLUMN_SOURCE_ID};
+            COLUMN_SOURCE_ID, COLUMN_DATE};
 
     public SqlHelper(Context context) {
         super(context, DB_NAME, null, DBVERSION);
@@ -184,7 +183,9 @@ public class SqlHelper extends SQLiteOpenHelper {
     public ArrayList<NewsItem> getNewsItems(NewsSource ns){
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(NEWSITEMS_TABLE, NEWSITEMS_COLUMNS,
-                SqlHelper.COLUMN_SOURCE_ID + " = " + ns.getId(), null, null, null, null, null);
+                SqlHelper.COLUMN_SOURCE_ID + " = " + ns.getId(), null, null, null, COLUMN_DATE
+
+                + " DESC", null);
         ArrayList<NewsItem> news = new ArrayList<NewsItem>();
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -225,6 +226,7 @@ public class SqlHelper extends SQLiteOpenHelper {
             values.put(SqlHelper.COLUMN_TITLE, ni.getTitle());
             values.put(SqlHelper.COLUMN_DESCRIPTION, ni.getDescription());
             values.put(SqlHelper.COLUMN_SOURCE_ID, ns.getId());
+            values.put(SqlHelper.COLUMN_DATE, ni.getPubDate());
             sqlLiteDatabase.insertWithOnConflict(SqlHelper.NEWSITEMS_TABLE, null, values,
                     SQLiteDatabase.CONFLICT_REPLACE);
         }

@@ -1,12 +1,19 @@
-package com.vladstoick.DataModel;
+package com.vladstoick.Utils;
 
 import android.content.SharedPreferences;
+
+import com.vladstoick.DataModel.NewsGroup;
+import com.vladstoick.DataModel.NewsItem;
+import com.vladstoick.DataModel.NewsSource;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by vlad on 7/19/13.
@@ -51,13 +58,18 @@ public class JSONParsing {
             ArrayList<NewsItem> newsItems = new ArrayList<NewsItem>();
             for (int i = 0; i < newsJArray.length(); i++) {
                 JSONObject jo = newsJArray.getJSONObject(i);
+                String dateString = jo.getString(NewsItem.TAG_DATE);
+                final DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                Date date = fmt.parse(dateString);
                 NewsItem ni = new NewsItem(jo.getString(NewsItem.TAG_TITLE),
                         jo.getString(NewsItem.TAG_DESCRIPTION),
-                        jo.getString(NewsItem.TAG_URLLINK));
+                        jo.getString(NewsItem.TAG_URLLINK),
+                        date.getTime());
                 newsItems.add(ni);
             }
             return newsItems;
         } catch (Exception e) {
+            e.printStackTrace();
             return new ArrayList<NewsItem>();
         }
 
@@ -104,7 +116,7 @@ public class JSONParsing {
             for(int i=0; i<resultsArray.length(); i++){
                 JSONObject newsItem = resultsArray.getJSONObject(i);
                 NewsItem ni = new NewsItem(newsItem.getString("title"),newsItem.getString("content"),
-                        newsItem.getString("url"));
+                        newsItem.getString("url"),0);
                 results.add(ni);
             }
         } catch (Exception e) {
