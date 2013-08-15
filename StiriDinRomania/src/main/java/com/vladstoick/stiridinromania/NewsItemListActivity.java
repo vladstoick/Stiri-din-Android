@@ -45,7 +45,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
             newsSourceId = getIntent().getExtras().getInt(Tags.NEWSOURCE_TAG_ID);
             NewsSource newsSource = ((StiriApp) getApplication())
                     .newsDataSource.getNewsSource(newsSourceId);
-            setTitle(newsSource.getTitle());
+            setTitle(getString(R.string.app_name)+ " " + newsSource.getTitle());
             ((NewsItemListFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.newsitem_list))
                     .setNewsSourceId(newsSourceId);

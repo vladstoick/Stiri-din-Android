@@ -35,7 +35,11 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
 
             if(extras.containsKey(NewsItemDetailFragment.ARG_ITEM)){
                 int newsSourceId = getIntent().getIntExtra(NewsItemDetailFragment.ARG_NEWSOURCE, 0);
-                news = ((StiriApp)getApplication()).newsDataSource.getNewsSource(newsSourceId).news;
+                NewsSource ns = ((StiriApp)getApplication()).newsDataSource
+                        .getNewsSource(newsSourceId);
+                setTitle(getString(R.string.app_name)+ " " + ns.getTitle());
+                news = ns.news;
+
                 mAdapter = new NewsItemPagerAdapter(getSupportFragmentManager(),news);
             } else {
                 ArrayList<NewsItem> news = new ArrayList<NewsItem>();
@@ -46,12 +50,6 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
             }
             mPager.setAdapter(mAdapter);
             mPager.setCurrentItem(getIntent().getIntExtra(NewsItemDetailFragment.ARG_ITEMPOSITION,0));
-
-//            NewsItemDetailFragment fragment = new NewsItemDetailFragment();
-//            fragment.setArguments(arguments);
-//            getSupportFragmentManager().beginTransaction()
-//                    .add(R.id.newsitem_detail_container, fragment)
-//                    .commit();
         }
     }
 
