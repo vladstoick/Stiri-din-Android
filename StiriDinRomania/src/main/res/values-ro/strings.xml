@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--SHARE-->
+    <string name="share">Share</string>
+    <string name="share_end">. Citește știri pe Android, iOS și WP8 cu \"Știri din\".</string>
     <!--NEWSGROUP LIST VIEW-->
     <string name="nofeedsadded">Nu ai nicio sursă de știri adăugată. Pentru a adăuga o sursă de știre trebuie să apeși pe butonul "+" care poate fi găsit în bara de sus ori în meniul invocat de butonul de pe telefon</string>
     <!--NEWSITEM DETAIL FRAMGENT-->

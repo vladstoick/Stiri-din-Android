@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--SHARE-->
+    <string name="share">Share</string>
+    <string name="share_end">. Read news on Android, iOS and WP8 with \"News from\"</string>
     <!-- NEWS ITEM DETAIL FRAGMENT -->
     <string name="see_full_article">Web Page</string>
     <!-- ALL GROUPS ACITIVTY -->

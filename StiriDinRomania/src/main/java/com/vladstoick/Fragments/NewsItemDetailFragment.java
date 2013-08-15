@@ -1,5 +1,6 @@
 package com.vladstoick.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.DragEvent;
@@ -127,6 +128,16 @@ public class NewsItemDetailFragment extends SherlockFragment {
                     mPaperized.setVisibility(View.VISIBLE);
                     isInMode = 0;
                 }
+
+            }
+            case R.id.action_share: {
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String title = mItem.getTitle();
+                String body = mItem.getUrlLink() + " " + getString(R.string.share_end);
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, title);
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, body);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
 
             }
         }

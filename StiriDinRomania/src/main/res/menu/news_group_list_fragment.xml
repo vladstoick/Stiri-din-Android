@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-            android:id="@+id/action_refresh"
-            android:orderInCategory="99"
-            android:showAsAction="always"
-            android:icon="@drawable/navigation_refresh"
-            android:title="@string/update_data"/>
+
     <item
             android:id="@+id/action_add"
-            android:orderInCategory="100"
-            android:showAsAction="always"
+            android:orderInCategory="3"
+            android:showAsAction="ifRoom"
             android:icon="@drawable/content_new"
             android:title="@string/add"/>
-
+    <item
+            android:id="@+id/action_refresh"
+            android:orderInCategory="2"
+            android:showAsAction="ifRoom"
+            android:icon="@drawable/navigation_refresh"
+            android:title="@string/update_data"/>
 
 </menu>
