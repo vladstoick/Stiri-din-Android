@@ -21,8 +21,8 @@ import butterknife.Views;
  */
 public class NewsItemAdapter extends BaseAdapter {
     static class Holder {
-        @InjectView(R.id.title)
-        TextView mTitle;
+        @InjectView(R.id.title) TextView mTitle;
+        @InjectView(R.id.date) TextView mDate;
 
         public Holder(View mView) {
             Views.inject(this, mView);
@@ -66,6 +66,7 @@ public class NewsItemAdapter extends BaseAdapter {
             holder = (Holder) row.getTag();
         }
         holder.mTitle.setText(ni.getTitle());
+        holder.mDate.setText(ni.getPubDateAsString(context));
         return row;
     }
 

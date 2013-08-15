@@ -6,12 +6,20 @@
               android:paddingTop="@dimen/top_and_bottom_margin"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/large_smaller_font"
+            android:text="@string/lorem_w_5"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/title"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/medium_font"
             android:text="@string/lorem_w_5"
+            android:textStyle="italic"
             android:fontFamily="sans-serif-condensed"
-            android:id="@+id/title"/>
+            android:id="@+id/date"/>
+
 </LinearLayout>
