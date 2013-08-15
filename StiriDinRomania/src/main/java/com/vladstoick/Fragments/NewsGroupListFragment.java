@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.Menu;
@@ -35,6 +36,7 @@ public class NewsGroupListFragment extends SherlockFragment
     private ArrayList<NewsGroup> newsDataSource;
     private static final String STATE_ACTIVATED_POSITION = "activated_position";
     @InjectView(R.id.newsgroup_listview) ListView mListView;
+    @InjectView(R.id.warning) TextView mWarning;
     private Callbacks mCallbacks;
     MenuItem refreshItem;
     private int mActivatedPosition = ListView.INVALID_POSITION;
@@ -59,6 +61,7 @@ public class NewsGroupListFragment extends SherlockFragment
         View view = inflater.inflate(R.layout.fragment_newsgroup_list,container,true);
         Views.inject(this,view);
         mListView.setOnItemClickListener(this);
+        mWarning.setVisibility(View.GONE);
         return view;
     }
 
@@ -68,8 +71,11 @@ public class NewsGroupListFragment extends SherlockFragment
         Context context = getSherlockActivity();
         StiriApp stiriApp = (StiriApp)(getSherlockActivity().getApplication());
         if (newsDataSource != null) {
+            mWarning.setVisibility(newsDataSource.size()==0 ? View.VISIBLE : View.GONE);
             adapter = new NewsGroupAdapter(newsDataSource, context, stiriApp, this);
             mListView.setAdapter(adapter);
+        } else {
+            mWarning.setVisibility(View.VISIBLE);
         }
     }
 
