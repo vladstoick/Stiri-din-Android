@@ -6,9 +6,12 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
 import com.vladstoick.Utils.NewsItemPagerAdapter;
+
+import java.util.ArrayList;
 
 import butterknife.InjectView;
 import butterknife.Views;
@@ -16,7 +19,7 @@ import butterknife.Views;
 
 public class NewsItemDetailActivity extends SherlockFragmentActivity {
     public static String FROM_SEARCH="FROMSEARCH";
-    private NewsSource newsSource;
+    private ArrayList<NewsItem> news;
     public NewsItemPagerAdapter mAdapter;
     @InjectView(R.id.newsitem_detail_container) public ViewPager mPager;
     boolean fromSearch = false;
@@ -32,16 +35,17 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
 
             if(extras.containsKey(NewsItemDetailFragment.ARG_ITEM)){
                 int newsSourceId = getIntent().getIntExtra(NewsItemDetailFragment.ARG_NEWSOURCE, 0);
-                newsSource = ((StiriApp)getApplication()).newsDataSource.getNewsSource(newsSourceId);
-                mAdapter = new NewsItemPagerAdapter(getSupportFragmentManager(),newsSource.news);
-                mPager.setAdapter(mAdapter);
-                mPager.setCurrentItem(getIntent().getIntExtra(NewsItemDetailFragment.ARG_ITEMPOSITION,0));
-
+                news = ((StiriApp)getApplication()).newsDataSource.getNewsSource(newsSourceId).news;
+                mAdapter = new NewsItemPagerAdapter(getSupportFragmentManager(),news);
             } else {
-//                arguments.putParcelable(NewsItemDetailFragment.ARG_ITEM_JO,
-//                        getIntent().getParcelableExtra(NewsItemDetailFragment.ARG_ITEM_JO));
+                ArrayList<NewsItem> news = new ArrayList<NewsItem>();
+                news.add((NewsItem)
+                        getIntent().getParcelableExtra(NewsItemDetailFragment.ARG_ITEM_JO));
+                mAdapter =  new NewsItemPagerAdapter(getSupportFragmentManager(),news);
+                mAdapter.fromOnlineSearch = true;
             }
-
+            mPager.setAdapter(mAdapter);
+            mPager.setCurrentItem(getIntent().getIntExtra(NewsItemDetailFragment.ARG_ITEMPOSITION,0));
 
 //            NewsItemDetailFragment fragment = new NewsItemDetailFragment();
 //            fragment.setArguments(arguments);

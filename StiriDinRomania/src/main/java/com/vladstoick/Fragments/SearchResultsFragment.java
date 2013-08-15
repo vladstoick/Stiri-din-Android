@@ -60,8 +60,7 @@ public class SearchResultsFragment extends SherlockFragment{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity().getBaseContext(),
                         NewsItemDetailActivity.class);
-                intent.putExtra(NewsItemDetailFragment.ARG_ITEM,newsItems.get(position)
-                        .getUrlLink());
+                intent.putExtra(NewsItemDetailFragment.ARG_ITEM_JO,newsItems.get(position));
                 intent.putExtra(NewsItemDetailActivity.FROM_SEARCH,true);
                 startActivity(intent);
             }

@@ -17,6 +17,7 @@ import java.util.ArrayList;
  */
 public class NewsItemPagerAdapter extends FragmentStatePagerAdapter {
     public ArrayList<NewsItem> newsItems;
+    public boolean fromOnlineSearch;
     public NewsItemPagerAdapter(FragmentManager fm, ArrayList<NewsItem> newsItems){
         super(fm);
         this.newsItems = newsItems;
@@ -26,7 +27,11 @@ public class NewsItemPagerAdapter extends FragmentStatePagerAdapter {
     public SherlockFragment getItem(int i) {
         SherlockFragment fragment = new NewsItemDetailFragment();
         Bundle arguments = new Bundle();
-        arguments.putString(NewsItemDetailFragment.ARG_ITEM, newsItems.get(i).getUrlLink());
+        if(fromOnlineSearch){
+            arguments.putParcelable(NewsItemDetailFragment.ARG_ITEM_JO,newsItems.get(i));
+        } else {
+            arguments.putString(NewsItemDetailFragment.ARG_ITEM, newsItems.get(i).getUrlLink());
+        }
         fragment.setArguments(arguments);
         return fragment;
     }
