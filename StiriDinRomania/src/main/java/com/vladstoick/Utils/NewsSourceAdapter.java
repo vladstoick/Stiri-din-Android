@@ -147,11 +147,4 @@ public class NewsSourceAdapter extends BaseAdapter {
     public void deleteSource(final NewsSource newsSource) {
         app.newsDataSource.deleteNewsSource(newsSource);
     }
-
-    public void renameSource(final NewsSource newsSource) {
-        RenameDialogFragment renameDialogFragment =
-                new RenameDialogFragment(RenameDialogFragment.SOURCE_TAG, newsSource.getId());
-        renameDialogFragment.show(fragment.getSherlockActivity().getSupportFragmentManager(),
-                RenameDialogFragment.TAG);
-    }
 }

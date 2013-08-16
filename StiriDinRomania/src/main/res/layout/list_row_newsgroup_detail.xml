@@ -24,6 +24,7 @@
             android:layout_marginRight="@dimen/left_and_right_margin_with_overflow_icon"
             android:layout_marginLeft="@dimen/left_and_right_margin"
             android:layout_width="match_parent"
+            android:layout_centerVertical="true"
             android:layout_height="wrap_content">
         <TextView
                 android:layout_alignParentRight="true"
@@ -37,6 +38,7 @@
                 android:id="@+id/numberOfNews"
                 android:textSize="@dimen/large_font"/>
         <TextView
+                android:layout_centerVertical="true"
                 android:fontFamily="sans-serif-condensed"
                 android:textSize="@dimen/large_font"
                 android:textStyle="bold"
