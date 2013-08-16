@@ -36,8 +36,6 @@ public class NewsSourceAdapter extends BaseAdapter {
     static class RowHolder {
         @InjectView(R.id.newsSourceTitle)
         TextView mTitle;
-        @InjectView(R.id.description)
-        TextView mDescription;
         @InjectView(R.id.numberOfNews)
         TextView mNumberOfNews;
         @InjectView(R.id.overflow_icon)
@@ -105,7 +103,6 @@ public class NewsSourceAdapter extends BaseAdapter {
             }
         });
         holder.mTitle.setText(ns.getTitle());
-        holder.mDescription.setText(ns.getDescription());
         holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews() + "");
         return row;
     }
@@ -123,10 +120,6 @@ public class NewsSourceAdapter extends BaseAdapter {
                         deleteSource(newsSource);
                         return true;
                     }
-                    case R.id.action_rename: {
-                        renameSource(newsSource);
-                        return true;
-                    }
                 }
                 return false;
             }
@@ -136,9 +129,6 @@ public class NewsSourceAdapter extends BaseAdapter {
 
     public void buildPopUpWindow(View v, final NewsSource newsSource) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("adda");
-        list.add("ggdgd");
         builder.setItems(R.array.popupmenu_newsgroup, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

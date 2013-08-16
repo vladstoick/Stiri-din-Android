@@ -22,6 +22,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.Scopes;
 import com.google.android.gms.plus.PlusClient;
+import com.newrelic.agent.android.NewRelic;
 import com.vladstoick.Utils.JSONParsing;
 import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.Utils.LoginVolleyRequest;
@@ -44,6 +45,7 @@ public class LoginActivity extends SherlockFragmentActivity
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        NewRelic.withApplicationToken("AAda1a6278e5ef8e4349079aa07d6b5039aaa395a0").start(this);
         SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
         if (settings.getInt("user_id", 0) != 0){
             ((StiriApp)getApplication()).newsDataSource =

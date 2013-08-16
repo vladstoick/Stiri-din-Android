@@ -33,8 +33,6 @@ public class AddElementManuallyFragment extends SherlockFragment {
     private View mView;
     @InjectView(R.id.add_element_group_spinner) Spinner mGroupSpinner;
     @InjectView(R.id.add_element_group_title) EditText mGroupTitle;
-    @InjectView(R.id.add_element_feed_title) EditText mSourceTitle;
-    @InjectView(R.id.add_element_feed_description) EditText mSourceDescription;
     @InjectView(R.id.add_element_feed_rss) EditText mSourceRss;
 
     public AddElementManuallyFragment() {
@@ -79,8 +77,6 @@ public class AddElementManuallyFragment extends SherlockFragment {
         switch (item.getItemId()) {
             case R.id.action_add: {
                 NewsSource ns = new NewsSource();
-                ns.setTitle(mSourceTitle.getText().toString());
-                ns.setDescription(mSourceDescription.getText().toString());
                 ns.setRssLink(mSourceRss.getText().toString());
                 if (mGroupTitle.getVisibility() == View.VISIBLE &&
                         mGroupTitle.getText().toString() != "") {

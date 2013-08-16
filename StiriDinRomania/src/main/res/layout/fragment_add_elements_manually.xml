@@ -39,26 +39,6 @@
             android:layout_width="fill_parent"
             android:layout_marginBottom="@dimen/top_and_bottom_margin"
             android:layout_marginTop="@dimen/top_and_bottom_margin"/>
-
-    <EditText
-            android:singleLine="true"
-            android:id="@+id/add_element_feed_title"
-            android:hint="@string/add_element_feed_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/top_and_bottom_margin"
-            android:layout_marginTop="@dimen/top_and_bottom_margin"/>
-
-    <EditText
-            android:singleLine="true"
-
-            android:id="@+id/add_element_feed_description"
-            android:hint="@string/add_element_feed_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/top_and_bottom_margin"
-            android:layout_marginTop="@dimen/top_and_bottom_margin"/>
-
     <EditText
             android:singleLine="true"
             android:inputType="textUri"
