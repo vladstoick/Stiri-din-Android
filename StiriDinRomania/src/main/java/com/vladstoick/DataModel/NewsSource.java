@@ -49,7 +49,7 @@ public class NewsSource implements Parcelable {
     }
 
     public NewsSource(Cursor cursor) {
-        
+
         this.id = cursor.getInt(0);
         this.title = cursor.getString(1);
         this.rssLink = cursor.getString(2);
@@ -57,12 +57,10 @@ public class NewsSource implements Parcelable {
         news = new ArrayList<NewsItem>();
     }
 
-    public void loadFeed(StiriApp app) {
-        BusProvider.getInstance().register(this);
-    }
 
-    public int getNumberOfUnreadNews() {
-        return numberOfUnreadNews;
+
+    public int getNumberOfUnreadNews(StiriApp app) {
+        return app.newsDataSource.getNumberOfNewsForNewsSource(getId());
     }
 
     public void setNumberOfUnreadNews(int numberOfUnreadNews) {

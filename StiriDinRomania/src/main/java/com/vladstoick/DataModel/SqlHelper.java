@@ -124,6 +124,11 @@ public class SqlHelper extends SQLiteOpenHelper {
     }
 
     //NEWSOURCE
+
+    public int getNumberOfNewsForNewsSource(int sourceId){
+        return getNewsItems(sourceId).size();
+    }
+
     public NewsSource getNewsSource(int sourceId) {
         NewsSource ns;
         SQLiteDatabase db = this.getReadableDatabase();
@@ -134,7 +139,7 @@ public class SqlHelper extends SQLiteOpenHelper {
             return null;
         }
         ns = new NewsSource(cursor);
-        ns.news = getNewsItems(ns);
+        ns.news = getNewsItems(ns.getId());
         return ns;
     }
 
@@ -179,10 +184,10 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     //NEWSITEM
 
-    public ArrayList<NewsItem> getNewsItems(NewsSource ns){
+    public ArrayList<NewsItem> getNewsItems(int sourceId){
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(NEWSITEMS_TABLE, NEWSITEMS_COLUMNS,
-                SqlHelper.COLUMN_SOURCE_ID + " = " + ns.getId(), null, null, null, COLUMN_DATE
+                SqlHelper.COLUMN_SOURCE_ID + " = " + sourceId, null, null, null, COLUMN_DATE
 
                 + " DESC", null);
         ArrayList<NewsItem> news = new ArrayList<NewsItem>();

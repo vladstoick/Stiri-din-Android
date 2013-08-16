@@ -103,7 +103,7 @@ public class NewsSourceAdapter extends BaseAdapter {
             }
         });
         holder.mTitle.setText(ns.getTitle());
-        holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews() + "");
+        holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews(app) + "");
         return row;
     }
 

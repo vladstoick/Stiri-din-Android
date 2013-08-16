@@ -163,7 +163,7 @@ public class
             ns.setNumberOfUnreadNews(newsItems.size());
             sqlHelper.insertNewsSourceInDb(ns);
             sqlHelper.insertNewsItemsInDb(ns);
-            newsItems = sqlHelper.getNewsItems(ns);
+            newsItems = sqlHelper.getNewsItems(ns.getId());
             for (int i = 0; i < newsItems.size(); i++)
                 if (newsItems.get(i).getDescription() == "null")
                     paperizeNewsItem(newsItems.get(i));
@@ -198,6 +198,10 @@ public class
         String url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId();
         httpClient.delete(url, new AsyncHttpResponseHandler() {
         });
+    }
+
+    public int getNumberOfNewsForNewsSource(int id){
+        return sqlHelper.getNumberOfNewsForNewsSource(id);
     }
     //NEWSITEM
 
