@@ -180,8 +180,6 @@ public class
 
     public void addNewsSource(final NewsSource newsSource, final int groupId) {
         RequestParams requestParams = new RequestParams();
-        requestParams.put("title", newsSource.getTitle());
-        requestParams.put("description", newsSource.getDescription());
         requestParams.put("url", newsSource.getRssLink());
         httpClient.post(BASE_URL + userId + "/" + groupId, requestParams,
                 new AsyncHttpResponseHandler() {

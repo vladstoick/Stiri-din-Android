@@ -36,7 +36,6 @@ public class JSONParsing {
                     JSONObject feedJO = feedsJA.getJSONObject(feedIterator);
                     NewsSource ns = new NewsSource(feedJO.getString(NewsSource.TAG_RSSLINK),
                             feedJO.getString(NewsSource.TAG_TITLE),
-                            feedJO.getString(NewsSource.TAG_DESCRIPTION),
                             feedJO.getInt(NewsSource.TAG_ID));
                     ns.setGroupId(ng.getId());
                     ng.newsSources.add(ns);
