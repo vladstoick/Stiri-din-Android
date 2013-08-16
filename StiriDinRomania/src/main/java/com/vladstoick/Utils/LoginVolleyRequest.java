@@ -20,8 +20,8 @@ import java.util.Map;
 public class LoginVolleyRequest<T> extends Request<JSONObject> {
     private Map<String, String> params = new HashMap<String, String>();
     private Response.Listener listener;
-    public static final String TAG_FB = "facebook";
-    public static final String TAG_G = "google";
+    public static final String TAG_FB = "fb";
+    public static final String TAG_G = "gp";
     public static final String url = "http://stiriromania.eu01.aws.af.cm/user/login";
 
     public LoginVolleyRequest(String type, String token, String account,
@@ -29,13 +29,9 @@ public class LoginVolleyRequest<T> extends Request<JSONObject> {
                               Response.ErrorListener errorListener) {
         super(Method.POST, url, errorListener);
         this.listener = listener;
-        if (type == TAG_FB) {
-            params.put("fbaccount", account);
-            params.put("fbtoken", token);
-        } else {
-            params.put("gaccount", account);
-            params.put("gtoken", token);
-        }
+        params.put("account",account);
+        params.put("token",token);
+        params.put("type",type);
     }
 
     @Override

@@ -129,7 +129,7 @@ public class LoginActivity extends SherlockFragmentActivity
             protected void onPostExecute(String token) {
                 super.onPostExecute(token);
                 LoginVolleyRequest loginVolleyRequest =
-                        new LoginVolleyRequest(LoginVolleyRequest.TAG_G, token,gUserId,
+                        new LoginVolleyRequest("gp", token,gUserId,
                                 new com.android.volley.Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject jsonObject) {
@@ -186,7 +186,7 @@ public class LoginActivity extends SherlockFragmentActivity
                     getSharedPreferences("appPref", Context.MODE_PRIVATE).edit();
             editor.putString("user_id_fb", user.getId());
             editor.commit();
-            LoginVolleyRequest loginVolleyRequest = new LoginVolleyRequest(LoginVolleyRequest.TAG_FB, token, user.getId(),
+            LoginVolleyRequest loginVolleyRequest = new LoginVolleyRequest("fb", token, user.getId(),
                     new com.android.volley.Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject jsonObject) {
