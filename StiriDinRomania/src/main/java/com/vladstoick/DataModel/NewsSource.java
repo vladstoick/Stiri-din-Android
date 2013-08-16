@@ -31,18 +31,15 @@ public class NewsSource implements Parcelable {
     private String rssLink;
     public static String TAG_TITLE = "title";
     private String title;
-    public static String TAG_DESCRIPTION = "description";
-    private String description;
     public ArrayList<NewsItem> news;
     public static String TAG_ID = "id";
     private int id;
     private int groupId;
     private int numberOfUnreadNews;
 
-    public NewsSource(String rssLink, String title, String description, int id) {
+    public NewsSource(String rssLink, String title, int id) {
         this.rssLink = rssLink;
         this.title = title;
-        this.description = description;
         this.id = id;
         news = new ArrayList<NewsItem>();
 
@@ -54,10 +51,9 @@ public class NewsSource implements Parcelable {
     public NewsSource(Cursor cursor) {
         this.id = cursor.getInt(0);
         this.title = cursor.getString(1);
-        this.description = cursor.getString(2);
-        this.rssLink = cursor.getString(3);
-        this.groupId = cursor.getInt(4);
-        this.numberOfUnreadNews = cursor.getInt(5);
+        this.rssLink = cursor.getString(2);
+        this.groupId = cursor.getInt(3);
+        this.numberOfUnreadNews = cursor.getInt(4);
         news = new ArrayList<NewsItem>();
     }
 
@@ -87,14 +83,6 @@ public class NewsSource implements Parcelable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getTitle() {
@@ -136,7 +124,6 @@ public class NewsSource implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.rssLink);
         dest.writeString(this.title);
-        dest.writeString(this.description);
         dest.writeTypedList(news);
         dest.writeInt(groupId);
         dest.writeInt(numberOfUnreadNews);
@@ -147,7 +134,6 @@ public class NewsSource implements Parcelable {
         news = new ArrayList<NewsItem>();
         this.rssLink = in.readString();
         this.title = in.readString();
-        this.description = in.readString();
         in.readTypedList(news, NewsItem.CREATOR);
         this.groupId = in.readInt();
         this.numberOfUnreadNews = in.readInt();
