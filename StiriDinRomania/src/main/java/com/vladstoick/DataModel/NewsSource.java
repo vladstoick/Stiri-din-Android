@@ -35,7 +35,6 @@ public class NewsSource implements Parcelable {
     public static String TAG_ID = "id";
     private int id;
     private int groupId;
-    private int numberOfUnreadNews;
 
     public NewsSource(String rssLink, String title, int id) {
         this.rssLink = rssLink;
@@ -61,10 +60,6 @@ public class NewsSource implements Parcelable {
 
     public int getNumberOfUnreadNews(StiriApp app) {
         return app.newsDataSource.getNumberOfNewsForNewsSource(getId());
-    }
-
-    public void setNumberOfUnreadNews(int numberOfUnreadNews) {
-        this.numberOfUnreadNews = numberOfUnreadNews;
     }
 
     public int getGroupId() {
@@ -124,7 +119,6 @@ public class NewsSource implements Parcelable {
         dest.writeString(this.title);
         dest.writeTypedList(news);
         dest.writeInt(groupId);
-        dest.writeInt(numberOfUnreadNews);
         dest.writeInt(id);
     }
 
@@ -134,7 +128,6 @@ public class NewsSource implements Parcelable {
         this.title = in.readString();
         in.readTypedList(news, NewsItem.CREATOR);
         this.groupId = in.readInt();
-        this.numberOfUnreadNews = in.readInt();
         this.id = in.readInt();
     }
 

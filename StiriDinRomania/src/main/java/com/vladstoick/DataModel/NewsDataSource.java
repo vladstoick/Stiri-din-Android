@@ -160,7 +160,6 @@ public class
             ArrayList<NewsItem> newsItems = JSONParsing.parseFeed(feedArray);
             NewsSource ns = getNewsSource(feedId);
             ns.news = newsItems;
-            ns.setNumberOfUnreadNews(newsItems.size());
             sqlHelper.insertNewsSourceInDb(ns);
             sqlHelper.insertNewsItemsInDb(ns);
             newsItems = sqlHelper.getNewsItems(ns.getId());
