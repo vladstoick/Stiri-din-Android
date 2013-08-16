@@ -23,7 +23,7 @@ import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.Scopes;
 import com.google.android.gms.plus.PlusClient;
 import com.newrelic.agent.android.NewRelic;
-import com.vladstoick.Utils.JSONParsing;
+import com.vladstoick.DataModel.JSONParsing;
 import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.Utils.LoginVolleyRequest;
 

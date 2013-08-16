@@ -1,4 +1,4 @@
-package com.vladstoick.Utils;
+package com.vladstoick.DataModel;
 
 import android.content.SharedPreferences;
 
@@ -86,13 +86,13 @@ public class JSONParsing {
         }
     }
 
-    public static int getNewsSourceId(String response) {
+    public static void parseAddNewsSource(NewsSource ns,String response) {
         try {
             JSONObject jsonObject = new JSONObject(response);
-            return jsonObject.getInt("feed_id");
+            ns.setId(jsonObject.getInt("id"));
+            ns.setTitle(jsonObject.getString("title"));
         } catch (JSONException e) {
             e.printStackTrace();
-            return -1;
         }
     }
 

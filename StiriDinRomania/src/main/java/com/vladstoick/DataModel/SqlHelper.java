@@ -246,10 +246,19 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     //GENERAL
 
-    public void deleteAllNewsGroupsAndNewsSources() {
+    public void deleteOldNewsGroups(ArrayList<NewsGroup> groups) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        sqLiteDatabase.delete(GROUPS_TABLE, null, null);
-        sqLiteDatabase.delete(SOURCES_TABLE, null, null);
+        String groupsQuery = "(";
+        for(int i=0; i<groups.size(); i++){
+            groupsQuery = groupsQuery + " " + groups.get(i).getId() + " ,";
+        }
+        groupsQuery = groupsQuery.substring(0,groupsQuery.length()-1);
+        groupsQuery = groupsQuery + " )";
+        if(groupsQuery.length()<4){
+            groupsQuery = "";
+        }
+        sqLiteDatabase.delete(GROUPS_TABLE, groupsQuery, null);
+
     }
 
 }
