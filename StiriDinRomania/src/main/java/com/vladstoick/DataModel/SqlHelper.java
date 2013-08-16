@@ -30,7 +30,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     public static String COLUMN_DESCRIPTION = "description";
     private static String CREATE_NEWSITEMS_TABLE = "CREATE TABLE " + NEWSITEMS_TABLE + " ( " +
             COLUMN_URL + " text primary key , " + COLUMN_TITLE + " text not null , " +
-            COLUMN_DESCRIPTION + " text not null , " + COLUMN_SOURCE_ID + " int , " +
+            COLUMN_SOURCE_ID + " int , " +
             COLUMN_DATE+ " long )";
     private static String CREATE_GROUPS_TABLE = "CREATE TABLE " + GROUPS_TABLE + " ( " +
             COLUMN_ID + " int primary key , " + COLUMN_TITLE + " text not null , " +
@@ -40,8 +40,8 @@ public class SqlHelper extends SQLiteOpenHelper {
             + COLUMN_DESCRIPTION + " text not null ," + COLUMN_URL + " text not null , " +
             COLUMN_GROUP_ID + " int , " + COLUMN_NOUNREADNEWS + " int ) ";
     public static String[] GROUPS_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_NOFEEDS};
-    public static String[] SOURCES_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_DESCRIPTION,
-            COLUMN_URL, COLUMN_GROUP_ID, COLUMN_NOUNREADNEWS};
+    public static String[] SOURCES_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_URL, COLUMN_GROUP_ID,
+            COLUMN_NOUNREADNEWS};
     public static String[] NEWSITEMS_COLUMNS = {COLUMN_URL, COLUMN_TITLE, COLUMN_DESCRIPTION,
             COLUMN_SOURCE_ID, COLUMN_DATE};
 
@@ -155,7 +155,6 @@ public class SqlHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
         values.put(SqlHelper.COLUMN_TITLE, ns.getTitle());
         values.put(SqlHelper.COLUMN_ID, ns.getId());
-        values.put(SqlHelper.COLUMN_DESCRIPTION, ns.getDescription());
         values.put(SqlHelper.COLUMN_URL, ns.getRssLink());
         values.put(SqlHelper.COLUMN_GROUP_ID, ns.getGroupId());
         int noUnreadNews = ns.getNumberOfUnreadNews();
