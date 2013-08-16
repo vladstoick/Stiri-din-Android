@@ -111,7 +111,7 @@ public class NewsSourceAdapter extends BaseAdapter {
     public void buildPopUpMenu(View v, final NewsSource newsSource) {
         PopupMenu popupMenu = new PopupMenu(context, v);
         MenuInflater inflater = popupMenu.getMenuInflater();
-        inflater.inflate(R.menu.popupmenu_newsgroup, popupMenu.getMenu());
+        inflater.inflate(R.menu.popupmenu_newssource, popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -129,15 +129,12 @@ public class NewsSourceAdapter extends BaseAdapter {
 
     public void buildPopUpWindow(View v, final NewsSource newsSource) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setItems(R.array.popupmenu_newsgroup, new DialogInterface.OnClickListener() {
+        builder.setItems(R.array.popupmenu_newsource, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case 0: {
                         deleteSource(newsSource);
-                    }
-                    case 1: {
-                        renameSource(newsSource);
                     }
                 }
             }

@@ -5,12 +5,17 @@
     <string name="share_end">. Read news on Android, iOS and WP8 with \"News from\"</string>
     <!-- NEWS ITEM DETAIL FRAGMENT -->
     <string name="see_full_article">Web Page</string>
-    <!-- ALL GROUPS ACITIVTY -->
+    <!--NEWSGROUP detail-->
+    <string-array name="popupmenu_newsource">
+        <item>@string/delete</item>
+    </string-array>
+    <!-- NEWSGROUP list -->
     <string name="all_groups_title">Your groups</string>
     <string-array name="popupmenu_newsgroup">
         <item>@string/delete</item>
         <item>@string/rename</item>
     </string-array>
+
     <!--NEWS GROUP LIST-->
     <string name="nofeedsadded">You have no news sources added. You can add news sources by pressing the "+" button. The add button can be found in the action bar, or if you hardware buttons, it can be found by clicking the menu button on the device.</string>
     <string name="update_data">Refresh</string>
