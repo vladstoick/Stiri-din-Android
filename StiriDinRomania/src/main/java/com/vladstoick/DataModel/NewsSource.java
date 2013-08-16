@@ -49,11 +49,11 @@ public class NewsSource implements Parcelable {
     }
 
     public NewsSource(Cursor cursor) {
+        
         this.id = cursor.getInt(0);
         this.title = cursor.getString(1);
         this.rssLink = cursor.getString(2);
         this.groupId = cursor.getInt(3);
-        this.numberOfUnreadNews = cursor.getInt(4);
         news = new ArrayList<NewsItem>();
     }
 

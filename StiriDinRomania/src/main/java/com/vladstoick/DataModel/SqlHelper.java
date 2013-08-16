@@ -23,7 +23,6 @@ public class SqlHelper extends SQLiteOpenHelper {
     public static String COLUMN_GROUP_ID = "groupid";
     public static String COLUMN_SOURCE_ID = "sourceid";
     public static String COLUMN_NOFEEDS = "nofeeds";
-    public static String COLUMN_NOUNREADNEWS = "nounreadnews";
     public static String COLUMN_ID = "id";
     public static String COLUMN_TITLE = "title";
     public static String COLUMN_URL = "url";
@@ -38,10 +37,9 @@ public class SqlHelper extends SQLiteOpenHelper {
     private static String CREATE_SOURCES_TABLE = "CREATE TABLE " + SOURCES_TABLE + " ( " +
             COLUMN_ID + " int primary key , " + COLUMN_TITLE + " text not null , "+ COLUMN_URL
             + " text not null , " +
-            COLUMN_GROUP_ID + " int , " + COLUMN_NOUNREADNEWS + " int ) ";
+            COLUMN_GROUP_ID + " int )";
     public static String[] GROUPS_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_NOFEEDS};
-    public static String[] SOURCES_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_URL, COLUMN_GROUP_ID,
-            COLUMN_NOUNREADNEWS};
+    public static String[] SOURCES_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_URL, COLUMN_GROUP_ID};
     public static String[] NEWSITEMS_COLUMNS = {COLUMN_URL, COLUMN_TITLE, COLUMN_DESCRIPTION,
             COLUMN_SOURCE_ID, COLUMN_DATE};
 
@@ -132,6 +130,9 @@ public class SqlHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(SqlHelper.SOURCES_TABLE, SqlHelper.SOURCES_COLUMNS,
                 SqlHelper.COLUMN_ID + " = " + sourceId, null, null, null, null, null);
         cursor.moveToFirst();
+        if(cursor.isAfterLast()==true){
+            return null;
+        }
         ns = new NewsSource(cursor);
         ns.news = getNewsItems(ns);
         return ns;
@@ -151,17 +152,16 @@ public class SqlHelper extends SQLiteOpenHelper {
     }
 
     public void insertNewsSourceInDb(NewsSource ns) {
-        ContentValues values = new ContentValues();
-        SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
-        values.put(SqlHelper.COLUMN_TITLE, ns.getTitle());
-        values.put(SqlHelper.COLUMN_ID, ns.getId());
-        values.put(SqlHelper.COLUMN_URL, ns.getRssLink());
-        values.put(SqlHelper.COLUMN_GROUP_ID, ns.getGroupId());
-        int noUnreadNews = ns.getNumberOfUnreadNews();
-        if(getNewsItems(ns).size() != 0 ) noUnreadNews = getNewsItems(ns).size();
-        values.put(SqlHelper.COLUMN_NOUNREADNEWS, noUnreadNews);
-        sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
-                SQLiteDatabase.CONFLICT_REPLACE);
+        if(getNewsSource(ns.getId())==null){
+            ContentValues values = new ContentValues();
+            SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
+            values.put(SqlHelper.COLUMN_TITLE, ns.getTitle());
+            values.put(SqlHelper.COLUMN_ID, ns.getId());
+            values.put(SqlHelper.COLUMN_URL, ns.getRssLink());
+            values.put(SqlHelper.COLUMN_GROUP_ID, ns.getGroupId());
+            sqlLiteDatabase.insertWithOnConflict(SqlHelper.SOURCES_TABLE, null, values,
+                    SQLiteDatabase.CONFLICT_REPLACE);
+        }
     }
 
     public void renameNewsSource(RenameDialogFragment.ElementRenamedEvent event){
