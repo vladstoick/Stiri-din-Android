@@ -53,7 +53,7 @@ public class
             @Override
             public void onResponse(String s) {
                 ArrayList<NewsGroup> allNewsGroups = JSONParsing.parseNewsDataSource(s);
-                sqlHelper.deleteOldNewsGroups(allNewsGroups);
+                sqlHelper.deleteOldNewsGroupsAndSources(allNewsGroups);
                 for (int i = 0; i < allNewsGroups.size(); i++) {
                     for (int j = 0; j < allNewsGroups.get(i).newsSources.size(); j++)
                         sqlHelper.insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
@@ -181,7 +181,7 @@ public class
                 new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(String s) {
-                        JSONParsing.parseAddNewsSource(newsSource,s);
+                        JSONParsing.parseAddNewsSource(newsSource, s);
                         newsSource.setGroupId(groupId);
                         sqlHelper.insertNewsSourceInDb(newsSource);
                         getNewsItems(newsSource);

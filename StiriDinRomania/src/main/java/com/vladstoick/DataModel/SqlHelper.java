@@ -246,19 +246,34 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     //GENERAL
 
-    public void deleteOldNewsGroups(ArrayList<NewsGroup> groups) {
+    public void deleteOldNewsGroupsAndSources(ArrayList<NewsGroup> groups) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        String groupsQuery = "(";
+        String groupsQuery = "id not in (";
+        String sourcesQuery = "id not in (";
         for(int i=0; i<groups.size(); i++){
             groupsQuery = groupsQuery + " " + groups.get(i).getId() + " ,";
+            for(int j=0;j<groups.get(i).newsSources.size();j++){
+                sourcesQuery = sourcesQuery + " "
+                        + groups.get(i).newsSources.get(j).getId() + " ,";
+            }
         }
-        groupsQuery = groupsQuery.substring(0,groupsQuery.length()-1);
-        groupsQuery = groupsQuery + " )";
-        if(groupsQuery.length()<4){
+        if(groupsQuery.equals("id not in (")){
             groupsQuery = "";
-        }
-        sqLiteDatabase.delete(GROUPS_TABLE, groupsQuery, null);
+        }else {
+            groupsQuery = groupsQuery.substring(0,groupsQuery.length()-1);
+            groupsQuery = groupsQuery + " )";
 
+        }
+        if(sourcesQuery.equals("id not in (")){
+            sourcesQuery = "";
+        }
+        else {
+            sourcesQuery = sourcesQuery.substring(0,sourcesQuery.length()-1);
+            sourcesQuery = sourcesQuery + " )";
+        }
+
+        sqLiteDatabase.delete(GROUPS_TABLE, groupsQuery, null);
+        sqLiteDatabase.delete(SOURCES_TABLE, sourcesQuery, null);
     }
 
 }
