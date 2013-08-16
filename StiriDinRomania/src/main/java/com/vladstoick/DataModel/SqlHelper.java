@@ -250,6 +250,7 @@ public class SqlHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         String groupsQuery = "id not in (";
         String sourcesQuery = "id not in (";
+        String itemsQuery = "";
         for(int i=0; i<groups.size(); i++){
             groupsQuery = groupsQuery + " " + groups.get(i).getId() + " ,";
             for(int j=0;j<groups.get(i).newsSources.size();j++){
@@ -270,10 +271,12 @@ public class SqlHelper extends SQLiteOpenHelper {
         else {
             sourcesQuery = sourcesQuery.substring(0,sourcesQuery.length()-1);
             sourcesQuery = sourcesQuery + " )";
+            itemsQuery = "source" + sourcesQuery;
         }
 
         sqLiteDatabase.delete(GROUPS_TABLE, groupsQuery, null);
         sqLiteDatabase.delete(SOURCES_TABLE, sourcesQuery, null);
+        sqLiteDatabase.delete(NEWSITEMS_TABLE, itemsQuery, null);
     }
 
 }
