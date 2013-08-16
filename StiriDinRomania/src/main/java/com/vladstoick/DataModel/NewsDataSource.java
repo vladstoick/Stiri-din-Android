@@ -204,6 +204,10 @@ public class
     }
     //NEWSITEM
 
+    public void makeNewsRead(String url){
+        sqlHelper.makeNewsRead(url);
+    }
+
     public void getNewsItems(NewsSource ns) {
         String url = NewsSource.BASE_URL + ns.getRssLink() + "&feedId=" + ns.getId();
 //                            +"&date="+dateString;

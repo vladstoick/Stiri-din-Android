@@ -65,10 +65,13 @@ public class NewsItemDetailFragment extends SherlockFragment {
             String url =getArguments().getString(ARG_ITEM);
             mItem = ((StiriApp)getSherlockActivity().getApplication())
                     .newsDataSource.getNewsItem(url);
+
         } else if (getArguments().containsKey(ARG_ITEM_JO)){
             mItem = getArguments().getParcelable(ARG_ITEM_JO);
         }
     }
+
+
 
     @Override
     public void onSaveInstanceState(Bundle outState) {

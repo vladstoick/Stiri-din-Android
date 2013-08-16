@@ -27,21 +27,21 @@ public class SqlHelper extends SQLiteOpenHelper {
     public static String COLUMN_TITLE = "title";
     public static String COLUMN_URL = "url";
     public static String COLUMN_DESCRIPTION = "description";
+    public static String COLUMN_READ = "read";
     private static String CREATE_NEWSITEMS_TABLE = "CREATE TABLE " + NEWSITEMS_TABLE + " ( " +
             COLUMN_URL + " text primary key , " + COLUMN_TITLE + " text not null , " +
             COLUMN_DESCRIPTION + " text not null , " +  COLUMN_SOURCE_ID + " int , " +
-            COLUMN_DATE+ " long )";
+            COLUMN_DATE+ " long , " + COLUMN_READ + " int not null )";
     private static String CREATE_GROUPS_TABLE = "CREATE TABLE " + GROUPS_TABLE + " ( " +
             COLUMN_ID + " int primary key , " + COLUMN_TITLE + " text not null , " +
             COLUMN_NOFEEDS + " int )";
     private static String CREATE_SOURCES_TABLE = "CREATE TABLE " + SOURCES_TABLE + " ( " +
             COLUMN_ID + " int primary key , " + COLUMN_TITLE + " text not null , "+ COLUMN_URL
-            + " text not null , " +
-            COLUMN_GROUP_ID + " int )";
+            + " text not null , " +  COLUMN_GROUP_ID + " int )";
     public static String[] GROUPS_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_NOFEEDS};
     public static String[] SOURCES_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_URL, COLUMN_GROUP_ID};
     public static String[] NEWSITEMS_COLUMNS = {COLUMN_URL, COLUMN_TITLE, COLUMN_DESCRIPTION,
-            COLUMN_SOURCE_ID, COLUMN_DATE};
+            COLUMN_SOURCE_ID, COLUMN_DATE, COLUMN_READ};
 
     public SqlHelper(Context context) {
         super(context, DB_NAME, null, DBVERSION);
@@ -126,7 +126,14 @@ public class SqlHelper extends SQLiteOpenHelper {
     //NEWSOURCE
 
     public int getNumberOfNewsForNewsSource(int sourceId){
-        return getNewsItems(sourceId).size();
+        ArrayList<NewsItem> news = getNewsItems(sourceId);
+        int unReadNews = news.size();
+        for(int i=0;i<news.size();i++){
+            if(news.get(i).read == 1){
+                unReadNews--;
+            }
+        }
+        return unReadNews;
     }
 
     public NewsSource getNewsSource(int sourceId) {
@@ -184,6 +191,17 @@ public class SqlHelper extends SQLiteOpenHelper {
 
     //NEWSITEM
 
+    public void makeNewsRead(String url){
+        ContentValues values = new ContentValues();
+        values.put(SqlHelper.COLUMN_READ, 1);
+        SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
+        try{
+            sqlLiteDatabase.update(NEWSITEMS_TABLE, values, COLUMN_URL + " =  '" + url+ "'" ,
+                    null);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     public ArrayList<NewsItem> getNewsItems(int sourceId){
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(NEWSITEMS_TABLE, NEWSITEMS_COLUMNS,
@@ -204,6 +222,9 @@ public class SqlHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(NEWSITEMS_TABLE, NEWSITEMS_COLUMNS,
                 SqlHelper.COLUMN_URL + " = \'" + url +"\'", null, null, null, null, null);
         cursor.moveToFirst();
+        if(cursor.isAfterLast()){
+            return null;
+        }
         NewsItem ni = new NewsItem(cursor);
         return ni;
     }
@@ -224,6 +245,8 @@ public class SqlHelper extends SQLiteOpenHelper {
     public void insertNewsItemsInDb(NewsSource ns) {
         SQLiteDatabase sqlLiteDatabase = this.getWritableDatabase();
         for (int i = 0; i < ns.news.size(); i++) {
+            if(getNewsItem(ns.news.get(i).getUrlLink())!=null)
+                continue;
             NewsItem ni = ns.news.get(i);
             ContentValues values = new ContentValues();
             values.put(SqlHelper.COLUMN_URL, ni.getUrlLink());
@@ -231,6 +254,7 @@ public class SqlHelper extends SQLiteOpenHelper {
             values.put(SqlHelper.COLUMN_DESCRIPTION, ni.getDescription());
             values.put(SqlHelper.COLUMN_SOURCE_ID, ns.getId());
             values.put(SqlHelper.COLUMN_DATE, ni.getPubDate());
+            values.put(SqlHelper.COLUMN_READ, ni.read);
             sqlLiteDatabase.insertWithOnConflict(SqlHelper.NEWSITEMS_TABLE, null, values,
                     SQLiteDatabase.CONFLICT_REPLACE);
         }

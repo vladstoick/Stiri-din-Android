@@ -29,6 +29,22 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
         setContentView(R.layout.activity_newsitem_detail);
         Views.inject(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i2) {
+
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+                ((StiriApp)getApplication()).newsDataSource.makeNewsRead(news.get(i).getUrlLink());
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
         if (savedInstanceState == null) {
             fromSearch = getIntent().getBooleanExtra(FROM_SEARCH,false);
             Bundle extras = getIntent().getExtras();

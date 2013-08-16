@@ -52,6 +52,12 @@ public class NewsGroupDetailFragment extends SherlockFragment {
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
+    }
+
     public NewsGroupDetailFragment() {
     }
 
