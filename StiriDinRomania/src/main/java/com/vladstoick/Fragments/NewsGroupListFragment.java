@@ -137,7 +137,11 @@ public class NewsGroupListFragment extends SherlockFragment
 
     @Subscribe
     public void onDataLoaded(DataLoadedEvent event) {
+        try{
         refreshItem.setActionView(null);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
         setAdapter();
     }
 
