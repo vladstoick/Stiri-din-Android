@@ -6,7 +6,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Created by vlad on 7/19/13.
@@ -44,7 +46,11 @@ public class NewsItem implements Parcelable {
         if(this.pubDate == 0){
             return "";
         }
-        Date articleDate = new Date(this.pubDate);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeZone(TimeZone.getTimeZone("GMT"));
+        calendar.setTimeInMillis(this.pubDate);
+        Date articleDate = calendar.getTime();
+
         DateFormat timeFormat = android.text.format.DateFormat
                 .getTimeFormat(context);
         DateFormat dateFormat = android.text.format.DateFormat.getLongDateFormat(context);
