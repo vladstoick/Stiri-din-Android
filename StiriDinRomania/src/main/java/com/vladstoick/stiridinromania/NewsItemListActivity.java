@@ -79,7 +79,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
             // adding or replacing the detail fragment using a
             // fragment transaction.
             Bundle arguments = new Bundle();
-
+            ((StiriApp)getApplication()).newsDataSource.makeNewsRead(url);
             arguments.putString(NewsItemDetailFragment.ARG_ITEM, url);
 
             NewsItemDetailFragment fragment = new NewsItemDetailFragment();

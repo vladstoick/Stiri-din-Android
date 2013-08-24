@@ -14,7 +14,7 @@ import java.util.Date;
 public class NewsItem implements Parcelable {
     public static String TAG_DATE = "date";
     public static String TAG_TITLE = "title";
-    public static String TAG_DESCRIPTION = "description";
+    public static String TAG_DESCRIPTION = "text";
     public static String TAG_URLLINK = "url";
     public int read;
     private String title;
@@ -44,7 +44,7 @@ public class NewsItem implements Parcelable {
         if(this.pubDate == 0){
             return "";
         }
-        Date articleDate = new Date(getPubDate());
+        Date articleDate = new Date(this.pubDate);
         DateFormat timeFormat = android.text.format.DateFormat
                 .getTimeFormat(context);
         DateFormat dateFormat = android.text.format.DateFormat.getLongDateFormat(context);

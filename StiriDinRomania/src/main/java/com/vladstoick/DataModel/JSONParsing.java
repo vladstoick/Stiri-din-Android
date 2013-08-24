@@ -58,14 +58,10 @@ public class JSONParsing {
             ArrayList<NewsItem> newsItems = new ArrayList<NewsItem>();
             for (int i = 0; i < newsJArray.length(); i++) {
                 JSONObject jo = newsJArray.getJSONObject(i);
-                String dateString = jo.getString(NewsItem.TAG_DATE);
-                final DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-                fmt.setTimeZone(TimeZone.getTimeZone("UTC"));
-                Date date = fmt.parse(dateString);
                 NewsItem ni = new NewsItem(jo.getString(NewsItem.TAG_TITLE),
                         jo.getString(NewsItem.TAG_DESCRIPTION),
                         jo.getString(NewsItem.TAG_URLLINK),
-                        date.getTime());
+                        jo.getLong(NewsItem.TAG_DATE));
                 newsItems.add(ni);
             }
             return newsItems;
