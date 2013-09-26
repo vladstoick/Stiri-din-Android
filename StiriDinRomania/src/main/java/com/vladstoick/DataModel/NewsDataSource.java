@@ -32,9 +32,10 @@ public class
     public boolean isDataLoaded = true;
     public AsyncHttpClient client;
     private AsyncHttpClient httpClient;
-    private String BASE_URL = "http://stiriromania.eu01.aws.af.cm/user/";
+    private String BASE_URL = "http://37.139.26.80/user/";
     private int userId;
     private SqlHelper sqlHelper;
+
     //CONSTRUCTORS
     public NewsDataSource(int userId, Application app) {
         this.userId = userId;
@@ -76,8 +77,6 @@ public class
 
     @Subscribe
     public void OnDataLoaded(DataLoadedEvent event) {
-//        final String dateString = (new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"))
-//                .format(Calendar.getInstance().getTime());
         if (event.dataLoadedType == DataLoadedEvent.TAG_NEWSDATASOURCE) {
             ArrayList<NewsSource> newsSources = sqlHelper.getAllNewsSources();
             for (int j = 0; j < newsSources.size(); j++) {

@@ -22,7 +22,7 @@ public class LoginVolleyRequest<T> extends Request<JSONObject> {
     private Response.Listener listener;
     public static final String TAG_FB = "fb";
     public static final String TAG_G = "gp";
-    public static final String url = "http://stiriromania.eu01.aws.af.cm/user/login";
+    public static final String url = "http://37.139.26.80/user/login";
 
     public LoginVolleyRequest(String type, String token, String account,
                               Response.Listener<JSONObject> listener,

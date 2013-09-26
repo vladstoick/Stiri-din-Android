@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+<module external.linked.project.path="C:\Programming\Android\Stiri-din-Android" external.system.id="GRADLE" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
@@ -69,9 +69,9 @@
     <orderEntry type="jdk" jdkName="Android 4.3 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="facebook" exported="" />
+    <orderEntry type="library" exported="" name="android-agent-2.426.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-18.0.0" level="project" />
     <orderEntry type="library" exported="" name="gson-1.7.2" level="project" />
-    <orderEntry type="library" exported="" name="android-agent-2.426.0" level="project" />
     <orderEntry type="library" exported="" name="otto-1.3.4" level="project" />
     <orderEntry type="library" exported="" name="butterknife-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="async" level="project" />

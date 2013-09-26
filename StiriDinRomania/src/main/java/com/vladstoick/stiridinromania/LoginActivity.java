@@ -161,9 +161,6 @@ public class LoginActivity extends SherlockFragmentActivity
     @Override
     public void onConnectionFailed(ConnectionResult result) {
         if (pd.isShowing()) {
-            // The user clicked the sign-in button already. Start to resolve
-            // connection errors. Wait until onConnected() to dismiss the
-            // connection dialog.
             if (result.hasResolution()) {
                 try {
                     result.startResolutionForResult(this, REQUEST_CODE_RESOLVE_ERR);
@@ -172,9 +169,6 @@ public class LoginActivity extends SherlockFragmentActivity
                 }
             }
         }
-
-        // Save the intent so that we can start an activity when the user clicks
-        // the sign-in button.
         mConnectionResult = result;
     }
 

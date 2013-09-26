@@ -20,6 +20,8 @@ import butterknife.Views;
  * Created by Vlad on 8/2/13.
  */
 public class NewsItemAdapter extends BaseAdapter {
+    private static final int SEPARATOR = 0;
+    private static final int ITEM = 1;
     static class Holder {
         @InjectView(R.id.title) TextView mTitle;
         @InjectView(R.id.date) TextView mDate;
@@ -38,13 +40,27 @@ public class NewsItemAdapter extends BaseAdapter {
     }
 
     @Override
-    public int getCount() {
-        return news.size();
+    public int getItemViewType(int position) {
+        if(position == 0){
+            return SEPARATOR;
+        }
+        return ITEM;
     }
 
     @Override
-    public NewsItem getItem(int position) {
-        return news.get(position);
+    public int getCount() {
+        return news.size() + 2;
+    }
+
+    @Override
+    public Object getItem(int position) {
+        if(position == 0){
+            return "Hello World";
+        }
+        if(position>0){
+            return news.get(position-1);
+        }
+        return null;
     }
 
     @Override
@@ -56,17 +72,40 @@ public class NewsItemAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
         Holder holder;
-        final NewsItem ni = getItem(position);
+        int type = getItemViewType(position);
+
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-            row = inflater.inflate(R.layout.list_row_newsitem_list, parent, false);
+            switch(type){
+                case ITEM:{
+                    row = inflater.inflate(R.layout.list_row_newsitem_list, parent, false);
+                    break;
+                }
+                case SEPARATOR:{
+                    row = inflater.inflate(R.layout.list_row_newsitem_list_separator, parent, false);
+                    break;
+                }
+            }
             holder = new Holder(row);
             row.setTag(holder);
         } else {
             holder = (Holder) row.getTag();
         }
-        holder.mTitle.setText(ni.getTitle());
-        holder.mDate.setText(ni.getPubDateAsString(context));
+        switch (type){
+            case ITEM:{
+
+                final NewsItem ni = (NewsItem) getItem(position);
+                holder.mTitle.setText(ni.getTitle());
+                holder.mDate.setText(ni.getPubDateAsString(context));
+                break;
+            }
+            case SEPARATOR:{
+                String separatorTitle = (String) getItem(position);
+                holder.mTitle.setText(separatorTitle);
+                break;
+            }
+        }
+
         return row;
     }
 
