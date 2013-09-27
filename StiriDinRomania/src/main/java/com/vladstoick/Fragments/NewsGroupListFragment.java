@@ -169,7 +169,7 @@ public class NewsGroupListFragment extends SherlockFragment
             }
             case R.id.action_refresh:{
                 if(Utils.isOnline(getSherlockActivity()) == true){
-                    ((StiriApp)(getActivity().getApplication())).newsDataSource.loadDataFromInternet();
+                    ((StiriApp)(getActivity().getApplication())).newsDataSource.loadData();
                     item.setActionView(R.layout.actionbar_refresh);
                 } else {
                     NoConnectionDialogFragment ndf = new NoConnectionDialogFragment();

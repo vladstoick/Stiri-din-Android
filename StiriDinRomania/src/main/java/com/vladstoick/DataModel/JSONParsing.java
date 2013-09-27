@@ -61,7 +61,8 @@ public class JSONParsing {
                 NewsItem ni = new NewsItem(jo.getString(NewsItem.TAG_TITLE),
                         jo.getString(NewsItem.TAG_DESCRIPTION),
                         jo.getString(NewsItem.TAG_URLLINK),
-                        jo.getLong(NewsItem.TAG_DATE));
+                        jo.getLong(NewsItem.TAG_DATE),
+                        jo.getInt(NewsItem.TAG_ID));
                 newsItems.add(ni);
             }
             return newsItems;
@@ -111,13 +112,28 @@ public class JSONParsing {
             JSONArray resultsArray = response.getJSONArray("docs");
             for(int i=0; i<resultsArray.length(); i++){
                 JSONObject newsItem = resultsArray.getJSONObject(i);
-                NewsItem ni = new NewsItem(newsItem.getString("title"),newsItem.getString("content"),
-                        newsItem.getString("url"),0);
+                NewsItem ni = new NewsItem(newsItem.getString("title"),
+                        newsItem.getString("content"),
+                        newsItem.getString("url"),0,0);
                 results.add(ni);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return results;
+    }
+
+    public static ArrayList<Integer> parseUnreadIds(JSONObject jsonObject){
+        try {
+            ArrayList<Integer> result = new ArrayList<Integer>();
+            JSONArray articles = jsonObject.getJSONArray("articles");
+            for(int i=0; i <articles.length();i++){
+                result.add(articles.getInt(i));
+            }
+            return result;
+        } catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
     }
 }

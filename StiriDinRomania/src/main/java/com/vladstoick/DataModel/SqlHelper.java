@@ -31,7 +31,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     private static String CREATE_NEWSITEMS_TABLE = "CREATE TABLE " + NEWSITEMS_TABLE + " ( " +
             COLUMN_URL + " text primary key , " + COLUMN_TITLE + " text not null , " +
             COLUMN_DESCRIPTION + " text not null , " +  COLUMN_SOURCE_ID + " int , " +
-            COLUMN_DATE+ " long , " + COLUMN_READ + " int not null )";
+            COLUMN_DATE+ " long , " + COLUMN_READ + " int not null , "+COLUMN_ID+" int not null )";
     private static String CREATE_GROUPS_TABLE = "CREATE TABLE " + GROUPS_TABLE + " ( " +
             COLUMN_ID + " int primary key , " + COLUMN_TITLE + " text not null , " +
             COLUMN_NOFEEDS + " int )";
@@ -41,7 +41,7 @@ public class SqlHelper extends SQLiteOpenHelper {
     public static String[] GROUPS_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_NOFEEDS};
     public static String[] SOURCES_COLUMNS = {COLUMN_ID, COLUMN_TITLE, COLUMN_URL, COLUMN_GROUP_ID};
     public static String[] NEWSITEMS_COLUMNS = {COLUMN_URL, COLUMN_TITLE, COLUMN_DESCRIPTION,
-            COLUMN_SOURCE_ID, COLUMN_DATE, COLUMN_READ};
+            COLUMN_SOURCE_ID, COLUMN_DATE, COLUMN_READ, COLUMN_ID};
 
     public SqlHelper(Context context) {
         super(context, DB_NAME, null, DBVERSION);
@@ -255,11 +255,28 @@ public class SqlHelper extends SQLiteOpenHelper {
             values.put(SqlHelper.COLUMN_SOURCE_ID, ns.getId());
             values.put(SqlHelper.COLUMN_DATE, ni.getPubDate());
             values.put(SqlHelper.COLUMN_READ, ni.read);
+            values.put(SqlHelper.COLUMN_ID,ni.getId());
             sqlLiteDatabase.insertWithOnConflict(SqlHelper.NEWSITEMS_TABLE, null, values,
                     SQLiteDatabase.CONFLICT_REPLACE);
         }
     }
 
+    public void updateUnreadNews(ArrayList<Integer> unreadIds) {
+        //removing old unread news;
+        ContentValues values = new ContentValues();
+        values.put(SqlHelper.COLUMN_READ,1);
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.update(NEWSITEMS_TABLE,values,COLUMN_READ + " = 0",null);
+        if(unreadIds.size()==0) return;
+        String query = COLUMN_ID + " IN ( ";
+        for(Integer id :unreadIds){
+            query = query + id + " , ";
+        }
+        query = query.substring(0,query.length()-2) + " ) ";
+        values = new ContentValues();
+        values.put(COLUMN_READ , 0);
+        sqLiteDatabase.update(NEWSITEMS_TABLE,values,query,null);
+    }
 
     public void updateNewsItem(String url, String paperized) {
         ContentValues values = new ContentValues();

@@ -32,7 +32,9 @@ import java.util.ArrayList;
  */
 public class
         NewsDataSource {
+    public int unparsedFeeds = 0 ;
     public boolean isDataLoaded = true;
+    public ArrayList<Integer> unreadIds;
     public AsyncHttpClient client;
     private AsyncHttpClient httpClient;
     private String BASE_URL = "http://37.139.26.80/user/";
@@ -42,21 +44,44 @@ public class
 
     //CONSTRUCTORS
     //0. constructor is called
-    //1. if there is intenet laodDataFromInternet is called;
-    //2. Once groups and sourcesa are added loadNewsItems in called
-    //3. For each news source getNewsItems is being called
-    //4. after they are done addNewsSourceInDb is called
+    //1. loadUnreadNews is called
+    //2. loadGroupsAndSources is called;
+    //3. Once groups and sourcesa are added loadNewsItems in called
+    //4. For each news source getNewsItems is being called
+    //5. after they are done addNewsSourceInDb is called
     public NewsDataSource(Application app, SharedPreferences settings) {
         this.userId = settings.getInt("user_id",0);
         this.token = settings.getString("key","");
         if (Utils.isOnline(app)) {
-            loadDataFromInternet();
+            loadData();
         }
+
         sqlHelper = new SqlHelper(app);
         BusProvider.getInstance().register(this);
     }
+    public void loadData(){
+        loadUnreadNews();
+    }
 
-    public void loadDataFromInternet() {
+    public void loadUnreadNews(){
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(BASE_URL+userId + "/unread" +
+                Utils.tokenWithoutAnd(token),null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        unreadIds = JSONParsing.parseUnreadIds(jsonObject);
+                        loadGroupsAndSources();
+                    }
+                }, new Response.ErrorListener(){
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        volleyError.printStackTrace();
+                }
+            });
+        StiriApp.queue.add(jsonObjectRequest);
+    }
+
+    public void loadGroupsAndSources() {
         isDataLoaded = false;
         httpClient = new AsyncHttpClient();
         StringRequest request = new StringRequest(Request.Method.GET,
@@ -66,13 +91,13 @@ public class
                 ArrayList<NewsGroup> allNewsGroups = JSONParsing.parseNewsDataSource(s);
                 sqlHelper.deleteOldNewsGroupsAndSources(allNewsGroups);
                 for (int i = 0; i < allNewsGroups.size(); i++) {
-                    for (int j = 0; j < allNewsGroups.get(i).newsSources.size(); j++)
+                    for (int j = 0; j < allNewsGroups.get(i).newsSources.size(); j++){
                         sqlHelper.insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
+                        unparsedFeeds++;
+                    }
                     sqlHelper.insertNewsGroupInDb(allNewsGroups.get(i));
                 }
                 loadNewsItems();
-                BusProvider.getInstance().post(new DataLoadedEvent(
-                        DataLoadedEvent.TAG_NEWSDATASOURCE));
                 isDataLoaded = true;
 
             }
@@ -128,6 +153,12 @@ public class
                     paperizeNewsItem(newsItems.get(i));
             BusProvider.getInstance().post(new
                     DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+            unparsedFeeds--;
+            if(unparsedFeeds == 0){
+                sqlHelper.updateUnreadNews(unreadIds);
+                BusProvider.getInstance().post(new DataLoadedEvent(
+                        DataLoadedEvent.TAG_NEWSDATASOURCE));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

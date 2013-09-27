@@ -18,19 +18,22 @@ public class NewsItem implements Parcelable {
     public static String TAG_TITLE = "title";
     public static String TAG_DESCRIPTION = "text";
     public static String TAG_URLLINK = "url";
+    public static String TAG_ID = "id";
     public int read;
     private String title;
     private String description;
     private String urlLink;
+    private int id;
     private long pubDate = 0;
     private int sourceId;
 
-    public NewsItem(String title, String description, String urlLink, long pubDate) {
+    public NewsItem(String title, String description, String urlLink, long pubDate, int id) {
         this.title = title;
         this.description = description;
         this.urlLink = urlLink;
         this.pubDate = pubDate;
         this.read = 0;
+        this.id = id;
     }
 
     public NewsItem(Cursor cursor) {
@@ -40,6 +43,7 @@ public class NewsItem implements Parcelable {
         this.sourceId = cursor.getInt(3);
         this.pubDate = cursor.getLong(4);
         this.read = cursor.getInt(5);
+        this.id = cursor.getInt(6);
     }
 
     public String getPubDateAsString(Context context){
@@ -55,6 +59,10 @@ public class NewsItem implements Parcelable {
                 .getTimeFormat(context);
         DateFormat dateFormat = android.text.format.DateFormat.getLongDateFormat(context);
         return dateFormat.format(articleDate) + " " + timeFormat.format(articleDate);
+    }
+
+    public int getId() {
+        return id;
     }
 
     public long getPubDate() {
@@ -126,6 +134,7 @@ public class NewsItem implements Parcelable {
         dest.writeInt(sourceId);
         dest.writeLong(pubDate);
         dest.writeInt(read);
+        dest.writeInt(id);
     }
 
     private NewsItem(Parcel in) {
@@ -135,5 +144,6 @@ public class NewsItem implements Parcelable {
         this.sourceId = in.readInt();
         this.pubDate = in.readLong();
         this.read = in.readInt();
+        this.id = in.readInt();
     }
 }
