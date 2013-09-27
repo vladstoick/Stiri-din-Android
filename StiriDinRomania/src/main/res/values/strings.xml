@@ -28,6 +28,7 @@
     <string name="category">Category</string>
     <string name="manual">Manual</string>
     <string name="recommended">Recommended</string>
+    <string name="categories">Categories</string>
     <string name="new_group">Add a new group</string>
     <string name="add_element_group_title">The name of the new group</string>
     <string name="add_element_fragment_title">Add a new feed</string>

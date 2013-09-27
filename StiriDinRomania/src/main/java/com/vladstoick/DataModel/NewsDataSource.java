@@ -3,6 +3,7 @@ package com.vladstoick.DataModel;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.Response;

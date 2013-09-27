@@ -1,11 +1,9 @@
 package com.vladstoick.stiridinromania;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
 
 import android.support.v4.view.ViewPager;
 import android.view.WindowManager;
@@ -13,9 +11,9 @@ import android.view.WindowManager;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.vladstoick.Fragments.AddElementManuallyFragment;
-import com.vladstoick.Fragments.AddElementRecommendedFragment;
+import com.vladstoick.Fragments.AddElement.AddElementCategoryFragment;
+import com.vladstoick.Fragments.AddElement.AddElementManuallyFragment;
+import com.vladstoick.Fragments.AddElement.AddElementSearchFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,14 +47,14 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         // Show the Up button in the action bar.
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(false);
-        actionBar.setDisplayShowTitleEnabled(false);
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the app.
 
         List<SherlockFragment> fragments = new ArrayList<SherlockFragment>();
+        fragments.add(new AddElementCategoryFragment());
+        fragments.add(new AddElementSearchFragment());
         fragments.add(new AddElementManuallyFragment());
-        fragments.add(new AddElementRecommendedFragment());
         mAddElementPageAdapter = new AddElementPagerAdapter(getSupportFragmentManager(),
                 fragments);
 
@@ -128,9 +126,11 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
             Locale locale = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return getString(R.string.manual).toUpperCase(locale);
+                    return getString(R.string.categories).toUpperCase(locale);
                 case 1:
-                    return getString(R.string.recommended).toUpperCase(locale);
+                    return getString(R.string.search).toUpperCase(locale);
+                case 2:
+                    return getString(R.string.manual).toUpperCase(locale);
             }
             return "";
         }

@@ -77,7 +77,6 @@ public class NewsItemAdapter extends BaseAdapter {
             holder = (Holder) row.getTag();
         }
         final NewsItem ni = (NewsItem) getItem(position);
-        Log.e("ADAPTER",ni.getTitle());
         holder.mTitle.setText(ni.getTitle());
         holder.mDate.setText(ni.getPubDateAsString(context));
 
