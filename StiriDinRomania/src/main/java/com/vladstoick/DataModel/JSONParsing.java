@@ -92,18 +92,15 @@ public class JSONParsing {
         }
     }
 
-    public static int parseServerLogin(JSONObject jsonObject, SharedPreferences.Editor editor) {
+    public static void parseServerLogin(JSONObject jsonObject, SharedPreferences.Editor editor) {
         try {
             int userId = jsonObject.getInt("id");
             String token = jsonObject.getString("key");
             editor.putString("key",token);
             editor.putInt("user_id", userId);
             editor.commit();
-            return userId;
         } catch (Exception e) {
             e.printStackTrace();
-            ;
-            return -1;
         }
     }
 

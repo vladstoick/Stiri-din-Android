@@ -1,6 +1,8 @@
 package com.vladstoick.DataModel;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -34,11 +36,18 @@ public class
     private AsyncHttpClient httpClient;
     private String BASE_URL = "http://37.139.26.80/user/";
     private int userId;
+    private String token;
     private SqlHelper sqlHelper;
 
     //CONSTRUCTORS
-    public NewsDataSource(int userId, Application app) {
-        this.userId = userId;
+    //0. constructor is called
+    //1. if there is intenet laodDataFromInternet is called;
+    //2. Once groups and sourcesa are added loadNewsItems in called
+    //3. For each news source getNewsItems is being called
+    //4. after they are done addNewsSourceInDb is called
+    public NewsDataSource(Application app, SharedPreferences settings) {
+        this.userId = settings.getInt("user_id",0);
+        this.token = settings.getString("key","");
         if (Utils.isOnline(app)) {
             loadDataFromInternet();
         }
@@ -50,7 +59,7 @@ public class
         isDataLoaded = false;
         httpClient = new AsyncHttpClient();
         StringRequest request = new StringRequest(Request.Method.GET,
-                BASE_URL + userId, new Response.Listener<String>() {
+                BASE_URL + userId+ Utils.tokenWithoutAnd(token), new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
                 ArrayList<NewsGroup> allNewsGroups = JSONParsing.parseNewsDataSource(s);
@@ -60,6 +69,7 @@ public class
                         sqlHelper.insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
                     sqlHelper.insertNewsGroupInDb(allNewsGroups.get(i));
                 }
+                loadNewsItems();
                 BusProvider.getInstance().post(new DataLoadedEvent(
                         DataLoadedEvent.TAG_NEWSDATASOURCE));
                 isDataLoaded = true;
@@ -74,18 +84,53 @@ public class
         );
         StiriApp.queue.add(request);
     }
-
-    @Subscribe
-    public void OnDataLoaded(DataLoadedEvent event) {
-        if (event.dataLoadedType == DataLoadedEvent.TAG_NEWSDATASOURCE) {
-            ArrayList<NewsSource> newsSources = sqlHelper.getAllNewsSources();
-            for (int j = 0; j < newsSources.size(); j++) {
-                NewsSource ns = newsSources.get(j);
-                getNewsItems(ns);
-            }
+    public void loadNewsItems(){
+        ArrayList<NewsSource> newsSources = sqlHelper.getAllNewsSources();
+        for(int j = 0; j < newsSources.size(); j++) {
+            NewsSource ns = newsSources.get(j);
+            getNewsItems(ns);
         }
     }
+    public void getNewsItems(NewsSource ns) {
+        String url = NewsSource.BASE_URL + ns.getId();
+//                            +"&date="+dateString;
+        StringRequest stringRequest = new StringRequest(
+                Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                addNewsSourceInDb(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        }
+        );
+        StiriApp.queue.add(stringRequest);
+    }
 
+    public void addNewsSourceInDb(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            String sFeedId = jsonObject.getString("feedId");
+            int feedId = Integer.parseInt(sFeedId);
+            JSONArray feedArray = jsonObject.getJSONArray("articles");
+            ArrayList<NewsItem> newsItems = JSONParsing.parseFeed(feedArray);
+            NewsSource ns = getNewsSource(feedId);
+            ns.news = newsItems;
+            sqlHelper.insertNewsSourceInDb(ns);
+            sqlHelper.insertNewsItemsInDb(ns);
+            newsItems = sqlHelper.getNewsItems(ns.getId());
+            for (int i = 0; i < newsItems.size(); i++)
+                if (newsItems.get(i).getDescription() == "null")
+                    paperizeNewsItem(newsItems.get(i));
+            BusProvider.getInstance().post(new
+                    DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     //MULTIPLE
 
     @Subscribe
@@ -149,29 +194,6 @@ public class
     public NewsSource getNewsSource(int id) {
         return sqlHelper.getNewsSource(id);
     }
-
-    public void addNewsSourceInDb(String response) {
-        try {
-            JSONObject jsonObject = new JSONObject(response);
-            String sFeedId = jsonObject.getString("feedId");
-            int feedId = Integer.parseInt(sFeedId);
-            JSONArray feedArray = jsonObject.getJSONArray("articles");
-            ArrayList<NewsItem> newsItems = JSONParsing.parseFeed(feedArray);
-            NewsSource ns = getNewsSource(feedId);
-            ns.news = newsItems;
-            sqlHelper.insertNewsSourceInDb(ns);
-            sqlHelper.insertNewsItemsInDb(ns);
-            newsItems = sqlHelper.getNewsItems(ns.getId());
-            for (int i = 0; i < newsItems.size(); i++)
-                if (newsItems.get(i).getDescription() == "null")
-                    paperizeNewsItem(newsItems.get(i));
-            BusProvider.getInstance().post(new
-                    DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void addNewsSource(final NewsSource newsSource, final int groupId) {
         RequestParams requestParams = new RequestParams();
         requestParams.put("url", newsSource.getRssLink());
@@ -207,24 +229,7 @@ public class
         sqlHelper.makeNewsRead(url);
     }
 
-    public void getNewsItems(NewsSource ns) {
-        String url = NewsSource.BASE_URL + ns.getRssLink() + "&feedId=" + ns.getId();
-//                            +"&date="+dateString;
-        StringRequest stringRequest = new StringRequest(
-                Request.Method.GET, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                addNewsSourceInDb(response);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError volleyError) {
-                volleyError.printStackTrace();
-            }
-        }
-        );
-        StiriApp.queue.add(stringRequest);
-    }
+
 
     public NewsItem getNewsItem(String url) {
         return sqlHelper.getNewsItem(url);

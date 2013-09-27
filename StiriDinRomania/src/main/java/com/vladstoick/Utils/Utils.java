@@ -18,4 +18,10 @@ public class Utils {
         }
         return false;
     }
+    public static String tokenWithAnd(String token){
+        return "&key="+token;
+    }
+    public static String tokenWithoutAnd(String token){
+        return "?key="+token;
+    }
 }

@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 public class NewsSource implements Parcelable {
     public static String TAG = "NEWSSORUCE";
-    public static String BASE_URL = "http://37.139.8.146:3000/?url=";
+    public static String BASE_URL = "http://37.139.8.146:3000/?feedId=";
     public static String TAG_RSSLINK = "url";
     private String rssLink;
     public static String TAG_TITLE = "title";

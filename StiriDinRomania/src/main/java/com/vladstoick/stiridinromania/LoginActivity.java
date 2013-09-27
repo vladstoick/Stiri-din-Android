@@ -49,7 +49,7 @@ public class LoginActivity extends SherlockFragmentActivity
         SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
         if (settings.getInt("user_id", 0) != 0){
             ((StiriApp)getApplication()).newsDataSource =
-                    new NewsDataSource(settings.getInt("user_id", 0),getApplication());
+                    new NewsDataSource(getApplication(),settings);
             gotoAllGroupsActivity();
             return;
         }
@@ -136,9 +136,12 @@ public class LoginActivity extends SherlockFragmentActivity
                                     @Override
                                     public void onResponse(JSONObject jsonObject) {
                                         pd.dismiss();
-                                        userId = JSONParsing.parseServerLogin(jsonObject, editor);
+                                        JSONParsing.parseServerLogin(jsonObject, editor);
+                                        SharedPreferences settings =
+                                                getSharedPreferences("appPref",
+                                                        Context.MODE_PRIVATE);
                                         ((StiriApp)getApplication()).newsDataSource =
-                                                new NewsDataSource(userId,getApplication());
+                                                new NewsDataSource(getApplication(),settings);
                                         gotoAllGroupsActivity();
                                     }
                                 }, new com.android.volley.Response.ErrorListener() {
@@ -187,9 +190,11 @@ public class LoginActivity extends SherlockFragmentActivity
                         @Override
                         public void onResponse(JSONObject jsonObject) {
                             pd.dismiss();
-                            userId = JSONParsing.parseServerLogin(jsonObject, editor);
+                            JSONParsing.parseServerLogin(jsonObject, editor);
+                            SharedPreferences settings = getSharedPreferences("appPref",
+                                    Context.MODE_PRIVATE);
                             ((StiriApp)getApplication()).newsDataSource =
-                                    new NewsDataSource(userId,getApplication());
+                                    new NewsDataSource(getApplication(),settings);
                             gotoAllGroupsActivity();
                         }
                     }, new com.android.volley.Response.ErrorListener() {
