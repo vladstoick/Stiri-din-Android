@@ -91,7 +91,10 @@
             android:name="com.vladstoick.stiridinromania.AddElementAcitvitiy"
             android:label="@string/add_element_fragment_title"
             android:parentActivityName="NewsGroupListActivity"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".NewsGroupListActivity" />
         </activity>
 
         <meta-data

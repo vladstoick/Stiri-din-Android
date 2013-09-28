@@ -61,6 +61,18 @@ public class NewsItemListFragment extends SherlockFragment implements
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        if(mListView!=null && this.ns!=null){
+            this.ns = ((StiriApp)getSherlockActivity().
+                    getApplication()).newsDataSource.getNewsSource(this.ns.getId());
+            NewsItemAdapter adapter = (NewsItemAdapter) mListView.getAdapter();
+            adapter.news = this.ns.news;
+            adapter.notifyDataSetChanged();
+        }
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }

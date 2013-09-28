@@ -73,15 +73,14 @@ public class NewsItemListActivity extends SherlockFragmentActivity
      */
     @Override
     public void onItemSelected(NewsItem newsItem, int position) {
-
-        //TODO SCAPA
+        ((StiriApp)getApplication()).newsDataSource.makeNewsRead(newsItem.getUrlLink(),
+                newsItem.getId());
         if (mTwoPane) {
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a
             // fragment transaction.
             Bundle arguments = new Bundle();
-            ((StiriApp)getApplication()).newsDataSource.makeNewsRead(newsItem.getUrlLink(),
-                    newsItem.getId());
+
             arguments.putString(NewsItemDetailFragment.ARG_ITEM, newsItem.getUrlLink());
 
             NewsItemDetailFragment fragment = new NewsItemDetailFragment();

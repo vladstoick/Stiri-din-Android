@@ -49,4 +49,11 @@
             android:layout_marginBottom="@dimen/top_and_bottom_margin"
             android:layout_marginTop="@dimen/top_and_bottom_margin"/>
 
+    <Button
+        android:id="@+id/donebutton"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/add"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

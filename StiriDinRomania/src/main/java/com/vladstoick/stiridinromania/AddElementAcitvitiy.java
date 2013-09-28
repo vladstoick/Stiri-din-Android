@@ -1,16 +1,19 @@
 package com.vladstoick.stiridinromania;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.view.WindowManager;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuItem;
 import com.vladstoick.Fragments.AddElement.AddElementCategoryFragment;
 import com.vladstoick.Fragments.AddElement.AddElementManuallyFragment;
 import com.vladstoick.Fragments.AddElement.AddElementSearchFragment;
@@ -136,5 +139,12 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
         }
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                NavUtils.navigateUpTo(this, new Intent(this, NewsGroupDetailActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

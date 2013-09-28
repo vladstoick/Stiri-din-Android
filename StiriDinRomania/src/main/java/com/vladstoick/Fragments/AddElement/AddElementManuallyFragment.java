@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -50,6 +51,24 @@ public class AddElementManuallyFragment extends SherlockFragment {
         mGroupSpinner.setAdapter(new AddElementManuallySpinnerAdapter(newsDataSource,
                 getSherlockActivity()));
         mGroupTitle.setVisibility(newsDataSource.size() == 0 ? View.VISIBLE : View.GONE);
+        Button mAddButton = (Button) mView.findViewById(R.id.donebutton);
+        mAddButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NewsSource ns = new NewsSource();
+                ns.setRssLink(mSourceRss.getText().toString());
+                if (mGroupTitle.getVisibility() == View.VISIBLE &&
+                        mGroupTitle.getText().toString() != "") {
+                    String groupTitle = mGroupTitle.getText().toString();
+                    ((StiriApp) (getSherlockActivity()).getApplication()).newsDataSource
+                            .addNewsGroupAndNewsSource(groupTitle, ns);
+                } else {
+                    int groupId = (int) mGroupSpinner.getSelectedItemId();
+                    ((StiriApp) (getSherlockActivity().getApplication())).newsDataSource.
+                            addNewsSource(ns, groupId);
+                }
+            }
+        });
         mGroupSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -66,36 +85,4 @@ public class AddElementManuallyFragment extends SherlockFragment {
         return mView;
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.add_element_manual_fragment, menu);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_add: {
-                NewsSource ns = new NewsSource();
-                ns.setRssLink(mSourceRss.getText().toString());
-                if (mGroupTitle.getVisibility() == View.VISIBLE &&
-                        mGroupTitle.getText().toString() != "") {
-                    String groupTitle = mGroupTitle.getText().toString();
-                    ((StiriApp) (getSherlockActivity()).getApplication()).newsDataSource
-                            .addNewsGroupAndNewsSource(groupTitle, ns);
-                } else {
-                    int groupId = (int) mGroupSpinner.getSelectedItemId();
-                    ((StiriApp) (getSherlockActivity().getApplication())).newsDataSource.
-                            addNewsSource(ns, groupId);
-                }
-
-            }
-            case R.id.action_cancel: {
-                NavUtils.navigateUpTo(getSherlockActivity(), new Intent(getSherlockActivity(),
-                        NewsGroupListActivity.class));
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
