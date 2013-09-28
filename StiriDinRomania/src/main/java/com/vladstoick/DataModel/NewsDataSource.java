@@ -257,7 +257,15 @@ public class
     }
     //NEWSITEM
 
-    public void makeNewsRead(String url){
+    public void makeNewsRead(String url,int newsId){
+        StringRequest request = new StringRequest(Request.Method.DELETE,BASE_URL+"user/"+userId+"/undread?article_id="+newsId + Utils.tokenWithAnd(token),new Response.Listener<String>() {
+            @Override
+            public void onResponse(String s) {}} ,new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    volleyError.printStackTrace();
+                }});
+        StiriApp.queue.add(request);
         sqlHelper.makeNewsRead(url);
     }
 
