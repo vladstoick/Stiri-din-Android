@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
 import com.vladstoick.Fragments.NewsItemListFragment;
@@ -71,7 +72,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
      * indicating that the item with the given ID was selected.
      */
     @Override
-    public void onItemSelected(String url, int position) {
+    public void onItemSelected(NewsItem newsItem, int position) {
 
         //TODO SCAPA
         if (mTwoPane) {
@@ -79,8 +80,9 @@ public class NewsItemListActivity extends SherlockFragmentActivity
             // adding or replacing the detail fragment using a
             // fragment transaction.
             Bundle arguments = new Bundle();
-            ((StiriApp)getApplication()).newsDataSource.makeNewsRead(url);
-            arguments.putString(NewsItemDetailFragment.ARG_ITEM, url);
+            ((StiriApp)getApplication()).newsDataSource.makeNewsRead(newsItem.getUrlLink(),
+                    newsItem.getId());
+            arguments.putString(NewsItemDetailFragment.ARG_ITEM, newsItem.getUrlLink());
 
             NewsItemDetailFragment fragment = new NewsItemDetailFragment();
             fragment.setArguments(arguments);
@@ -92,7 +94,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
             // In single-pane mode, simply start the detail activity
             // for the selected item ID.
             Intent detailIntent = new Intent(this, NewsItemDetailActivity.class);
-            detailIntent.putExtra(NewsItemDetailFragment.ARG_ITEM, url);
+            detailIntent.putExtra(NewsItemDetailFragment.ARG_ITEM, newsItem.getUrlLink());
             detailIntent.putExtra(NewsItemDetailFragment.ARG_NEWSOURCE, newsSourceId);
             detailIntent.putExtra(NewsItemDetailFragment.ARG_ITEMPOSITION, position);
                     startActivity(detailIntent);

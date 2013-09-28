@@ -9,7 +9,7 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
-import com.vladstoick.Utils.NewsItemPagerAdapter;
+import com.vladstoick.Utils.Adapters.NewsItemPagerAdapter;
 
 import java.util.ArrayList;
 
@@ -37,7 +37,8 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
 
             @Override
             public void onPageSelected(int i) {
-                ((StiriApp)getApplication()).newsDataSource.makeNewsRead(news.get(i).getUrlLink());
+                ((StiriApp)getApplication()).newsDataSource.makeNewsRead(news.get(i).getUrlLink()
+                        ,news.get(i).getId());
             }
 
             @Override

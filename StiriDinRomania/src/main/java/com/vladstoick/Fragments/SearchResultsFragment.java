@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.vladstoick.DataModel.NewsItem;
-import com.vladstoick.Utils.NewsItemAdapter;
+import com.vladstoick.Utils.Adapters.NewsItemAdapter;
 import com.vladstoick.stiridinromania.NewsItemDetailActivity;
 import com.vladstoick.stiridinromania.R;
 

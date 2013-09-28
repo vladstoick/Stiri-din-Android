@@ -13,7 +13,7 @@ import com.squareup.otto.Subscribe;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
-import com.vladstoick.Utils.NewsSourceAdapter;
+import com.vladstoick.Utils.Adapters.NewsSourceAdapter;
 import com.vladstoick.Utils.Tags;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;

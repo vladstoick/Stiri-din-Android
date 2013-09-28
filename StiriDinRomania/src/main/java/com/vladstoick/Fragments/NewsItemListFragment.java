@@ -2,7 +2,6 @@ package com.vladstoick.Fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +9,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
-import com.vladstoick.Utils.NewsItemAdapter;
+import com.vladstoick.Utils.Adapters.NewsItemAdapter;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
 
@@ -35,7 +35,7 @@ public class NewsItemListFragment extends SherlockFragment implements
     private Callbacks mCallbacks = null;
     private int mActivatedPosition = ListView.INVALID_POSITION;
     public interface Callbacks {
-        public void onItemSelected(String id, int position);
+        public void onItemSelected(NewsItem newsItem, int position);
     }
 
 
@@ -105,7 +105,7 @@ public class NewsItemListFragment extends SherlockFragment implements
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        mCallbacks.onItemSelected(ns.news.get(i).getUrlLink(),i);
+        mCallbacks.onItemSelected(ns.news.get(i),i);
     }
 
     @Override

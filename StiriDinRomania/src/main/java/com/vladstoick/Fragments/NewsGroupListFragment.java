@@ -19,7 +19,7 @@ import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DialogFragment.NoConnectionDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.DataLoadedEvent;
-import com.vladstoick.Utils.NewsGroupAdapter;
+import com.vladstoick.Utils.Adapters.NewsGroupAdapter;
 import com.vladstoick.Utils.Utils;
 import com.vladstoick.stiridinromania.R;
 import com.vladstoick.stiridinromania.StiriApp;
