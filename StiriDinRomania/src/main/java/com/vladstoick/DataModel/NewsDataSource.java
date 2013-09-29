@@ -168,8 +168,6 @@ public class
     @Subscribe
     public void renameElement(RenameDialogFragment.ElementRenamedEvent event) {
         String url;
-        RequestParams requestParams = new RequestParams();
-        requestParams.put("title", event.newName);
         if (event.type == RenameDialogFragment.GROUP_TAG) {
             sqlHelper.renameNewsGroup(event);
             url = BASE_URL + userId + "/" + event.id;
@@ -178,8 +176,19 @@ public class
             NewsSource ns = getNewsSource(event.id);
             url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId();
         }
-        httpClient.put(url, requestParams, new AsyncHttpResponseHandler() {
-        });
+        StringRequest request = new StringRequest(Request.Method.PUT,url +
+                Utils.tokenWithoutAnd(token) + "&title="+event.newName,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String s) {
+
+                    }
+                },new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                    }
+                });
+        StiriApp.queue.add(request);
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
     }
@@ -187,7 +196,8 @@ public class
     public void addNewsGroupAndNewsSource(final String groupTitle, final NewsSource ns) {
         RequestParams requestParams = new RequestParams();
         requestParams.put("title", groupTitle);
-        httpClient.post(BASE_URL + userId, requestParams, new AsyncHttpResponseHandler() {
+        requestParams.put("key",token);
+        httpClient.post(BASE_URL + userId , requestParams, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(String s) {
                 NewsGroup ng = new NewsGroup(groupTitle, JSONParsing.parseAddNewsGroupResponse(s));
@@ -212,7 +222,7 @@ public class
         sqlHelper.deleteNewsGroup(id);
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
-        httpClient.delete(BASE_URL + userId + "/" + id,
+        httpClient.delete(BASE_URL + userId + "/" + id + Utils.tokenWithoutAnd(token),
                 new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(String s) {
@@ -229,6 +239,7 @@ public class
     public void addNewsSource(final NewsSource newsSource, final int groupId) {
         RequestParams requestParams = new RequestParams();
         requestParams.put("url", newsSource.getRssLink());
+        requestParams.put("key",token);
         httpClient.post(BASE_URL + userId + "/" + groupId, requestParams,
                 new AsyncHttpResponseHandler() {
                     @Override
@@ -247,9 +258,19 @@ public class
         sqlHelper.updateNewsGroupNoFeeds(ns.getGroupId());
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
-        String url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId();
-        httpClient.delete(url, new AsyncHttpResponseHandler() {
+        String url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId()
+                + Utils.tokenWithoutAnd(token);
+        StringRequest request = new StringRequest(Request.Method.DELETE, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String s) {
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+            }
         });
+        StiriApp.queue.add(request);
     }
 
     public int getNumberOfNewsForNewsSource(int id){
