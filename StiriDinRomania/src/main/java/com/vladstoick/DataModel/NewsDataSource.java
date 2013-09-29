@@ -10,6 +10,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.google.android.gms.internal.r;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -32,11 +33,10 @@ import java.util.ArrayList;
  */
 public class
         NewsDataSource {
-    public int unparsedFeeds = 0 ;
+    public int unparsedFeeds = 0;
     public boolean isDataLoaded = true;
     public ArrayList<Integer> unreadIds;
     public AsyncHttpClient client;
-    private AsyncHttpClient httpClient;
     private String BASE_URL = "http://37.139.26.80/user/";
     private int userId;
     private String token;
@@ -50,8 +50,8 @@ public class
     //4. For each news source getNewsItems is being called
     //5. after they are done addNewsSourceInDb is called
     public NewsDataSource(Application app, SharedPreferences settings) {
-        this.userId = settings.getInt("user_id",0);
-        this.token = settings.getString("key","");
+        this.userId = settings.getInt("user_id", 0);
+        this.token = settings.getString("key", "");
         if (Utils.isOnline(app)) {
             loadData();
         }
@@ -59,39 +59,40 @@ public class
         sqlHelper = new SqlHelper(app);
         BusProvider.getInstance().register(this);
     }
-    public void loadData(){
+
+    public void loadData() {
         loadUnreadNews();
     }
 
-    public void loadUnreadNews(){
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(BASE_URL+userId + "/unread" +
-                Utils.tokenWithoutAnd(token),null,
+    public void loadUnreadNews() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(BASE_URL + userId + "/unread" +
+                Utils.tokenWithoutAnd(token), null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         unreadIds = JSONParsing.parseUnreadIds(jsonObject);
                         loadGroupsAndSources();
                     }
-                }, new Response.ErrorListener(){
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        volleyError.printStackTrace();
-                }
-            });
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        }
+        );
         StiriApp.queue.add(jsonObjectRequest);
     }
 
     public void loadGroupsAndSources() {
         isDataLoaded = false;
-        httpClient = new AsyncHttpClient();
         StringRequest request = new StringRequest(Request.Method.GET,
-                BASE_URL + userId+ Utils.tokenWithoutAnd(token), new Response.Listener<String>() {
+                BASE_URL + userId + Utils.tokenWithoutAnd(token), new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
                 ArrayList<NewsGroup> allNewsGroups = JSONParsing.parseNewsDataSource(s);
                 sqlHelper.deleteOldNewsGroupsAndSources(allNewsGroups);
                 for (int i = 0; i < allNewsGroups.size(); i++) {
-                    for (int j = 0; j < allNewsGroups.get(i).newsSources.size(); j++){
+                    for (int j = 0; j < allNewsGroups.get(i).newsSources.size(); j++) {
                         sqlHelper.insertNewsSourceInDb(allNewsGroups.get(i).newsSources.get(j));
                         unparsedFeeds++;
                     }
@@ -110,13 +111,15 @@ public class
         );
         StiriApp.queue.add(request);
     }
-    public void loadNewsItems(){
+
+    public void loadNewsItems() {
         ArrayList<NewsSource> newsSources = sqlHelper.getAllNewsSources();
-        for(int j = 0; j < newsSources.size(); j++) {
+        for (int j = 0; j < newsSources.size(); j++) {
             NewsSource ns = newsSources.get(j);
             getNewsItems(ns);
         }
     }
+
     public void getNewsItems(NewsSource ns) {
         String url = NewsSource.BASE_URL + ns.getId();
 //                            +"&date="+dateString;
@@ -154,7 +157,7 @@ public class
             BusProvider.getInstance().post(new
                     DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
             unparsedFeeds--;
-            if(unparsedFeeds == 0){
+            if (unparsedFeeds == 0) {
                 sqlHelper.updateUnreadNews(unreadIds);
                 BusProvider.getInstance().post(new DataLoadedEvent(
                         DataLoadedEvent.TAG_NEWSDATASOURCE));
@@ -176,37 +179,48 @@ public class
             NewsSource ns = getNewsSource(event.id);
             url = BASE_URL + userId + "/" + ns.getGroupId() + "/" + ns.getId();
         }
-        StringRequest request = new StringRequest(Request.Method.PUT,url +
-                Utils.tokenWithoutAnd(token) + "&title="+event.newName,
+        StringRequest request = new StringRequest(Request.Method.PUT, url +
+                Utils.tokenWithoutAnd(token) + "&title=" + event.newName,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
 
                     }
-                },new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                    }
-                });
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        }
+        );
         StiriApp.queue.add(request);
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
     }
 
     public void addNewsGroupAndNewsSource(final String groupTitle, final NewsSource ns) {
-        RequestParams requestParams = new RequestParams();
-        requestParams.put("title", groupTitle);
-        requestParams.put("key",token);
-        httpClient.post(BASE_URL + userId , requestParams, new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(String s) {
-                NewsGroup ng = new NewsGroup(groupTitle, JSONParsing.parseAddNewsGroupResponse(s));
-                sqlHelper.insertNewsGroupInDb(ng);
-                addNewsSource(ns, ng.getId());
-                BusProvider.getInstance().post(new
-                        DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
-            }
-        });
+
+        StringRequest request = new StringRequest(Request.Method.POST,
+                BASE_URL + userId + Utils.tokenWithoutAnd(token) + "&title=" + groupTitle,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String s) {
+                        NewsGroup ng = new NewsGroup(groupTitle,
+                                JSONParsing.parseAddNewsGroupResponse(s));
+                        sqlHelper.insertNewsGroupInDb(ng);
+                        addNewsSource(ns, ng.getId());
+                        BusProvider.getInstance().post(new
+                                DataLoadedEvent(DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        volleyError.printStackTrace();
+                    }
+                }
+        );
+        StiriApp.queue.add(request);
     }
     //NEWSGROUP
 
@@ -222,13 +236,21 @@ public class
         sqlHelper.deleteNewsGroup(id);
         BusProvider.getInstance().post(new DataLoadedEvent(
                 DataLoadedEvent.TAG_NEWSDATASOURCE_MODIFIED));
-        httpClient.delete(BASE_URL + userId + "/" + id + Utils.tokenWithoutAnd(token),
-                new AsyncHttpResponseHandler() {
-                    @Override
-                    public void onSuccess(String s) {
-                    }
-                });
+        StringRequest request = new StringRequest(Request.Method.DELETE, BASE_URL + userId + "/" +
+                id + Utils.tokenWithoutAnd(token), new Response.Listener<String>() {
+            @Override
+            public void onResponse(String s) {
 
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        volleyError.printStackTrace();
+                    }
+                }
+        );
+        StiriApp.queue.add(request);
     }
 
     //NewsSource
@@ -236,21 +258,27 @@ public class
     public NewsSource getNewsSource(int id) {
         return sqlHelper.getNewsSource(id);
     }
+
     public void addNewsSource(final NewsSource newsSource, final int groupId) {
-        RequestParams requestParams = new RequestParams();
-        requestParams.put("url", newsSource.getRssLink());
-        requestParams.put("key",token);
-        httpClient.post(BASE_URL + userId + "/" + groupId, requestParams,
-                new AsyncHttpResponseHandler() {
+        StringRequest request = new StringRequest(Request.Method.POST, BASE_URL + userId + "/"
+                + groupId + Utils.tokenWithoutAnd(token) + "&url=" + newsSource.getRssLink(),
+                new Response.Listener<String>() {
                     @Override
-                    public void onSuccess(String s) {
+                    public void onResponse(String s) {
                         JSONParsing.parseAddNewsSource(newsSource, s);
                         newsSource.setGroupId(groupId);
                         sqlHelper.insertNewsSourceInDb(newsSource);
                         getNewsItems(newsSource);
                         sqlHelper.updateNewsGroupNoFeeds(groupId);
                     }
-                });
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        }
+        );
+        StiriApp.queue.add(request);
     }
 
     public void deleteNewsSource(NewsSource ns) {
@@ -266,35 +294,39 @@ public class
                     public void onResponse(String s) {
                     }
                 }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
             }
-        });
+        }
+        );
         StiriApp.queue.add(request);
     }
 
-    public int getNumberOfNewsForNewsSource(int id){
+    public int getNumberOfNewsForNewsSource(int id) {
         return sqlHelper.getNumberOfNewsForNewsSource(id);
     }
     //NEWSITEM
 
-    public void makeNewsRead(String url,int newsId){
-        StringRequest request = new StringRequest(Request.Method.DELETE,BASE_URL+
-                userId+"/unread?article_id="+newsId + Utils.tokenWithAnd(token)
-                ,new Response.Listener<String>() {
-                   @Override
-                  public void onResponse(String s) {
+    public void makeNewsRead(String url, int newsId) {
+        StringRequest request = new StringRequest(Request.Method.DELETE, BASE_URL +
+                userId + "/unread?article_id=" + newsId + Utils.tokenWithAnd(token)
+                , new Response.Listener<String>() {
+            @Override
+            public void onResponse(String s) {
 
-                   }} ,
+            }
+        },
                 new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError volleyError) {
-                    volleyError.printStackTrace();
-                }});
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        volleyError.printStackTrace();
+                    }
+                }
+        );
         StiriApp.queue.add(request);
         sqlHelper.makeNewsRead(url);
     }
-
 
 
     public NewsItem getNewsItem(String url) {
@@ -314,14 +346,14 @@ public class
                     public void onResponse(JSONObject jobj) {
                         ArrayList<NewsItem> searchResults = JSONParsing.parseSearchResults(jobj);
                         BusProvider.getInstance()
-                                .post(new SearchResultsEvent(searchResults,query));
+                                .post(new SearchResultsEvent(searchResults, query));
                     }
                 }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        volleyError.printStackTrace();
-                    }
-                }
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                volleyError.printStackTrace();
+            }
+        }
         );
         StiriApp.queue.add(request);
     }
