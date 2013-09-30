@@ -28,17 +28,18 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Styled" >
         <activity
-                android:name="com.vladstoick.stiridinromania.SearchResultsActivity"
-                android:label="@string/search"
-                android:launchMode="singleTop"
-                android:parentActivityName=".NewsGroupListActivity">
+            android:name="com.vladstoick.stiridinromania.SearchResultsActivity"
+            android:label="@string/search"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewsGroupListActivity" >
             <meta-data
-                    android:name="android.app.searchable"
-                    android:resource="@xml/searchable"
-                    android:value=".SearchResultsActivity" />
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"
+                android:value=".SearchResultsActivity" />
             <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".NewsGroupListActivity" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NewsGroupListActivity" />
+
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -46,6 +47,7 @@
         <activity android:name="com.vladstoick.stiridinromania.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -55,7 +57,6 @@
             android:value="@string/app_id" />
 
         <activity android:name="com.facebook.LoginActivity" />
-
         <activity
             android:name="com.vladstoick.stiridinromania.NewsGroupListActivity"
             android:launchMode="singleTop" >
@@ -91,16 +92,18 @@
             android:name="com.vladstoick.stiridinromania.AddElementAcitvitiy"
             android:label="@string/add_element_fragment_title"
             android:parentActivityName="NewsGroupListActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize" >
             <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".NewsGroupListActivity" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NewsGroupListActivity" />
         </activity>
 
         <meta-data
             android:name="android.app.default_searchable"
             android:value=".SearchResultsActivity" />
 
+        <activity
+            android:name=".AddElementSelectFeedActivity"/>
 
     </application>
 

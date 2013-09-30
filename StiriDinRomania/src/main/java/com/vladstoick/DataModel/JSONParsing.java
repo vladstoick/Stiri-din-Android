@@ -143,7 +143,7 @@ public class JSONParsing {
             ArrayList<NewsSource> results = new ArrayList<NewsSource>();
             for(int i=0; i< feeds.length(); i++){
                 JSONObject feed = feeds.getJSONObject(i);
-                NewsSource ns = new NewsSource(feed.getString("title"),feed.getString("url")
+                NewsSource ns = new NewsSource(feed.getString("url"),feed.getString("title")
                         ,feed.getInt("id"));
                 ns.category = feed.getString("category");
                 results.add(ns);
