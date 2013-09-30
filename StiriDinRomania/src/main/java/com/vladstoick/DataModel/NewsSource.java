@@ -35,6 +35,7 @@ public class NewsSource implements Parcelable {
     public static String TAG_ID = "id";
     private int id;
     private int groupId;
+    public String category;
 
     public NewsSource(String rssLink, String title, int id) {
         this.rssLink = rssLink;
@@ -120,6 +121,7 @@ public class NewsSource implements Parcelable {
         dest.writeTypedList(news);
         dest.writeInt(groupId);
         dest.writeInt(id);
+        dest.writeString(category);
     }
 
     private NewsSource(Parcel in) {
@@ -129,6 +131,7 @@ public class NewsSource implements Parcelable {
         in.readTypedList(news, NewsItem.CREATOR);
         this.groupId = in.readInt();
         this.id = in.readInt();
+        this.category = in.readString();
     }
 
 }

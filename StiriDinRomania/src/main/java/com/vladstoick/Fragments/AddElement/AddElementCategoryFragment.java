@@ -7,7 +7,13 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.vladstoick.DataModel.NewsDataSource;
+import com.vladstoick.DataModel.NewsSource;
+import com.vladstoick.Utils.Adapters.AddElementCategoryAdapter;
 import com.vladstoick.stiridinromania.R;
+import com.vladstoick.stiridinromania.StiriApp;
+
+import java.util.ArrayList;
 
 import butterknife.InjectView;
 import butterknife.Views;
@@ -24,6 +30,14 @@ public class AddElementCategoryFragment extends SherlockFragment {
                              Bundle savedInstanceState) {
         View mView = inflater.inflate(R.layout.fragment_add_elemens_category,container,false);
         Views.inject(this,mView);
+        ArrayList<NewsSource> feeds = NewsDataSource.getInstance().feeds;
+        ArrayList<String> categories = new ArrayList<String>();
+        for(NewsSource newsSource : feeds){
+            if(!categories.contains(newsSource.category)){
+                categories.add(newsSource.category);
+            }
+        }
+        mListView.setAdapter(new AddElementCategoryAdapter(getSherlockActivity(),categories));
         return mView;
     }
 }

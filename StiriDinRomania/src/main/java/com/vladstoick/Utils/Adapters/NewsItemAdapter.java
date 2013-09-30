@@ -70,7 +70,6 @@ public class NewsItemAdapter extends BaseAdapter {
         Holder holder;
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-
              row = inflater.inflate(R.layout.list_row_newsitem_list, parent, false);
             holder = new Holder(row);
             row.setTag(holder);

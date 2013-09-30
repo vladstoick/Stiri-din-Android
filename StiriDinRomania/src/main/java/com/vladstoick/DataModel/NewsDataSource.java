@@ -33,6 +33,7 @@ import java.util.ArrayList;
  */
 public class
         NewsDataSource {
+    private static NewsDataSource instance;
     public int unparsedFeeds = 0;
     public ArrayList<NewsSource> feeds;
     public boolean isDataLoaded = true;
@@ -60,6 +61,11 @@ public class
 
         sqlHelper = new SqlHelper(app);
         BusProvider.getInstance().register(this);
+        NewsDataSource.instance = this;
+    }
+
+    public static NewsDataSource getInstance(){
+        return instance;
     }
 
     public void loadFeeds(){

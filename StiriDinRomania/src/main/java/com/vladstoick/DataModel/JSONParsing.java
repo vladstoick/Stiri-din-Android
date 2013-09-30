@@ -143,8 +143,10 @@ public class JSONParsing {
             ArrayList<NewsSource> results = new ArrayList<NewsSource>();
             for(int i=0; i< feeds.length(); i++){
                 JSONObject feed = feeds.getJSONObject(i);
-                results.add(new NewsSource(feed.getString("title"),feed.getString("url")
-                        ,feed.getInt("id")));
+                NewsSource ns = new NewsSource(feed.getString("title"),feed.getString("url")
+                        ,feed.getInt("id"));
+                ns.category = feed.getString("category");
+                results.add(ns);
             }
             return results;
         } catch (Exception e){
