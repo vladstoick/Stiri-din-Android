@@ -15,7 +15,6 @@ import com.vladstoick.OttoBus.BusProvider;
  * Created by Vlad on 8/1/13.
  */
 public class StiriApp extends Application {
-    public NewsDataSource newsDataSource = null;
     public static RequestQueue queue;
 
     @Override

@@ -15,6 +15,7 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Utils.AddElementManuallySpinnerAdapter;
@@ -45,9 +46,7 @@ public class AddElementManuallyFragment extends SherlockFragment {
         setHasOptionsMenu(true);
         mView = inflater.inflate(R.layout.fragment_add_elements_manually, container, false);
         Views.inject(this, mView);
-        ArrayList<NewsGroup> newsDataSource =
-                ((StiriApp) ((getSherlockActivity()).getApplication())).newsDataSource
-                        .getAllNewsGroups();
+        ArrayList<NewsGroup> newsDataSource = NewsDataSource.getInstance().getAllNewsGroups();
         mGroupSpinner.setAdapter(new AddElementManuallySpinnerAdapter(newsDataSource,
                 getSherlockActivity()));
         mGroupTitle.setVisibility(newsDataSource.size() == 0 ? View.VISIBLE : View.GONE);
@@ -60,12 +59,10 @@ public class AddElementManuallyFragment extends SherlockFragment {
                 if (mGroupTitle.getVisibility() == View.VISIBLE &&
                         mGroupTitle.getText().toString() != "") {
                     String groupTitle = mGroupTitle.getText().toString();
-                    ((StiriApp) (getSherlockActivity()).getApplication()).newsDataSource
-                            .addNewsGroupAndNewsSource(groupTitle, ns);
+                    NewsDataSource.getInstance().addNewsGroupAndNewsSource(groupTitle, ns);
                 } else {
                     int groupId = (int) mGroupSpinner.getSelectedItemId();
-                    ((StiriApp) (getSherlockActivity().getApplication())).newsDataSource.
-                            addNewsSource(ns, groupId);
+                    NewsDataSource.getInstance().addNewsSource(ns, groupId);
                 }
             }
         });

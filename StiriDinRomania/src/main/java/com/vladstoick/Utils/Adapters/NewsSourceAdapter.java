@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.DialogFragment.RenameDialogFragment;
@@ -103,7 +104,7 @@ public class NewsSourceAdapter extends BaseAdapter {
             }
         });
         holder.mTitle.setText(ns.getTitle());
-        holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews(app) + "");
+        holder.mNumberOfNews.setText(ns.getNumberOfUnreadNews() + "");
         return row;
     }
 
@@ -145,6 +146,6 @@ public class NewsSourceAdapter extends BaseAdapter {
     }
 
     public void deleteSource(final NewsSource newsSource) {
-        app.newsDataSource.deleteNewsSource(newsSource);
+        NewsDataSource.getInstance().deleteNewsSource(newsSource);
     }
 }

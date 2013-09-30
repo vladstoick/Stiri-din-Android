@@ -68,6 +68,10 @@ public class
         return instance;
     }
 
+    public static void setInstance(NewsDataSource newsDataSource){
+        instance = newsDataSource;
+    }
+
     public void loadFeeds(){
         JsonObjectRequest jsonObjectRequest =
                 new JsonObjectRequest("http://37.139.26.80/newssource", null,

@@ -48,13 +48,12 @@ public class LoginActivity extends SherlockFragmentActivity
         NewRelic.withApplicationToken("AAda1a6278e5ef8e4349079aa07d6b5039aaa395a0").start(this);
         SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
         if (settings.getInt("user_id", 0) != 0){
-            ((StiriApp)getApplication()).newsDataSource =
-                    new NewsDataSource(getApplication(),settings);
+            NewsDataSource.setInstance(new NewsDataSource(getApplication(),settings));
             gotoAllGroupsActivity();
             return;
         }
         setContentView(R.layout.activity_login);
-        ((StiriApp)getApplication()).newsDataSource = null;
+        NewsDataSource.setInstance(null);
         getSupportActionBar().hide();
         pd = new ProgressDialog(this);
         pd.setCancelable(false);
@@ -140,8 +139,9 @@ public class LoginActivity extends SherlockFragmentActivity
                                         SharedPreferences settings =
                                                 getSharedPreferences("appPref",
                                                         Context.MODE_PRIVATE);
-                                        ((StiriApp)getApplication()).newsDataSource =
-                                                new NewsDataSource(getApplication(),settings);
+                                        NewsDataSource
+                                                .setInstance(new NewsDataSource(getApplication(),
+                                                        settings));
                                         gotoAllGroupsActivity();
                                     }
                                 }, new com.android.volley.Response.ErrorListener() {
@@ -193,8 +193,8 @@ public class LoginActivity extends SherlockFragmentActivity
                             JSONParsing.parseServerLogin(jsonObject, editor);
                             SharedPreferences settings = getSharedPreferences("appPref",
                                     Context.MODE_PRIVATE);
-                            ((StiriApp)getApplication()).newsDataSource =
-                                    new NewsDataSource(getApplication(),settings);
+                            NewsDataSource.setInstance(new NewsDataSource(getApplication(),
+                                    settings));
                             gotoAllGroupsActivity();
                         }
                     }, new com.android.volley.Response.ErrorListener() {

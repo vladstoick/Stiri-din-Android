@@ -6,6 +6,7 @@ import android.support.v4.app.NavUtils;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.Fragments.NewsGroupDetailFragment;
 import com.vladstoick.Utils.Tags;
@@ -44,8 +45,7 @@ public class NewsGroupDetailActivity extends SherlockFragmentActivity implements
             // using a fragment transaction.
             Bundle arguments = new Bundle();
             int newsGroupId = getIntent().getIntExtra(Tags.NEWSGROUP_TAG_ID, -1);
-            NewsGroup newsGroup = ((StiriApp)getApplication()).newsDataSource
-                    .getNewsGroup(newsGroupId);
+            NewsGroup newsGroup = NewsDataSource.getInstance().getNewsGroup(newsGroupId);
             setTitle(getString(R.string.app_name) + " " + newsGroup.getTitle());
             arguments.putInt(Tags.NEWSGROUP_TAG_ID, newsGroupId);
             NewsGroupDetailFragment fragment = new NewsGroupDetailFragment();

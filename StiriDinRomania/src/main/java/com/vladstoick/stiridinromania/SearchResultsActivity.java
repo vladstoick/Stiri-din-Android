@@ -16,6 +16,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
 import com.squareup.otto.Subscribe;
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.Fragments.SearchOnlineResultsFragment;
 import com.vladstoick.Fragments.SearchResultsFragment;
@@ -80,7 +81,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
             SearchOnlineResultsFragment fragment = (SearchOnlineResultsFragment)
                     mSectionsPagerAdapter.fragments.get(selectedPosition);
             fragment.showProgressIndicator();
-            ((StiriApp)getApplication()).newsDataSource.searchNewsItemOnline(query);
+            NewsDataSource.getInstance().searchNewsItemOnline(query);
         }
     }
 
@@ -93,8 +94,7 @@ public class SearchResultsActivity extends SherlockFragmentActivity implements A
         }
     }
     private ArrayList<NewsItem> getLocalResults(){
-        ArrayList<NewsItem> results = ((StiriApp)getApplication()).newsDataSource
-                .searchNewsItemsLocal(query);
+        ArrayList<NewsItem> results = NewsDataSource.getInstance().searchNewsItemsLocal(query);
         return results;
     }
 

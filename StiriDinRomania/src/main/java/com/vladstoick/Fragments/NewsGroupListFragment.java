@@ -15,6 +15,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.squareup.otto.Subscribe;
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DialogFragment.NoConnectionDialogFragment;
 import com.vladstoick.OttoBus.BusProvider;
@@ -66,8 +67,7 @@ public class NewsGroupListFragment extends SherlockFragment
     }
 
     private void setAdapter() {
-        newsDataSource = ((StiriApp) (getSherlockActivity().getApplication())).newsDataSource
-                .getAllNewsGroups();
+        newsDataSource = NewsDataSource.getInstance().getAllNewsGroups();
         Context context = getSherlockActivity();
         StiriApp stiriApp = (StiriApp)(getSherlockActivity().getApplication());
         if (newsDataSource != null) {
@@ -149,7 +149,7 @@ public class NewsGroupListFragment extends SherlockFragment
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.news_group_list_fragment,menu);
         refreshItem  = menu.findItem(R.id.action_refresh);
-        if(!((StiriApp) (getSherlockActivity().getApplication())).newsDataSource.isDataLoaded)
+        if(!NewsDataSource.getInstance().isDataLoaded)
             refreshItem.setActionView(R.layout.actionbar_refresh);
         super.onCreateOptionsMenu(menu, inflater);
     }
@@ -169,7 +169,7 @@ public class NewsGroupListFragment extends SherlockFragment
             }
             case R.id.action_refresh:{
                 if(Utils.isOnline(getSherlockActivity()) == true){
-                    ((StiriApp)(getActivity().getApplication())).newsDataSource.loadData();
+                    NewsDataSource.getInstance().loadData();
                     item.setActionView(R.layout.actionbar_refresh);
                 } else {
                     NoConnectionDialogFragment ndf = new NoConnectionDialogFragment();

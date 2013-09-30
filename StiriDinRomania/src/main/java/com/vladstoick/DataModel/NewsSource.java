@@ -59,8 +59,8 @@ public class NewsSource implements Parcelable {
 
 
 
-    public int getNumberOfUnreadNews(StiriApp app) {
-        return app.newsDataSource.getNumberOfNewsForNewsSource(getId());
+    public int getNumberOfUnreadNews() {
+        return NewsDataSource.getInstance().getNumberOfNewsForNewsSource(getId());
     }
 
     public int getGroupId() {

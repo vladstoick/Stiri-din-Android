@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DialogFragment.RenameDialogFragment;
 import com.vladstoick.Fragments.NewsGroupListFragment;
@@ -154,7 +155,7 @@ public class NewsGroupAdapter extends BaseAdapter {
     }
 
     public void deleteGroup(NewsGroup ng) {
-        app.newsDataSource.deleteNewsGroup(ng.getId());
+        NewsDataSource.getInstance().deleteNewsGroup(ng.getId());
     }
 
     public void renameGroup(NewsGroup ng) {

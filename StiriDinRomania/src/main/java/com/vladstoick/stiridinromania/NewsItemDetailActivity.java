@@ -6,6 +6,7 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
@@ -37,8 +38,8 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
 
             @Override
             public void onPageSelected(int i) {
-                ((StiriApp)getApplication()).newsDataSource.makeNewsRead(news.get(i).getUrlLink()
-                        ,news.get(i).getId());
+                NewsDataSource.getInstance().makeNewsRead(news.get(i).getUrlLink()
+                        , news.get(i).getId());
             }
 
             @Override
@@ -52,8 +53,7 @@ public class NewsItemDetailActivity extends SherlockFragmentActivity {
 
             if(extras.containsKey(NewsItemDetailFragment.ARG_ITEM)){
                 int newsSourceId = getIntent().getIntExtra(NewsItemDetailFragment.ARG_NEWSOURCE, 0);
-                NewsSource ns = ((StiriApp)getApplication()).newsDataSource
-                        .getNewsSource(newsSourceId);
+                NewsSource ns = NewsDataSource.getInstance().getNewsSource(newsSourceId);
                 setTitle(getString(R.string.app_name)+ " " + ns.getTitle());
                 news = ns.news;
 

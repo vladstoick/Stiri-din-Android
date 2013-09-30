@@ -17,6 +17,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.squareup.otto.Subscribe;
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.OttoBus.BusProvider;
 import com.vladstoick.OttoBus.NewsItemLoadedEvent;
@@ -63,8 +64,7 @@ public class NewsItemDetailFragment extends SherlockFragment {
             isInMode = savedInstanceState.getInt(ARG_MODE);
         if (getArguments().containsKey(ARG_ITEM)) {
             String url =getArguments().getString(ARG_ITEM);
-            mItem = ((StiriApp)getSherlockActivity().getApplication())
-                    .newsDataSource.getNewsItem(url);
+            mItem = NewsDataSource.getInstance().getNewsItem(url);
 
         } else if (getArguments().containsKey(ARG_ITEM_JO)){
             mItem = getArguments().getParcelable(ARG_ITEM_JO);
@@ -101,8 +101,7 @@ public class NewsItemDetailFragment extends SherlockFragment {
             } else {
                 BusProvider.getInstance().register(this);
                 mPaperized.setText(getString(R.string.loading));
-                ((StiriApp)(getSherlockActivity().getApplication())).newsDataSource
-                        .paperizeNewsItem(mItem);
+                NewsDataSource.getInstance().paperizeNewsItem(mItem);
             }
             mWebView.setWebViewClient(new WebViewClient());
         }

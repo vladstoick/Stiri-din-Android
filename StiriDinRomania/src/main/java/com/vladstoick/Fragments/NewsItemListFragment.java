@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Utils.Adapters.NewsItemAdapter;
@@ -55,8 +56,7 @@ public class NewsItemListFragment extends SherlockFragment implements
     }
 
     public void setNewsSourceId(int id) {
-        this.ns = ((StiriApp)getSherlockActivity().
-                getApplication()).newsDataSource.getNewsSource(id);
+        this.ns = NewsDataSource.getInstance().getNewsSource(id);
         mListView.setAdapter(new NewsItemAdapter(getActivity(), ns.news));
     }
 
@@ -64,8 +64,7 @@ public class NewsItemListFragment extends SherlockFragment implements
     public void onResume() {
         super.onResume();
         if(mListView!=null && this.ns!=null){
-            this.ns = ((StiriApp)getSherlockActivity().
-                    getApplication()).newsDataSource.getNewsSource(this.ns.getId());
+            this.ns = NewsDataSource.getInstance().getNewsSource(this.ns.getId());
             NewsItemAdapter adapter = (NewsItemAdapter) mListView.getAdapter();
             adapter.news = this.ns.news;
             adapter.notifyDataSetChanged();

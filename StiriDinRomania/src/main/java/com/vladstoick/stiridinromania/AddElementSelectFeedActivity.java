@@ -38,14 +38,6 @@ public class AddElementSelectFeedActivity extends SherlockFragmentActivity {
         listView.setAdapter(new AddElementFeedAdapter(this,feeds));
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getSupportMenuInflater().inflate(R.menu.add_element_select_feed, menu);
-        return true;
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){

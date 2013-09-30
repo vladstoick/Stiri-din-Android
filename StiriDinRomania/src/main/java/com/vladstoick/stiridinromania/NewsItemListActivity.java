@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
 import com.vladstoick.Fragments.NewsItemDetailFragment;
@@ -44,8 +45,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
         setContentView(R.layout.activity_newsitem_list);
         if (getIntent().getExtras() != null) {
             newsSourceId = getIntent().getExtras().getInt(Tags.NEWSOURCE_TAG_ID);
-            NewsSource newsSource = ((StiriApp) getApplication())
-                    .newsDataSource.getNewsSource(newsSourceId);
+            NewsSource newsSource = NewsDataSource.getInstance().getNewsSource(newsSourceId);
             setTitle(getString(R.string.app_name)+ " " + newsSource.getTitle());
             ((NewsItemListFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.newsitem_list))
@@ -73,7 +73,7 @@ public class NewsItemListActivity extends SherlockFragmentActivity
      */
     @Override
     public void onItemSelected(NewsItem newsItem, int position) {
-        ((StiriApp)getApplication()).newsDataSource.makeNewsRead(newsItem.getUrlLink(),
+        NewsDataSource.getInstance().makeNewsRead(newsItem.getUrlLink(),
                 newsItem.getId());
         if (mTwoPane) {
             // In two-pane mode, show the detail view in this activity by
