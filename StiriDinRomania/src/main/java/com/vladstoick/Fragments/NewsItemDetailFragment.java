@@ -131,7 +131,7 @@ public class NewsItemDetailFragment extends SherlockFragment {
                     mPaperized.setVisibility(View.VISIBLE);
                     isInMode = 0;
                 }
-
+                break;
             }
             case R.id.action_share: {
                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);

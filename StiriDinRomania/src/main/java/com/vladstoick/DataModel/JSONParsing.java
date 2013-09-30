@@ -2,6 +2,7 @@ package com.vladstoick.DataModel;
 
 import android.content.SharedPreferences;
 
+import com.google.gson.JsonObject;
 import com.vladstoick.DataModel.NewsGroup;
 import com.vladstoick.DataModel.NewsItem;
 import com.vladstoick.DataModel.NewsSource;
@@ -136,4 +137,20 @@ public class JSONParsing {
             return null;
         }
     }
+    public static ArrayList<NewsSource> parseFeeds(JSONObject jsonObject){
+        try{
+            JSONArray feeds = jsonObject.getJSONArray("feeds");
+            ArrayList<NewsSource> results = new ArrayList<NewsSource>();
+            for(int i=0; i< feeds.length(); i++){
+                JSONObject feed = feeds.getJSONObject(i);
+                results.add(new NewsSource(feed.getString("title"),feed.getString("url")
+                        ,feed.getInt("id")));
+            }
+            return results;
+        } catch (Exception e){
+            e.printStackTrace();
+            return new ArrayList<NewsSource>();
+        }
+    }
+
 }

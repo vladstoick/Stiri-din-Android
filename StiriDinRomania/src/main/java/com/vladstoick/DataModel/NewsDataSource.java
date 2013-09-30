@@ -34,6 +34,7 @@ import java.util.ArrayList;
 public class
         NewsDataSource {
     public int unparsedFeeds = 0;
+    public ArrayList<NewsSource> feeds;
     public boolean isDataLoaded = true;
     public ArrayList<Integer> unreadIds;
     public AsyncHttpClient client;
@@ -53,11 +54,30 @@ public class
         this.userId = settings.getInt("user_id", 0);
         this.token = settings.getString("key", "");
         if (Utils.isOnline(app)) {
+            loadFeeds();
             loadData();
         }
 
         sqlHelper = new SqlHelper(app);
         BusProvider.getInstance().register(this);
+    }
+
+    public void loadFeeds(){
+        JsonObjectRequest jsonObjectRequest =
+                new JsonObjectRequest("http://37.139.26.80/newssource", null,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject jsonObject) {
+                                feeds = JSONParsing.parseFeeds(jsonObject);
+                                loadData();
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError volleyError) {
+                                volleyError.printStackTrace();
+                            }
+                        });
+        StiriApp.queue.add(jsonObjectRequest);
     }
 
     public void loadData() {
