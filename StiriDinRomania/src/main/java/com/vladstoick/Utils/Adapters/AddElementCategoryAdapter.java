@@ -41,7 +41,8 @@ public class AddElementCategoryAdapter extends BaseAdapter {
 
     @Override
     public String getItem(int position) {
-        return categories.get(position).toUpperCase();
+        String category = categories.get(position);
+        return category.substring(0,1).toUpperCase()+category.substring(1);
     }
 
     @Override
