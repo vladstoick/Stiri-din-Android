@@ -11,6 +11,9 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
+import com.facebook.FacebookActivity;
+import com.facebook.android.Facebook;
+import com.google.android.gms.plus.PlusClient;
 import com.vladstoick.DataModel.NewsDataSource;
 import com.vladstoick.Fragments.NewsGroupDetailFragment;
 import com.vladstoick.Fragments.NewsGroupListFragment;
@@ -120,7 +123,11 @@ public class NewsGroupListActivity extends SherlockFragmentActivity
         switch (item.getItemId()){
             case R.id.action_logout:{
                 SharedPreferences settings = getSharedPreferences("appPref", Context.MODE_PRIVATE);
+                try{
+                    com.facebook.Session.getActiveSession().closeAndClearTokenInformation();
+                } catch(Exception e){
 
+                }
                 settings.edit().remove("user_id").commit();
                 Intent intent = new Intent(this,LoginActivity.class);
                 intent.putExtra(Tags.LOGOUT_TAG,true);
