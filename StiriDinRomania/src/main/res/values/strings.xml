@@ -66,5 +66,6 @@
     <string name="title_activity_add_element_select_feed">MainActivity</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add_element_select_group">Select a group</string>
 
 </resources>

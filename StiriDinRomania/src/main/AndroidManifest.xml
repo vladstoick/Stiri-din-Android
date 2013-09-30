@@ -92,6 +92,7 @@
             android:name="com.vladstoick.stiridinromania.AddElementAcitvitiy"
             android:label="@string/add_element_fragment_title"
             android:parentActivityName="NewsGroupListActivity"
+            android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -102,9 +103,13 @@
             android:name="android.app.default_searchable"
             android:value=".SearchResultsActivity" />
 
+        <activity android:name="com.vladstoick.stiridinromania.AddElementSelectFeedActivity"
+            android:launchMode="singleTop"/>
         <activity
-            android:name=".AddElementSelectFeedActivity"/>
-
+            android:launchMode="singleTop"
+            android:name="com.vladstoick.stiridinromania.AddElementSelectGroupActivity"
+            android:label="@string/title_activity_add_element_select_group" >
+        </activity>
     </application>
 
 </manifest>

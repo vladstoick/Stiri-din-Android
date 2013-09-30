@@ -16,7 +16,6 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.vladstoick.Fragments.AddElement.AddElementCategoryFragment;
 import com.vladstoick.Fragments.AddElement.AddElementManuallyFragment;
-import com.vladstoick.Fragments.AddElement.AddElementSearchFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +55,7 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
 
         List<SherlockFragment> fragments = new ArrayList<SherlockFragment>();
         fragments.add(new AddElementCategoryFragment());
-        fragments.add(new AddElementSearchFragment());
+//        fragments.add(new AddElementSearchFragment());
         fragments.add(new AddElementManuallyFragment());
         mAddElementPageAdapter = new AddElementPagerAdapter(getSupportFragmentManager(),
                 fragments);
@@ -130,9 +129,9 @@ public class AddElementAcitvitiy extends SherlockFragmentActivity implements Act
             switch (position) {
                 case 0:
                     return getString(R.string.categories).toUpperCase(locale);
+//                case 1:
+//                    return getString(R.string.search).toUpperCase(locale);
                 case 1:
-                    return getString(R.string.search).toUpperCase(locale);
-                case 2:
                     return getString(R.string.manual).toUpperCase(locale);
             }
             return "";
